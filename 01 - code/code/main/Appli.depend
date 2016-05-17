@@ -824,20 +824,20 @@
 	<Application.h>
 	<windows.h>
 
-1463504879 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\application.h
+1463506741 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\application.h
 	<Ecran.h>
 	<Gestion_ecrans.h>
 	<SFML/Graphics.hpp>
 	<vector>
 	"gui.h"
 
-1463500224 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\ecran.h
+1463506692 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\ecran.h
 	<SFML/Graphics.hpp>
 
-1460903131 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\gestion_ecrans.h
+1463506771 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\gestion_ecrans.h
 	<Ecran.h>
 
-1463504879 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\application.cpp
+1463506741 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\application.cpp
 	"Application.h"
 	"Config.h"
 	"ecrans/EcranAccueil.h"
@@ -1233,27 +1233,28 @@
 	<cstdlib>
 	<stdio.h>
 
-1463500471 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\gestion_ecrans.cpp
+1463506771 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\gestion_ecrans.cpp
 	"Gestion_ecrans.h"
 
-1463500033 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\ecrans\ecranaccueil.h
+1463506692 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\ecrans\ecranaccueil.h
 	<SFML/Graphics.hpp>
 	<Ecran.h>
 	<Application.h>
 
-1463504740 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\ecrans\ecranjeu.h
+1463506711 c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\include\ecrans\ecranjeu.h
 	<SFML/Graphics.hpp>
 	<Ecran.h>
 	<Application.h>
+	"Jeu.h"
 
-1463501760 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\ecrans\ecranaccueil.cpp
+1463506895 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\ecrans\ecranaccueil.cpp
 	"ecrans\EcranAccueil.h"
 	<iostream>
 	<cstdio>
 	"Config.h"
 	"gui.h"
 
-1463505372 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\ecrans\ecranjeu.cpp
+1463506888 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\main\src\ecrans\ecranjeu.cpp
 	"ecrans\EcranJeu.h"
 	<iostream>
 	"Config.h"
@@ -1270,4 +1271,34 @@
 	<cstdio>
 	"Config.h"
 	"gui.h"
+
+1463506294 c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\include\jeu.h
+	<SFML/Graphics.hpp>
+	"Terrain.h"
+
+1463506085 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\src\etage.cpp
+	<Etage.h>
+
+1463506085 c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\include\etage.h
+	<SFML/Graphics.hpp>
+
+1463506330 c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\include\terrain.h
+	<SFML/Graphics.hpp>
+	<memory>
+	<vector>
+	"Etage.h"
+
+1463506085 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\src\jeu.cpp
+	<Jeu.h>
+	<Terrain.h>
+
+1463506085 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\src\planteverte.cpp
+	<PlanteVerte.h>
+
+1463506085 c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\include\planteverte.h
+	<SFML/Graphics.hpp>
+
+1463506085 source:c:\users\kris\onedrive\recherche fourmis\01 - code\code\jeu\src\terrain.cpp
+	<Terrain.h>
+	<Etage.h>
 

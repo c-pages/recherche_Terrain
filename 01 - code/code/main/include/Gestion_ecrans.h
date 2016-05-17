@@ -82,7 +82,7 @@ public:
     /// \return Rien
     ///
     /////////////////////////////////////////////////
-    void actualiser ( float deltaT );
+    void actualiser ( sf::Time deltaT );
 
     /////////////////////////////////////////////////
     /// \brief Rendre les écrans de la pile.

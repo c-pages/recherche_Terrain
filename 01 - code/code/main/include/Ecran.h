@@ -49,7 +49,7 @@ public:
     /// \return Rien
     ///
     /////////////////////////////////////////////////
-    virtual     void actualiser ( float deltaT ) =0;
+    virtual     void actualiser ( sf::Time deltaT ) =0;
 
     /////////////////////////////////////////////////
     /// \brief Rendre les éléments.

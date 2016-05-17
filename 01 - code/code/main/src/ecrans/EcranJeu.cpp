@@ -18,19 +18,25 @@ EcranJeu::EcranJeu( Application*  appli )
 {
     // Initialisation de l'interface graphique.
     initGUI();
+
+    // Demarrer une nouvelle partie
+    m_jeu.demarrerPartie ();
+
 }
 
 
 /////////////////////////////////////////////////
 void EcranJeu::traiter_evenements    ( const sf::Event& event )
 {
+    m_jeu.traiterEvenements  ( event );
 //    m_interface->traiterEvenements  ( event );
 }
 
 
 /////////////////////////////////////////////////
-void EcranJeu::actualiser            ( float deltaT )
+void EcranJeu::actualiser            ( sf::Time deltaT )
 {
+    m_jeu.actualiser ( deltaT );
 //    m_interface->actualiser    (  );
 }
 
@@ -38,7 +44,7 @@ void EcranJeu::actualiser            ( float deltaT )
 /////////////////////////////////////////////////
 void EcranJeu::dessiner ()
 {
-    Ecran::m_appli->getFenetre()->draw ( m_fond );
+    Ecran::m_appli->getFenetre()->draw ( m_jeu );
 }
 
 
@@ -57,7 +63,7 @@ EcranJeu::initGUI  ( )
 
     auto fctCreerFenetreOptions = [this](){
 
-        std::shared_ptr<gui::BtnTexte>   btnRetour         = m_interface->creer.boutonTexte( "Retour" );
+        std::shared_ptr<gui::BtnTexte>   btnRetour         = m_interface->creer.boutonTexte( "Retour à la partie en cours" );
         std::shared_ptr<gui::BtnTexte>   btnQuitter         = m_interface->creer.boutonTexte( "Quitter" );
         btnRetour->setAutoAjuster(false);
         btnRetour->setTailleX (400);

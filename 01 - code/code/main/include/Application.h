@@ -105,7 +105,7 @@ class Application
         /// pour ponderer les mouvements en fonction du temps et ainsi avoir une indépendance entre animation et frame rate.
         ///
         /////////////////////////////////////////////////
-        void actualiser ( float deltaT );
+        void actualiser ( sf::Time deltaT );
 
         /////////////////////////////////////////////////
         /// \brief Rendre les éléments.

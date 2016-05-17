@@ -8,7 +8,7 @@
 #include    <Ecran.h>
 #include    <Application.h>
 
-//#include    "Jeu.h"
+#include    "Jeu.h"
 
 namespace app {
 
@@ -46,7 +46,7 @@ private:
     /// \return  Rien
     ///
     /////////////////////////////////////////////////
-    virtual     void actualiser ( float deltaT );
+    virtual     void actualiser ( sf::Time deltaT );
 
     /////////////////////////////////////////////////
     /// \brief Rendre les éléments.
@@ -85,7 +85,7 @@ private:
     bool                                m_pause = false;
 
    // gui::Groupe*     m_gui;         ///< Le groupe de GUI du menu principal.
-//    jeu::Jeu            m_jeu;  /// le jeu
+    jeu::Jeu            m_jeu;  /// le jeu
 
 }; // fin EcranJeu
 }; // fin app

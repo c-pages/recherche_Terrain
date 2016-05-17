@@ -20,6 +20,7 @@ EcranAccueil::EcranAccueil( Application*  appli )
     // Initialisation de l'interface graphique.
     initGUI();
 
+
 }
 /////////////////////////////////////////////////
 EcranAccueil::~EcranAccueil( )
@@ -36,7 +37,7 @@ void EcranAccueil::traiter_evenements    ( const sf::Event& event )
 
 
 /////////////////////////////////////////////////
-void EcranAccueil::actualiser            ( float deltaT )
+void EcranAccueil::actualiser            ( sf::Time deltaT )
 {
 //    m_interface->actualiser    (  );
 }
@@ -66,6 +67,10 @@ EcranAccueil::initGUI  ( )
 
     std::shared_ptr<BtnTexte>   btnNouvellePartie  = m_interface->creer.boutonTexte( "Nouvelle partie" );
     std::shared_ptr<BtnTexte>   btnQuitter         = m_interface->creer.boutonTexte( "Quitter" );
+    btnNouvellePartie->setAutoAjuster(false);
+    btnNouvellePartie->setTailleX (400);
+    btnQuitter->setAutoAjuster(false);
+    btnQuitter->setTailleX (400);
 
     std::shared_ptr<Fenetre>    fenetre            = m_interface->creer.fenetre( "SuperOrganisme" );
     fenetre->ajouter ( btnNouvellePartie );
@@ -92,7 +97,7 @@ EcranAccueil::initGUI  ( )
     m_interface->lier (sf::Keyboard::Escape , fctQuitter );
     btnNouvellePartie->lier( Evenement::onBtnG_relacher, fctNouvellePartie );
     btnQuitter->lier( Evenement::onBtnG_relacher, fctQuitter );
-
+    fenetre->lier ( Evenement::onFen_fermer, fctQuitter );
 
 }   // fin init GUI
 

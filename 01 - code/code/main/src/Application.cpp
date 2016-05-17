@@ -84,7 +84,7 @@ void    Application::executer()
             traiter_evenements();
 
             // Actualisation des éléments des écrans.
-            actualiser( Config::getDureeImage().asSeconds() );
+            actualiser( Config::getDureeImage() );
 
             // si la pile d'écrans est vide, on ferme.
             if ( m_ecrans.estVide() )
@@ -155,7 +155,7 @@ void Application::traiter_evenements(){
 
 
 /////////////////////////////////////////////////
-void Application::actualiser ( float deltaT )
+void Application::actualiser ( sf::Time deltaT )
 {
     m_interface->actualiser    (  );
     m_ecrans.actualiser ( deltaT );

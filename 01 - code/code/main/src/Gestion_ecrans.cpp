@@ -64,7 +64,7 @@ void    Gestion_ecrans::traiter_evenements (sf::Event event )
 
 
 /////////////////////////////////////////////////
-void    Gestion_ecrans::actualiser ( float deltaT )
+void    Gestion_ecrans::actualiser ( sf::Time deltaT )
 {
     for ( Ecran* ecran : m_pile )
         ecran->actualiser( deltaT );
