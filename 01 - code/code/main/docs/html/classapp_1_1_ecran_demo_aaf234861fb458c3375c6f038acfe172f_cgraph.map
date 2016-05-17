@@ -1,0 +1,5 @@
+<map id="app::EcranDemo::EcranDemo" name="app::EcranDemo::EcranDemo">
+<area shape="rect" id="node2" href="$classapp_1_1_ecran_demo.html#a8e26aa83dad5dea758fc8e445c9399c1" title="Initialisation de l&#39;interface graphique. " alt="" coords="255,5,422,32"/>
+<area shape="rect" id="node3" href="$classapp_1_1_application.html#acbc0a186b9ec7abfaf35eaad5d55b45a" title="renvois la fenetre sfml de l&#39;application " alt="" coords="477,56,663,83"/>
+<area shape="rect" id="node4" href="$classapp_1_1_ecran_demo.html#aa61d4d976b54eb8fa13ccbef328da064" title="Initialisation de la scene ... le monde du jeu ou tout autre bazard... " alt="" coords="248,107,429,133"/>
+</map>

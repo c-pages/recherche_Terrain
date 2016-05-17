@@ -1,0 +1,55 @@
+#ifndef UTILITAIRES_H
+#define UTILITAIRES_H
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include <sstream>
+
+
+
+
+// conversions d'un nombre en string
+// (le "to_string" sur MinGW marche pas alors on refait le notre )
+template <typename T>
+std::string toString(const T& value);
+
+// conversions d'un string en float
+float       toFloat(const std::string&   str );
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////// les machins templates ( parceque j'me galere a trouver le *.inl avec un #include)  ////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//#include <Utilitaires.inl>
+
+
+
+///////////////////////////////////////////////////
+template <typename T>
+std::string toString(const T& value)
+{
+    std::stringstream stream;
+    stream << value;
+    return stream.str();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif // UTILITAIRES_H

@@ -1,0 +1,20 @@
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include <Repartiteurs/Repartiteur.h>
+
+
+
+namespace gui {
+
+/////////////////////////////////////////////////
+Repartiteur::Repartiteur ( Gadget* racine )
+: m_racine      ( racine )
+, m_espacement  ( {5,5} )
+{
+
+}
+
+
+} // fin namespace gui
+

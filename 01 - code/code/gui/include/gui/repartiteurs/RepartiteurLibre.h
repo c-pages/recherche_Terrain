@@ -1,0 +1,37 @@
+#ifndef REPARTITEURLIBRE__H
+#define REPARTITEURLIBRE__H
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include "Repartiteur.h"
+
+
+
+namespace gui {
+
+
+
+class RepartiteurLibre : public gui::Repartiteur {
+
+
+
+/////////////////////////////////////////////////
+// Méthodes
+/////////////////////////////////////////////////
+public:
+    /////////////////////////////////////////////////
+    /// \brief Constructeur par défaut.
+    ///
+    /// \param racine
+    /////////////////////////////////////////////////
+    RepartiteurLibre ( Gadget* racine );
+
+    virtual void repartir (std::vector<std::shared_ptr<Gadget>> groupe);
+
+
+}; // fin class RepartiteurLibre
+
+} // fin namespace gui
+
+#endif

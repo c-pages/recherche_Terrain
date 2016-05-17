@@ -1,0 +1,21 @@
+#ifndef DRAWABLE__H
+#define DRAWABLE__H
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+
+
+
+namespace sf {
+
+
+
+class Drawable {
+
+
+}; // fin class Drawable
+
+} // fin namespace sf
+
+#endif

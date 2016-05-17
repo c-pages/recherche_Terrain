@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Application" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Appli" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="utilitaires/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="../gui/bin/Debug/libgui.a" />
+					<Add library="sfml-audio-s-d" />
+					<Add library="sfml-graphics-s-d" />
+					<Add library="sfml-window-s-d" />
+					<Add library="sfml-system-s-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Appli" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add directory="utilitaires/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="../gui/bin/Release/libgui.a" />
+					<Add library="sfml-audio-s" />
+					<Add library="sfml-graphics-s" />
+					<Add library="sfml-window-s" />
+					<Add library="sfml-system-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+			<Add option="-DSFML_STATIC" />
+			<Add directory="F:/Bibliotheques CPP/SFML-2.1/include" />
+			<Add directory="include" />
+			<Add directory="../gui/include/gui" />
+		</Compiler>
+		<Linker>
+			<Add directory="C:/SFML-2.1/lib" />
+			<Add directory="src" />
+			<Add directory="F:/Bibliotheques CPP/SFML-2.1/lib" />
+		</Linker>
+		<Unit filename="../utilitaires/include/Utilitaires.h" />
+		<Unit filename="../utilitaires/src/Utilitaires.cpp" />
+		<Unit filename="include/Application.h" />
+		<Unit filename="include/Config.h" />
+		<Unit filename="include/Ecran.h" />
+		<Unit filename="include/Gestion_ecrans.h" />
+		<Unit filename="include/ResourceMgr.h" />
+		<Unit filename="include/ResourceMgr.inl" />
+		<Unit filename="include/ecrans/EcranAtelier.h" />
+		<Unit filename="include/ecrans/EcranDemo.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="media/img/IconeVide.png" />
+		<Unit filename="media/img/nuage.jpg" />
+		<Unit filename="media/polices/arial.ttf" />
+		<Unit filename="media/polices/bgothl.ttf" />
+		<Unit filename="media/polices/consola.ttf" />
+		<Unit filename="media/polices/consolab.ttf" />
+		<Unit filename="media/polices/consolai.ttf" />
+		<Unit filename="media/polices/consolaz.ttf" />
+		<Unit filename="media/polices/webdings.ttf" />
+		<Unit filename="media/polices/wingding.ttf" />
+		<Unit filename="media/shaders/clippingMask.frag" />
+		<Unit filename="media/shaders/flou.frag" />
+		<Unit filename="src/Application.cpp" />
+		<Unit filename="src/Config.cpp" />
+		<Unit filename="src/Ecran.cpp" />
+		<Unit filename="src/Gestion_ecrans.cpp" />
+		<Unit filename="src/ecrans/EcranAtelier.cpp" />
+		<Unit filename="src/ecrans/EcranDemo.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<DoxyBlocks>
+				<comment_style block="5" line="2" />
+				<doxyfile_project output_directory="docs" output_language="French" />
+				<doxyfile_build extract_all="1" extract_private="1" extract_static="1" />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot class_diagrams="1" have_dot="1" />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

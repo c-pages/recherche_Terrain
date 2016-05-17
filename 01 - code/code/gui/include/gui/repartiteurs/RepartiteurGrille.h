@@ -1,0 +1,33 @@
+#ifndef REPARTITEURGRILLE__H
+#define REPARTITEURGRILLE__H
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include "Repartiteur.h"
+
+
+
+namespace gui {
+
+class RepartiteurGrille : public gui::Repartiteur {
+
+
+/////////////////////////////////////////////////
+// Méthodes
+/////////////////////////////////////////////////
+public:
+    /////////////////////////////////////////////////
+    /// \brief Constructeur par défaut.
+    ///
+    /// \param racine
+    /////////////////////////////////////////////////
+    RepartiteurGrille (Gadget* racine);
+
+    virtual void repartir (std::vector<std::shared_ptr<Gadget>> groupe);
+
+}; // fin class RepartiteurGrille
+
+} // fin namespace gui
+
+#endif

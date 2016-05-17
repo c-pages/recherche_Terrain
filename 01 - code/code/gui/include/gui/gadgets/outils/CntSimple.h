@@ -1,0 +1,69 @@
+#ifndef GRPPANNEAUSIMPLE__H
+#define GRPPANNEAUSIMPLE__H
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include "interfaces/gadgets/Contenant.h"
+#include "gadgets/AffRectangle.h"
+
+#include "repartiteurs/Repartiteur.h"
+#include "repartiteurs/RepartiteurGrille.h"
+#include "repartiteurs/RepartiteurHorizontal.h"
+#include "repartiteurs/RepartiteurLibre.h"
+#include "repartiteurs/RepartiteurVerticale.h"
+#include "Enums.h"
+
+#include <memory>
+#include <SFML/Graphics.hpp>
+
+
+
+namespace gui {
+
+
+
+class CntSimple : public gui::Contenant {
+
+
+/////////////////////////////////////////////////
+// Enums & typedefs
+/////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////
+// Méthodes
+/////////////////////////////////////////////////
+public:
+    /////////////////////////////////////////////////
+    /// \brief Constructeur par défaut.
+    ///
+    /////////////////////////////////////////////////
+    CntSimple ();
+
+//    /////////////////////////////////////////////////
+//    /// \brief Actualise le repartiteur puis les gadgets enfant contenus.
+//    ///
+//    /////////////////////////////////////////////////
+//    virtual void actualiser ();
+
+    /////////////////////////////////////////////////
+//    virtual void actualiserGeometrie ();
+//
+//    /////////////////////////////////////////////////
+//    virtual void actualiserStyle ();
+
+    virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
+
+
+/////////////////////////////////////////////////
+// Membres
+/////////////////////////////////////////////////
+
+
+
+}; // fin class CntSimple
+
+} // fin namespace gui
+
+#endif
