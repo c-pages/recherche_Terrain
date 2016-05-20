@@ -1345,7 +1345,7 @@
 	"gui/Calque.h"
 	<iostream>
 
-1463745794 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
+1463750263 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
 	<memory>
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1385,7 +1385,7 @@
 	"appli/Ecran.h"
 	<stdio.h>
 
-1463744998 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
+1463750012 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
 	"appli/ecrans\EcranAccueil.h"
 	"appli/Config.h"
 	<iostream>
@@ -1412,7 +1412,7 @@
 1463526728 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\fenetre.h
 	"Gadget.h"
 
-1463741740 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
+1463750181 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
 	<gui/Gadget.h>
 	<iostream>
 
@@ -1473,7 +1473,7 @@
 1463532361 c:\users\kris\onedrive\recherche biome\01 - code\code\include\outils\utilitaires.h
 	<sstream>
 
-1463678912 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\fabrique.h
+1463748828 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\fabrique.h
 	"gui/gadgets/Label.h"
 	"gui/gadgets/Image.h"
 	"gui/gadgets/Bouton.h"
@@ -1484,7 +1484,7 @@
 1463741350 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\calque.cpp
 	<gui/Calque.h>
 
-1463744879 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\fabrique.cpp
+1463749931 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\fabrique.cpp
 	<gui/Fabrique.h>
 	"gui/Gui.h"
 	"appli/Config.h"
@@ -1526,11 +1526,11 @@
 	<gui/Actions.h>
 	<iostream>
 
-1463745897 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
+1463750181 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
 	<gui/gadgets/Bouton.h>
 	<appli/Config.h>
 	<iostream>
 
-1463745794 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
+1463750263 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
 	"gui/Gadget.h"
 

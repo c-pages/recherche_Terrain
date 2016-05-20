@@ -14,6 +14,7 @@ Gadget::Gadget ()
 , m_size            ( {0,0} )
 , m_globalBounds    ( {0,0,0,0} )
 , m_localBounds     ( {0,0,0,0} )
+, m_marge           ( { 5,5 })
 {
 
 }

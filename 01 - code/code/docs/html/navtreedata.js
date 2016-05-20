@@ -33,7 +33,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_actions_8cpp.html",
-"classgui_1_1_gui.html#a781368d750e9c2e57a721305fa0d81df"
+"classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a753b5db1717e65ac676ba9473b3dbac4"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

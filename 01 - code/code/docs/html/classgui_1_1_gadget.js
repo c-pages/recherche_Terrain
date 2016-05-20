@@ -3,7 +3,8 @@ var classgui_1_1_gadget =
     [ "Etat", "classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524", [
       [ "Repos", "classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a5425be176c542f566123112599300dfa", null ],
       [ "Survol", "classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524ab7365de0974fdb24c2a47a2af713c14e", null ],
-      [ "Presse", "classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a753b5db1717e65ac676ba9473b3dbac4", null ]
+      [ "Presse", "classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a753b5db1717e65ac676ba9473b3dbac4", null ],
+      [ "Fin", "classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a4493d011fa6935f4d91714d738888eb0", null ]
     ] ],
     [ "Gadget", "classgui_1_1_gadget.html#a62dfd5bd962b252b792f00b183df9462", null ],
     [ "actualiser", "classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972", null ],
@@ -19,6 +20,8 @@ var classgui_1_1_gadget =
     [ "mettreDevant", "classgui_1_1_gadget.html#af01ca555487f3ea351e53e2074dad3aa", null ],
     [ "retirerEnfant", "classgui_1_1_gadget.html#a387706235192713391026917bb119b22", null ],
     [ "setEtat", "classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432", null ],
+    [ "setMarge", "classgui_1_1_gadget.html#a942f46298bf3e5824a42b6439f9b2985", null ],
+    [ "setMarge", "classgui_1_1_gadget.html#a11fb712d655dea8ba3ff47bf3ba0f608", null ],
     [ "setParent", "classgui_1_1_gadget.html#a8d9dac5aee31bfbb176f452d61186be0", null ],
     [ "setPosition", "classgui_1_1_gadget.html#a92c42e660b6b307daa77cd0d42aad26f", null ],
     [ "setPosition", "classgui_1_1_gadget.html#ad3d9ba5eecba0ecf49f94767699aba17", null ],
@@ -32,6 +35,7 @@ var classgui_1_1_gadget =
     [ "m_enfants", "classgui_1_1_gadget.html#ae35b833b6030e36026729e15916ee694", null ],
     [ "m_globalBounds", "classgui_1_1_gadget.html#aaace78b90fc448c422ac4b2adde5a889", null ],
     [ "m_localBounds", "classgui_1_1_gadget.html#a188b42366f5b5adf373edbe0af62a6ec", null ],
+    [ "m_marge", "classgui_1_1_gadget.html#ace11645220e06219f23ac3e2f5150dff", null ],
     [ "m_parent", "classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a", null ],
     [ "m_size", "classgui_1_1_gadget.html#a35c10fa7e18e19b6dc19d65490104474", null ]
 ];

@@ -24,17 +24,18 @@ class Bouton :  public gui::Gadget {
 /////////////////////////////////////////////////
 // Méthodes
 /////////////////////////////////////////////////
+
 public:
     /////////////////////////////////////////////////
     /// \brief Constructeur
+    /// créer un bouton
     ///
-    /// \param texte Le texte du bouton (optionel)
-    /// \param taille La taille du bouton (optionel)
     /////////////////////////////////////////////////
-    Bouton ( std::string texte , sf::Vector2i taille );
+    Bouton (  );
 
 
 
+    /// Accessuers / mutateurs ///////////////////////
 
 
     /////////////////////////////////////////////////
@@ -46,8 +47,15 @@ public:
 
 
 
-    /// Accessuers / mutateurs ///////////////////////
-  /////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////
+    /// \brief Definie la taille de la marge
+    ///
+    /// \param marge La nouvelle marge
+    /////////////////////////////////////////////////
+    virtual void setMarge ( sf::Vector2f marge ){ m_marge = marge; ajuster(); };
+
+    /////////////////////////////////////////////////
     /// \brief Définie le texte à afficher.
     ///
     /// \param texte		 le nouveau texte du gadget.
@@ -113,10 +121,6 @@ public:
     /////////////////////////////////////////////////
     void setIcone (sf::Texture& texture );
 
-
-
-
-
     /////////////////////////////////////////////////
     /// \brief Definie l'alpha du fond du bouton à l'état de repos
     ///
@@ -125,6 +129,14 @@ public:
     /// \param press		 L' alpha du fond au press
     /////////////////////////////////////////////////
     void setAlphaEtats ( float repos , float survol, float press );
+
+    /////////////////////////////////////////////////
+    /// \brief Ajuster le fond au texte et à l'icone (le plus grand des deux)
+    ///
+    /////////////////////////////////////////////////
+    void ajuster ( );
+
+
 
 
 
@@ -176,9 +188,10 @@ public:
     sf::RectangleShape  m_icone;    ///< L'icone à dessiner.
     sf::Text            m_texte;    ///< Le texte sfml affiché.
 
+    /// les alphas en fonction de l'état du bouton /////////////////
     float   m_alphaRepos;           ///< l'alpha du fond du bouton au repos
     float   m_alphaSurvol;          ///< l'alpha du fond du bouton au survol
-    float   m_alphaPresse;           ///< l'alpha du fond du bouton au presse
+    float   m_alphaPresse;          ///< l'alpha du fond du bouton au presse
 
 }; // fin class Bouton
 

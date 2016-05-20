@@ -8,7 +8,7 @@
 namespace gui {
 
 /////////////////////////////////////////////////
-Bouton::Bouton ( std::string texte , sf::Vector2i taille )
+Bouton::Bouton (  )
 : m_etat        ( Repos )
 , m_alphaRepos  ( 50 )
 , m_alphaSurvol ( 200 )
@@ -18,7 +18,6 @@ Bouton::Bouton ( std::string texte , sf::Vector2i taille )
     sf::Vector2i marge = { 5, 5 };
 
     /// Initialisation du texte SFML.
-    m_texte.setString           ( texte );
     m_texte.setCharacterSize    ( 10 );
     m_texte.setColor            ( sf::Color (200,200,200) );
     m_texte.setFont             ( app::Config::ms_polices.get( app::Config::Polices::police_1 ) );
@@ -27,14 +26,6 @@ Bouton::Bouton ( std::string texte , sf::Vector2i taille )
     m_fond.setFillColor        ( { 150, 150, 150 } );
     m_fond.setOutlineColor     ( { 150, 150, 150 } );
     m_fond.setOutlineThickness ( 1 );
-
-    /// Si on a défini une taille on l'applique et on centre le texte, sinon on l'ajuste au texte.
-    auto tailleTexte = m_texte.getGlobalBounds();
-
-    if ( taille != sf::Vector2i( -1,-1 ) )
-        m_size = { taille.x , taille.y } ;
-    else
-        m_size = { tailleTexte.width + 2*marge.x , tailleTexte.height + 2*marge.y } ;
 
     setEtat ( );
     actualiser();
@@ -152,6 +143,17 @@ void Bouton::setAlphaEtats ( float repos , float survol, float press )
 
 
 
+/////////////////////////////////////////////////
+void Bouton::ajuster ( )
+{
+    sf::Vector2i tailleTexte = {m_texte.getGlobalBounds().width, m_texte.getGlobalBounds().height} ;
+    sf::Vector2i tailleIcone = {m_icone.getSize().x, m_icone.getSize().y} ;
+
+    m_size.x = ( tailleTexte.x > tailleIcone.x ) ? tailleTexte.x + 2*m_marge.x : tailleIcone.x + 2*m_marge.x ;
+    m_size.y = ( tailleTexte.y > tailleIcone.y ) ? tailleTexte.y + 2*m_marge.y : tailleIcone.y + 2*m_marge.y ;
+
+    actualiser();
+}
 
 
 

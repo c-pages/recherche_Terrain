@@ -98,6 +98,21 @@ public:
     /// Accesseurs / mutateur    /////////////////////
 
     /////////////////////////////////////////////////
+    /// \brief Definie la taille de la marge
+    ///
+    /// \param marge La nouvelle marge
+    /////////////////////////////////////////////////
+    virtual void setMarge ( sf::Vector2f marge ){ m_marge = marge; };
+
+    /////////////////////////////////////////////////
+    /// \brief recuperer la taille de la marge
+    ///
+    /////////////////////////////////////////////////
+    sf::Vector2f setMarge (  ){ return m_marge; };
+
+
+
+    /////////////////////////////////////////////////
     /// \brief Definie l'état du gadget , surtout pour les éléments interactifs, ici ne fait rien.
     ///
     /////////////////////////////////////////////////
@@ -241,6 +256,9 @@ protected:
     sf::Vector2i    m_size;             ///< La taille du gadget.
     sf::IntRect     m_globalBounds;     ///< Les limites globales du gadget (par rapport à la fenêtre principale).
     sf::IntRect     m_localBounds;      ///< Les limites locales du gadget (par rapport à son parent).
+
+    sf::Vector2f    m_marge;            ///< la marge est l'espace entre texte ou icone et le fond par exemple.
+
 
 }; // fin class Gadget
 

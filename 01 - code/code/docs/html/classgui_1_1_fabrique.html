@@ -145,9 +145,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ad7cef5c9cc75fdd841b99936d381e59d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fabrique.html#ad7cef5c9cc75fdd841b99936d381e59d">bouton</a> (std::string texte=&quot;Bouton&quot;, sf::Vector2i taille={-1,-1})</td></tr>
 <tr class="memdesc:ad7cef5c9cc75fdd841b99936d381e59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un bouton texte rectangulaire.  <a href="#ad7cef5c9cc75fdd841b99936d381e59d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad7cef5c9cc75fdd841b99936d381e59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bbe485a910d1979adee4680378d21e1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fabrique.html#a8bbe485a910d1979adee4680378d21e1">bouton</a> (sf::Texture &amp;texture)</td></tr>
-<tr class="memdesc:a8bbe485a910d1979adee4680378d21e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un bouton image.  <a href="#a8bbe485a910d1979adee4680378d21e1">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8bbe485a910d1979adee4680378d21e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d80f8e2a61eff0b136e47cebc5d211"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fabrique.html#a24d80f8e2a61eff0b136e47cebc5d211">bouton</a> (sf::Texture &amp;texture, sf::Vector2i taille={-1,-1})</td></tr>
+<tr class="memdesc:a24d80f8e2a61eff0b136e47cebc5d211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un bouton icone.  <a href="#a24d80f8e2a61eff0b136e47cebc5d211">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a24d80f8e2a61eff0b136e47cebc5d211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -219,7 +219,7 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8bbe485a910d1979adee4680378d21e1"></a>
+<a class="anchor" id="a24d80f8e2a61eff0b136e47cebc5d211"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -227,13 +227,23 @@ Attributs privés</h2></td></tr>
           <td class="memname">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt; gui::Fabrique::bouton </td>
           <td>(</td>
           <td class="paramtype">sf::Texture &amp;&#160;</td>
-          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">sf::Vector2i&#160;</td>
+          <td class="paramname"><em>taille</em> = <code>{-1,-1}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Créer un bouton image. </p>
+<p>Créer un bouton icone. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers le nouveau gadget créé.</dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
@@ -327,7 +337,7 @@ Attributs privés</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_fabrique.html">Fabrique</a></li>
-    <li class="footer">Généré le Vendredi 20 Mai 2016 13:06:37 pour Appli par
+    <li class="footer">Généré le Vendredi 20 Mai 2016 15:19:33 pour Appli par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

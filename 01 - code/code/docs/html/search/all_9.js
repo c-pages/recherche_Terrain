@@ -1,7 +1,7 @@
 var searchData=
 [
   ['label',['Label',['../classgui_1_1_label.html',1,'gui']]],
-  ['label',['Label',['../classgui_1_1_label.html#aceccd273f79a8de8580b105b95717e67',1,'gui::Label::Label()'],['../classgui_1_1_fabrique.html#a707dcf03d00db295888085abb9b71400',1,'gui::Fabrique::label()']]],
+  ['label',['label',['../classgui_1_1_fabrique.html#a707dcf03d00db295888085abb9b71400',1,'gui::Fabrique::label()'],['../classgui_1_1_label.html#aceccd273f79a8de8580b105b95717e67',1,'gui::Label::Label()']]],
   ['label_2ecpp',['Label.cpp',['../_label_8cpp.html',1,'']]],
   ['label_2eh',['Label.h',['../_label_8h.html',1,'']]],
   ['lier',['lier',['../classgui_1_1_actions.html#a0b0dfd024938532a3c8abf98ddefd3d8',1,'gui::Actions::lier(Evenement evenement, FctnAction fonction)'],['../classgui_1_1_actions.html#aa27df5505d15177e0a213bd6ab791182',1,'gui::Actions::lier(sf::Keyboard::Key touche, FctnAction fonction)']]],

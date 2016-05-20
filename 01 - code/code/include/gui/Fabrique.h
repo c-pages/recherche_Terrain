@@ -65,12 +65,12 @@ public:
     std::shared_ptr<Bouton> bouton ( std::string texte = "Bouton" , sf::Vector2i taille = {-1,-1} );
 
     /////////////////////////////////////////////////
-    /// \brief Créer un bouton image.
+    /// \brief Créer un bouton icone.
     /// \return un pointeur vers le nouveau gadget créé.
     ///
     /// \param texture		 La texture du bouton.
     /////////////////////////////////////////////////
-    std::shared_ptr<Bouton> bouton ( sf::Texture& texture );
+    std::shared_ptr<Bouton> bouton ( sf::Texture& texture , sf::Vector2i taille = {-1,-1} );
 
 
 

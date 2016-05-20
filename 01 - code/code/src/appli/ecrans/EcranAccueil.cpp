@@ -91,23 +91,24 @@ EcranAccueil::initGUI  ( )
     //img_1->setSize ( {20,200});
 //    img_1->setImage( Config::ms_textures.get( Config::Images::image_1 ) );
 //    img_1->setImage( Config::ms_textures.get( Config::Images::image_1 ) );
-    img_1->setPosition   ( 300,300 );
+    img_1->setPosition   ( 200,300 );
 
     std::shared_ptr<gui::Image>     img_2  =   m_interface->creer.image( Config::ms_textures.get( Config::Images::image_2 ) );
     //img_1->setSize ( {20,200});
     img_2->setTexture( Config::ms_textures.get( Config::Images::image_1 ) );
 //    img_1->setImage( Config::ms_textures.get( Config::Images::image_1 ) );
-    img_2->setPosition   ( 320,320 );
+    img_2->setPosition   ( 220,320 );
 
 
     std::shared_ptr<gui::Bouton>    boutonTexte_1   =   m_interface->creer.bouton( "Bouton texte sans taille" );
     boutonTexte_1->setPosition   ( 400,200 );
 
-    std::shared_ptr<gui::Bouton>    boutonTexte_2   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) );
+    std::shared_ptr<gui::Bouton>    boutonTexte_2   =   m_interface->creer.bouton( "Bouton texte AVEC taille" , {300,20});
+
 //    boutonTexte_2->setIcone( Config::ms_textures.get( Config::Images::image_2 ) );
 
     boutonTexte_2->setPosition   ( 400,250 );
-    boutonTexte_2->setSize ({ 30,30});
+//    boutonTexte_2->setSize ({ 30,30});
 
     // interactions de l'interface
     m_interface->lier (  sf::Keyboard::Space
@@ -120,10 +121,22 @@ EcranAccueil::initGUI  ( )
                             std::cout << "ACTION BOUTON\n";
                         });
 
-    boutonTexte_1->setRemplissageCouleur( sf::Color(0,0,200));
-    boutonTexte_1->setContourCouleur( sf::Color(250,250,0));
-    boutonTexte_1->setContourEpaisseur( 3 );
-    boutonTexte_1->setAlphaEtats( 255,255,0);
+//    boutonTexte_1->setRemplissageCouleur    ( sf::Color(0,0,200));
+//    boutonTexte_1->setContourCouleur        ( sf::Color(250,250,0));
+//    boutonTexte_1->setContourEpaisseur      ( 3 );
+//    boutonTexte_1->setAlphaEtats            ( 255,255,0);
+
+    std::shared_ptr<gui::Bouton>    boutonTexte_3   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) );
+    boutonTexte_3->setPosition   ( 400,300 );
+    boutonTexte_3->setAlphaEtats            ( 0,100,250);
+    boutonTexte_3->setContourEpaisseur      ( 0);
+//    boutonTexte_3->setMarge({20,20});
+
+    std::shared_ptr<gui::Bouton>    boutonTexte_4   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) , { 20, 20 });
+    boutonTexte_4->setPosition   ( 400,350 );
+
+
+
 
 }   // fin init GUI
 

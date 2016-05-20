@@ -9,6 +9,7 @@ var searchData=
   ['ajouter',['ajouter',['../classapp_1_1_gestion__ecrans.html#a576182f13e96e890e961dd1f7f69747b',1,'app::Gestion_ecrans']]],
   ['ajouterecran',['ajouterEcran',['../classapp_1_1_application.html#a266215c22bb94757ac0b338a3abc3daa',1,'app::Application']]],
   ['ajouterenfant',['ajouterEnfant',['../classgui_1_1_gadget.html#ae710168f0ae17e7b2992812268da3e32',1,'gui::Gadget']]],
+  ['ajuster',['ajuster',['../classgui_1_1_bouton.html#a961823c2d04c02b85316bb177f24f379',1,'gui::Bouton']]],
   ['app',['app',['../namespaceapp.html',1,'']]],
   ['application',['Application',['../classapp_1_1_application.html',1,'app']]],
   ['application',['Application',['../classapp_1_1_application.html#a3c480be05f51b91e648b2f6533a32f1b',1,'app::Application']]],
