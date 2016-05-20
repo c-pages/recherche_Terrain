@@ -18,10 +18,10 @@ Fabrique::Fabrique ( Gui* interface )
 /////////////////////////////////////////////////
 std::shared_ptr<Label> Fabrique::label ( std::string texte )
 {
-    // creation du label dans son pointeur
+    // creation du gadget dans son pointeur
     std::shared_ptr<Label> nouveauGadget = std::make_shared<gui::Label>( texte );
 
-    // initialisation du label
+    // initialisation du gadget
     m_interface->m_calqueFond->ajouterEnfant( nouveauGadget );
 
     return nouveauGadget;
@@ -31,10 +31,10 @@ std::shared_ptr<Label> Fabrique::label ( std::string texte )
 /////////////////////////////////////////////////
 std::shared_ptr<Image> Fabrique::image ( sf::Texture& image )
 {
-    // creation d'une image dans son pointeur
+    // creation du gadget dans son pointeur
     std::shared_ptr<Image> nouveauGadget = std::make_shared<gui::Image>( image );
 
-    // initialisation du label
+    // initialisation du gadget
     m_interface->m_calqueFond->ajouterEnfant( nouveauGadget );
 
     return nouveauGadget;
@@ -44,10 +44,10 @@ std::shared_ptr<Image> Fabrique::image ( sf::Texture& image )
 /////////////////////////////////////////////////
 std::shared_ptr<Bouton> Fabrique::bouton ( std::string texte , sf::Vector2i taille )
 {
-    // creation d'une image dans son pointeur
+    // creation du gadget dans son pointeur
     std::shared_ptr<Bouton> nouveauGadget = std::make_shared<gui::Bouton>( texte , taille );
 
-    // initialisation du label
+    // initialisation du gadget
     m_interface->m_calqueFond->ajouterEnfant( nouveauGadget );
 
     return nouveauGadget;
@@ -58,13 +58,15 @@ std::shared_ptr<Bouton> Fabrique::bouton ( std::string texte , sf::Vector2i tail
 /////////////////////////////////////////////////
 std::shared_ptr<Bouton> Fabrique::bouton ( sf::Texture& texture )
 {
-//    // creation d'une image dans son pointeur
-//    std::shared_ptr<Bouton> nouveauGadget = std::make_shared<gui::Bouton>( image );
-//
-//    // initialisation du label
-//    m_interface->m_calqueFond.ajouterEnfant( nouveauGadget );
-//
-//    return nouveauGadget;
+    // creation du gadget dans son pointeur
+    sf::Vector2i taille = { texture.getSize().x, texture.getSize().y };
+    std::shared_ptr<Bouton> nouveauGadget = std::make_shared<gui::Bouton>( "", taille  );
+
+    // initialisation du gadget
+    m_interface->m_calqueFond->ajouterEnfant( nouveauGadget );
+    nouveauGadget->setIcone( texture );
+
+    return nouveauGadget;
 }
 
 ///////////////////////////////////////////////////

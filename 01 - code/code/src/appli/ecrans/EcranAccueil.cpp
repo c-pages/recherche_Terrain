@@ -103,8 +103,11 @@ EcranAccueil::initGUI  ( )
     std::shared_ptr<gui::Bouton>    boutonTexte_1   =   m_interface->creer.bouton( "Bouton texte sans taille" );
     boutonTexte_1->setPosition   ( 400,200 );
 
-    std::shared_ptr<gui::Bouton>    boutonTexte_2   =   m_interface->creer.bouton( "Bouton texte 'taillé'", { 200, 20 } );
+    std::shared_ptr<gui::Bouton>    boutonTexte_2   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) );
+//    boutonTexte_2->setIcone( Config::ms_textures.get( Config::Images::image_2 ) );
+
     boutonTexte_2->setPosition   ( 400,250 );
+    boutonTexte_2->setSize ({ 30,30});
 
     // interactions de l'interface
     m_interface->lier (  sf::Keyboard::Space
@@ -113,8 +116,15 @@ EcranAccueil::initGUI  ( )
 
     // interactions de l'interface
     boutonTexte_1->lier (  gui::Actions::Evenement::onBtnG_relacher
-                       , [this ](){  std::cout << "ACTION BOUTON\n"; }
-                       );
+                        , [this , boutonTexte_1 ](){
+                            std::cout << "ACTION BOUTON\n";
+                        });
+
+    boutonTexte_1->setRemplissageCouleur( sf::Color(0,0,200));
+    boutonTexte_1->setContourCouleur( sf::Color(250,250,0));
+    boutonTexte_1->setContourEpaisseur( 3 );
+    boutonTexte_1->setAlphaEtats( 255,255,0);
+
 }   // fin init GUI
 
 

@@ -33,7 +33,8 @@ public:
     enum Etat {
         Repos,      ///< Le bouton est au repos.
         Survol,     ///< Le bouton est survolé par la souris.
-        Presse      ///< Le bouton est pressé.
+        Presse,     ///< Le bouton est pressé.
+        Fin
     };
 
 

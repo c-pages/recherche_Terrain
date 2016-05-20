@@ -1345,7 +1345,7 @@
 	"gui/Calque.h"
 	<iostream>
 
-1463741740 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
+1463745794 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
 	<memory>
 	<SFML/Graphics.hpp>
 	<vector>
@@ -1385,7 +1385,7 @@
 	"appli/Ecran.h"
 	<stdio.h>
 
-1463695702 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
+1463744998 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
 	"appli/ecrans\EcranAccueil.h"
 	"appli/Config.h"
 	<iostream>
@@ -1416,7 +1416,7 @@
 	<gui/Gadget.h>
 	<iostream>
 
-1463741571 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gui.cpp
+1463741835 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gui.cpp
 	<iostream>
 	<gui/Gui.h>
 	<gui/Calque.h>
@@ -1484,7 +1484,7 @@
 1463741350 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\calque.cpp
 	<gui/Calque.h>
 
-1463686671 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\fabrique.cpp
+1463744879 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\fabrique.cpp
 	<gui/Fabrique.h>
 	"gui/Gui.h"
 	"appli/Config.h"
@@ -1508,7 +1508,7 @@
 	"gui/Gadget.h"
 	<SFML/Graphics.hpp>
 
-1463692914 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\label.cpp
+1463741835 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\label.cpp
 	<gui/gadgets/Label.h>
 	"appli/Config.h"
 	<iostream>
@@ -1526,11 +1526,11 @@
 	<gui/Actions.h>
 	<iostream>
 
-1463741672 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
+1463745897 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
 	<gui/gadgets/Bouton.h>
 	<appli/Config.h>
 	<iostream>
 
-1463741214 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
+1463745794 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
 	"gui/Gadget.h"
 
