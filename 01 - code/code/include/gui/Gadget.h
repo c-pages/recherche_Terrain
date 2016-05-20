@@ -98,6 +98,22 @@ public:
     /// Accesseurs / mutateur    /////////////////////
 
     /////////////////////////////////////////////////
+    /// \brief Definie la visibilité du gadget
+    ///
+    /// \param visible La nouvelle visibilité
+    /////////////////////////////////////////////////
+    virtual void setVisible ( bool visible ){ m_visible = visible; };
+
+    /////////////////////////////////////////////////
+    /// \brief SAvoir si le gadget est visible
+    ///
+    /// \return true si visible, false si caché
+    /////////////////////////////////////////////////
+    bool estVisible () const { return m_visible; };
+
+
+
+    /////////////////////////////////////////////////
     /// \brief Definie la taille de la marge
     ///
     /// \param marge La nouvelle marge
@@ -246,7 +262,8 @@ public:
 // Membres
 /////////////////////////////////////////////////
 protected:
-//    friend class Gui;
+    ///  /////////////////////
+    bool            m_visible; ///< La visibilité du gadget ( true :visible, false: caché )
 
     /// Composite /////////////////////
     Gadget*                                 m_parent;           ///< Le gadget parent.
@@ -256,7 +273,6 @@ protected:
     sf::Vector2i    m_size;             ///< La taille du gadget.
     sf::IntRect     m_globalBounds;     ///< Les limites globales du gadget (par rapport à la fenêtre principale).
     sf::IntRect     m_localBounds;      ///< Les limites locales du gadget (par rapport à son parent).
-
     sf::Vector2f    m_marge;            ///< la marge est l'espace entre texte ou icone et le fond par exemple.
 
 

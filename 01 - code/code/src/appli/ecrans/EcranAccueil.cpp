@@ -132,9 +132,8 @@ EcranAccueil::initGUI  ( )
     boutonTexte_3->setContourEpaisseur      ( 0);
 //    boutonTexte_3->setMarge({20,20});
 
-    std::shared_ptr<gui::Bouton>    boutonTexte_4   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) , { 20, 20 });
+    std::shared_ptr<gui::Bouton>    boutonTexte_4   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) , { 40, 20 });
     boutonTexte_4->setPosition   ( 400,350 );
-
 
 
 

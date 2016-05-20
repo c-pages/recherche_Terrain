@@ -151,14 +151,6 @@ public:
     /////////////////////////////////////////////////
     virtual Gadget* testerSurvol (sf::Vector2i posSouris) ;
 
-
-    /////////////////////////////////////////////////
-    /// \brief Traitement des évenements clavier ou souris.
-    ///
-    /// \param evenement		 L'évenemnt à tratier.
-    /////////////////////////////////////////////////
-    virtual void traiterEvenements (sf::Event evenement);
-
     /////////////////////////////////////////////////
     /// \brief Actualiser le gadget (bounding bax)
     ///

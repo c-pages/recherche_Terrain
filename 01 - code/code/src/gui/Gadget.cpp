@@ -9,7 +9,8 @@ namespace gui {
 
 /////////////////////////////////////////////////
 Gadget::Gadget ()
-: m_parent          ( nullptr )
+: m_visible         ( true )
+, m_parent          ( nullptr )
 , m_enfants         (  )
 , m_size            ( {0,0} )
 , m_globalBounds    ( {0,0,0,0} )
@@ -124,6 +125,9 @@ Gadget* Gadget::testerSurvol (sf::Vector2i posSouris)
 /////////////////////////////////////////////////
 void Gadget::traiterEvenements (sf::Event evenement)
 {
+    // si non visible on sort
+    if (! estVisible () ) return;
+
     // on traite les évènement des enfants
     for ( auto enfant : m_enfants )
         enfant->traiterEvenements ( evenement );
@@ -161,6 +165,8 @@ void Gadget::actualiser ()
 /////////////////////////////////////////////////
 void Gadget::draw (sf::RenderTarget& target, sf::RenderStates states) const
 {
+    // si non visible on sort
+    if (! estVisible () ) return;
 
     //On applique la transformation
     states.transform *= getTransform();

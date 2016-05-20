@@ -11,6 +11,7 @@ var classgui_1_1_gadget =
     [ "ajouterEnfant", "classgui_1_1_gadget.html#ae710168f0ae17e7b2992812268da3e32", null ],
     [ "demander_etreDevant", "classgui_1_1_gadget.html#a259ddff0c620f53e5533be5c09984323", null ],
     [ "draw", "classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866", null ],
+    [ "estVisible", "classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd", null ],
     [ "getEnfant", "classgui_1_1_gadget.html#a8cf95ed43ca734db351030c58c6fe2f5", null ],
     [ "getGlobalBounds", "classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401", null ],
     [ "getLocalBounds", "classgui_1_1_gadget.html#a9618784a15aedf679d52dfe46d5b6cb7", null ],
@@ -27,6 +28,7 @@ var classgui_1_1_gadget =
     [ "setPosition", "classgui_1_1_gadget.html#ad3d9ba5eecba0ecf49f94767699aba17", null ],
     [ "setPosition", "classgui_1_1_gadget.html#a2872eb12af266b02c8bc17affebc7827", null ],
     [ "setSize", "classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9", null ],
+    [ "setVisible", "classgui_1_1_gadget.html#a1ba69340c4ea11ac6facd3f0bb8487bf", null ],
     [ "supprimer", "classgui_1_1_gadget.html#a2c9c5d103b90ace0b72e66625497c995", null ],
     [ "testerSurvol", "classgui_1_1_gadget.html#a05c0bc3e85aab97c14f402cddb0be381", null ],
     [ "thisPtr", "classgui_1_1_gadget.html#ae1702e98e25d7b6986c98aeabecae7c0", null ],
@@ -37,5 +39,6 @@ var classgui_1_1_gadget =
     [ "m_localBounds", "classgui_1_1_gadget.html#a188b42366f5b5adf373edbe0af62a6ec", null ],
     [ "m_marge", "classgui_1_1_gadget.html#ace11645220e06219f23ac3e2f5150dff", null ],
     [ "m_parent", "classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a", null ],
-    [ "m_size", "classgui_1_1_gadget.html#a35c10fa7e18e19b6dc19d65490104474", null ]
+    [ "m_size", "classgui_1_1_gadget.html#a35c10fa7e18e19b6dc19d65490104474", null ],
+    [ "m_visible", "classgui_1_1_gadget.html#a10fc45e0ac3da5339be2e1efb9fed289", null ]
 ];

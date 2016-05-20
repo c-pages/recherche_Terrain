@@ -1,7 +1,8 @@
 <map id="gui::Gui::traiterEvenements" name="gui::Gui::traiterEvenements">
 <area shape="rect" id="node2" href="$classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="232,5,435,47"/>
 <area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="233,71,434,98"/>
-<area shape="rect" id="node4" href="$classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="250,123,417,164"/>
-<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="264,189,403,215"/>
-<area shape="rect" id="node6" href="$classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="252,239,415,266"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="250,123,417,164"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="264,189,403,215"/>
+<area shape="rect" id="node7" href="$classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="252,239,415,266"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="483,71,637,98"/>
 </map>

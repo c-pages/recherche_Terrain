@@ -1,0 +1,62 @@
+#ifndef GLISSIERE__H
+#define GLISSIERE__H
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include "Gadget.h"
+
+
+
+namespace gui {
+
+
+
+/////////////////////////////////////////////////
+/// \brief Une Glissière est un bouton qui permet de deplacer le contenu d'une fenetre.
+///
+/////////////////////////////////////////////////
+class Glissiere : public gui::Gadget {
+
+
+/////////////////////////////////////////////////
+// Enums & typedefs
+/////////////////////////////////////////////////
+    /////////////////////////////////////////////////
+    /// \brief l'orientation du slider.
+    /////////////////////////////////////////////////
+    enum Orientation {
+        Horizontal,
+        Vertical
+    };
+
+
+
+/////////////////////////////////////////////////
+// Méthodes
+/////////////////////////////////////////////////
+
+public:
+private:
+    /////////////////////////////////////////////////
+    /// \brief Constructeur (privée, seulement créable depuis une fenêtre (pour l(instant).
+    ///
+    /// \param orientation		 Un slider horizontal ou vertical.
+    /////////////////////////////////////////////////
+    Glissière (Orientation orientation);
+
+
+
+/////////////////////////////////////////////////
+// Membres
+/////////////////////////////////////////////////
+private:
+    Orientation m_orientation;    
+    Bouton m_btnFond;    ///< Le bouton fix de fond, il permet de déplacer en un clique le m_btnGlissière.    
+    Bouton m_btnGlissière;    ///< Ce bouton est la glissière proprement dite, c'est ce bouton qui glisse pour deplacer le contenu de la fenetre.    
+
+}; // fin class Glissiere
+
+} // fin namespace gui
+
+#endif

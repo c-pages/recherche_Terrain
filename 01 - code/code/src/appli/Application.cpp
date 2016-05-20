@@ -36,6 +36,7 @@ Application::Application()
 //                      , sf::Style::Fullscreen
 //                      , contextFenetre );
 
+
     m_fenetre->create(sf::VideoMode(1200, 800)
                       , "SuperOrganisme"
                       , sf::Style::Titlebar

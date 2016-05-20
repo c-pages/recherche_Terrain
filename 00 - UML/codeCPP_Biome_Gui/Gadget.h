@@ -4,8 +4,9 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
-#include <SFML/Graphics.hpp>
 #include <memory>
+#include "Actions.h"
+#include <SFML/Graphics.hpp>
 #include <vector>
 
 
@@ -20,7 +21,7 @@ class Gadget;
 /// \brief Un gadget est la classe abstraite des éléments de l'interface.
 ///
 /////////////////////////////////////////////////
-class Gadget : public sf::Transformable, public sf::NonCopyable, public sf::Drawable {
+class Gadget : public std::enable_shared_from_this, public gui::Actions, public sf::Transformable, public sf::NonCopyable, public sf::Drawable {
 
 
 
@@ -67,17 +68,32 @@ public:
     Gadget ();
 
     /////////////////////////////////////////////////
+    /// \brief Créer un shared pointeur vers this.
+    /// \return Un pointeur vers ce gadget.
+    ///
+    /////////////////////////////////////////////////
+    std::shared_ptr<Gadget> thisPtr ();
+
+    /////////////////////////////////////////////////
+    /// \brief Teste le survol du gadget par la souris.
+    /// \return nullptr de base, fonction à surcharger pour éléments interactifs.
+    ///
+    /// \param posSouris		 La position à tester.
+    /////////////////////////////////////////////////
+    virtual std::shared_ptr<Gadget> testerSurvol (sf::Vector2i posSouris) const;
+
+    /////////////////////////////////////////////////
     /// \brief Traitement des évenements clavier ou souris.
     ///
     /// \param evenement		 L'évenemnt à tratier.
     /////////////////////////////////////////////////
-    void traiterEvenements (sf::Event evenement);
+    virtual void traiterEvenements (sf::Event evenement);
 
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments de l'interface.
     ///
     /////////////////////////////////////////////////
-    void actualiser ();
+    virtual void actualiser ();
 
     /////////////////////////////////////////////////
     /// \brief Dessine tout les éléments de l'interface.
@@ -86,13 +102,6 @@ public:
     /// \param states		 
     /////////////////////////////////////////////////
     virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
-
-    /////////////////////////////////////////////////
-    /// \brief Teste le survol du gadget par la souris.
-    /// \return le gadget survolé, celui si ou un de ses enfants. nullptr si ne survol rien d'interactif.
-    ///
-    /////////////////////////////////////////////////
-    virtual std::shared_ptr<Gadget> testerSurvol () const;
 
 
 

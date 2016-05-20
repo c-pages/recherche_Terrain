@@ -8,6 +8,13 @@
 namespace gui {
 
 /////////////////////////////////////////////////
+InterfacePheromones::InterfacePheromones ()
+{
+    
+}
+
+
+/////////////////////////////////////////////////
 void InterfacePheromones::traiterEvenements (sf::Event evenement)
 {
     

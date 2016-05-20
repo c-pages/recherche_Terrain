@@ -14,5 +14,19 @@ std::shared_ptr<Label> Fabrique::label (string texte)
 }
 
 
+/////////////////////////////////////////////////
+std::shared_ptr<Image> Fabrique::image (sf::Texture texture)
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+std::shared_ptr<Vue> Fabrique::vue ()
+{
+    
+}
+
+
 } // fin namespace gui
 

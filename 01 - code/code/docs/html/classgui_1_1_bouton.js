@@ -17,7 +17,6 @@ var classgui_1_1_bouton =
     [ "setTexteStyle", "classgui_1_1_bouton.html#ac02c3dbec9a808602ed91baae6d180d5", null ],
     [ "setTexteTaille", "classgui_1_1_bouton.html#a441e2e464621b1f3c7c150800b6430e2", null ],
     [ "testerSurvol", "classgui_1_1_bouton.html#a85f00dfbf2b34eb66f934a401684b9f3", null ],
-    [ "traiterEvenements", "classgui_1_1_bouton.html#aafa7200ca277e63020cce724d164fa0d", null ],
     [ "m_alphaPresse", "classgui_1_1_bouton.html#a28caa2c70fbd2922851d418371c932d7", null ],
     [ "m_alphaRepos", "classgui_1_1_bouton.html#ad37670b2502dc25cd02fe3e1f01e79fa", null ],
     [ "m_alphaSurvol", "classgui_1_1_bouton.html#a2a230783e6a9c4d08ed4e3d002acf344", null ],

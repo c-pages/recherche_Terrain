@@ -80,6 +80,10 @@ void Label::actualiser () {
 /////////////////////////////////////////////////
 void Label::draw (sf::RenderTarget& target, sf::RenderStates states) const
 {
+    // si non visible on sort
+    if (! estVisible () ) return;
+
+
     //On applique la transformation
     states.transform *= getTransform();
 

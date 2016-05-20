@@ -159,36 +159,30 @@ void Bouton::ajuster ( )
 
 
 
-
-/////////////////////////////////////////////////
-void Bouton::traiterEvenements (sf::Event evenement)
-{
-
-}
-
-
 /////////////////////////////////////////////////
 void Bouton::actualiser ()
 {
 
-    // la taille du fond
+    // on actualise la taille du fond
     m_fond.setSize     ( {m_size.x, m_size.y}  );
 
-    // on centre le texte sur le fond
+    // on centre le texte et l'icone sur le fond
     auto tailleTexte = m_texte.getGlobalBounds();
     m_texte.setPosition ( (int)(m_fond.getSize().x/2 - tailleTexte.width/2), (int)(m_fond.getSize().y/2 - tailleTexte.height/2) );
-
-    // on centre l'icone sur le fond
     m_icone.setPosition ( (int)(m_fond.getSize().x/2 - m_icone.getSize().x/2 ), (int)(m_fond.getSize().y/2 - m_icone.getSize().y/2 ) );
 
-    // on actualise les bases du gadget (Bounds)
+    // on actualise les Bounds du gadget
     Gadget::actualiser();
+
 }
 
 
 /////////////////////////////////////////////////
 void Bouton::draw (sf::RenderTarget& target, sf::RenderStates states) const
 {
+
+    // si non visible on sort
+    if (! estVisible () ) return;
 
     //On applique la transformation
     states.transform *= getTransform();
@@ -212,23 +206,13 @@ Gadget* Bouton::testerSurvol (sf::Vector2i posSouris)
 //std::shared_ptr<Gadget> Bouton::testerSurvol (sf::Vector2i posSouris)
 {
 
-//    std::cout << "testerSurvol\n";
-    // Si on survol pas le gadget on sort
-    if ( ! getGlobalBounds().contains( posSouris.x, posSouris.y ) ) return nullptr;
+    // si non visible on renvois nullptr
+    if (! estVisible () ) return nullptr;
 
+    // Si on survol le gadget on renvois son pointeur, sinon on renvois pointeur vide
+    if ( getGlobalBounds().contains( posSouris.x, posSouris.y ) ) return this;
+    else  return nullptr;
 
-//    // On test le survol des composants
-//    auto testInterfaceLocal = testerSurvolComposants( position );
-//    if ( testInterfaceLocal != nullptr )
-//        return testInterfaceLocal;
-//
-//    // On test le survol des enfants
-//    auto testEnfants = testerSurvolEnfants( position );
-//    if ( testEnfants != nullptr )
-//        return testEnfants;
-
-    // si on a rien survolé on renvois nous-même
-    else  return this;
 }
 
 

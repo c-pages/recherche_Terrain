@@ -1,9 +1,10 @@
 <map id="gui::Gui::setSize" name="gui::Gui::setSize">
 <area shape="rect" id="node2" href="$classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="417,5,583,47"/>
 <area shape="rect" id="node3" href="$classgui_1_1_gui.html#a6e0209d60ac47f2c86e8340a9b4a64b1" title="Traitement général des évenements clavier ou souris de tout les gadgets de l&#39;interface. " alt="" coords="172,118,351,145"/>
-<area shape="rect" id="node8" href="$classgui_1_1_gui.html#ad10b5a8ef07513c03c9126a3eef9955b" title="Actualiser les éléments de l&#39;interface. " alt="" coords="196,169,327,195"/>
+<area shape="rect" id="node9" href="$classgui_1_1_gui.html#ad10b5a8ef07513c03c9126a3eef9955b" title="Actualiser les éléments de l&#39;interface. " alt="" coords="196,169,327,195"/>
 <area shape="rect" id="node4" href="$classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="399,71,601,112"/>
 <area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="399,137,601,163"/>
-<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="431,187,569,214"/>
-<area shape="rect" id="node7" href="$classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="419,238,581,265"/>
+<area shape="rect" id="node7" href="$classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="431,187,569,214"/>
+<area shape="rect" id="node8" href="$classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="419,238,581,265"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="649,137,804,163"/>
 </map>

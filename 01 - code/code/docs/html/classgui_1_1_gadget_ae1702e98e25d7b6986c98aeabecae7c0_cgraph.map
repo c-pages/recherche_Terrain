@@ -1,7 +1,8 @@
 <map id="gui::Gadget::thisPtr" name="gui::Gadget::thisPtr">
 <area shape="rect" id="node2" href="$classgui_1_1_gadget.html#a05c0bc3e85aab97c14f402cddb0be381" title="Teste le survol du gadget par la souris. " alt="" coords="206,5,371,32"/>
 <area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="188,56,389,83"/>
-<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="212,107,365,133"/>
-<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="227,157,351,184"/>
-<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="437,107,599,133"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="212,157,365,184"/>
+<area shape="rect" id="node7" href="$classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="227,107,351,133"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="441,69,595,96"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="437,157,599,184"/>
 </map>

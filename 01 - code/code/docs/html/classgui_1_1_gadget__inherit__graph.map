@@ -1,8 +1,10 @@
 <map id="gui::Gadget" name="gui::Gadget">
-<area shape="rect" id="node7" href="$classgui_1_1_bouton.html" title="Un bouton rectangulaire. " alt="" coords="339,21,427,47"/>
-<area shape="rect" id="node8" href="$classgui_1_1_calque.html" title="Un calque permet de grouper un ensemble de gadgets et du coup de gérer la position de la profondeur d..." alt="" coords="339,71,426,98"/>
-<area shape="rect" id="node9" href="$classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme&#45;machine du jeu. D&#39;un coté un système de fenêtre..." alt="" coords="349,122,416,149"/>
-<area shape="rect" id="node10" href="$classgui_1_1_image.html" title="Une simple image. " alt="" coords="341,173,424,199"/>
-<area shape="rect" id="node11" href="$classgui_1_1_label.html" title="Un simple label. " alt="" coords="343,223,422,250"/>
-<area shape="rect" id="node6" href="$classgui_1_1_actions.html" title="Classe abstraite qui gère les évenements claviers et souris. " alt="" coords="34,223,125,250"/>
+<area shape="rect" id="node7" href="$classgui_1_1_bouton.html" title="Un bouton rectangulaire. " alt="" coords="370,5,458,32"/>
+<area shape="rect" id="node8" href="$classgui_1_1_calque.html" title="Un calque permet de grouper un ensemble de gadgets et du coup de gérer la position de la profondeur d..." alt="" coords="371,56,457,83"/>
+<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html" title="Une fenêtre encapsule des éléments d&#39;interface. " alt="" coords="369,107,459,133"/>
+<area shape="rect" id="node10" href="$classgui_1_1_fenetre_1_1_glissiere.html" title="Une Glissière est un élément interactif qui permet de deplacer le contenu d&#39;une fenetre. " alt="" coords="339,157,489,184"/>
+<area shape="rect" id="node11" href="$classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme&#45;machine du jeu. D&#39;un coté un système de fenêtre..." alt="" coords="381,208,447,235"/>
+<area shape="rect" id="node12" href="$classgui_1_1_image.html" title="Une simple image. " alt="" coords="373,259,455,285"/>
+<area shape="rect" id="node13" href="$classgui_1_1_label.html" title="Un simple label. " alt="" coords="375,309,453,336"/>
+<area shape="rect" id="node6" href="$classgui_1_1_actions.html" title="Classe abstraite qui gère les évenements claviers et souris. " alt="" coords="34,259,125,285"/>
 </map>

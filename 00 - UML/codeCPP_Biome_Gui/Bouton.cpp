@@ -8,6 +8,21 @@
 namespace gui {
 
 /////////////////////////////////////////////////
+Bouton::Bouton ()
+: m_etat ( Repos )
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+void Bouton::setEtat (Etat etat)
+{
+    
+}
+
+
+/////////////////////////////////////////////////
 void Bouton::traiterEvenements (sf::Event evenement)
 {
     
@@ -23,6 +38,13 @@ void Bouton::actualiser ()
 
 /////////////////////////////////////////////////
 void Bouton::draw (sf::RenderTarget& target, sf::RenderStates states) const
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+std::shared_ptr<Gadget> Bouton::testerSurvol (sf::Vector2i posSouris) const
 {
     
 }

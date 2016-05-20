@@ -25,11 +25,26 @@ class Fabrique {
 public:
     /////////////////////////////////////////////////
     /// \brief Créer un label.
-    /// \return un pointeur vers le nouveau label créé.
+    /// \return un pointeur vers le nouveau gadget créé.
     ///
     /// \param texte		 Le texte du label.
     /////////////////////////////////////////////////
     std::shared_ptr<Label> label (string texte);
+
+    /////////////////////////////////////////////////
+    /// \brief Créer une image.
+    /// \return un pointeur vers le nouveau gadget créé.
+    ///
+    /// \param texture		 La texture du label.
+    /////////////////////////////////////////////////
+    std::shared_ptr<Image> image (sf::Texture texture);
+
+    /////////////////////////////////////////////////
+    /// \brief Créer un support pour afficher une vue SFML.
+    /// \return un pointeur vers le nouveau gadget créé.
+    ///
+    /////////////////////////////////////////////////
+    std::shared_ptr<Vue> vue ();
 
 
 }; // fin class Fabrique

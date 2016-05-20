@@ -5,6 +5,9 @@
 // Headers
 /////////////////////////////////////////////////
 #include "Gadget.h"
+#include <SFML/Graphics.hpp>
+#include <memory>
+#include  "Slider.h"
 
 
 
@@ -14,6 +17,7 @@ namespace gui {
 
 /////////////////////////////////////////////////
 /// \brief Une fenêtre encapsule des éléments d'interface.
+/// 
 ///
 /////////////////////////////////////////////////
 class Fenetre : public gui::Gadget {
@@ -23,19 +27,27 @@ class Fenetre : public gui::Gadget {
 /////////////////////////////////////////////////
 // Méthodes
 /////////////////////////////////////////////////
+
 public:
+public:
+    /////////////////////////////////////////////////
+    /// \brief Constructeur
+    ///
+    /////////////////////////////////////////////////
+    Fenetre ();
+
     /////////////////////////////////////////////////
     /// \brief Traitement des évenements clavier ou souris.
     ///
     /// \param evenement		 L'évenemnt à tratier.
     /////////////////////////////////////////////////
-    void traiterEvenements (sf::Event evenement);
+    virtual void traiterEvenements (sf::Event evenement);
 
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments de l'interface.
     ///
     /////////////////////////////////////////////////
-    void actualiser ();
+    virtual void actualiser ();
 
     /////////////////////////////////////////////////
     /// \brief Dessine tout les éléments de l'interface.
@@ -45,6 +57,15 @@ public:
     /////////////////////////////////////////////////
     virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
 
+
+
+/////////////////////////////////////////////////
+// Membres
+/////////////////////////////////////////////////
+private:
+    sf::Shader m_shaderClip;    ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage    
+    gui::Slider m_sliderV;     ///< Le slider vertical.
+    gui::Slider m_sliderH;     ///< Le slider horizontal.
 
 }; // fin class Fenetre
 
