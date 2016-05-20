@@ -1,0 +1,8 @@
+<map id="gui::Gadget" name="gui::Gadget">
+<area shape="rect" id="node7" href="$classgui_1_1_bouton.html" title="Un bouton rectangulaire. " alt="" coords="339,21,427,47"/>
+<area shape="rect" id="node8" href="$classgui_1_1_calque.html" title="Un calque permet de grouper un ensemble de gadgets et du coup de gérer la position de la profondeur d..." alt="" coords="339,71,426,98"/>
+<area shape="rect" id="node9" href="$classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme&#45;machine du jeu. D&#39;un coté un système de fenêtre..." alt="" coords="349,122,416,149"/>
+<area shape="rect" id="node10" href="$classgui_1_1_image.html" title="Une simple image. " alt="" coords="341,173,424,199"/>
+<area shape="rect" id="node11" href="$classgui_1_1_label.html" title="Un simple label. " alt="" coords="343,223,422,250"/>
+<area shape="rect" id="node6" href="$classgui_1_1_actions.html" title="Classe abstraite qui gère les évenements claviers et souris. " alt="" coords="34,223,125,250"/>
+</map>

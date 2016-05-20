@@ -1,0 +1,206 @@
+\hypertarget{classapp_1_1_application}{}\section{RÃ©fÃ©rence de la classe app\+:\+:Application}
+\label{classapp_1_1_application}\index{app\+::\+Application@{app\+::\+Application}}
+
+
+La classe de base du programme.  
+
+
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7}{Ecrans} \{ \hyperlink{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7a73bf7ecf1c9b44c4f3022d48f187cd70}{Accueil}, 
+\hyperlink{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7a4f69f619f9ff3c77e312f52cefeba3e6}{Jeu}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapp_1_1_application_a3c480be05f51b91e648b2f6533a32f1b}{Application} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{classapp_1_1_application_a6d1fee4f8c8fb3d33470f605c179def9}{$\sim$\+Application} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_application_ace29cf983643a2cc74cb52b19483620d}{changer\+Ecran} (\hyperlink{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7}{Ecrans} ecran)
+\begin{DoxyCompactList}\small\item\em Changer d\textquotesingle{}écran. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_application_a266215c22bb94757ac0b338a3abc3daa}{ajouter\+Ecran} (\hyperlink{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7}{Ecrans} ecran)
+\begin{DoxyCompactList}\small\item\em ajouter un écran \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_application_a6cbc17d5a777730d7811e874182fd11a}{retirer\+Ecran} ()
+\begin{DoxyCompactList}\small\item\em retirer un écran \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_application_ae375e0fdeb21265f93cff8958a26f95d}{executer} ()
+\begin{DoxyCompactList}\small\item\em La boucle principale. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_application_aee4bdeeb44c6b2a943acc8e651b0ff83}{traiter\+\_\+evenements} ()
+\begin{DoxyCompactList}\small\item\em La gestion des évènements utilisateurs. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_application_ad10d5a33f82b7fc224e3d0c7c8bf57b2}{actualiser} (sf\+::\+Time deltaT)
+\begin{DoxyCompactList}\small\item\em Actualiser les éléments. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_application_a03b3bac56e523faa9669622eadd237f8}{dessiner} ()
+\begin{DoxyCompactList}\small\item\em Rendre les éléments. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window $\ast$ \hyperlink{classapp_1_1_application_a8636afdcd2019c1358560d92e156e68c}{get\+Fenetre} ()
+\begin{DoxyCompactList}\small\item\em renvois la fenetre sfml de l\textquotesingle{}application \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description dÃ©taillÃ©e}
+La classe de base du programme. 
+
+\subsection{Documentation des Ã©numÃ©rations membres}
+\index{app\+::\+Application@{app\+::\+Application}!Ecrans@{Ecrans}}
+\index{Ecrans@{Ecrans}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{Ecrans}{Ecrans}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf app\+::\+Application\+::\+Ecrans}}\hypertarget{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7}{}\label{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7}
+\begin{Desc}
+\item[Valeurs Ã©numÃ©rÃ©es]\par
+\begin{description}
+\index{Accueil@{Accueil}!app\+::\+Application@{app\+::\+Application}}\index{app\+::\+Application@{app\+::\+Application}!Accueil@{Accueil}}\item[{\em 
+Accueil\hypertarget{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7a73bf7ecf1c9b44c4f3022d48f187cd70}{}\label{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7a73bf7ecf1c9b44c4f3022d48f187cd70}
+}]\index{Jeu@{Jeu}!app\+::\+Application@{app\+::\+Application}}\index{app\+::\+Application@{app\+::\+Application}!Jeu@{Jeu}}\item[{\em 
+Jeu\hypertarget{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7a4f69f619f9ff3c77e312f52cefeba3e6}{}\label{classapp_1_1_application_af23b16d902265e5140a3c29f9f2a45a7a4f69f619f9ff3c77e312f52cefeba3e6}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{app\+::\+Application@{app\+::\+Application}!Application@{Application}}
+\index{Application@{Application}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{Application()}{Application()}}]{\setlength{\rightskip}{0pt plus 5cm}app\+::\+Application\+::\+Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_a3c480be05f51b91e648b2f6533a32f1b}{}\label{classapp_1_1_application_a3c480be05f51b91e648b2f6533a32f1b}
+
+
+Constructeur. 
+
+\index{app\+::\+Application@{app\+::\+Application}!````~Application@{$\sim$\+Application}}
+\index{````~Application@{$\sim$\+Application}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{$\sim$\+Application()}{~Application()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual app\+::\+Application\+::$\sim$\+Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classapp_1_1_application_a6d1fee4f8c8fb3d33470f605c179def9}{}\label{classapp_1_1_application_a6d1fee4f8c8fb3d33470f605c179def9}
+
+
+Destructeur. 
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{app\+::\+Application@{app\+::\+Application}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{actualiser(sf\+::\+Time delta\+T)}{actualiser(sf::Time deltaT)}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Application\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{deltaT}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_ad10d5a33f82b7fc224e3d0c7c8bf57b2}{}\label{classapp_1_1_application_ad10d5a33f82b7fc224e3d0c7c8bf57b2}
+
+
+Actualiser les éléments. 
+
+Actualiser les différents éléments du ou des écrans actifs. 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em deltaT} & Un {\itshape float} qui indique le delta du temps écoulé depuis la dernière actualisation. pour ponderer les mouvements en fonction du temps et ainsi avoir une indépendance entre animation et frame rate. \\
+\hline
+\end{DoxyParams}
+\index{app\+::\+Application@{app\+::\+Application}!ajouter\+Ecran@{ajouter\+Ecran}}
+\index{ajouter\+Ecran@{ajouter\+Ecran}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{ajouter\+Ecran(\+Ecrans ecran)}{ajouterEcran(Ecrans ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Application\+::ajouter\+Ecran (
+\begin{DoxyParamCaption}
+\item[{{\bf Ecrans}}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_a266215c22bb94757ac0b338a3abc3daa}{}\label{classapp_1_1_application_a266215c22bb94757ac0b338a3abc3daa}
+
+
+ajouter un écran 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Application@{app\+::\+Application}!changer\+Ecran@{changer\+Ecran}}
+\index{changer\+Ecran@{changer\+Ecran}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{changer\+Ecran(\+Ecrans ecran)}{changerEcran(Ecrans ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Application\+::changer\+Ecran (
+\begin{DoxyParamCaption}
+\item[{{\bf Ecrans}}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_ace29cf983643a2cc74cb52b19483620d}{}\label{classapp_1_1_application_ace29cf983643a2cc74cb52b19483620d}
+
+
+Changer d\textquotesingle{}écran. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Application@{app\+::\+Application}!dessiner@{dessiner}}
+\index{dessiner@{dessiner}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{dessiner()}{dessiner()}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Application\+::dessiner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_a03b3bac56e523faa9669622eadd237f8}{}\label{classapp_1_1_application_a03b3bac56e523faa9669622eadd237f8}
+
+
+Rendre les éléments. 
+
+Dessiner les différents éléments du ou des écrans actifs. \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Application@{app\+::\+Application}!executer@{executer}}
+\index{executer@{executer}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{executer()}{executer()}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Application\+::executer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_ae375e0fdeb21265f93cff8958a26f95d}{}\label{classapp_1_1_application_ae375e0fdeb21265f93cff8958a26f95d}
+
+
+La boucle principale. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Application@{app\+::\+Application}!get\+Fenetre@{get\+Fenetre}}
+\index{get\+Fenetre@{get\+Fenetre}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{get\+Fenetre()}{getFenetre()}}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Render\+Window$\ast$ app\+::\+Application\+::get\+Fenetre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_a8636afdcd2019c1358560d92e156e68c}{}\label{classapp_1_1_application_a8636afdcd2019c1358560d92e156e68c}
+
+
+renvois la fenetre sfml de l\textquotesingle{}application 
+
+\begin{DoxyReturn}{Renvoie}
+la fenetre sfml de l\textquotesingle{}application 
+\end{DoxyReturn}
+\index{app\+::\+Application@{app\+::\+Application}!retirer\+Ecran@{retirer\+Ecran}}
+\index{retirer\+Ecran@{retirer\+Ecran}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{retirer\+Ecran()}{retirerEcran()}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Application\+::retirer\+Ecran (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_a6cbc17d5a777730d7811e874182fd11a}{}\label{classapp_1_1_application_a6cbc17d5a777730d7811e874182fd11a}
+
+
+retirer un écran 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Application@{app\+::\+Application}!traiter\+\_\+evenements@{traiter\+\_\+evenements}}
+\index{traiter\+\_\+evenements@{traiter\+\_\+evenements}!app\+::\+Application@{app\+::\+Application}}
+\subsubsection[{\texorpdfstring{traiter\+\_\+evenements()}{traiter_evenements()}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Application\+::traiter\+\_\+evenements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_application_aee4bdeeb44c6b2a943acc8e651b0ff83}{}\label{classapp_1_1_application_aee4bdeeb44c6b2a943acc8e651b0ff83}
+
+
+La gestion des évènements utilisateurs. 
+
+Gère les entrées claviers, souris, fenetre ... \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/kris/\+One\+Drive/recherche Biome/01 -\/ code/code/include/appli/\hyperlink{_application_8h}{Application.\+h}\end{DoxyCompactItemize}

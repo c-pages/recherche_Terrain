@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Appli:  Fichier source de Bouton.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Appli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_bouton_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bouton.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bouton_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BOUTON__H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BOUTON__H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Headers</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span><span class="preprocessor">#include &quot;<a class="code" href="_gadget_8h.html">gui/Gadget.h</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegui.html">gui</a> {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgui_1_1_bouton.html">Bouton</a> :  <span class="keyword">public</span> <a class="code" href="classgui_1_1_gadget.html">gui::Gadget</a> {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Méthodes</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span><span class="keyword">public</span>:</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classgui_1_1_bouton.html#af7e84bbcc6e18c37c174555dddedcc12">Bouton</a> ( std::string texte , sf::Vector2i taille );</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//    /////////////////////////////////////////////////</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//    /// \brief Créer un shared pointeur vers this.</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//    /// \return Un pointeur vers ce gadget.</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//    ///</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//    /////////////////////////////////////////////////</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//    virtual std::shared_ptr&lt;Gadget&gt; thisPtr ()  { return std::make_shared&lt;Bouton&gt;(this); };</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classgui_1_1_bouton.html#a2880b31ee8b540382b191195281182e2">setEtat</a> (<a class="code" href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524">Etat</a> etat);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classgui_1_1_bouton.html#aafa7200ca277e63020cce724d164fa0d">traiterEvenements</a> (sf::Event evenement);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e">actualiser</a> ();</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d">draw</a> (sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const</span>;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//    virtual std::shared_ptr&lt;Gadget&gt; testerSurvol (sf::Vector2i posSouris) ;</span></div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classgui_1_1_gadget.html">Gadget</a>* <a class="code" href="classgui_1_1_bouton.html#a85f00dfbf2b34eb66f934a401684b9f3">testerSurvol</a> (sf::Vector2i posSouris) ;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// Membres</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span><span class="keyword">public</span>:</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#aba5d6c7c41e4483f40d883d04c358ad2">   89</a></span>&#160;    <a class="code" href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524">Etat</a>                <a class="code" href="classgui_1_1_bouton.html#aba5d6c7c41e4483f40d883d04c358ad2">m_etat</a>;     </div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#abc3058ce110296f3f7e31aac1f47b122">   92</a></span>&#160;    sf::RectangleShape  <a class="code" href="classgui_1_1_bouton.html#abc3058ce110296f3f7e31aac1f47b122">m_shape</a>;    </div><div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a988708913eceb6733a852275a393147a">   93</a></span>&#160;    sf::Text            <a class="code" href="classgui_1_1_bouton.html#a988708913eceb6733a852275a393147a">m_texte</a>;    </div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//    sf::Color           m_couleurRepos;</span></div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//    sf::Color           m_couleurSurvol;</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">//    sf::Color           m_couleurPresse;</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}; <span class="comment">// fin class Bouton</span></div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">// fin namespace gui</span></div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classgui_1_1_bouton_html_abc3058ce110296f3f7e31aac1f47b122"><div class="ttname"><a href="classgui_1_1_bouton.html#abc3058ce110296f3f7e31aac1f47b122">gui::Bouton::m_shape</a></div><div class="ttdeci">sf::RectangleShape m_shape</div><div class="ttdoc">les éléments graphiques ///////////////// </div><div class="ttdef"><b>Definition:</b> Bouton.h:92</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a988708913eceb6733a852275a393147a"><div class="ttname"><a href="classgui_1_1_bouton.html#a988708913eceb6733a852275a393147a">gui::Bouton::m_texte</a></div><div class="ttdeci">sf::Text m_texte</div><div class="ttdoc">Le texte sfml affiché. </div><div class="ttdef"><b>Definition:</b> Bouton.h:93</div></div>
+<div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> Actions.h:13</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a2255d73ed2ea825e61279148c004884e"><div class="ttname"><a href="classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e">gui::Bouton::actualiser</a></div><div class="ttdeci">virtual void actualiser()</div><div class="ttdoc">Actualiser le gadget (bounding bax) </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:79</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a2880b31ee8b540382b191195281182e2"><div class="ttname"><a href="classgui_1_1_bouton.html#a2880b31ee8b540382b191195281182e2">gui::Bouton::setEtat</a></div><div class="ttdeci">virtual void setEtat(Etat etat)</div><div class="ttdoc">Définie l&amp;#39;état du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:49</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html"><div class="ttname"><a href="classgui_1_1_bouton.html">gui::Bouton</a></div><div class="ttdoc">Un bouton rectangulaire. </div><div class="ttdef"><b>Definition:</b> Bouton.h:20</div></div>
+<div class="ttc" id="classgui_1_1_gadget_html"><div class="ttname"><a href="classgui_1_1_gadget.html">gui::Gadget</a></div><div class="ttdoc">Un gadget est la classe abstraite des éléments de l&amp;#39;interface. </div><div class="ttdef"><b>Definition:</b> Gadget.h:21</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a8d736a0c912d7bb23551ccc0aaa0e20d"><div class="ttname"><a href="classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d">gui::Bouton::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const </div><div class="ttdoc">Dessine le gadget. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:87</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_aafa7200ca277e63020cce724d164fa0d"><div class="ttname"><a href="classgui_1_1_bouton.html#aafa7200ca277e63020cce724d164fa0d">gui::Bouton::traiterEvenements</a></div><div class="ttdeci">virtual void traiterEvenements(sf::Event evenement)</div><div class="ttdoc">Traitement des évenements clavier ou souris. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:72</div></div>
+<div class="ttc" id="classgui_1_1_gadget_html_ab11cdc9ef91e4f62286cca422d65c524"><div class="ttname"><a href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524">gui::Gadget::Etat</a></div><div class="ttdeci">Etat</div><div class="ttdoc">&lt; </div><div class="ttdef"><b>Definition:</b> Gadget.h:33</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_af7e84bbcc6e18c37c174555dddedcc12"><div class="ttname"><a href="classgui_1_1_bouton.html#af7e84bbcc6e18c37c174555dddedcc12">gui::Bouton::Bouton</a></div><div class="ttdeci">Bouton(std::string texte, sf::Vector2i taille)</div><div class="ttdoc">Constructeur. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:11</div></div>
+<div class="ttc" id="_gadget_8h_html"><div class="ttname"><a href="_gadget_8h.html">Gadget.h</a></div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_aba5d6c7c41e4483f40d883d04c358ad2"><div class="ttname"><a href="classgui_1_1_bouton.html#aba5d6c7c41e4483f40d883d04c358ad2">gui::Bouton::m_etat</a></div><div class="ttdeci">Etat m_etat</div><div class="ttdoc">L&amp;#39;état du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.h:89</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a85f00dfbf2b34eb66f934a401684b9f3"><div class="ttname"><a href="classgui_1_1_bouton.html#a85f00dfbf2b34eb66f934a401684b9f3">gui::Bouton::testerSurvol</a></div><div class="ttdeci">virtual Gadget * testerSurvol(sf::Vector2i posSouris)</div><div class="ttdoc">Teste le survol du gadget par la souris. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:102</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_48c1f94cd2ae07e13fa9a9f16a1d541c.html">gui</a></li><li class="navelem"><a class="el" href="dir_e5e2a7372dee725280dce163f2b5407f.html">gadgets</a></li><li class="navelem"><a class="el" href="_bouton_8h.html">Bouton.h</a></li>
+    <li class="footer">Généré le Vendredi 20 Mai 2016 13:06:37 pour Appli par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

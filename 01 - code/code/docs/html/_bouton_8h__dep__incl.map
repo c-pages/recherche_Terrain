@@ -1,0 +1,14 @@
+<map id="Bouton.h" name="Bouton.h">
+<area shape="rect" id="node2" href="$_fabrique_8h.html" title="Fabrique.h" alt="" coords="467,80,550,107"/>
+<area shape="rect" id="node13" href="$_bouton_8cpp.html" title="Bouton.cpp" alt="" coords="574,80,662,107"/>
+<area shape="rect" id="node3" href="$_gui_8h.html" title="Gui.h" alt="" coords="406,155,459,181"/>
+<area shape="rect" id="node11" href="$_fabrique_8cpp.html" title="Fabrique.cpp" alt="" coords="460,229,557,256"/>
+<area shape="rect" id="node12" href="$_gui_8cpp.html" title="Gui.cpp" alt="" coords="582,229,649,256"/>
+<area shape="rect" id="node4" href="$_application_8h.html" title="La classe principale du programme. " alt="" coords="187,229,284,256"/>
+<area shape="rect" id="node5" href="$_ecran_accueil_8h.html" title="EcranAccueil.h" alt="" coords="12,304,123,331"/>
+<area shape="rect" id="node6" href="$_application_8cpp.html" title="Application.cpp" alt="" coords="155,379,265,405"/>
+<area shape="rect" id="node8" href="$_ecran_jeu_8h.html" title="EcranJeu.h" alt="" coords="297,304,384,331"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title="main.cpp" alt="" coords="198,304,273,331"/>
+<area shape="rect" id="node7" href="$_ecran_accueil_8cpp.html" title="EcranAccueil.cpp" alt="" coords="5,379,129,405"/>
+<area shape="rect" id="node9" href="$_ecran_jeu_8cpp.html" title="EcranJeu.cpp" alt="" coords="290,379,391,405"/>
+</map>

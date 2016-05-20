@@ -1,0 +1,5 @@
+<map id="gui::Label::setTaille" name="gui::Label::setTaille">
+<area shape="rect" id="node2" href="$classgui_1_1_label.html#af807726e00c95695a8ed8ee60a898b6a" title="Actualiser les éléments de l&#39;interface. " alt="" coords="188,29,331,56"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="379,29,532,56"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="580,29,741,56"/>
+</map>

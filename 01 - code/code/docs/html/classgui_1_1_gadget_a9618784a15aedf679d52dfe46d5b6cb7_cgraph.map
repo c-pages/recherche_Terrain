@@ -1,0 +1,8 @@
+<map id="gui::Gadget::getLocalBounds" name="gui::Gadget::getLocalBounds">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#a62dfd5bd962b252b792f00b183df9462" title="Constructeur. " alt="" coords="275,5,414,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a51641ad00a9d762eaef51a86fe0fb622" title="Créer un shared pointeur vers this. " alt="" coords="277,56,412,83"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#abff34c1b161e3f3eb238e90c2a48ec11" title="Teste le survol du gadget par la souris. " alt="" coords="262,107,427,133"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="244,157,445,184"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="268,208,421,235"/>
+<area shape="rect" id="node7" href="$classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="283,259,407,285"/>
+</map>

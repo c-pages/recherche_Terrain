@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classapp_1_1_application.html#ae375e0fdeb21265f93cff8958a26f95d" title="La boucle principale. " alt="" coords="104,122,277,149"/>
+<area shape="rect" id="node3" href="$classapp_1_1_application.html#aee4bdeeb44c6b2a943acc8e651b0ff83" title="La gestion des Ã©vÃ¨nements utilisateurs. " alt="" coords="339,5,495,47"/>
+<area shape="rect" id="node5" href="$classapp_1_1_config.html#a300d3ecafed165cfe44b93c555116ff5" title="recuperer la durÃ©e d&#39;une image, DureeImage = 1.f / 60.f Ã  60Fps. " alt="" coords="325,71,508,98"/>
+<area shape="rect" id="node6" href="$classapp_1_1_application.html#ad10d5a33f82b7fc224e3d0c7c8bf57b2" title="Actualiser les Ã©lÃ©ments. " alt="" coords="327,122,506,149"/>
+<area shape="rect" id="node8" href="$classapp_1_1_gestion__ecrans.html#a7424aab98a8b01f5b5e201ee77bbb7bb" title="Demande si il y a encore des ecrans dans la pile. " alt="" coords="345,173,488,215"/>
+<area shape="rect" id="node9" href="$classapp_1_1_application.html#a03b3bac56e523faa9669622eadd237f8" title="Rendre les Ã©lÃ©ments. " alt="" coords="331,239,503,266"/>
+<area shape="rect" id="node4" href="$classapp_1_1_gestion__ecrans.html#afdca6c8f031948a5ce80136209924fe8" title="Gère les évenements des écrans actifs. " alt="" coords="556,5,699,47"/>
+<area shape="rect" id="node7" href="$classapp_1_1_gestion__ecrans.html#ac271e2ce11691a51f82f54a7c395d565" title="Actualiser les éléments. " alt="" coords="556,115,699,156"/>
+<area shape="rect" id="node10" href="$classapp_1_1_gestion__ecrans.html#a3c413e7ecbcb252c343136465f5be100" title="Rendre les écrans de la pile. " alt="" coords="556,232,699,273"/>
+</map>

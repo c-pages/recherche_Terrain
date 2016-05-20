@@ -1,0 +1,5 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. " alt="" coords="5,31,91,57"/>
+<area shape="rect" id="node2" href="$classapp_1_1_ecran_accueil.html" title="L&#39;écran d&#39;accueil affiche le menu de démarrage du jeu : Démarrer une partie, accéder au options..." alt="" coords="139,5,267,32"/>
+<area shape="rect" id="node3" href="$classapp_1_1_ecran_jeu.html" title="Ecran de jeu. " alt="" coords="150,56,255,83"/>
+</map>

@@ -1,0 +1,6 @@
+C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/gui/Fabrique.h:31: warning: argument 'le' of command @param is not found in the argument list of gui::Fabrique::Fabrique(Gui *interface)
+C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/gui/Fabrique.h:35: warning: The following parameters of gui::Fabrique::Fabrique(Gui *interface) are not documented:
+  parameter 'interface'
+C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/gui/gadgets/Image.h:36: warning: argument 'texure' of command @param is not found in the argument list of gui::Image::setTexture(sf::Texture &texture)
+C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/gui/gadgets/Image.h:40: warning: The following parameters of gui::Image::setTexture(sf::Texture &texture) are not documented:
+  parameter 'texture'

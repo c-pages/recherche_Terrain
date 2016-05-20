@@ -1,0 +1,10 @@
+<map id="gui::Gadget::demander_etreDevant" name="gui::Gadget::demander_etreDevant">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#af01ca555487f3ea351e53e2074dad3aa" title="Mettre le gadget au dessus des autres enfants de son parent. " alt="" coords="208,31,381,57"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae1702e98e25d7b6986c98aeabecae7c0" title="Créer un shared pointeur vers this. " alt="" coords="227,107,362,133"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a387706235192713391026917bb119b22" title="retirer un enfant du gadget " alt="" coords="447,5,613,32"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a05c0bc3e85aab97c14f402cddb0be381" title="Teste le survol du gadget par la souris. " alt="" coords="447,56,613,83"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="429,107,631,133"/>
+<area shape="rect" id="node7" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="453,157,607,184"/>
+<area shape="rect" id="node9" href="$classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="468,208,592,235"/>
+<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="679,157,840,184"/>
+</map>

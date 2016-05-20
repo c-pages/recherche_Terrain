@@ -1,0 +1,193 @@
+\hypertarget{classapp_1_1_gestion__ecrans}{}\section{R√©f√©rence de la classe app\+:\+:Gestion\+\_\+ecrans}
+\label{classapp_1_1_gestion__ecrans}\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+
+
+Gestionnaire des Ècrans.  
+
+
+
+
+{\ttfamily \#include $<$Gestion\+\_\+ecrans.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapp_1_1_gestion__ecrans_a576182f13e96e890e961dd1f7f69747b}{ajouter} (\hyperlink{classapp_1_1_ecran}{Ecran} $\ast$ecran)
+\begin{DoxyCompactList}\small\item\em Ajouter un Ècran sur la pile. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_gestion__ecrans_a0db2b08457f77a9d01ed007d410d2e0c}{retirer} ()
+\begin{DoxyCompactList}\small\item\em Retirer l\textquotesingle{}Ècran du dessus de la pile. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_gestion__ecrans_a1c7fab33cf6489b092a482bae4b266f7}{vider} ()
+\begin{DoxyCompactList}\small\item\em Retirer tout les Ècrans de la pile. \end{DoxyCompactList}\item 
+bool \hyperlink{classapp_1_1_gestion__ecrans_a7424aab98a8b01f5b5e201ee77bbb7bb}{est\+Vide} ()
+\begin{DoxyCompactList}\small\item\em Demande si il y a encore des ecrans dans la pile. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_gestion__ecrans_addd582c82b53c7c142d23dbee83c5bbd}{changer} (\hyperlink{classapp_1_1_ecran}{Ecran} $\ast$ecran)
+\begin{DoxyCompactList}\small\item\em Changer d\textquotesingle{}Ècran. \end{DoxyCompactList}\item 
+\hyperlink{classapp_1_1_ecran}{Ecran} $\ast$ \hyperlink{classapp_1_1_gestion__ecrans_ae6e4040862cce8d816a9f771424de11d}{courant} ()
+\begin{DoxyCompactList}\small\item\em Renvoie l\textquotesingle{}Ècran courant, celui au top de la {\itshape \+\_\+pile}. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_gestion__ecrans_afdca6c8f031948a5ce80136209924fe8}{traiter\+\_\+evenements} (sf\+::\+Event event)
+\begin{DoxyCompactList}\small\item\em GËre les Èvenements des Ècrans actifs. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_gestion__ecrans_ac271e2ce11691a51f82f54a7c395d565}{actualiser} (sf\+::\+Time deltaT)
+\begin{DoxyCompactList}\small\item\em Actualiser les ÈlÈments. \end{DoxyCompactList}\item 
+void \hyperlink{classapp_1_1_gestion__ecrans_a3c413e7ecbcb252c343136465f5be100}{dessiner} ()
+\begin{DoxyCompactList}\small\item\em Rendre les Ècrans de la pile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description d√©taill√©e}
+Gestionnaire des Ècrans. 
+
+GËre les diffÈrents Ècrans de l\textquotesingle{}application. C\textquotesingle{}est lui qui porte les Ècrans actifs du programme. qui permet de passer d\textquotesingle{}un Ècran ‡ l\textquotesingle{}autre, etc. \begin{DoxySeeAlso}{Voir √©galement}
+\hyperlink{classapp_1_1_ecran}{app\+::\+Ecran} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des fonctions membres}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{actualiser(sf\+::\+Time delta\+T)}{actualiser(sf::Time deltaT)}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Gestion\+\_\+ecrans\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{deltaT}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_ac271e2ce11691a51f82f54a7c395d565}{}\label{classapp_1_1_gestion__ecrans_ac271e2ce11691a51f82f54a7c395d565}
+
+
+Actualiser les ÈlÈments. 
+
+Actualiser les diffÈrents ÈlÈments du ou des Ècrans actifs. 
+\begin{DoxyParams}{Param√®tres}
+{\em deltaT} & Un {\itshape float} qui indique le delta du temps ÈcoulÈ depuis la derniËre actualisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!ajouter@{ajouter}}
+\index{ajouter@{ajouter}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{ajouter(\+Ecran $\ast$ecran)}{ajouter(Ecran *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Gestion\+\_\+ecrans\+::ajouter (
+\begin{DoxyParamCaption}
+\item[{{\bf Ecran} $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_a576182f13e96e890e961dd1f7f69747b}{}\label{classapp_1_1_gestion__ecrans_a576182f13e96e890e961dd1f7f69747b}
+
+
+Ajouter un Ècran sur la pile. 
+
+
+\begin{DoxyParams}{Param√®tres}
+{\em ecran} & Un nouvel {\itshape \hyperlink{classapp_1_1_ecran}{Ecran}} ‡ ajouter ‡ la pile active. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!changer@{changer}}
+\index{changer@{changer}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{changer(\+Ecran $\ast$ecran)}{changer(Ecran *ecran)}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Gestion\+\_\+ecrans\+::changer (
+\begin{DoxyParamCaption}
+\item[{{\bf Ecran} $\ast$}]{ecran}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_addd582c82b53c7c142d23dbee83c5bbd}{}\label{classapp_1_1_gestion__ecrans_addd582c82b53c7c142d23dbee83c5bbd}
+
+
+Changer d\textquotesingle{}Ècran. 
+
+On retire l\textquotesingle{}Ècran en cours, puis on ajoute le nouveau.
+
+
+\begin{DoxyParams}{Param√®tres}
+{\em ecran} & le nouvel {\itshape \hyperlink{classapp_1_1_ecran}{Ecran}} ‡ mettre ‡ la place du dernier de la pile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!courant@{courant}}
+\index{courant@{courant}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{courant()}{courant()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ecran}$\ast$ app\+::\+Gestion\+\_\+ecrans\+::courant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_ae6e4040862cce8d816a9f771424de11d}{}\label{classapp_1_1_gestion__ecrans_ae6e4040862cce8d816a9f771424de11d}
+
+
+Renvoie l\textquotesingle{}Ècran courant, celui au top de la {\itshape \+\_\+pile}. 
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}Ècran courant. 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!dessiner@{dessiner}}
+\index{dessiner@{dessiner}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{dessiner()}{dessiner()}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Gestion\+\_\+ecrans\+::dessiner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_a3c413e7ecbcb252c343136465f5be100}{}\label{classapp_1_1_gestion__ecrans_a3c413e7ecbcb252c343136465f5be100}
+
+
+Rendre les Ècrans de la pile. 
+
+Dessine les diffÈrents ÈlÈments du ou des Ècrans de la pile.
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!est\+Vide@{est\+Vide}}
+\index{est\+Vide@{est\+Vide}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{est\+Vide()}{estVide()}}]{\setlength{\rightskip}{0pt plus 5cm}bool app\+::\+Gestion\+\_\+ecrans\+::est\+Vide (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_a7424aab98a8b01f5b5e201ee77bbb7bb}{}\label{classapp_1_1_gestion__ecrans_a7424aab98a8b01f5b5e201ee77bbb7bb}
+
+
+Demande si il y a encore des ecrans dans la pile. 
+
+\begin{DoxyReturn}{Renvoie}
+bool true si vide. 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!retirer@{retirer}}
+\index{retirer@{retirer}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{retirer()}{retirer()}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Gestion\+\_\+ecrans\+::retirer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_a0db2b08457f77a9d01ed007d410d2e0c}{}\label{classapp_1_1_gestion__ecrans_a0db2b08457f77a9d01ed007d410d2e0c}
+
+
+Retirer l\textquotesingle{}Ècran du dessus de la pile. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!traiter\+\_\+evenements@{traiter\+\_\+evenements}}
+\index{traiter\+\_\+evenements@{traiter\+\_\+evenements}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{traiter\+\_\+evenements(sf\+::\+Event event)}{traiter_evenements(sf::Event event)}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Gestion\+\_\+ecrans\+::traiter\+\_\+evenements (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Event}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_afdca6c8f031948a5ce80136209924fe8}{}\label{classapp_1_1_gestion__ecrans_afdca6c8f031948a5ce80136209924fe8}
+
+
+GËre les Èvenements des Ècrans actifs. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}!vider@{vider}}
+\index{vider@{vider}!app\+::\+Gestion\+\_\+ecrans@{app\+::\+Gestion\+\_\+ecrans}}
+\subsubsection[{\texorpdfstring{vider()}{vider()}}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Gestion\+\_\+ecrans\+::vider (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_gestion__ecrans_a1c7fab33cf6489b092a482bae4b266f7}{}\label{classapp_1_1_gestion__ecrans_a1c7fab33cf6489b092a482bae4b266f7}
+
+
+Retirer tout les Ècrans de la pile. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/kris/\+One\+Drive/recherche Biome/01 -\/ code/code/include/appli/\hyperlink{_gestion__ecrans_8h}{Gestion\+\_\+ecrans.\+h}\end{DoxyCompactItemize}

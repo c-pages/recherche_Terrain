@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Appli: RÃ©fÃ©rence de la classe jeu::Terrain</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Appli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associÃ©es</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>HiÃ©rarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classjeu_1_1_terrain.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-attribs">Attributs privÃ©s</a> &#124;
+<a href="classjeu_1_1_terrain-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">RÃ©fÃ©rence de la classe jeu::Terrain</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Le terrain est le champs d'évolution des fourmis et autres éléments du biome. Composé de plusieurs étages ( 2? ou 3? ), il est représenté en 2D avec une profondeur représentant les étages. Le "tilemap' est au niveau du pixel.  
+ <a href="classjeu_1_1_terrain.html#details">Plus de dÃ©tails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_terrain_8h_source.html">Terrain.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'hÃ©ritage de jeu::Terrain:</div>
+<div class="dyncontent">
+<div class="center"><img src="classjeu_1_1_terrain__inherit__graph.png" border="0" usemap="#jeu_1_1_terrain_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">lÃ©gende</a>]</span></center></div>
+<div class="dynheader">
+Graphe de collaboration de jeu::Terrain:</div>
+<div class="dyncontent">
+<div class="center"><img src="classjeu_1_1_terrain__coll__graph.png" border="0" usemap="#jeu_1_1_terrain_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">lÃ©gende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a863ec2c8050a5484b95fbb9e012e616e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a863ec2c8050a5484b95fbb9e012e616e">setIndexEtageCourant</a> (std::size_t val)</td></tr>
+<tr class="memdesc:a863ec2c8050a5484b95fbb9e012e616e"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; Definir m_indexEtageCourant  <a href="#a863ec2c8050a5484b95fbb9e012e616e">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a863ec2c8050a5484b95fbb9e012e616e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044b5cdbffba772339cf9078120afd4f"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a044b5cdbffba772339cf9078120afd4f">getIndexEtageCourant</a> () const </td></tr>
+<tr class="memdesc:a044b5cdbffba772339cf9078120afd4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_indexEtageCourant.  <a href="#a044b5cdbffba772339cf9078120afd4f">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a044b5cdbffba772339cf9078120afd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720ed1fa9ef9cc785a4d84fff3ea6a3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a720ed1fa9ef9cc785a4d84fff3ea6a3f">setTaille</a> (sf::Vector2i val)</td></tr>
+<tr class="memdesc:a720ed1fa9ef9cc785a4d84fff3ea6a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definir m_taille.  <a href="#a720ed1fa9ef9cc785a4d84fff3ea6a3f">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a720ed1fa9ef9cc785a4d84fff3ea6a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90b77e2d23cd2087df1c15bb23106f9"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#ae90b77e2d23cd2087df1c15bb23106f9">getTaille</a> () const </td></tr>
+<tr class="memdesc:ae90b77e2d23cd2087df1c15bb23106f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_taille.  <a href="#ae90b77e2d23cd2087df1c15bb23106f9">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:ae90b77e2d23cd2087df1c15bb23106f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4cf297206eccab9d9b119ca34a547ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#ae4cf297206eccab9d9b119ca34a547ad">Terrain</a> ()</td></tr>
+<tr class="memdesc:ae4cf297206eccab9d9b119ca34a547ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut.  <a href="#ae4cf297206eccab9d9b119ca34a547ad">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:ae4cf297206eccab9d9b119ca34a547ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce6a8d053bbb70e22b6749b79cfd3b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#acce6a8d053bbb70e22b6749b79cfd3b0">genererEtages</a> (int seed=123456)</td></tr>
+<tr class="memdesc:acce6a8d053bbb70e22b6749b79cfd3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genère les differents étages du terrain.  <a href="#acce6a8d053bbb70e22b6749b79cfd3b0">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:acce6a8d053bbb70e22b6749b79cfd3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43df1b4f47b831a2d944964ccda6e82e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a43df1b4f47b831a2d944964ccda6e82e">initialiser</a> ()</td></tr>
+<tr class="memdesc:a43df1b4f47b831a2d944964ccda6e82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vide la liste des étages, vide le terrain.  <a href="#a43df1b4f47b831a2d944964ccda6e82e">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a43df1b4f47b831a2d944964ccda6e82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd3d2045650dd088147a0c4f0f3e9f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a0fd3d2045650dd088147a0c4f0f3e9f1">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const </td></tr>
+<tr class="memdesc:a0fd3d2045650dd088147a0c4f0f3e9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fonction de dessin SFML. Dessine l'étage courant.  <a href="#a0fd3d2045650dd088147a0c4f0f3e9f1">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a0fd3d2045650dd088147a0c4f0f3e9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privÃ©s</h2></td></tr>
+<tr class="memitem:a3c959b256d57b8e62e2e5317f73e029e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classjeu_1_1_etage.html">Etage</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a3c959b256d57b8e62e2e5317f73e029e">m_etages</a></td></tr>
+<tr class="memdesc:a3c959b256d57b8e62e2e5317f73e029e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les différents etages composants le terrain.  <a href="#a3c959b256d57b8e62e2e5317f73e029e">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a3c959b256d57b8e62e2e5317f73e029e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ad026f079315ecc9ac41661dfb199e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a81ad026f079315ecc9ac41661dfb199e">m_indexEtageCourant</a></td></tr>
+<tr class="memdesc:a81ad026f079315ecc9ac41661dfb199e"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'index dans m_etages de l'étage actuellement affiché.  <a href="#a81ad026f079315ecc9ac41661dfb199e">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a81ad026f079315ecc9ac41661dfb199e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb505adb5a07904eb33b9cef7aa5bd69"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#abb505adb5a07904eb33b9cef7aa5bd69">m_taille</a></td></tr>
+<tr class="memdesc:abb505adb5a07904eb33b9cef7aa5bd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">La taille du terrain, en pixels.  <a href="#abb505adb5a07904eb33b9cef7aa5bd69">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:abb505adb5a07904eb33b9cef7aa5bd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba77797edf548179de1648f57639dfc8"><td class="memItemLeft" align="right" valign="top">sf::Shader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#aba77797edf548179de1648f57639dfc8">m_shaderGrille</a></td></tr>
+<tr class="memdesc:aba77797edf548179de1648f57639dfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le shader dessinant la grille sur les parties 'sol' du terrain.  <a href="#aba77797edf548179de1648f57639dfc8">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:aba77797edf548179de1648f57639dfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80acf28cc64d6096bf088304cadf3710"><td class="memItemLeft" align="right" valign="top">sf::Shader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a80acf28cc64d6096bf088304cadf3710">m_shaderHachures</a></td></tr>
+<tr class="memdesc:a80acf28cc64d6096bf088304cadf3710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le shader dessinant les hachures sur les parties 'terre' du terrain.  <a href="#a80acf28cc64d6096bf088304cadf3710">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a80acf28cc64d6096bf088304cadf3710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9d8e37c4c91638c57eb6bb8441fe73"><td class="memItemLeft" align="right" valign="top">sf::Shader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a7e9d8e37c4c91638c57eb6bb8441fe73">m_shaderOmbre</a></td></tr>
+<tr class="memdesc:a7e9d8e37c4c91638c57eb6bb8441fe73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le shader dessinant les ombres ('terre', végétation ...) sur les parties 'sol' du terrain. /todo voir pour gérer ça en fonction du mouvement d'un soleil, pour représenter un cycle jour/nuit)  <a href="#a7e9d8e37c4c91638c57eb6bb8441fe73">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a7e9d8e37c4c91638c57eb6bb8441fe73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234e06036746a48e4acf4f4582cd82e5"><td class="memItemLeft" align="right" valign="top">sf::Shader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a234e06036746a48e4acf4f4582cd82e5">m_shaderAO</a></td></tr>
+<tr class="memdesc:a234e06036746a48e4acf4f4582cd82e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le shader simulant un AO ('terre', végétation ...) sur les parties 'sol' du terrain.  <a href="#a234e06036746a48e4acf4f4582cd82e5">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a234e06036746a48e4acf4f4582cd82e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7307dfd83441f69a720df9bbaa3243b"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#ae7307dfd83441f69a720df9bbaa3243b">m_couleurSol</a></td></tr>
+<tr class="memdesc:ae7307dfd83441f69a720df9bbaa3243b"><td class="mdescLeft">&#160;</td><td class="mdescRight">La couleur du sol.  <a href="#ae7307dfd83441f69a720df9bbaa3243b">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:ae7307dfd83441f69a720df9bbaa3243b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9dd88edee2a4b139b7d169b9079fd27"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#aa9dd88edee2a4b139b7d169b9079fd27">m_couleurTerre</a></td></tr>
+<tr class="memdesc:aa9dd88edee2a4b139b7d169b9079fd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">La couleur de la terre.  <a href="#aa9dd88edee2a4b139b7d169b9079fd27">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:aa9dd88edee2a4b139b7d169b9079fd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a81180f753ae83956f79b0c22a81b59"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a4a81180f753ae83956f79b0c22a81b59">m_couleurOmbres</a></td></tr>
+<tr class="memdesc:a4a81180f753ae83956f79b0c22a81b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">La couleur des ombres.  <a href="#a4a81180f753ae83956f79b0c22a81b59">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:a4a81180f753ae83956f79b0c22a81b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description dÃ©taillÃ©e</h2>
+<div class="textblock"><p>Le terrain est le champs d'évolution des fourmis et autres éléments du biome. Composé de plusieurs étages ( 2? ou 3? ), il est représenté en 2D avec une profondeur représentant les étages. Le "tilemap' est au niveau du pixel. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="ae4cf297206eccab9d9b119ca34a547ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">jeu::Terrain::Terrain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur par défaut. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a0fd3d2045650dd088147a0c4f0f3e9f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu::Terrain::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::RenderStates&#160;</td>
+          <td class="paramname"><em>states</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La fonction de dessin SFML. Dessine l'étage courant. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td></td></tr>
+    <tr><td class="paramname">states</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acce6a8d053bbb70e22b6749b79cfd3b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu::Terrain::genererEtages </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seed</em> = <code>123456</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Genère les differents étages du terrain. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seed</td><td>Permet de définir le seed pour la génération du bruit de Perlin. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a044b5cdbffba772339cf9078120afd4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t jeu::Terrain::getIndexEtageCourant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Acceder à m_indexEtageCourant. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae90b77e2d23cd2087df1c15bb23106f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2i jeu::Terrain::getTaille </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Acceder à m_taille. </p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph.png" border="0" usemap="#classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph" alt=""/></div>
+<map name="classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph" id="classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph">
+<area shape="rect" id="node2" href="classjeu_1_1_terrain.html#ae4cf297206eccab9d9b119ca34a547ad" title="Constructeur par défaut. " alt="" coords="219,5,352,32"/>
+<area shape="rect" id="node3" href="classjeu_1_1_terrain.html#acce6a8d053bbb70e22b6749b79cfd3b0" title="Genère les differents étages du terrain. " alt="" coords="196,56,375,83"/>
+<area shape="rect" id="node4" href="classjeu_1_1_terrain.html#a43df1b4f47b831a2d944964ccda6e82e" title="Vide la liste des étages, vide le terrain. " alt="" coords="213,107,358,133"/>
+<area shape="rect" id="node5" href="classjeu_1_1_terrain.html#a0fd3d2045650dd088147a0c4f0f3e9f1" title="La fonction de dessin SFML. Dessine l&#39;étage courant. " alt="" coords="225,157,346,184"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a43df1b4f47b831a2d944964ccda6e82e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu::Terrain::initialiser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vide la liste des étages, vide le terrain. </p>
+
+</div>
+</div>
+<a class="anchor" id="a863ec2c8050a5484b95fbb9e012e616e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu::Terrain::setIndexEtageCourant </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt; Definir m_indexEtageCourant </p>
+
+</div>
+</div>
+<a class="anchor" id="a720ed1fa9ef9cc785a4d84fff3ea6a3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jeu::Terrain::setTaille </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2i&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definir m_taille. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des donnÃ©es membres</h2>
+<a class="anchor" id="a4a81180f753ae83956f79b0c22a81b59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Color jeu::Terrain::m_couleurOmbres</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La couleur des ombres. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae7307dfd83441f69a720df9bbaa3243b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Color jeu::Terrain::m_couleurSol</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La couleur du sol. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa9dd88edee2a4b139b7d169b9079fd27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Color jeu::Terrain::m_couleurTerre</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La couleur de la terre. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3c959b256d57b8e62e2e5317f73e029e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="classjeu_1_1_etage.html">Etage</a>&gt; &gt; jeu::Terrain::m_etages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Les différents etages composants le terrain. </p>
+
+</div>
+</div>
+<a class="anchor" id="a81ad026f079315ecc9ac41661dfb199e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t jeu::Terrain::m_indexEtageCourant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>L'index dans m_etages de l'étage actuellement affiché. </p>
+
+</div>
+</div>
+<a class="anchor" id="a234e06036746a48e4acf4f4582cd82e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Shader jeu::Terrain::m_shaderAO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le shader simulant un AO ('terre', végétation ...) sur les parties 'sol' du terrain. </p>
+
+</div>
+</div>
+<a class="anchor" id="aba77797edf548179de1648f57639dfc8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Shader jeu::Terrain::m_shaderGrille</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le shader dessinant la grille sur les parties 'sol' du terrain. </p>
+
+</div>
+</div>
+<a class="anchor" id="a80acf28cc64d6096bf088304cadf3710"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Shader jeu::Terrain::m_shaderHachures</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le shader dessinant les hachures sur les parties 'terre' du terrain. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e9d8e37c4c91638c57eb6bb8441fe73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Shader jeu::Terrain::m_shaderOmbre</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le shader dessinant les ombres ('terre', végétation ...) sur les parties 'sol' du terrain. /todo voir pour gérer ça en fonction du mouvement d'un soleil, pour représenter un cycle jour/nuit) </p>
+
+</div>
+</div>
+<a class="anchor" id="abb505adb5a07904eb33b9cef7aa5bd69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2i jeu::Terrain::m_taille</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La taille du terrain, en pixels. </p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants :<ul>
+<li><a class="el" href="_terrain_8h_source.html">Terrain.h</a></li>
+<li><a class="el" href="_terrain_8cpp.html">Terrain.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacejeu.html">jeu</a></li><li class="navelem"><a class="el" href="classjeu_1_1_terrain.html">Terrain</a></li>
+    <li class="footer">GÃ©nÃ©rÃ© le Vendredi 20 Mai 2016 13:06:37 pour Appli par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

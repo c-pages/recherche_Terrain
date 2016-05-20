@@ -1,0 +1,161 @@
+\hypertarget{classapp_1_1_config}{}\section{Référence de la classe app\+:\+:Config}
+\label{classapp_1_1_config}\index{app\+::\+Config@{app\+::\+Config}}
+
+
+Contient les différents éléments de Configuration de l\textquotesingle{}application.  
+
+
+
+
+{\ttfamily \#include $<$Config.\+h$>$}
+
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049}{Polices} \+: int \{ \hyperlink{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049a759ba1bca9923fc3b3e61b9e0edd154a}{police\+\_\+1}, 
+\hyperlink{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21}{police\+\_\+2}, 
+\hyperlink{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049aa9e5b356892159d1526d850436f9186e}{log}
+ \}\begin{DoxyCompactList}\small\item\em listes les polices enregistrable dans le manager de polices \end{DoxyCompactList}
+\item 
+enum \hyperlink{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209beda}{Styles} \+: int \{ \hyperlink{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa02fd230360f0a9b4e42a24c2e826e2a7}{root}, 
+\hyperlink{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa853b0170848ebe1bb8aa66895283a816}{Bouton}, 
+\hyperlink{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa1297561847b1b84d487c3a875f5f8f6a}{Fenetre}
+ \}\begin{DoxyCompactList}\small\item\em listes les styles (\hyperlink{classgui_1_1_style}{gui\+::\+Style}) enregistrable dans la pile des Styles \end{DoxyCompactList}
+\item 
+enum \hyperlink{classapp_1_1_config_a457412fb51e1853408f2201a69471e32}{Skins} \+: int \{ \hyperlink{classapp_1_1_config_a457412fb51e1853408f2201a69471e32abb0a28eb4da75e2aadaf74b6d9aa2d4e}{Skin1}
+ \}\begin{DoxyCompactList}\small\item\em listes les skins (gui\+::\+Skin) enregistrable dans la pile des skins. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapp_1_1_config_a6b5877b87cbfef7bb28ed405dfa3ea62}{Config} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{classapp_1_1_config_af8bea439b3dd6daa60079937d43b0dcb}{$\sim$\+Config} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classapp_1_1_config_a8680abec2844bbb045614662a218b5d5}{init} ()
+\begin{DoxyCompactList}\small\item\em Initialiser les differents élément. \end{DoxyCompactList}\item 
+static sf\+::\+Time \hyperlink{classapp_1_1_config_a379b1f1ac039e8c2cb92567b994fe74c}{get\+Duree\+Image} ()
+\begin{DoxyCompactList}\small\item\em recuperer la durée d\textquotesingle{}une image, Duree\+Image = 1.\+f / 60.\+f à 60\+Fps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Contient les différents éléments de Configuration de l\textquotesingle{}application. 
+
+Configuration des textures, sons, musiques polices, tailles, couleurs ....
+
+\begin{DoxySeeAlso}{Voir également}
+\hyperlink{classapp_1_1_ecran}{app\+::\+Ecran}, \hyperlink{classapp_1_1_gestion__ecrans}{app\+::\+Gestion\+\_\+ecrans} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des énumérations membres}
+\index{app\+::\+Config@{app\+::\+Config}!Polices@{Polices}}
+\index{Polices@{Polices}!app\+::\+Config@{app\+::\+Config}}
+\subsubsection[{\texorpdfstring{Polices}{Polices}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf app\+::\+Config\+::\+Polices} \+: int}\hypertarget{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049}{}\label{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049}
+
+
+listes les polices enregistrable dans le manager de polices 
+
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{police\+\_\+1@{police\+\_\+1}!app\+::\+Config@{app\+::\+Config}}\index{app\+::\+Config@{app\+::\+Config}!police\+\_\+1@{police\+\_\+1}}\item[{\em 
+police\+\_\+1\hypertarget{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049a759ba1bca9923fc3b3e61b9e0edd154a}{}\label{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049a759ba1bca9923fc3b3e61b9e0edd154a}
+}]\index{police\+\_\+2@{police\+\_\+2}!app\+::\+Config@{app\+::\+Config}}\index{app\+::\+Config@{app\+::\+Config}!police\+\_\+2@{police\+\_\+2}}\item[{\em 
+police\+\_\+2\hypertarget{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21}{}\label{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21}
+}]\index{log@{log}!app\+::\+Config@{app\+::\+Config}}\index{app\+::\+Config@{app\+::\+Config}!log@{log}}\item[{\em 
+log\hypertarget{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049aa9e5b356892159d1526d850436f9186e}{}\label{classapp_1_1_config_ac576a323feff0b9aaa6aecd40e038049aa9e5b356892159d1526d850436f9186e}
+}]\end{description}
+\end{Desc}
+\index{app\+::\+Config@{app\+::\+Config}!Skins@{Skins}}
+\index{Skins@{Skins}!app\+::\+Config@{app\+::\+Config}}
+\subsubsection[{\texorpdfstring{Skins}{Skins}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf app\+::\+Config\+::\+Skins} \+: int}\hypertarget{classapp_1_1_config_a457412fb51e1853408f2201a69471e32}{}\label{classapp_1_1_config_a457412fb51e1853408f2201a69471e32}
+
+
+listes les skins (gui\+::\+Skin) enregistrable dans la pile des skins. 
+
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Skin1@{Skin1}!app\+::\+Config@{app\+::\+Config}}\index{app\+::\+Config@{app\+::\+Config}!Skin1@{Skin1}}\item[{\em 
+Skin1\hypertarget{classapp_1_1_config_a457412fb51e1853408f2201a69471e32abb0a28eb4da75e2aadaf74b6d9aa2d4e}{}\label{classapp_1_1_config_a457412fb51e1853408f2201a69471e32abb0a28eb4da75e2aadaf74b6d9aa2d4e}
+}]\end{description}
+\end{Desc}
+\index{app\+::\+Config@{app\+::\+Config}!Styles@{Styles}}
+\index{Styles@{Styles}!app\+::\+Config@{app\+::\+Config}}
+\subsubsection[{\texorpdfstring{Styles}{Styles}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf app\+::\+Config\+::\+Styles} \+: int}\hypertarget{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209beda}{}\label{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209beda}
+
+
+listes les styles (\hyperlink{classgui_1_1_style}{gui\+::\+Style}) enregistrable dans la pile des Styles 
+
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{root@{root}!app\+::\+Config@{app\+::\+Config}}\index{app\+::\+Config@{app\+::\+Config}!root@{root}}\item[{\em 
+root\hypertarget{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa02fd230360f0a9b4e42a24c2e826e2a7}{}\label{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa02fd230360f0a9b4e42a24c2e826e2a7}
+}]\index{Bouton@{Bouton}!app\+::\+Config@{app\+::\+Config}}\index{app\+::\+Config@{app\+::\+Config}!Bouton@{Bouton}}\item[{\em 
+Bouton\hypertarget{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa853b0170848ebe1bb8aa66895283a816}{}\label{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa853b0170848ebe1bb8aa66895283a816}
+}]\index{Fenetre@{Fenetre}!app\+::\+Config@{app\+::\+Config}}\index{app\+::\+Config@{app\+::\+Config}!Fenetre@{Fenetre}}\item[{\em 
+Fenetre\hypertarget{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa1297561847b1b84d487c3a875f5f8f6a}{}\label{classapp_1_1_config_ab0fd2b7fe87a4b68c93d2a4a7209bedaa1297561847b1b84d487c3a875f5f8f6a}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{app\+::\+Config@{app\+::\+Config}!Config@{Config}}
+\index{Config@{Config}!app\+::\+Config@{app\+::\+Config}}
+\subsubsection[{\texorpdfstring{Config()}{Config()}}]{\setlength{\rightskip}{0pt plus 5cm}app\+::\+Config\+::\+Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classapp_1_1_config_a6b5877b87cbfef7bb28ed405dfa3ea62}{}\label{classapp_1_1_config_a6b5877b87cbfef7bb28ed405dfa3ea62}
+
+
+Constructeur. 
+
+\index{app\+::\+Config@{app\+::\+Config}!````~Config@{$\sim$\+Config}}
+\index{````~Config@{$\sim$\+Config}!app\+::\+Config@{app\+::\+Config}}
+\subsubsection[{\texorpdfstring{$\sim$\+Config()}{~Config()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual app\+::\+Config\+::$\sim$\+Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classapp_1_1_config_af8bea439b3dd6daa60079937d43b0dcb}{}\label{classapp_1_1_config_af8bea439b3dd6daa60079937d43b0dcb}
+
+
+Destructeur. 
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{app\+::\+Config@{app\+::\+Config}!get\+Duree\+Image@{get\+Duree\+Image}}
+\index{get\+Duree\+Image@{get\+Duree\+Image}!app\+::\+Config@{app\+::\+Config}}
+\subsubsection[{\texorpdfstring{get\+Duree\+Image()}{getDureeImage()}}]{\setlength{\rightskip}{0pt plus 5cm}static sf\+::\+Time app\+::\+Config\+::get\+Duree\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classapp_1_1_config_a379b1f1ac039e8c2cb92567b994fe74c}{}\label{classapp_1_1_config_a379b1f1ac039e8c2cb92567b994fe74c}
+
+
+recuperer la durée d\textquotesingle{}une image, Duree\+Image = 1.\+f / 60.\+f à 60\+Fps. 
+
+\index{app\+::\+Config@{app\+::\+Config}!init@{init}}
+\index{init@{init}!app\+::\+Config@{app\+::\+Config}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}static void app\+::\+Config\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classapp_1_1_config_a8680abec2844bbb045614662a218b5d5}{}\label{classapp_1_1_config_a8680abec2844bbb045614662a218b5d5}
+
+
+Initialiser les differents élément. 
+
+\begin{DoxyItemize}
+\item les textures \item les polices \item les styles \item les sons (à prévoir) \item les musiques (à prévoir) \end{DoxyItemize}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/kris/\+One\+Drive/recherche Biome/01 -\/ code/code/include/appli/\hyperlink{_config_8h}{Config.\+h}\end{DoxyCompactItemize}

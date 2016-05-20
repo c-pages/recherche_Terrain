@@ -1,0 +1,852 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Appli: Référence de la classe gui::Gui</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Appli
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classgui_1_1_gui.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-attribs">Attributs publics</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="#friends">Amis</a> &#124;
+<a href="classgui_1_1_gui-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe gui::Gui</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Le <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> gère l'ensemble des interactions homme-machine du jeu. D'un coté un système de fenêtre, boutons basiques gérant les différents menus de l'appli. De l'autre, le menu phéromones, système central de l'interaction du joueur avec ses fourmis.  
+ <a href="classgui_1_1_gui.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_gui_8h_source.html">Gui.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de gui::Gui:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_gui__inherit__graph.png" border="0" usemap="#gui_1_1_gui_inherit__map" alt="Inheritance graph"/></div>
+<map name="gui_1_1_gui_inherit__map" id="gui_1_1_gui_inherit__map">
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html" title="Un gadget est la classe abstraite des éléments de l&#39;interface. " alt="" coords="201,122,291,149"/>
+<area shape="rect" id="node7" href="classgui_1_1_actions.html" title="Classe abstraite qui gère les évenements claviers et souris. " alt="" coords="34,223,125,250"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
+<div class="dynheader">
+Graphe de collaboration de gui::Gui:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_gui__coll__graph.png" border="0" usemap="#gui_1_1_gui_coll__map" alt="Collaboration graph"/></div>
+<map name="gui_1_1_gui_coll__map" id="gui_1_1_gui_coll__map">
+<area shape="rect" id="node8" href="classgui_1_1_fabrique.html" title="La fabrique des gadget. " alt="" coords="629,122,727,149"/>
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html" title="Un gadget est la classe abstraite des éléments de l&#39;interface. " alt="" coords="203,122,292,149"/>
+<area shape="rect" id="node7" href="classgui_1_1_actions.html" title="Classe abstraite qui gère les évenements claviers et souris. " alt="" coords="34,223,125,250"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a781368d750e9c2e57a721305fa0d81df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a781368d750e9c2e57a721305fa0d81df">Gui</a> (sf::RenderWindow *fenetre)</td></tr>
+<tr class="memdesc:a781368d750e9c2e57a721305fa0d81df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a781368d750e9c2e57a721305fa0d81df">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a781368d750e9c2e57a721305fa0d81df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a33e82fb7fe037ef0d2eb493707df6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a49a33e82fb7fe037ef0d2eb493707df6">setParent</a> (<a class="el" href="classgui_1_1_gadget.html">Gadget</a> *val)</td></tr>
+<tr class="memdesc:a49a33e82fb7fe037ef0d2eb493707df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definir m_parent. Ici ne fait rien car <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> est le root.  <a href="#a49a33e82fb7fe037ef0d2eb493707df6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a49a33e82fb7fe037ef0d2eb493707df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b81c276f098468358927fef561a4601"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a0b81c276f098468358927fef561a4601">getParent</a> () const </td></tr>
+<tr class="memdesc:a0b81c276f098468358927fef561a4601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_parent. Ici ne fait rien car <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> est le root.  <a href="#a0b81c276f098468358927fef561a4601">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0b81c276f098468358927fef561a4601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f8610a53aa2eb7626811dba531195f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ad6f8610a53aa2eb7626811dba531195f">retirerEnfant</a> (std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; cible)</td></tr>
+<tr class="memdesc:ad6f8610a53aa2eb7626811dba531195f"><td class="mdescLeft">&#160;</td><td class="mdescRight">retirer un enfant du gadget  <a href="#ad6f8610a53aa2eb7626811dba531195f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad6f8610a53aa2eb7626811dba531195f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25e7e107c6a60f8cf52b3e11a936419"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ab25e7e107c6a60f8cf52b3e11a936419">viderEnfants</a> ()</td></tr>
+<tr class="memdesc:ab25e7e107c6a60f8cf52b3e11a936419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vider m_enfants. Ici on vide le contenu des calques.  <a href="#ab25e7e107c6a60f8cf52b3e11a936419">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab25e7e107c6a60f8cf52b3e11a936419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced24f6da36479c68b22f2a6c7f6973d"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#aced24f6da36479c68b22f2a6c7f6973d">getEnfant</a> (unsigned int id) const </td></tr>
+<tr class="memdesc:aced24f6da36479c68b22f2a6c7f6973d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseur à l'élément de m_enfants désigné par un id.  <a href="#aced24f6da36479c68b22f2a6c7f6973d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aced24f6da36479c68b22f2a6c7f6973d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2965a5abefcf61e11429e01618b0206"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ab2965a5abefcf61e11429e01618b0206">setSize</a> (sf::Vector2i val)</td></tr>
+<tr class="memdesc:ab2965a5abefcf61e11429e01618b0206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definir m_size. Ici ne fait rien car <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> à la taille de la fenetre SFML.  <a href="#ab2965a5abefcf61e11429e01618b0206">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab2965a5abefcf61e11429e01618b0206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d59bd1caae90c88b0e4db8a3010a9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a">chercherGadgetSurvole</a> ()</td></tr>
+<tr class="memdesc:ad1d59bd1caae90c88b0e4db8a3010a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recherche le gadget survolé par la sourie dans l'interface.  <a href="#ad1d59bd1caae90c88b0e4db8a3010a9a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad1d59bd1caae90c88b0e4db8a3010a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0209d60ac47f2c86e8340a9b4a64b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a6e0209d60ac47f2c86e8340a9b4a64b1">traiterEvenements</a> (sf::Event evenement)</td></tr>
+<tr class="memdesc:a6e0209d60ac47f2c86e8340a9b4a64b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traitement général des évenements clavier ou souris de tout les gadgets de l'interface.  <a href="#a6e0209d60ac47f2c86e8340a9b4a64b1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6e0209d60ac47f2c86e8340a9b4a64b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10b5a8ef07513c03c9126a3eef9955b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ad10b5a8ef07513c03c9126a3eef9955b">actualiser</a> ()</td></tr>
+<tr class="memdesc:ad10b5a8ef07513c03c9126a3eef9955b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiser les éléments de l'interface.  <a href="#ad10b5a8ef07513c03c9126a3eef9955b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad10b5a8ef07513c03c9126a3eef9955b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classgui_1_1_gadget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgui_1_1_gadget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="classgui_1_1_gadget.html">gui::Gadget</a></td></tr>
+<tr class="memitem:a62dfd5bd962b252b792f00b183df9462 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a62dfd5bd962b252b792f00b183df9462">Gadget</a> ()</td></tr>
+<tr class="memdesc:a62dfd5bd962b252b792f00b183df9462 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a62dfd5bd962b252b792f00b183df9462">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a62dfd5bd962b252b792f00b183df9462 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1702e98e25d7b6986c98aeabecae7c0 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae1702e98e25d7b6986c98aeabecae7c0">thisPtr</a> ()</td></tr>
+<tr class="memdesc:ae1702e98e25d7b6986c98aeabecae7c0 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un shared pointeur vers this.  <a href="#ae1702e98e25d7b6986c98aeabecae7c0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae1702e98e25d7b6986c98aeabecae7c0 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c0bc3e85aab97c14f402cddb0be381 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a05c0bc3e85aab97c14f402cddb0be381">testerSurvol</a> (sf::Vector2i posSouris)</td></tr>
+<tr class="memdesc:a05c0bc3e85aab97c14f402cddb0be381 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste le survol du gadget par la souris.  <a href="#a05c0bc3e85aab97c14f402cddb0be381">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a05c0bc3e85aab97c14f402cddb0be381 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ccb80ac58d4b1320bc76ad8ae031866 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const </td></tr>
+<tr class="memdesc:a7ccb80ac58d4b1320bc76ad8ae031866 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine tout les éléments de l'interface.  <a href="#a7ccb80ac58d4b1320bc76ad8ae031866">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7ccb80ac58d4b1320bc76ad8ae031866 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b8d5f74d5b34aab2dcbab2273ae432 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432">setEtat</a> (<a class="el" href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524">Etat</a> etat)</td></tr>
+<tr class="memdesc:ad5b8d5f74d5b34aab2dcbab2273ae432 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseurs / mutateur /////////////////////.  <a href="#ad5b8d5f74d5b34aab2dcbab2273ae432">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad5b8d5f74d5b34aab2dcbab2273ae432 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae710168f0ae17e7b2992812268da3e32 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae710168f0ae17e7b2992812268da3e32">ajouterEnfant</a> (std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; nouvelElement)</td></tr>
+<tr class="memdesc:ae710168f0ae17e7b2992812268da3e32 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter un élement dans m_enfants.  <a href="#ae710168f0ae17e7b2992812268da3e32">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae710168f0ae17e7b2992812268da3e32 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259ddff0c620f53e5533be5c09984323 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a259ddff0c620f53e5533be5c09984323">demander_etreDevant</a> ()</td></tr>
+<tr class="memdesc:a259ddff0c620f53e5533be5c09984323 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demanderau perent à être au dessus des autres enfants.  <a href="#a259ddff0c620f53e5533be5c09984323">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a259ddff0c620f53e5533be5c09984323 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01ca555487f3ea351e53e2074dad3aa inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af01ca555487f3ea351e53e2074dad3aa">mettreDevant</a> (std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; gadget)</td></tr>
+<tr class="memdesc:af01ca555487f3ea351e53e2074dad3aa inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre le gadget au dessus des autres enfants de son parent.  <a href="#af01ca555487f3ea351e53e2074dad3aa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af01ca555487f3ea351e53e2074dad3aa inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9c5d103b90ace0b72e66625497c995 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a2c9c5d103b90ace0b72e66625497c995">supprimer</a> ()</td></tr>
+<tr class="memdesc:a2c9c5d103b90ace0b72e66625497c995 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">supprimer le gadget.  <a href="#a2c9c5d103b90ace0b72e66625497c995">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2c9c5d103b90ace0b72e66625497c995 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c42e660b6b307daa77cd0d42aad26f inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a92c42e660b6b307daa77cd0d42aad26f">setPosition</a> (float x, float y)</td></tr>
+<tr class="memdesc:a92c42e660b6b307daa77cd0d42aad26f inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">override (un peu a l'arrache) de la fonction sf::Transformable::setPosition().  <a href="#a92c42e660b6b307daa77cd0d42aad26f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a92c42e660b6b307daa77cd0d42aad26f inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d9ba5eecba0ecf49f94767699aba17 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ad3d9ba5eecba0ecf49f94767699aba17">setPosition</a> (const sf::Vector2f &amp;position)</td></tr>
+<tr class="memdesc:ad3d9ba5eecba0ecf49f94767699aba17 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">override (un peu a l'arrache) de la fonction sf::Transformable::setPosition().  <a href="#ad3d9ba5eecba0ecf49f94767699aba17">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad3d9ba5eecba0ecf49f94767699aba17 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2872eb12af266b02c8bc17affebc7827 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a2872eb12af266b02c8bc17affebc7827">setPosition</a> (const sf::Vector2i &amp;position)</td></tr>
+<tr class="memdesc:a2872eb12af266b02c8bc17affebc7827 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">override (un peu a l'arrache) de la fonction sf::Transformable::setPosition().  <a href="#a2872eb12af266b02c8bc17affebc7827">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2872eb12af266b02c8bc17affebc7827 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b82417fb662b2e9dcb34ad4766a539 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539">getPosAbs</a> () const </td></tr>
+<tr class="memdesc:ae8b82417fb662b2e9dcb34ad4766a539 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la position absolue du gadget.  <a href="#ae8b82417fb662b2e9dcb34ad4766a539">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae8b82417fb662b2e9dcb34ad4766a539 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14394919166b43c08176ea40a494c6c2 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2">getSize</a> () const </td></tr>
+<tr class="memdesc:a14394919166b43c08176ea40a494c6c2 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_size.  <a href="#a14394919166b43c08176ea40a494c6c2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a14394919166b43c08176ea40a494c6c2 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f1b38002fb1eaf0b31b86b0c3e4401 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401">getGlobalBounds</a> () const </td></tr>
+<tr class="memdesc:af2f1b38002fb1eaf0b31b86b0c3e4401 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_globalBounds.  <a href="#af2f1b38002fb1eaf0b31b86b0c3e4401">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af2f1b38002fb1eaf0b31b86b0c3e4401 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9618784a15aedf679d52dfe46d5b6cb7 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a9618784a15aedf679d52dfe46d5b6cb7">getLocalBounds</a> () const </td></tr>
+<tr class="memdesc:a9618784a15aedf679d52dfe46d5b6cb7 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_localBounds.  <a href="#a9618784a15aedf679d52dfe46d5b6cb7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9618784a15aedf679d52dfe46d5b6cb7 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classgui_1_1_actions"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgui_1_1_actions')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="classgui_1_1_actions.html">gui::Actions</a></td></tr>
+<tr class="memitem:aae886f6e33a961f191cc99642c4f7569 inherit pub_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#aae886f6e33a961f191cc99642c4f7569">ActionSouris</a> ()</td></tr>
+<tr class="memdesc:aae886f6e33a961f191cc99642c4f7569 inherit pub_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contructeur.  <a href="#aae886f6e33a961f191cc99642c4f7569">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aae886f6e33a961f191cc99642c4f7569 inherit pub_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0dfd024938532a3c8abf98ddefd3d8 inherit pub_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#a0b0dfd024938532a3c8abf98ddefd3d8">lier</a> (<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4">Evenement</a> evenement, <a class="el" href="classgui_1_1_actions.html#a1e4ae8b013b4b60d7dcf0fb8ef16a0b6">FctnAction</a> fonction)</td></tr>
+<tr class="memdesc:a0b0dfd024938532a3c8abf98ddefd3d8 inherit pub_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer une nouvelle liaison entre un evenement souris et une fonction lambda.  <a href="#a0b0dfd024938532a3c8abf98ddefd3d8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0b0dfd024938532a3c8abf98ddefd3d8 inherit pub_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27df5505d15177e0a213bd6ab791182 inherit pub_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#aa27df5505d15177e0a213bd6ab791182">lier</a> (sf::Keyboard::Key touche, <a class="el" href="classgui_1_1_actions.html#a1e4ae8b013b4b60d7dcf0fb8ef16a0b6">FctnAction</a> fonction)</td></tr>
+<tr class="memdesc:aa27df5505d15177e0a213bd6ab791182 inherit pub_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer une nouvelle liaison entre un evenement clavier et une fonction lambda.  <a href="#aa27df5505d15177e0a213bd6ab791182">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa27df5505d15177e0a213bd6ab791182 inherit pub_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7adb489979aa03218df78f6018874e inherit pub_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#aca7adb489979aa03218df78f6018874e">delier</a> (<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4">Evenement</a> evenement)</td></tr>
+<tr class="memdesc:aca7adb489979aa03218df78f6018874e inherit pub_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime une liaison entre un evenement souris et une fonction lambda.  <a href="#aca7adb489979aa03218df78f6018874e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aca7adb489979aa03218df78f6018874e inherit pub_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071ed94a1fe8561860ab6e3478df51aa inherit pub_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#a071ed94a1fe8561860ab6e3478df51aa">delier</a> (sf::Keyboard::Key touche)</td></tr>
+<tr class="memdesc:a071ed94a1fe8561860ab6e3478df51aa inherit pub_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime une liaison entre un evenement clavier et une fonction lambda.  <a href="#a071ed94a1fe8561860ab6e3478df51aa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a071ed94a1fe8561860ab6e3478df51aa inherit pub_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7a42c1fdb6f4051b9cd0edc7a6840e inherit pub_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#acd7a42c1fdb6f4051b9cd0edc7a6840e">vider</a> ()</td></tr>
+<tr class="memdesc:acd7a42c1fdb6f4051b9cd0edc7a6840e inherit pub_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime toutes les actions du gadget.  <a href="#acd7a42c1fdb6f4051b9cd0edc7a6840e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acd7a42c1fdb6f4051b9cd0edc7a6840e inherit pub_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Attributs publics</h2></td></tr>
+<tr class="memitem:ae5dd6ef6163bce1ef69086bd7dd0c49b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_fabrique.html">gui::Fabrique</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ae5dd6ef6163bce1ef69086bd7dd0c49b">creer</a></td></tr>
+<tr class="memdesc:ae5dd6ef6163bce1ef69086bd7dd0c49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">la fabrique/////////////////////  <a href="#ae5dd6ef6163bce1ef69086bd7dd0c49b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae5dd6ef6163bce1ef69086bd7dd0c49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a676bd17b12968c4541fd6f9abcee3cff"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a676bd17b12968c4541fd6f9abcee3cff">m_fenetre</a></td></tr>
+<tr class="memdesc:a676bd17b12968c4541fd6f9abcee3cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">la fenetre SFML /////////////////////  <a href="#a676bd17b12968c4541fd6f9abcee3cff">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a676bd17b12968c4541fd6f9abcee3cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb85d2fd66d95c565cd9574c3c600278"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_calque.html">Calque</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#aeb85d2fd66d95c565cd9574c3c600278">m_calqueFond</a></td></tr>
+<tr class="memdesc:aeb85d2fd66d95c565cd9574c3c600278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le calque regroupant les gadgets les plus au fond de la vue.  <a href="#aeb85d2fd66d95c565cd9574c3c600278">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeb85d2fd66d95c565cd9574c3c600278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5eb0e20c44e24291c71faeb5fded14"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_calque.html">Calque</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a7b5eb0e20c44e24291c71faeb5fded14">m_calqueFenetres</a></td></tr>
+<tr class="memdesc:a7b5eb0e20c44e24291c71faeb5fded14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le calque regroupant les fenetres.  <a href="#a7b5eb0e20c44e24291c71faeb5fded14">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7b5eb0e20c44e24291c71faeb5fded14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc3584efc019882f7cb18e2c703e494"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#afdc3584efc019882f7cb18e2c703e494">m_gadgetSurvole</a></td></tr>
+<tr class="memdesc:afdc3584efc019882f7cb18e2c703e494"><td class="mdescLeft">&#160;</td><td class="mdescRight">la gestion des gadgets interactifs  <a href="#afdc3584efc019882f7cb18e2c703e494">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afdc3584efc019882f7cb18e2c703e494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81bd7f3a2f4a3286988f490702807196"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a81bd7f3a2f4a3286988f490702807196">m_gadgetPresse</a></td></tr>
+<tr class="memdesc:a81bd7f3a2f4a3286988f490702807196"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Le gadget survolé (nullptr si aucun) </p>
+</blockquote>
+ <a href="#a81bd7f3a2f4a3286988f490702807196">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a81bd7f3a2f4a3286988f490702807196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amis</h2></td></tr>
+<tr class="memitem:a4aecc6b4dfc3941df0608797538a1726"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a4aecc6b4dfc3941df0608797538a1726">Fabrique</a></td></tr>
+<tr class="memdesc:a4aecc6b4dfc3941df0608797538a1726"><td class="mdescLeft">&#160;</td><td class="mdescRight">les calques /////////////////////  <a href="#a4aecc6b4dfc3941df0608797538a1726">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4aecc6b4dfc3941df0608797538a1726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Membres hérités additionnels</h2></td></tr>
+<tr class="inherit_header pub_types_classgui_1_1_gadget"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgui_1_1_gadget')"><img src="closed.png" alt="-"/>&#160;Types publics hérités de <a class="el" href="classgui_1_1_gadget.html">gui::Gadget</a></td></tr>
+<tr class="memitem:ab11cdc9ef91e4f62286cca422d65c524 inherit pub_types_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524">Etat</a> { <a class="el" href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a5425be176c542f566123112599300dfa">Repos</a>, 
+<a class="el" href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524ab7365de0974fdb24c2a47a2af713c14e">Survol</a>, 
+<a class="el" href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a753b5db1717e65ac676ba9473b3dbac4">Presse</a>
+ }<tr class="memdesc:ab11cdc9ef91e4f62286cca422d65c524"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;  <a href="classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524">Plus de détails...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ab11cdc9ef91e4f62286cca422d65c524 inherit pub_types_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classgui_1_1_actions"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgui_1_1_actions')"><img src="closed.png" alt="-"/>&#160;Types publics hérités de <a class="el" href="classgui_1_1_actions.html">gui::Actions</a></td></tr>
+<tr class="memitem:a372fe9b49ce56cd4aedc01a8423457e4 inherit pub_types_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4">Evenement</a> { <br />
+&#160;&#160;<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a6816af14ccff8c269e7ec7a940a8c526">onBtnG_dblCliquer</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a0437b7694172fc0dca20a7aeb8058b78">onBtnG_relacher</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a25ad3985b324cf2116f57ca22ff18110">onBtnG_relacherDehors</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a72ff926240374951158554e315c45b4f">onBtnG_presser</a>, 
+<br />
+&#160;&#160;<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a469ece6eff34f40584e5f2e5b6141f47">onBtnG_presserDehors</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a6ffd04cc33517762806c9b22514d8642">onBtnD_relacher</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4aa82b2ecb53c7eb63add3b8d285af3198">onBtnD_relacherDehors</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a2dfb939bf492dba77ce91fd311fa987c">onBtnD_presser</a>, 
+<br />
+&#160;&#160;<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4ad9b68716bb41ea9dbc616dfcc86cb286">onBtnM_relacher</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4ada04500160c9c72e33f814744ec5cbf9">onBtnM_relacherDehors</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4ab32b448d47e0c8673fdaa7d0eecdb27c">onBtnM_presser</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a3607208fa711ef83e8b6b58228256e62">onBtnM_roulerHaut</a>, 
+<br />
+&#160;&#160;<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a48c3a5f2206eec90545a8e55e9f549ba">onBtnM_roulerBas</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a6a0f9c9de50462b026a8d3d4f26e54ed">onBtn_entrer</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4ac8ba5895cf104d006cb73c2c9edd05ea">onBtn_sortir</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a7bb731ecc6baef61e486bd2f6e06dcc2">onBtn_changerEtat</a>, 
+<br />
+&#160;&#160;<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a2337908cb7d696e7426e7a8a261393ea">onFen_fermer</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a4d0cbbd51ba58b8b217e5778c72ae607">onFen_ouvrir</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a55818b0813457db931a09d66fbade9af">onBool_changerValeur</a>, 
+<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4aae35b8908b5845da0618b5badcc95a53">onBool_validerValeur</a>
+<br />
+ }<tr class="memdesc:a372fe9b49ce56cd4aedc01a8423457e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">les evenements de la souris qui déclenchent une fonction lambda associée.  <a href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4">Plus de détails...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a372fe9b49ce56cd4aedc01a8423457e4 inherit pub_types_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4ae8b013b4b60d7dcf0fb8ef16a0b6 inherit pub_types_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#a1e4ae8b013b4b60d7dcf0fb8ef16a0b6">FctnAction</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:a1e4ae8b013b4b60d7dcf0fb8ef16a0b6 inherit pub_types_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">le type de fonction associé aux declenchements des evenements.  <a href="#a1e4ae8b013b4b60d7dcf0fb8ef16a0b6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1e4ae8b013b4b60d7dcf0fb8ef16a0b6 inherit pub_types_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classgui_1_1_actions"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgui_1_1_actions')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="classgui_1_1_actions.html">gui::Actions</a></td></tr>
+<tr class="memitem:ad997ac14f6b6c5873386152f46bcf83c inherit pro_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c">declencher</a> (<a class="el" href="classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4">Evenement</a> evenement)</td></tr>
+<tr class="memdesc:ad997ac14f6b6c5873386152f46bcf83c inherit pro_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déclencher un évenement souris (les évenement claviers sont gérer.  <a href="#ad997ac14f6b6c5873386152f46bcf83c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad997ac14f6b6c5873386152f46bcf83c inherit pro_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efc2ada71486701f67d1d10015b127a inherit pro_methods_classgui_1_1_actions"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a">traiterEvenementsClavier</a> (sf::Event evenement)</td></tr>
+<tr class="memdesc:a1efc2ada71486701f67d1d10015b127a inherit pro_methods_classgui_1_1_actions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regarde si l'évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas échéant.  <a href="#a1efc2ada71486701f67d1d10015b127a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1efc2ada71486701f67d1d10015b127a inherit pro_methods_classgui_1_1_actions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classgui_1_1_gadget"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classgui_1_1_gadget')"><img src="closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="classgui_1_1_gadget.html">gui::Gadget</a></td></tr>
+<tr class="memitem:aed32b8bde0e9e8f5384adb7adf05a46a inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a">m_parent</a></td></tr>
+<tr class="memdesc:aed32b8bde0e9e8f5384adb7adf05a46a inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Composite /////////////////////.  <a href="#aed32b8bde0e9e8f5384adb7adf05a46a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aed32b8bde0e9e8f5384adb7adf05a46a inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae35b833b6030e36026729e15916ee694 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae35b833b6030e36026729e15916ee694">m_enfants</a></td></tr>
+<tr class="memdesc:ae35b833b6030e36026729e15916ee694 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">les liste des gadgets enfants.  <a href="#ae35b833b6030e36026729e15916ee694">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae35b833b6030e36026729e15916ee694 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c10fa7e18e19b6dc19d65490104474 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a35c10fa7e18e19b6dc19d65490104474">m_size</a></td></tr>
+<tr class="memdesc:a35c10fa7e18e19b6dc19d65490104474 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geométrie /////////////////////.  <a href="#a35c10fa7e18e19b6dc19d65490104474">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a35c10fa7e18e19b6dc19d65490104474 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaace78b90fc448c422ac4b2adde5a889 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#aaace78b90fc448c422ac4b2adde5a889">m_globalBounds</a></td></tr>
+<tr class="memdesc:aaace78b90fc448c422ac4b2adde5a889 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les limites globales du gadget (par rapport à la fenêtre principale).  <a href="#aaace78b90fc448c422ac4b2adde5a889">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aaace78b90fc448c422ac4b2adde5a889 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188b42366f5b5adf373edbe0af62a6ec inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a188b42366f5b5adf373edbe0af62a6ec">m_localBounds</a></td></tr>
+<tr class="memdesc:a188b42366f5b5adf373edbe0af62a6ec inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les limites locales du gadget (par rapport à son parent).  <a href="#a188b42366f5b5adf373edbe0af62a6ec">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a188b42366f5b5adf373edbe0af62a6ec inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Le <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> gère l'ensemble des interactions homme-machine du jeu. D'un coté un système de fenêtre, boutons basiques gérant les différents menus de l'appli. De l'autre, le menu phéromones, système central de l'interaction du joueur avec ses fourmis. </p>
+<p>Gère les gadgets composant les interfaces. Ce n'est pas un singleton mais il ne doit y avoir qu'une seul instance.</p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classgui_1_1_gadget.html" title="Un gadget est la classe abstraite des éléments de l&#39;interface. ">gui::Gadget</a> </dd></dl>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a781368d750e9c2e57a721305fa0d81df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gui::Gui::Gui </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow *&#160;</td>
+          <td class="paramname"><em>fenetre</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fenetre</td><td>La fenêtre SFML de l'application </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Initialisation des claques </p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_gui_a781368d750e9c2e57a721305fa0d81df_cgraph.png" border="0" usemap="#classgui_1_1_gui_a781368d750e9c2e57a721305fa0d81df_cgraph" alt=""/></div>
+<map name="classgui_1_1_gui_a781368d750e9c2e57a721305fa0d81df_cgraph" id="classgui_1_1_gui_a781368d750e9c2e57a721305fa0d81df_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html#ae710168f0ae17e7b2992812268da3e32" title="Ajouter un élement dans m_enfants. " alt="" coords="148,5,321,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="ad10b5a8ef07513c03c9126a3eef9955b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Gui::actualiser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actualiser les éléments de l'interface. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972">gui::Gadget</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1d59bd1caae90c88b0e4db8a3010a9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgui_1_1_gadget.html">Gadget</a> * gui::Gui::chercherGadgetSurvole </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recherche le gadget survolé par la sourie dans l'interface. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers le gadget survolé, nullptr si aucun. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aced24f6da36479c68b22f2a6c7f6973d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classgui_1_1_gadget.html">Gadget</a>&gt; gui::Gui::getEnfant </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesseur à l'élément de m_enfants désigné par un id. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>pour l'instant ne fait rien (nullptr). </dd></dl>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a8cf95ed43ca734db351030c58c6fe2f5">gui::Gadget</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b81c276f098468358927fef561a4601"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classgui_1_1_gadget.html">Gadget</a>* gui::Gui::getParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Acceder à m_parent. Ici ne fait rien car <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> est le root. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a9590993ba38e567c8da3f8f0cfc79820">gui::Gadget</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph.png" border="0" usemap="#classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph" alt=""/></div>
+<map name="classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph" id="classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_gui.html#ad6f8610a53aa2eb7626811dba531195f" title="retirer un enfant du gadget " alt="" coords="184,5,329,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6f8610a53aa2eb7626811dba531195f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Gui::retirerEnfant </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt;&#160;</td>
+          <td class="paramname"><em>cible</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>retirer un enfant du gadget </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cible</td><td>le gadget à retirer </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>on ne retire pas directement l'enfant dans m_enfants mais dans les calques. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a387706235192713391026917bb119b22">gui::Gadget</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49a33e82fb7fe037ef0d2eb493707df6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gui::Gui::setParent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definir m_parent. Ici ne fait rien car <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> est le root. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a8d9dac5aee31bfbb176f452d61186be0">gui::Gadget</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2965a5abefcf61e11429e01618b0206"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gui::Gui::setSize </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2i&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definir m_size. Ici ne fait rien car <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> à la taille de la fenetre SFML. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9">gui::Gadget</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph.png" border="0" usemap="#classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph" alt=""/></div>
+<map name="classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph" id="classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="417,5,583,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_gui.html#a6e0209d60ac47f2c86e8340a9b4a64b1" title="Traitement général des évenements clavier ou souris de tout les gadgets de l&#39;interface. " alt="" coords="172,118,351,145"/>
+<area shape="rect" id="node8" href="classgui_1_1_gui.html#ad10b5a8ef07513c03c9126a3eef9955b" title="Actualiser les éléments de l&#39;interface. " alt="" coords="196,169,327,195"/>
+<area shape="rect" id="node4" href="classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="399,71,601,112"/>
+<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="399,137,601,163"/>
+<area shape="rect" id="node6" href="classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Accesseurs / mutateur /////////////////////. " alt="" coords="431,187,569,214"/>
+<area shape="rect" id="node7" href="classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="419,238,581,265"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e0209d60ac47f2c86e8340a9b4a64b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Gui::traiterEvenements </td>
+          <td>(</td>
+          <td class="paramtype">sf::Event&#160;</td>
+          <td class="paramname"><em>evenement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Traitement général des évenements clavier ou souris de tout les gadgets de l'interface. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evenement</td><td>L'évenemnt à tratier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>on gère les actions liés au claviers</p>
+<p>on traite les évènements des enfants</p>
+<p>les gadgets survolé et survolé back</p>
+<p>les evenements 'souris' de l'interface </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20">gui::Gadget</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph.png" border="0" usemap="#classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph" alt=""/></div>
+<map name="classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph" id="classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="232,5,435,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="233,71,434,98"/>
+<area shape="rect" id="node4" href="classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="250,123,417,164"/>
+<area shape="rect" id="node5" href="classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Accesseurs / mutateur /////////////////////. " alt="" coords="264,189,403,215"/>
+<area shape="rect" id="node6" href="classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="252,239,415,266"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab25e7e107c6a60f8cf52b3e11a936419"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gui::Gui::viderEnfants </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vider m_enfants. Ici on vide le contenu des calques. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#adb5a08b6427b6cd2af98a6a2e993bb5b">gui::Gadget</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions amies et associées</h2>
+<a class="anchor" id="a4aecc6b4dfc3941df0608797538a1726"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classgui_1_1_fabrique.html">Fabrique</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>les calques ///////////////////// </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="ae5dd6ef6163bce1ef69086bd7dd0c49b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgui_1_1_fabrique.html">gui::Fabrique</a> gui::Gui::creer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>la fabrique///////////////////// </p>
+<p>La fabrique des gadget. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7b5eb0e20c44e24291c71faeb5fded14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_calque.html">Calque</a>&gt; gui::Gui::m_calqueFenetres</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le calque regroupant les fenetres. </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb85d2fd66d95c565cd9574c3c600278"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_calque.html">Calque</a>&gt; gui::Gui::m_calqueFond</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le calque regroupant les gadgets les plus au fond de la vue. </p>
+
+</div>
+</div>
+<a class="anchor" id="a676bd17b12968c4541fd6f9abcee3cff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::RenderWindow* gui::Gui::m_fenetre</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>la fenetre SFML ///////////////////// </p>
+<p>La fenêtre SFML de l'application, pour acceder aux coordonnées de la souris par exemple. </p>
+
+</div>
+</div>
+<a class="anchor" id="a81bd7f3a2f4a3286988f490702807196"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgui_1_1_gadget.html">Gadget</a>* gui::Gui::m_gadgetPresse</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Le gadget survolé (nullptr si aucun) </p>
+</blockquote>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afdc3584efc019882f7cb18e2c703e494"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgui_1_1_gadget.html">Gadget</a>* gui::Gui::m_gadgetSurvole</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>la gestion des gadgets interactifs </p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li><a class="el" href="_gui_8h_source.html">Gui.h</a></li>
+<li><a class="el" href="_gui_8cpp.html">Gui.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_gui.html">Gui</a></li>
+    <li class="footer">Généré le Vendredi 20 Mai 2016 13:06:37 pour Appli par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

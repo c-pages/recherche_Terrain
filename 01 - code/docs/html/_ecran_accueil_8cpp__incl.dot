@@ -1,0 +1,46 @@
+digraph "EcranAccueil.cpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="EcranAccueil.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="appli/ecrans\\EcranAccueil.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ecran_accueil_8h.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SFML/Graphics.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="appli/Ecran.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ecran_8h.html"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="appli/Application.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_application_8h.html",tooltip="La classe principale du programme. "];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="appli/Gestion_ecrans.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gestion__ecrans_8h.html"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="appli/Config.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_config_8h.html"];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="map",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="memory",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="gui/Gui.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gui_8h.html"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Gadget.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gadget_8h.html"];
+  Node12 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Fabrique.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_fabrique_8h.html"];
+  Node11 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Style.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_style_8h.html"];
+  Node14 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="cstdio",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

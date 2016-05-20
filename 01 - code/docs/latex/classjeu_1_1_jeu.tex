@@ -1,0 +1,141 @@
+\hypertarget{classjeu_1_1_jeu}{}\section{RÃ©fÃ©rence de la classe jeu\+:\+:Jeu}
+\label{classjeu_1_1_jeu}\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+
+
+La classe général du jeu, gère le jeu de manière global. popo autre ligne là aussi.  
+
+
+
+
+{\ttfamily \#include $<$Jeu.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}hÃ©ritage de jeu\+:\+:Jeu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classjeu_1_1_jeu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de jeu\+:\+:Jeu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classjeu_1_1_jeu__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classjeu_1_1_jeu_ab2a947b1bcf23bfc03055e44ef3f1b97}{demarrer\+Partie} ()
+\begin{DoxyCompactList}\small\item\em Démarre une nouvelle partie. et là onsaute une ligne. et une autre. \end{DoxyCompactList}\item 
+void \hyperlink{classjeu_1_1_jeu_a3db176776c68ecf18e4b295496d962b4}{quitter\+Partie} ()
+\begin{DoxyCompactList}\small\item\em Quitter la partie en cours (sans sauvegarde). \end{DoxyCompactList}\item 
+void \hyperlink{classjeu_1_1_jeu_a8a4797dd1509a9f81da923f6bdff7796}{charger\+Partie} ()
+\begin{DoxyCompactList}\small\item\em Charger une partie precedement sauvegarder. \end{DoxyCompactList}\item 
+void \hyperlink{classjeu_1_1_jeu_a61a3a44e5de01e55376caf7b31785931}{sauvegarder\+Partie} ()
+\begin{DoxyCompactList}\small\item\em Sauvegarder une partie. \end{DoxyCompactList}\item 
+void \hyperlink{classjeu_1_1_jeu_ad387370139d955b86a92d1cd4d9becd8}{actualiser} (sf\+::\+Time deltaT=sf\+::\+Time\+::\+Zero)
+\begin{DoxyCompactList}\small\item\em Actualiser les éléments du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{classjeu_1_1_jeu_acf25c03f9a224e223aec9e2540ca8aa0}{traiter\+Evenements} (sf\+::\+Event evenement)
+\begin{DoxyCompactList}\small\item\em Traitement des évenemnts clavier et souris. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classjeu_1_1_jeu_a9c6b7bee6497df47fab172f87048c725}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Description dÃ©taillÃ©e}
+La classe général du jeu, gère le jeu de manière global. popo autre ligne là aussi. 
+
+\subsection{Documentation des fonctions membres}
+\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+\subsubsection[{\texorpdfstring{actualiser(sf\+::\+Time delta\+T=sf\+::\+Time\+::\+Zero)}{actualiser(sf::Time deltaT=sf::Time::Zero)}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Jeu\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{deltaT = {\ttfamily sf\+:\+:Time\+:\+:Zero}}
+\end{DoxyParamCaption}
+)}\hypertarget{classjeu_1_1_jeu_ad387370139d955b86a92d1cd4d9becd8}{}\label{classjeu_1_1_jeu_ad387370139d955b86a92d1cd4d9becd8}
+
+
+Actualiser les éléments du jeu. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em deltaT} & Temps écoulé depuis la dernière actualisation. ( par défaut = 0\+: Actualise sans tenir compte du temps ecoulé) \\
+\hline
+\end{DoxyParams}
+\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}!charger\+Partie@{charger\+Partie}}
+\index{charger\+Partie@{charger\+Partie}!jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+\subsubsection[{\texorpdfstring{charger\+Partie()}{chargerPartie()}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Jeu\+::charger\+Partie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjeu_1_1_jeu_a8a4797dd1509a9f81da923f6bdff7796}{}\label{classjeu_1_1_jeu_a8a4797dd1509a9f81da923f6bdff7796}
+
+
+Charger une partie precedement sauvegarder. 
+
+\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}!demarrer\+Partie@{demarrer\+Partie}}
+\index{demarrer\+Partie@{demarrer\+Partie}!jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+\subsubsection[{\texorpdfstring{demarrer\+Partie()}{demarrerPartie()}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Jeu\+::demarrer\+Partie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjeu_1_1_jeu_ab2a947b1bcf23bfc03055e44ef3f1b97}{}\label{classjeu_1_1_jeu_ab2a947b1bcf23bfc03055e44ef3f1b97}
+
+
+Démarre une nouvelle partie. et là onsaute une ligne. et une autre. 
+
+\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}!draw@{draw}}
+\index{draw@{draw}!jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const }{draw(sf::RenderTarget &target, sf::RenderStates states) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual void jeu\+::\+Jeu\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Target \&}]{target, }
+\item[{sf\+::\+Render\+States}]{states}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classjeu_1_1_jeu_a9c6b7bee6497df47fab172f87048c725}{}\label{classjeu_1_1_jeu_a9c6b7bee6497df47fab172f87048c725}
+\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}!quitter\+Partie@{quitter\+Partie}}
+\index{quitter\+Partie@{quitter\+Partie}!jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+\subsubsection[{\texorpdfstring{quitter\+Partie()}{quitterPartie()}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Jeu\+::quitter\+Partie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjeu_1_1_jeu_a3db176776c68ecf18e4b295496d962b4}{}\label{classjeu_1_1_jeu_a3db176776c68ecf18e4b295496d962b4}
+
+
+Quitter la partie en cours (sans sauvegarde). 
+
+\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}!sauvegarder\+Partie@{sauvegarder\+Partie}}
+\index{sauvegarder\+Partie@{sauvegarder\+Partie}!jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+\subsubsection[{\texorpdfstring{sauvegarder\+Partie()}{sauvegarderPartie()}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Jeu\+::sauvegarder\+Partie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classjeu_1_1_jeu_a61a3a44e5de01e55376caf7b31785931}{}\label{classjeu_1_1_jeu_a61a3a44e5de01e55376caf7b31785931}
+
+
+Sauvegarder une partie. 
+
+\index{jeu\+::\+Jeu@{jeu\+::\+Jeu}!traiter\+Evenements@{traiter\+Evenements}}
+\index{traiter\+Evenements@{traiter\+Evenements}!jeu\+::\+Jeu@{jeu\+::\+Jeu}}
+\subsubsection[{\texorpdfstring{traiter\+Evenements(sf\+::\+Event evenement)}{traiterEvenements(sf::Event evenement)}}]{\setlength{\rightskip}{0pt plus 5cm}void jeu\+::\+Jeu\+::traiter\+Evenements (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Event}]{evenement}
+\end{DoxyParamCaption}
+)}\hypertarget{classjeu_1_1_jeu_acf25c03f9a224e223aec9e2540ca8aa0}{}\label{classjeu_1_1_jeu_acf25c03f9a224e223aec9e2540ca8aa0}
+
+
+Traitement des évenemnts clavier et souris. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em evenement} & l\textquotesingle{}évenement à traiter. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/kris/\+One\+Drive/recherche Biome/01 -\/ code/code/include/jeu/\hyperlink{_jeu_8h}{Jeu.\+h}\end{DoxyCompactItemize}

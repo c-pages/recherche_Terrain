@@ -1,0 +1,5 @@
+<map id="app::Application::changerEcran" name="app::Application::changerEcran">
+<area shape="rect" id="node2" href="$classapp_1_1_gestion__ecrans.html#addd582c82b53c7c142d23dbee83c5bbd" title="Changer d&#39;écran. " alt="" coords="223,39,365,80"/>
+<area shape="rect" id="node3" href="$classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c" title="Retirer l&#39;écran du dessus de la pile. " alt="" coords="413,5,556,47"/>
+<area shape="rect" id="node4" href="$classapp_1_1_gestion__ecrans.html#a576182f13e96e890e961dd1f7f69747b" title="Ajouter un écran sur la pile. " alt="" coords="413,71,556,112"/>
+</map>

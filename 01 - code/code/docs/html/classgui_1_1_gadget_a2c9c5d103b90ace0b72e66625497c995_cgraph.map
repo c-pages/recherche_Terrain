@@ -1,0 +1,11 @@
+<map id="gui::Gadget::supprimer" name="gui::Gadget::supprimer">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#a387706235192713391026917bb119b22" title="retirer un enfant du gadget " alt="" coords="208,5,375,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#ae1702e98e25d7b6986c98aeabecae7c0" title="Créer un shared pointeur vers this. " alt="" coords="224,56,359,83"/>
+<area shape="rect" id="node7" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="672,183,833,209"/>
+<area shape="rect" id="node9" href="$classgui_1_1_gadget.html#a92c42e660b6b307daa77cd0d42aad26f" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="210,107,373,133"/>
+<area shape="rect" id="node10" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="221,157,362,184"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#a05c0bc3e85aab97c14f402cddb0be381" title="Teste le survol du gadget par la souris. " alt="" coords="441,5,606,32"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="423,56,624,83"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="447,157,600,184"/>
+<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="461,107,585,133"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="gui::Label::traiterEvenements" name="gui::Label::traiterEvenements">
+<area shape="rect" id="node2" href="$classgui_1_1_label.html#af807726e00c95695a8ed8ee60a898b6a" title="Actualiser les éléments de l&#39;interface. " alt="" coords="244,29,387,56"/>
+<area shape="rect" id="node5" href="$classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="259,80,372,107"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="435,29,588,56"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="636,29,797,56"/>
+</map>
