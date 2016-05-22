@@ -126,8 +126,8 @@ EcranAccueil::initGUI  ( )
 
     std::shared_ptr<gui::Bouton>    boutonTexte_3   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) );
     boutonTexte_3->setPosition   ( 400,300 );
-    boutonTexte_3->setAlphaEtats            ( 0,100,250);
-    boutonTexte_3->setContourEpaisseur      ( 0);
+    boutonTexte_3->setAlphaEtats            (   0, 100, 250 );
+    boutonTexte_3->setContourEpaisseur      ( 0 );
 //    boutonTexte_3->setMarge({20,20});
 
     std::shared_ptr<gui::Bouton>    boutonTexte_4   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) , { 40, 20 });
@@ -144,13 +144,18 @@ EcranAccueil::initGUI  ( )
 
 
     auto boutonPourFenetre  = m_interface->creer.bouton ("Bouton dans la fenetre");
-    boutonPourFenetre->setPosition ( 10, 5 );
+    boutonPourFenetre->setPosition ( 0, 5 );
+
     auto boutonPourFenetre2 = m_interface->creer.bouton ("Bouton dans la fenetre super long pour voir quand ca depasse");
-    boutonPourFenetre2->setPosition ( 10, 30 );
+    boutonPourFenetre2->setPosition ( 0, 30 );
+
+    auto boutonPourFenetre3 = m_interface->creer.bouton ("Autre Bouton dans la fenetre super long pour voir quand ca depasse");
+    boutonPourFenetre3->setPosition ( 0, 70 );
 
 
     fenetreTest->ajouterEnfant( boutonPourFenetre );
     fenetreTest->ajouterEnfant( boutonPourFenetre2 );
+    fenetreTest->ajouterEnfant( boutonPourFenetre3 );
     fenetreTest->setPosition   ( 250,250 );
 
 

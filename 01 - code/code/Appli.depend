@@ -430,7 +430,7 @@
 1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
 	"gui/Gadget.h"
 
-1463944536 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\fenetre.h
+1463956052 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\fenetre.h
 	"gui/Gadget.h"
 	<gui/Calque.h>
 	"gui/gadgets/Bouton.h"
@@ -600,7 +600,7 @@
 	"appli/Ecran.h"
 	<stdio.h>
 
-1463944591 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
+1463955502 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
 	"appli/ecrans\EcranAccueil.h"
 	"appli/Config.h"
 	<iostream>
@@ -638,7 +638,7 @@
 	<appli/Config.h>
 	<iostream>
 
-1463944489 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\fenetre.cpp
+1463955210 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\fenetre.cpp
 	<gui/gadgets/Fenetre.h>
 	<appli/Config.h>
 	"gui/Gui.h"

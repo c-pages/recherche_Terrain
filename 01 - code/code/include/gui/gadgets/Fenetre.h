@@ -60,11 +60,33 @@ private:
 
 
             /////////////////////////////////////////////////
-            /// \brief Modifie la longueur de la glissere pour l'adapter à la fenetre.
+            /// \brief Modifie la longueur du gadget pour l'adapter à la fenetre.
             ///
             /// \param longueur la nouvelle longueur
             /////////////////////////////////////////////////
             void setLongueur ( int longueur );
+
+            /////////////////////////////////////////////////
+            /// \brief Modifie la longueur de la glissere.
+            ///
+            /// \param rapport la nouvelle longueur
+            /////////////////////////////////////////////////
+            void setRapport ( float rapport );
+
+            /////////////////////////////////////////////////
+            /// \brief Definie la position de la glissere sur le gadget
+            ///
+            /// \return position la nouvelle position
+            /////////////////////////////////////////////////
+            void setPosGlissiere ( int position );
+
+            /////////////////////////////////////////////////
+            /// \brief Acceder à la position de la glissere sur le gadget
+            ///
+            /// \return longueur la nouvelle longueur
+            /////////////////////////////////////////////////
+            int getPosGlissiere ();
+
 
             /////////////////////////////////////////////////
             /// \brief Modifie la largeur de la glissere.
@@ -77,7 +99,8 @@ private:
             /// \brief Modifie la largeur de la glissere.
             ///
             /// \return  la largeur
-            /////////////////////////////////////////////////
+            ///////////////////////////////////
+    /// gestion du drag de la fenetre /////////////////////////////
             int getLargeur ( );
 
 
@@ -115,12 +138,15 @@ private:
         /////////////////////////////////////////////////
         private:
 
-            Orientation m_orientation;
-            Bouton      m_btnFond;           ///< Le bouton fix de fond, il permet de déplacer en un clique le m_btnGlissière.
-            Bouton      m_btnGlissiere;      ///< Ce bouton est la glissière proprement dite, c'est ce bouton qui glisse pour deplacer le contenu de la fenetre.
-            int         m_largeur;           ///< La largeur de la glissiere, represente m_size.x pour une glissiere vertical et m_size.y pour une horizontale.
+            Orientation     m_orientation;          ///< L'orientation de la glissère, soit horizontal, soit vertical
+            int             m_largeur;              ///< La largeur de la glissiere, represente m_size.x pour une glissiere vertical et m_size.y pour une horizontale.
 
+            bool            m_dragEnCours;          ///< Si on est en train de dragger la fenêtre.
+            sf::Vector2i    m_dragPosOrigin;        ///< La position d'origine au debut du drag.
+            sf::Vector2i    m_dragPosSourisOrigin;  ///< La position d'origine de la souris au debut du drag.
 
+            Bouton          m_btnFond;              ///< Le bouton fix de fond, il permet de déplacer en un clique le m_btnGlissière.
+            Bouton          m_btnGlissiere;         ///< Ce bouton est la glissière proprement dite, c'est ce bouton qui glisse pour deplacer le contenu de la fenetre.
     }; // fin class Glissiere
 
 

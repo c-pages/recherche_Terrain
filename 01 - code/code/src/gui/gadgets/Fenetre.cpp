@@ -8,22 +8,49 @@
 
 
 namespace gui {
+/////////////////////////////////////////////////
+// Glissiere
+/////////////////////////////////////////////////
 
 /////////////////////////////////////////////////
 Fenetre::Glissiere::Glissiere ( Glissiere::Orientation orientation )
-: m_orientation     ( orientation )
-, m_btnFond         ( )
-, m_btnGlissiere    ( )
-, m_largeur         ( 7 )
+: m_orientation         ( orientation )
+, m_dragEnCours         ( false )
+, m_dragPosOrigin       ( {0,0} )
+, m_dragPosSourisOrigin ( {0,0} )
+, m_btnFond             ( )
+, m_btnGlissiere        ( )
+, m_largeur             ( 7 )
 {
+
+    /// Initialisation bouton du fond
     m_btnFond.setRemplissageCouleur    ( { 255, 255, 255 } );
     m_btnFond.setContourCouleur        ( { 150, 150, 150 } );
     m_btnFond.setContourEpaisseur      ( 0 );
     m_btnFond.setParent                ( this );
-    m_btnFond.setAlphaEtats            ( 50,75,100 );
+    m_btnFond.setAlphaEtats            ( 0,20,30 );
+
+    /// Initialisation bouton glissiere
+    m_btnGlissiere.setRemplissageCouleur    ( { 255, 255, 255 } );
+    m_btnGlissiere.setContourCouleur        ( { 150, 150, 150 } );
+    m_btnGlissiere.setContourEpaisseur      ( 0 );
+    m_btnGlissiere.setParent                ( this );
+    m_btnGlissiere.setAlphaEtats            ( 100,150,200 );
+
+    /// Interactions
+    auto fctDebutDrag = [this](){
+        std::cout << "debut drag\n";
+    };
+    auto fctFinDrag = [this](){
+        std::cout << "fin drag\n";
+    };
+    m_btnGlissiere.lier ( Evenement::onBtnG_presser     , fctDebutDrag );
+    m_btnGlissiere.lier ( Evenement::onBtnG_relacher    , fctFinDrag );
 
     actualiser();
+
 }
+
 
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::setLongueur ( int longueur ){
@@ -35,7 +62,21 @@ void Fenetre::Glissiere::setLongueur ( int longueur ){
             m_size = { m_largeur, longueur };
             break;
     }
+    actualiser();
+}
 
+
+/////////////////////////////////////////////////
+void Fenetre::Glissiere::setRapport ( float rapport )
+{
+    switch ( m_orientation ){
+        case Horizontal:
+            m_btnGlissiere.setSize( { rapport * m_size.x , m_largeur } );
+            break;
+        case Vertical:
+            m_btnGlissiere.setSize( { m_largeur , m_size.y * rapport } );
+            break;
+    }
     actualiser();
 }
 
@@ -54,10 +95,33 @@ int Fenetre::Glissiere::getLargeur ( )
 }
 
 
+
+
+
+/////////////////////////////////////////////////
+void Fenetre::Glissiere::setPosGlissiere ( int position )
+{
+
+}
+
+
+/////////////////////////////////////////////////
+int Fenetre::Glissiere::getPosGlissiere ()
+{
+
+}
+
+
+
+
+
+
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::actualiser (){
 
     m_btnFond.setSize ( m_size );
+
+    m_btnGlissiere.actualiser();
 
     Gadget::actualiser();
 
@@ -76,11 +140,12 @@ Gadget* Fenetre::Glissiere::testerSurvol (sf::Vector2i posSouris)
         return nullptr;
 
     // Si on survol les glissieres
+    if ( m_btnGlissiere.testerSurvol ( posSouris ) != nullptr )
+        return m_btnGlissiere.testerSurvol ( posSouris );
+
     if ( m_btnFond.testerSurvol ( posSouris ) != nullptr )
         return m_btnFond.testerSurvol ( posSouris );
 
-    if ( m_btnGlissiere.testerSurvol ( posSouris ) != nullptr )
-        return m_btnGlissiere.testerSurvol ( posSouris );
 
 
 
@@ -127,8 +192,9 @@ void Fenetre::Glissiere::draw (sf::RenderTarget& target, sf::RenderStates states
 
 
 
-
-
+/////////////////////////////////////////////////
+// Fenetre
+/////////////////////////////////////////////////
 
 /////////////////////////////////////////////////
 Fenetre::Fenetre ( )
@@ -216,7 +282,7 @@ Fenetre::Fenetre ( )
 /////////////////////////////////////////////////
 void Fenetre::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
 
-    // on l'ajoute normalement
+    /// on l'ajoute dans le calque
     m_calque->ajouterEnfant( nouvelElement );
 
     actualiser();
@@ -298,21 +364,21 @@ void Fenetre::setContourEpaisseur (float epaisseur)
 /////////////////////////////////////////////////
 void Fenetre::actualiser ()
 {
-    // les bounds
+    /// les bounds
     Gadget::actualiser();
 
-    // les éléments graphiques
+    /// les éléments graphiques
     auto hauteurTitre = m_titre.getLocalBounds().height;
     m_fond.setSize              ( { m_size.x, m_size.y } );
     m_titre.setPosition         ( m_marge.x , m_marge.y  - hauteurTitre/3 );
     m_btnFermer.setSize         ( { hauteurTitre , hauteurTitre } );
     m_btnFermer.setPosition     ( m_size.x - hauteurTitre - m_marge.x, m_marge.y );
 
-    // on replace le calque enfants dans la fenetre
+    /// on replace le calque enfants dans la fenetre
     m_calque->setSize           ( { m_size.x - 2*m_marge.x - m_btnSliderV.getLargeur (), m_size.y - ( 3*m_marge.y + hauteurTitre ) - m_btnSliderH.getLargeur () } );
     m_calque->setPosition       ( m_marge.x, 2*m_marge.y + hauteurTitre );
 
-    // les glissières si besoin
+    /// les glissières si besoin
     auto boundsEnfants = m_calque->getEnfantsLocalBounds () ;
     m_btnSliderH.setVisible ( boundsEnfants.width  > m_calque->getSize().x );
     m_btnSliderV.setVisible ( boundsEnfants.height > m_calque->getSize().y );
@@ -320,16 +386,19 @@ void Fenetre::actualiser ()
         m_btnSliderH.setPosition  ( m_calque->getPosition().x
                                   , m_calque->getPosition().y + m_calque->getSize().y   );
         m_btnSliderH.setLongueur ( m_calque->getSize().x );
+
+        m_btnSliderH.setRapport (  (float)(m_calque->getSize().x ) /  (float)(boundsEnfants.width));
     }
     if ( m_btnSliderV.estVisible() ) {
         m_btnSliderV.setPosition   ( m_calque->getPosition().x + m_calque->getSize().x
                                    , m_calque->getPosition().y);
         m_btnSliderV.setLongueur ( m_calque->getSize().y );
+        m_btnSliderV.setRapport ( (float)(m_calque->getSize().y) /  (float)(boundsEnfants.height));
     }
 
 
 
-    // actualiser les bounds du shader
+    /// actualiser les bounds du shader
     actualiserClipping ( m_calque->getGlobalBounds () );
 
 
@@ -339,16 +408,19 @@ void Fenetre::actualiser ()
 /////////////////////////////////////////////////
 void Fenetre::traiterEvenements (sf::Event evenement)
 {
-    if ( ! estVisible() )
-        return;
+    /// si caché on zappe
+    if ( ! estVisible() ) return;
 
-    /// gestion du drag /////
+    /// Drag de la fenetre ///////////////
     if ( m_dragEnCours )
     {
         auto posSouris = Gui::getSourisPosition ();
         setPosition ( m_dragPosOrigin + posSouris - m_dragPosSourisOrigin );
     }
 
+    /// Les sliders, pour le drag aussi ///////////////
+    m_btnSliderH.traiterEvenements( evenement );
+    m_btnSliderV.traiterEvenements( evenement );
 
 }
 
@@ -357,31 +429,31 @@ void Fenetre::traiterEvenements (sf::Event evenement)
 Gadget* Fenetre::testerSurvol (sf::Vector2i posSouris)
 {
 
-    // si non visible on renvois nullptr
+    /// si non visible on renvois nullptr
     if (! estVisible () )
         return nullptr;
 
-    // Si on survol pas la fenetre on sort direct
+    /// Si on survol pas la fenetre on sort direct
     if ( ! getGlobalBounds().contains( posSouris.x, posSouris.y ) )
         return nullptr;
 
-    // Si on survol le bouton fermeture
+    /// Si on survol le bouton fermeture
     if ( m_btnFermer.testerSurvol ( posSouris ) != nullptr )
         return m_btnFermer.testerSurvol ( posSouris );
 
-    // Si on survol les glissieres
+    /// Si on survol les glissieres
     if ( m_btnSliderH.testerSurvol ( posSouris ) != nullptr )
         return m_btnSliderH.testerSurvol ( posSouris );
     if ( m_btnSliderV.testerSurvol ( posSouris ) != nullptr )
         return m_btnSliderV.testerSurvol ( posSouris );
 
 
-    // on test les enfants
+    /// on test les enfants
     if ( m_calque->testerSurvol ( posSouris ) != nullptr )
         return m_calque->testerSurvol ( posSouris );
 
 
-    // finalement on renvois la fenetre (pour le drag par exemple)
+    /// finalement on renvois la fenetre (pour le drag par exemple)
     return this;
 
 }
@@ -390,26 +462,26 @@ Gadget* Fenetre::testerSurvol (sf::Vector2i posSouris)
 void Fenetre::draw (sf::RenderTarget& target, sf::RenderStates states) const
 {
 
-    // si non visible on sort
+    /// si non visible on sort
     if ( ! estVisible () ) return;
 
-    //On applique la transformation
+    ///On applique la transformation
     states.transform *= getTransform();
 
-    // On dessine le fond
+    /// On dessine le fond
     target.draw ( m_fond , states );
 
-    // on dessine le bouton fermeture si besoin
+    /// on dessine le bouton fermeture si besoin
     if ( m_fermable ) target.draw ( m_btnFermer , states );
 
-    // on dessine les glissieres
+    /// on dessine les glissieres
     target.draw ( m_btnSliderH , states );
     target.draw ( m_btnSliderV , states );
 
-    // On dessine le titre
+    /// On dessine le titre
     target.draw ( m_titre , states );
 
-    // on dessine les enfants
+    /// on dessine les enfants
     target.draw ( *m_calque , states );
 
 
