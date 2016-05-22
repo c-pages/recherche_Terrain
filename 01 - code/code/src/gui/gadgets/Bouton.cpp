@@ -187,14 +187,20 @@ void Bouton::draw (sf::RenderTarget& target, sf::RenderStates states) const
     //On applique la transformation
     states.transform *= getTransform();
 
-    // On dessine le rectangle
+    // On dessine le rectangle avec le shader clipping
+    states.shader = &m_shaderClip;
     target.draw ( m_fond , states );
 
-    // on dessine l'icone si besoin
-    if ( m_icone.getTexture() != nullptr )
-        target.draw ( m_icone , states );
+    //on applique le shader
 
-    // On dessine le texte
+    // on dessine l'icone si besoin
+    if ( m_icone.getTexture() != nullptr ) {
+        states.shader = &m_shaderClipImage;
+        target.draw ( m_icone , states );
+    }
+
+    // On dessine le texte avec le shader clipping
+    states.shader = &m_shaderClipImage;
     target.draw ( m_texte , states );
 
 

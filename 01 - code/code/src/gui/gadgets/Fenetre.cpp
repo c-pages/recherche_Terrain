@@ -27,7 +27,7 @@ Fenetre::Fenetre ( )
 , m_dragEnCours         ( false )
 , m_dragPosOrigin       ( {0,0} )
 , m_dragPosSourisOrigin ( {0,0} )
-, m_shaderClip          ( )
+//, m_shaderClip          ( )
 , m_fond                ( )
 , m_titre               ( )
 , m_boutonFermer        ( )
@@ -36,10 +36,10 @@ Fenetre::Fenetre ( )
 , m_calque              ( std::make_shared<Calque>() )
 {
 
-    /// Initialisation du shader SANS le ressource manager !! ATTENTION a corriger !!
-    if (! m_shaderClip.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment ) )
-        std::cout << "PROBLEME CHARGEMENT SHADER\n";
-    else    m_shaderClip.setParameter("texture", sf::Shader::CurrentTexture);
+//    /// Initialisation du shader SANS le ressource manager !! ATTENTION a corriger !!
+//    if (! m_shaderClip.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment ) )
+//        std::cout << "PROBLEME CHARGEMENT SHADER\n";
+//    else    m_shaderClip.setParameter("texture", sf::Shader::CurrentTexture);
 
     m_marge = { 8,8 };
 
@@ -106,6 +106,7 @@ void Fenetre::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
     // on l'ajoute normalement
     m_calque->ajouterEnfant( nouvelElement );
 
+    actualiser();
 
 }
 
@@ -182,17 +183,18 @@ void Fenetre::setContourEpaisseur (float epaisseur)
 
 
 
-/////////////////////////////////////////////////
-void Fenetre::actualiserClipping ()
-{
-    auto bounds = m_calque->getGlobalBounds();
-    std::cout << "actualiserClipping : " << bounds.left << " , " << bounds.top << " , " << bounds.width << " , " << bounds.height << "\n";
-    m_shaderClip.setParameter( "rectMasque" , bounds.left
-                                            , bounds.top
-                                            , bounds.width
-                                            , bounds.height );
-    m_shaderClip.setParameter( "aTexture" , true );
-}
+///////////////////////////////////////////////////
+//void Fenetre::actualiserClipping ()
+//{
+//    auto bounds = m_calque->getGlobalBounds();
+//    std::cout << "actualiserClipping : " << bounds.left << " , " << bounds.top << " , " << bounds.width << " , " << bounds.height << "\n";
+//    m_shaderClip.setParameter( "rectMasque" , bounds.left
+//                                            , bounds.top
+//                                            , bounds.width
+//                                            , bounds.height );
+//
+////    m_shaderClip.setParameter( "aTexture" , false );
+//}
 
 
 /////////////////////////////////////////////////
@@ -209,11 +211,11 @@ void Fenetre::actualiser ()
     m_boutonFermer.setPosition  ( m_size.x - hauteurTitre - m_marge.x, m_marge.y );
 
     // on replace le calque enfants dans la fenetre
-    m_calque->setPosition       ( m_marge.x, 2*m_marge.y + hauteurTitre );
     m_calque->setSize           ( { m_size.x - 2*m_marge.x , m_size.y - ( 2*m_marge.y + hauteurTitre ) } );
+    m_calque->setPosition       ( m_marge.x, 2*m_marge.y + hauteurTitre );
 
-    // le shader
-    actualiserClipping ();
+    // actualiser les bounds du shader
+    actualiserClipping ( m_calque->getGlobalBounds () );
 
 
 }
@@ -283,10 +285,7 @@ void Fenetre::draw (sf::RenderTarget& target, sf::RenderStates states) const
     target.draw ( m_titre , states );
 
     // on dessine les enfants
-    states.shader = &m_shaderClip;
     target.draw ( *m_calque , states );
-
-
 
 
 }

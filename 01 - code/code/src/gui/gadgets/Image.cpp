@@ -50,7 +50,8 @@ void Image::draw (sf::RenderTarget& target, sf::RenderStates states) const
     //On applique la transformation
     states.transform *= getTransform();
 
-    // On dessine le texte
+    // On dessine le shape avec son shader clipping
+    states.shader = &m_shaderClipImage;
     target.draw ( m_shape , states );
 }
 

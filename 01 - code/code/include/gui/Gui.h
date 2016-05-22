@@ -18,8 +18,7 @@ namespace gui {
 /// De l'autre, le menu phéromones, système central de l'interaction du joueur avec ses fourmis.
 ///
 /////////////////////////////////////////////////
-class Gui : //public Actions,
-            public Gadget {
+class Gui : public Gadget {
 
 
 
@@ -41,11 +40,16 @@ public:
 /////////////////////////////////////////////////
 
     /////////////////////////////////////////////////
-    /// \brief accesseur la la position de la souris
+    /// \brief accesseur de la position de la souris
     ///
     /////////////////////////////////////////////////
     static sf::Vector2i getSourisPosition ();
 
+    /////////////////////////////////////////////////
+    /// \brief accesseur de la fenetre SFML
+    ///
+    /////////////////////////////////////////////////
+    static sf::RenderWindow* getFenetreSFML ();
 
 
 
@@ -138,7 +142,7 @@ public:
 private:
 
     /// la fenetre SFML /////////////////////
-    static sf::RenderWindow *  m_fenetre;          ///< La fenêtre SFML de l'application, pour acceder aux coordonnées de la souris par exemple.
+    static sf::RenderWindow *  ms_fenetre;          ///< La fenêtre SFML de l'application, pour acceder aux coordonnées de la souris par exemple.
 
     /// les calques /////////////////////
     friend class                Fabrique;

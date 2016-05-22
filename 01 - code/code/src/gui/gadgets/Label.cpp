@@ -18,6 +18,8 @@ Label::Label ( std::string texte)
     m_texte.setColor            ( sf::Color (200,200,200) );
     m_texte.setFont             ( app::Config::ms_polices.get( app::Config::Polices::police_1 ) );
 
+
+
     actualiser ();
 }
 
@@ -83,11 +85,11 @@ void Label::draw (sf::RenderTarget& target, sf::RenderStates states) const
     // si non visible on sort
     if (! estVisible () ) return;
 
-
     //On applique la transformation
     states.transform *= getTransform();
 
-    // On dessine le texte
+    // On dessine le texte avec son shader clipping
+    states.shader = &m_shaderClipImage;
     target.draw ( m_texte , states );
 }
 

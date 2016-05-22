@@ -11,7 +11,7 @@
 
 namespace gui {
 
-sf::RenderWindow *  ms_fenetre = nullptr;
+sf::RenderWindow *  Gui::ms_fenetre = nullptr;
 
 
 
@@ -23,6 +23,7 @@ Gui::Gui ( sf::RenderWindow* fenetre )
 , m_gadgetSurvole   ( nullptr )
 , m_gadgetPresse    ( nullptr )
 {
+
     // la fenetre SFML
     ms_fenetre = fenetre;
 
@@ -37,8 +38,8 @@ Gui::Gui ( sf::RenderWindow* fenetre )
 void Gui::retirerEnfant ( std::shared_ptr<Gadget> cible )
 {
     /// on ne retire pas directement l'enfant dans m_enfants mais dans les calques.
-    m_calqueFenetres->retirerEnfant( cible );
-    m_calqueFond->retirerEnfant( cible );
+    m_calqueFenetres->retirerEnfant ( cible );
+    m_calqueFond->retirerEnfant     ( cible );
 }
 
 
@@ -224,6 +225,10 @@ sf::Vector2i Gui::getSourisPosition ()
     return sf::Mouse::getPosition( *ms_fenetre );
 }
 
+/////////////////////////////////////////////////
+sf::RenderWindow* Gui::getFenetreSFML (){
+    return ms_fenetre;
+}
 
 } // fin namespace gui
 

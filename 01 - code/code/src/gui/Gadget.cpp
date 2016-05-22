@@ -1,7 +1,8 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
-#include <gui/Gadget.h>
+#include "gui/Gadget.h"
+#include "gui/Gui.h"
 
 #include <iostream>
 
@@ -16,7 +17,19 @@ Gadget::Gadget ()
 , m_globalBounds    ( {0,0,0,0} )
 , m_localBounds     ( {0,0,0,0} )
 , m_marge           ( { 5,5 })
+, m_shaderClip      ( )
+, m_shaderClipImage ( )
 {
+
+    /// Initialisation du shader SANS le ressource manager !! ATTENTION a corriger !!
+    if (! m_shaderClip.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment ) )
+        std::cout << "PROBLEME CHARGEMENT SHADER\n";
+    if (! m_shaderClipImage.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment ) )
+        std::cout << "PROBLEME CHARGEMENT SHADER\n";
+
+    m_shaderClip.setParameter("texture", sf::Shader::CurrentTexture);
+    m_shaderClipImage.setParameter("texture", sf::Shader::CurrentTexture);
+    m_shaderClipImage.setParameter("aTexture", true );
 
 }
 
@@ -177,6 +190,28 @@ void Gadget::actualiser ()
         enfant->actualiser ( );
 
 }
+
+
+
+/////////////////////////////////////////////////
+void Gadget::actualiserClipping ( sf::IntRect bounds )
+{
+
+//    std::cout << "actualiserClipping : " << bounds.left << " , " << bounds.top << " , " << bounds.width << " , " << bounds.height << "\n";
+    m_shaderClip.setParameter( "rectMasque" , bounds.left
+                                            , Gui::getFenetreSFML()->getSize().y - bounds.top
+                                            , bounds.width
+                                            , bounds.height );
+    m_shaderClipImage.setParameter( "rectMasque"    , bounds.left
+                                                    , Gui::getFenetreSFML()->getSize().y - bounds.top
+                                                    , bounds.width
+                                                    , bounds.height );
+
+    for ( auto enfant : m_enfants )
+        enfant->actualiserClipping ( bounds );
+
+}
+
 
 
 /////////////////////////////////////////////////

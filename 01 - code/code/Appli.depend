@@ -394,14 +394,14 @@
 1463532295 c:\users\kris\onedrive\recherche biome\01 - code\code\include\appli\gestion_ecrans.h
 	<appli/Ecran.h>
 
-1463915106 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gui.h
+1463931863 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gui.h
 	<memory>
 	"gui/Gadget.h"
 	"gui/Fabrique.h"
 	"gui/Calque.h"
 	<iostream>
 
-1463915605 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
+1463932810 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
 	<memory>
 	<SFML/Graphics.hpp>
 	<vector>
@@ -419,18 +419,18 @@
 	"gui/gadgets/Bouton.h"
 	"gui/gadgets/Fenetre.h"
 
-1463692227 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\label.h
+1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\label.h
 	"gui/Gadget.h"
 	<SFML/Graphics.hpp>
 
-1463664653 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\image.h
+1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\image.h
 	"gui/Gadget.h"
 	<SFML/Graphics.hpp>
 
-1463906068 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
+1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
 	"gui/Gadget.h"
 
-1463923614 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\fenetre.h
+1463928667 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\fenetre.h
 	"gui/Gadget.h"
 	<gui/Calque.h>
 	"gui/gadgets/Bouton.h"
@@ -579,11 +579,11 @@
 	<appli/Application.h>
 	"jeu/Jeu.h"
 
-1463532361 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\jeu.h
+1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\jeu.h
 	<SFML/Graphics.hpp>
 	"Terrain.h"
 
-1463532361 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain.h
+1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain.h
 	<SFML/Graphics.hpp>
 	<memory>
 	<vector>
@@ -600,7 +600,7 @@
 	"appli/Ecran.h"
 	<stdio.h>
 
-1463925232 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
+1463929477 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
 	"appli/ecrans\EcranAccueil.h"
 	"appli/Config.h"
 	<iostream>
@@ -627,30 +627,31 @@
 	"gui/Gui.h"
 	"appli/Config.h"
 
-1463923090 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
-	<gui/Gadget.h>
+1463932810 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
+	"gui/Gadget.h"
+	"gui/Gui.h"
 	<iostream>
 
-1463924337 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
+1463932913 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
 	<gui/gadgets/Bouton.h>
 	<appli/Config.h>
 	<iostream>
 
-1463925838 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\fenetre.cpp
+1463933035 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\fenetre.cpp
 	<gui/gadgets/Fenetre.h>
 	<appli/Config.h>
 	"gui/Gui.h"
 
-1463752552 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\image.cpp
+1463933035 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\image.cpp
 	<gui/gadgets/Image.h>
 	<iostream>
 
-1463752552 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\label.cpp
+1463933035 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\label.cpp
 	<gui/gadgets/Label.h>
 	"appli/Config.h"
 	<iostream>
 
-1463922423 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gui.cpp
+1463932070 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gui.cpp
 	<iostream>
 	<gui/Gui.h>
 	<gui/Calque.h>
@@ -659,7 +660,7 @@
 1463527859 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\etage.cpp
 	<jeu/Etage.h>
 
-1463527868 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\jeu.cpp
+1463928094 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\jeu.cpp
 	<jeu/Jeu.h>
 	<jeu/Terrain.h>
 
@@ -669,7 +670,7 @@
 1463532361 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\planteverte.h
 	<SFML/Graphics.hpp>
 
-1463527876 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain.cpp
+1463928094 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain.cpp
 	<jeu/Terrain.h>
 	<jeu/Etage.h>
 

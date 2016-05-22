@@ -262,6 +262,15 @@ public:
 
 
 
+   /////////////////////////////////////////////////
+    /// \brief Actualise les parametres du shader clipping.
+    ///
+    /////////////////////////////////////////////////
+    void actualiserClipping ( sf::IntRect bounds );
+
+
+
+//    m_shaderClip.setParameter( "aTexture" , false );
 
 
 /////////////////////////////////////////////////
@@ -281,6 +290,10 @@ protected:
     sf::IntRect     m_localBounds;      ///< Les limites locales du gadget (par rapport à son parent).
     sf::Vector2f    m_marge;            ///< la marge est l'espace entre texte ou icone et le fond par exemple.
 
+
+    /// le shader /////////////////
+    sf::Shader          m_shaderClipImage;  ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
+    sf::Shader          m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
 
 }; // fin class Gadget
 

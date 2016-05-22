@@ -153,6 +153,17 @@ EcranAccueil::initGUI  ( )
     fenetreTest->setPosition   ( 250,250 );
 
 
+
+    std::shared_ptr<gui::Label>     lblPourFenetre  =   m_interface->creer.label( " label un peu lkong pour que ca depasse un peu");
+    lblPourFenetre->setPosition   ( 50,0 );
+    lblPourFenetre->setCouleur    ( sf::Color(255,255,0) );
+    lblPourFenetre->setTaille     ( 20 );
+    lblPourFenetre->setStyle      ( sf::Text::Style::Italic );
+
+    fenetreTest->ajouterEnfant( lblPourFenetre );
+
+
+
     boutonPourFenetre->lier (  gui::Actions::Evenement::onBtnG_relacher
                         , [this , boutonTexte_1 ](){
                             std::cout << "ACTION BOUTON 2\n";

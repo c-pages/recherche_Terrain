@@ -210,11 +210,11 @@ public:
     virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
 
 private:
-    /////////////////////////////////////////////////
-    /// \brief Actualise les parametres du shader clipping.
-    ///
-    /////////////////////////////////////////////////
-    void actualiserClipping ();
+//    /////////////////////////////////////////////////
+//    /// \brief Actualise les parametres du shader clipping.
+//    ///
+//    /////////////////////////////////////////////////
+//    void actualiserClipping ();
 
 
 
@@ -231,8 +231,8 @@ private:
     sf::Vector2i        m_dragPosOrigin;        ///< La position d'origine au debut du drag.
     sf::Vector2i        m_dragPosSourisOrigin;  ///< La position d'origine de la souris au debut du drag.
 
-    /// le shader /////////////////
-    sf::Shader          m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
+//    /// le shader /////////////////
+//    sf::Shader          m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
 
     /// Les composants de la fenetre /////////////////
     Bouton              m_boutonFermer;     ///< Le bouton de fermeture de la fenetre
