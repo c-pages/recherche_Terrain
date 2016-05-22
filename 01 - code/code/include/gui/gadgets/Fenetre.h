@@ -66,6 +66,15 @@ private:
             Bouton m_btnFond;           ///< Le bouton fix de fond, il permet de déplacer en un clique le m_btnGlissière.
             Bouton m_btnGlissiere;      ///< Ce bouton est la glissière proprement dite, c'est ce bouton qui glisse pour deplacer le contenu de la fenetre.
 
+        /////////////////////////////////////////////////
+        /// \brief Dessine tout les éléments de l'interface.
+        ///
+        /// \param target
+        /// \param states
+        /////////////////////////////////////////////////
+        virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
+
+
     }; // fin class Glissiere
 
 

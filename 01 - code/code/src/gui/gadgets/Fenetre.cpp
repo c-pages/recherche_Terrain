@@ -16,6 +16,13 @@ Fenetre::Glissiere::Glissiere ( Glissiere::Orientation orientation )
 }
 
 
+/////////////////////////////////////////////////
+void Fenetre::Glissiere::draw (sf::RenderTarget& target, sf::RenderStates states) const
+{
+
+}
+
+
 
 
 
