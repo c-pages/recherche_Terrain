@@ -27,8 +27,8 @@ Gui::Gui ( sf::RenderWindow* fenetre )
     ms_fenetre = fenetre;
 
     /// Initialisation des claques
-    ajouterEnfant( m_calqueFenetres );
     ajouterEnfant( m_calqueFond );
+    ajouterEnfant( m_calqueFenetres );
 
 }
 
@@ -59,9 +59,13 @@ Gadget* Gui::chercherGadgetSurvole ()
 //                std::cout << "chercherGadgetSurvole\n";
     sf::Vector2i posSouris = sf::Mouse::getPosition( *ms_fenetre );
 
-    for ( auto enfant : m_enfants )
+    for (  int i =  m_enfants.size()-1 ; i>=0 ; i--){
+        auto enfant = m_enfants[i];
         if ( enfant->testerSurvol ( posSouris ) != nullptr )
             return enfant->testerSurvol ( posSouris );
+    }
+
+
 
     return nullptr;
 }

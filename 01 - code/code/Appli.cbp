@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Application" />
+		<Option title="Appli" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -14,14 +14,23 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
-					<Add directory="utilitaires/include" />
 					<Add directory="include" />
+					<Add directory="gui/include" />
+					<Add directory="racine/include" />
+					<Add directory="gui/gadgets/include" />
 				</Compiler>
 				<Linker>
-					<Add library="sfml-audio-s-d" />
 					<Add library="sfml-graphics-s-d" />
 					<Add library="sfml-window-s-d" />
 					<Add library="sfml-system-s-d" />
+					<Add library="sfml-audio-s-d" />
+					<Add library="openal32" />
+					<Add library="jpeg" />
+					<Add library="freetype" />
+					<Add library="ws2_32" />
+					<Add library="gdi32" />
+					<Add library="opengl32" />
+					<Add library="winmm" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -32,124 +41,37 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
-					<Add directory="utilitaires/include" />
 					<Add directory="include" />
+					<Add directory="gui/include" />
+					<Add directory="racine/include" />
+					<Add directory="gui/gadgets/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="sfml-audio-s" />
 					<Add library="sfml-graphics-s" />
 					<Add library="sfml-window-s" />
 					<Add library="sfml-system-s" />
+					<Add library="sfml-audio-s" />
+					<Add library="openal32" />
+					<Add library="jpeg" />
+					<Add library="freetype" />
+					<Add library="ws2_32" />
+					<Add library="gdi32" />
+					<Add library="opengl32" />
+					<Add library="winmm" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-Wall" />
 			<Add option="-std=c++11" />
+			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 			<Add option="-DSFML_STATIC" />
-			<Add directory="F:/Bibliotheques CPP/SFML-2.1/include" />
-			<Add directory="include" />
+			<Add directory="L:/programes/SFML-2.3.2/include" />
 		</Compiler>
 		<Linker>
-			<Add directory="F:/Bibliotheques CPP/SFML-2.1/lib" />
-			<Add directory="src" />
+			<Add directory="L:/programes/SFML-2.3.2/lib" />
 		</Linker>
-		<Unit filename="Appli.depend" />
-		<Unit filename="Appli.layout" />
-		<Unit filename="include/appli/Application.h" />
-		<Unit filename="include/appli/Config.h" />
-		<Unit filename="include/appli/Ecran.h" />
-		<Unit filename="include/appli/Gestion_ecrans.h" />
-		<Unit filename="include/appli/ResourceMgr.h" />
-		<Unit filename="include/appli/ResourceMgr.inl" />
-		<Unit filename="include/appli/ecrans/EcranAccueil.h" />
-		<Unit filename="include/appli/ecrans/EcranJeu.h" />
-		<Unit filename="include/gui/Actions.h" />
-		<Unit filename="include/gui/Calque.h" />
-		<Unit filename="include/gui/Fabrique.h" />
-		<Unit filename="include/gui/Gadget.h" />
-		<Unit filename="include/gui/Gui.h" />
-		<Unit filename="include/gui/gadgets/Bouton.h" />
-		<Unit filename="include/gui/gadgets/Fenetre.h" />
-		<Unit filename="include/gui/gadgets/Image.h" />
-		<Unit filename="include/gui/gadgets/Label.h" />
-		<Unit filename="include/jeu/Etage.h" />
-		<Unit filename="include/jeu/Jeu.h" />
-		<Unit filename="include/jeu/PlanteVerte.h" />
-		<Unit filename="include/jeu/Terrain.h" />
-		<Unit filename="include/outils/Utilitaires.h" />
-		<Unit filename="include/outils/Utilitaires.inl" />
-		<Unit filename="main.cpp" />
-		<Unit filename="media/img/IconeVide.png" />
-		<Unit filename="media/img/Icone_test x16.png" />
-		<Unit filename="media/img/Icone_test.png" />
-		<Unit filename="media/img/Icones_test.png" />
-		<Unit filename="media/img/Icones_test.psd" />
-		<Unit filename="media/img/Image_defaut.png" />
-		<Unit filename="media/img/avatar 2.jpg" />
-		<Unit filename="media/img/avatar3.jpg" />
-		<Unit filename="media/img/avatar4.jpg" />
-		<Unit filename="media/img/curs_redimensionnement.png" />
-		<Unit filename="media/img/curs_redimensionnement.psd" />
-		<Unit filename="media/img/ico_Historique.png" />
-		<Unit filename="media/img/ico_btnIcone.png" />
-		<Unit filename="media/img/ico_fenetre.png" />
-		<Unit filename="media/img/ico_fenetreAgrandir.png" />
-		<Unit filename="media/img/ico_fenetreFermer.png" />
-		<Unit filename="media/img/ico_fenetreReduire.png" />
-		<Unit filename="media/img/ico_fichiers.png" />
-		<Unit filename="media/img/ico_fleches.png" />
-		<Unit filename="media/img/ico_lecteur.png" />
-		<Unit filename="media/img/ico_sphere.png" />
-		<Unit filename="media/img/ico_testBoutons.png" />
-		<Unit filename="media/img/icone_titre.png" />
-		<Unit filename="media/img/icones_cercles.png" />
-		<Unit filename="media/img/icones_fenetre.png" />
-		<Unit filename="media/img/nuage.jpg" />
-		<Unit filename="media/img/resultat.jpg" />
-		<Unit filename="media/img/sawaki_redim.jpg" />
-		<Unit filename="media/img/senseidoigt.gif" />
-		<Unit filename="media/img/senseidoigt.png" />
-		<Unit filename="media/polices/arial.ttf" />
-		<Unit filename="media/polices/bgothl.ttf" />
-		<Unit filename="media/polices/consola.ttf" />
-		<Unit filename="media/polices/consolab.ttf" />
-		<Unit filename="media/polices/consolai.ttf" />
-		<Unit filename="media/polices/consolaz.ttf" />
-		<Unit filename="media/polices/swisse.ttf" />
-		<Unit filename="media/polices/swisseb.ttf" />
-		<Unit filename="media/polices/syastro_.ttf" />
-		<Unit filename="media/polices/webdings.ttf" />
-		<Unit filename="media/polices/wingding.ttf" />
-		<Unit filename="media/shaders/clippingMask.frag" />
-		<Unit filename="media/shaders/flou.frag" />
-		<Unit filename="media/shaders/flouTableau.frag" />
-		<Unit filename="media/shaders/grille.frag" />
-		<Unit filename="media/shaders/hachures&amp;contours.frag" />
-		<Unit filename="media/shaders/hachures.frag" />
-		<Unit filename="media/shaders/vignette.frag" />
-		<Unit filename="src/appli/Application.cpp" />
-		<Unit filename="src/appli/Config.cpp" />
-		<Unit filename="src/appli/Ecran.cpp" />
-		<Unit filename="src/appli/Gestion_ecrans.cpp" />
-		<Unit filename="src/appli/ecrans/EcranAccueil.cpp" />
-		<Unit filename="src/appli/ecrans/EcranJeu.cpp" />
-		<Unit filename="src/gui/Actions.cpp" />
-		<Unit filename="src/gui/Calque.cpp" />
-		<Unit filename="src/gui/Fabrique.cpp" />
-		<Unit filename="src/gui/Gadget.cpp" />
-		<Unit filename="src/gui/Gui.cpp" />
-		<Unit filename="src/gui/gadgets/Bouton.cpp" />
-		<Unit filename="src/gui/gadgets/Fenetre.cpp" />
-		<Unit filename="src/gui/gadgets/Image.cpp" />
-		<Unit filename="src/gui/gadgets/Label.cpp" />
-		<Unit filename="src/jeu/Etage.cpp" />
-		<Unit filename="src/jeu/Jeu.cpp" />
-		<Unit filename="src/jeu/PlanteVerte.cpp" />
-		<Unit filename="src/jeu/Terrain.cpp" />
-		<Unit filename="src/outils/Utilitaires.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

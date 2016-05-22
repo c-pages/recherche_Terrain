@@ -107,7 +107,7 @@ EcranAccueil::initGUI  ( )
 
 //    boutonTexte_2->setIcone( Config::ms_textures.get( Config::Images::image_2 ) );
 
-    boutonTexte_2->setPosition   ( 400,250 );
+    boutonTexte_2->setPosition   ( 410,210 );
 //    boutonTexte_2->setSize ({ 30,30});
 
     // interactions de l'interface

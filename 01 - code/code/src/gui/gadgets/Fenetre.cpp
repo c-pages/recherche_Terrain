@@ -27,16 +27,17 @@ Fenetre::Fenetre ( )
 , m_dragEnCours         ( false )
 , m_dragPosOrigin       ( {0,0} )
 , m_dragPosSourisOrigin ( {0,0} )
-, m_shaderClip          (  )
+, m_shaderClip          ( )
 , m_fond                ( )
 , m_titre               ( )
-, m_boutonFermer        (  )
+, m_boutonFermer        ( )
 , m_sliderH             ( Glissiere::Orientation::Horizontal  )
 , m_sliderV             ( Glissiere::Orientation::Horizontal  )
 {
 
     /// Initialisation du shader SANS le ressource manager !! ATTENTION a corriger !!
-    m_shaderClip.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment );
+    if (! m_shaderClip.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment ) )
+        std::cout << "PROBELEME CHARGEMENT SHADER\n";
 
     /// Initialisation du titre SFML ////////////////////
     m_titre.setCharacterSize    ( 10 );
@@ -44,7 +45,7 @@ Fenetre::Fenetre ( )
     m_titre.setFont             ( app::Config::ms_polices.get( app::Config::Polices::police_1 ) );
 
     /// Initialisation du fond SFML. ////////////////////
-    m_fond.setFillColor        ( { 150, 150, 150 , 100} );
+    m_fond.setFillColor        ( { 50, 70, 50 , 255 } );
     m_fond.setOutlineColor     ( { 150, 150, 150 } );
     m_fond.setOutlineThickness ( 1 );
 
@@ -52,7 +53,9 @@ Fenetre::Fenetre ( )
     m_boutonFermer.setRemplissageCouleur    ( { 255, 255, 255 } );
     m_boutonFermer.setContourCouleur        ( { 150, 150, 150 } );
     m_boutonFermer.setContourEpaisseur      ( 1 );
-    m_boutonFermer.setParent (this);
+    m_boutonFermer.setTexte                 ( "X" );
+    m_boutonFermer.setParent                ( this );
+    m_boutonFermer.setAlphaEtats            ( 0,50,100 );
 
     /// les interactions ////////////////////
     // les fonctions lambdas //
