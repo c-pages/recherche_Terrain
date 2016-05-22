@@ -168,7 +168,7 @@ void Bouton::actualiser ()
 
     // on centre le texte et l'icone sur le fond
     auto tailleTexte = m_texte.getGlobalBounds();
-    m_texte.setPosition ( (int)(m_fond.getSize().x/2 - tailleTexte.width/2), (int)(m_fond.getSize().y/2 - tailleTexte.height/2) );
+    m_texte.setPosition ( (int)(m_fond.getSize().x/2 - tailleTexte.width/2), (int)(m_fond.getSize().y/2 - tailleTexte.height/2) - tailleTexte.height/3 );
     m_icone.setPosition ( (int)(m_fond.getSize().x/2 - m_icone.getSize().x/2 ), (int)(m_fond.getSize().y/2 - m_icone.getSize().y/2 ) );
 
     // on actualise les Bounds du gadget

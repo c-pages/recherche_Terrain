@@ -6,6 +6,7 @@
 // Headers
 /////////////////////////////////////////////////
 #include "gui/Gadget.h"
+#include <gui/Calque.h>
 #include "gui/gadgets/Bouton.h"
 
 #include <SFML/Graphics.hpp>
@@ -103,6 +104,12 @@ public:
 
 
 
+
+    /////////////////////////////////////////////////
+    /// \brief Ajouter un élement dans m_enfants.
+    ///
+    /////////////////////////////////////////////////
+    virtual void ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement );
 
     /////////////////////////////////////////////////
     /// \brief Définit le titre de la fenêtre.
@@ -233,6 +240,9 @@ private:
     sf::Text            m_titre;            ///< Le titre de la fenêtre.
     Glissiere           m_sliderH;          ///< Le slider horizontal
     Glissiere           m_sliderV;          ///< Le slider vertical
+
+    std::shared_ptr<Calque> m_calque;       ///< Le calque regroupant les enfants de la fenetres.
+
 
 }; // fin class Fenetre
 

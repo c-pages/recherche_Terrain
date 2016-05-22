@@ -430,8 +430,9 @@
 1463906068 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\bouton.h
 	"gui/Gadget.h"
 
-1463919760 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\fenetre.h
+1463923614 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\fenetre.h
 	"gui/Gadget.h"
+	<gui/Calque.h>
 	"gui/gadgets/Bouton.h"
 	<SFML/Graphics.hpp>
 
@@ -599,7 +600,7 @@
 	"appli/Ecran.h"
 	<stdio.h>
 
-1463922086 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
+1463925232 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranaccueil.cpp
 	"appli/ecrans\EcranAccueil.h"
 	"appli/Config.h"
 	<iostream>
@@ -626,16 +627,16 @@
 	"gui/Gui.h"
 	"appli/Config.h"
 
-1463915834 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
+1463923090 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
 	<gui/Gadget.h>
 	<iostream>
 
-1463922526 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
+1463924337 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
 	<gui/gadgets/Bouton.h>
 	<appli/Config.h>
 	<iostream>
 
-1463921967 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\fenetre.cpp
+1463925838 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\fenetre.cpp
 	<gui/gadgets/Fenetre.h>
 	<appli/Config.h>
 	"gui/Gui.h"

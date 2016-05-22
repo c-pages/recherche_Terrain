@@ -33,15 +33,20 @@ Fenetre::Fenetre ( )
 , m_boutonFermer        ( )
 , m_sliderH             ( Glissiere::Orientation::Horizontal  )
 , m_sliderV             ( Glissiere::Orientation::Horizontal  )
+, m_calque              ( std::make_shared<Calque>() )
 {
 
     /// Initialisation du shader SANS le ressource manager !! ATTENTION a corriger !!
     if (! m_shaderClip.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment ) )
-        std::cout << "PROBELEME CHARGEMENT SHADER\n";
+        std::cout << "PROBLEME CHARGEMENT SHADER\n";
+    else    m_shaderClip.setParameter("texture", sf::Shader::CurrentTexture);
+
+    m_marge = { 8,8 };
 
     /// Initialisation du titre SFML ////////////////////
-    m_titre.setCharacterSize    ( 10 );
+    m_titre.setCharacterSize    ( 12 );
     m_titre.setColor            ( sf::Color (200,200,200) );
+    m_titre.setStyle            ( sf::Text::Bold );
     m_titre.setFont             ( app::Config::ms_polices.get( app::Config::Polices::police_1 ) );
 
     /// Initialisation du fond SFML. ////////////////////
@@ -52,13 +57,19 @@ Fenetre::Fenetre ( )
     /// Initialisation du bouton fermeture. ////////////////////
     m_boutonFermer.setRemplissageCouleur    ( { 255, 255, 255 } );
     m_boutonFermer.setContourCouleur        ( { 150, 150, 150 } );
-    m_boutonFermer.setContourEpaisseur      ( 1 );
+    m_boutonFermer.setContourEpaisseur      ( 0 );
     m_boutonFermer.setTexte                 ( "X" );
     m_boutonFermer.setParent                ( this );
     m_boutonFermer.setAlphaEtats            ( 0,50,100 );
 
+    /// Initialisation du calque des enfants. ////////////////////
+    Gadget::ajouterEnfant ( m_calque );
+
+
+
+
     /// les interactions ////////////////////
-    // les fonctions lambdas //
+    // les fonctions
     auto fn_fermeture = [this](){
         std::cout <<"Fermer la fenetre\n";
     };
@@ -89,6 +100,14 @@ Fenetre::Fenetre ( )
 
 }
 
+/////////////////////////////////////////////////
+void Fenetre::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
+
+    // on l'ajoute normalement
+    m_calque->ajouterEnfant( nouvelElement );
+
+
+}
 
 /////////////////////////////////////////////////
 void Fenetre::setTitre (std::string titre)
@@ -108,6 +127,7 @@ void Fenetre::setTitreCouleur (sf::Color couleur)
 void Fenetre::setTitreTaille (float taille)
 {
     m_titre.setCharacterSize( taille );
+    actualiser();
 }
 
 
@@ -115,6 +135,7 @@ void Fenetre::setTitreTaille (float taille)
 void Fenetre::setTitreStyle (sf::Text::Style style)
 {
     m_titre.setStyle( style );
+    actualiser();
 }
 
 
@@ -122,6 +143,7 @@ void Fenetre::setTitreStyle (sf::Text::Style style)
 void Fenetre::setTitrePolice (sf::Font& police)
 {
     m_titre.setFont( police );
+    actualiser();
 }
 
 
@@ -163,7 +185,13 @@ void Fenetre::setContourEpaisseur (float epaisseur)
 /////////////////////////////////////////////////
 void Fenetre::actualiserClipping ()
 {
-
+    auto bounds = m_calque->getGlobalBounds();
+    std::cout << "actualiserClipping : " << bounds.left << " , " << bounds.top << " , " << bounds.width << " , " << bounds.height << "\n";
+    m_shaderClip.setParameter( "rectMasque" , bounds.left
+                                            , bounds.top
+                                            , bounds.width
+                                            , bounds.height );
+    m_shaderClip.setParameter( "aTexture" , true );
 }
 
 
@@ -176,9 +204,13 @@ void Fenetre::actualiser ()
     // les éléments graphiques
     auto hauteurTitre = m_titre.getLocalBounds().height;
     m_fond.setSize              ( { m_size.x, m_size.y } );
-    m_titre.setPosition         ( m_marge.x , m_marge.y );
+    m_titre.setPosition         ( m_marge.x , m_marge.y  - hauteurTitre/3 );
     m_boutonFermer.setSize      ( { hauteurTitre , hauteurTitre } );
     m_boutonFermer.setPosition  ( m_size.x - hauteurTitre - m_marge.x, m_marge.y );
+
+    // on replace le calque enfants dans la fenetre
+    m_calque->setPosition       ( m_marge.x, 2*m_marge.y + hauteurTitre );
+    m_calque->setSize           ( { m_size.x - 2*m_marge.x , m_size.y - ( 2*m_marge.y + hauteurTitre ) } );
 
     // le shader
     actualiserClipping ();
@@ -220,6 +252,11 @@ Gadget* Fenetre::testerSurvol (sf::Vector2i posSouris)
     if ( m_boutonFermer.testerSurvol ( posSouris ) != nullptr )
         return m_boutonFermer.testerSurvol ( posSouris );
 
+    // on test les enfants
+    if ( m_calque->testerSurvol ( posSouris ) != nullptr )
+        return m_calque->testerSurvol ( posSouris );
+
+
     // finalement on renvois la fenetre (pour le drag par exemple)
     return this;
 
@@ -242,8 +279,14 @@ void Fenetre::draw (sf::RenderTarget& target, sf::RenderStates states) const
     if ( m_fermable )
         target.draw ( m_boutonFermer , states );
 
-    // On dessine le texte
+    // On dessine le titre
     target.draw ( m_titre , states );
+
+    // on dessine les enfants
+    states.shader = &m_shaderClip;
+    target.draw ( *m_calque , states );
+
+
 
 
 }

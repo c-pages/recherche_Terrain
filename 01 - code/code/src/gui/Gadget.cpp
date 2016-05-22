@@ -81,8 +81,15 @@ void Gadget::setSize( sf::Vector2i val ){
 
 /////////////////////////////////////////////////
 void Gadget::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
+
+    // on retire l'enfant de son ancien parent si besoin
+    if ( nouvelElement->getParent() != nullptr )
+        nouvelElement->getParent()->retirerEnfant( nouvelElement ) ;
+
+    // puis on l'ajoute
     m_enfants.push_back( nouvelElement );
     nouvelElement->setParent ( this );
+
 }
 
 /////////////////////////////////////////////////

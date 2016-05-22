@@ -10,7 +10,7 @@ void main() {
     // la couleur du rectangle (FillColor)
     vec4 color = gl_Color;
     vec2 pos   = gl_FragCoord.xy;
-
+/*
     vec4 masque;
     if ( pos.x < rectMasque.x
     ||   pos.x > rectMasque.x + rectMasque.z
@@ -19,17 +19,19 @@ void main() {
         masque = vec4(0.,0.,0.,0.);
     else
         masque = vec4(1.,1.,1.,1.);
-
+*/
 
     if ( aTexture ) {
         // la couleur du pixel de la texture
         vec4 pixel = texture2D(texture, gl_TexCoord[0].st);
 
-        gl_FragColor = pixel * color * masque;
+        gl_FragColor = pixel * color /** masque*/;
     } else {
 
-        gl_FragColor = color * masque;
+        gl_FragColor = color /** masque*/;
     }
+
+//    gl_FragColor = color * texture2D(texture, gl_TexCoord[0].st);
 
 }
 

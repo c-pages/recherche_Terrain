@@ -139,14 +139,29 @@ EcranAccueil::initGUI  ( )
 
 
 
+
+
+
     std::shared_ptr<gui::Fenetre>    fenetreTest   =   m_interface->creer.fenetre( "Fenetre test" , { 200, 100 } );
 
 
+    auto boutonPourFenetre  = m_interface->creer.bouton ("Bouton dans la fenetre");
+    auto boutonPourFenetre2 = m_interface->creer.bouton ("Bouton dans la fenetre super long pour voir quand ca depasse");
+    boutonPourFenetre2->move ( 0, 25 );
+    fenetreTest->ajouterEnfant( boutonPourFenetre );
+    fenetreTest->ajouterEnfant( boutonPourFenetre2 );
+    fenetreTest->setPosition   ( 250,250 );
 
 
+    boutonPourFenetre->lier (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this , boutonTexte_1 ](){
+                            std::cout << "ACTION BOUTON 2\n";
+                        });
 
-
-
+    boutonPourFenetre2->lier (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this , boutonTexte_1 ](){
+                            std::cout << "ACTION BOUTON 3\n";
+                        });
 
 }   // fin init GUI
 
