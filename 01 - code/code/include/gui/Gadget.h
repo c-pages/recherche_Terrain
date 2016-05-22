@@ -258,6 +258,12 @@ public:
     /////////////////////////////////////////////////
     sf::IntRect getLocalBounds () const { return m_localBounds; };
 
+    /////////////////////////////////////////////////
+    /// \brief Acceder à au bounds total des enfants.
+    ///
+    /// \return le bounds des enfnats
+    /////////////////////////////////////////////////
+    sf::IntRect getEnfantsLocalBounds () ;
 
 
 
@@ -269,8 +275,6 @@ public:
     void actualiserClipping ( sf::IntRect bounds );
 
 
-
-//    m_shaderClip.setParameter( "aTexture" , false );
 
 
 /////////////////////////////////////////////////

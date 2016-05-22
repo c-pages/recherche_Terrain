@@ -89,7 +89,34 @@ void Gadget::setSize( sf::Vector2i val ){
 };
 
 
+/////////////////////////////////////////////////
+sf::IntRect  Gadget::getEnfantsLocalBounds()
+{
+    sf::IntRect result;
+    if ( m_enfants.size() == 0 )
+        return result;
 
+    int minX = 90000;
+    int minY = 90000;
+    int maxX = -90000;
+    int maxY = -90000;
+
+
+    for ( auto enfant : m_enfants )
+    {
+        auto LB = enfant->getLocalBounds();
+
+        if (LB.left < minX) minX = LB.left;
+        if (LB.top  < minY) minY = LB.top;
+        if (LB.left + LB.width > maxX ) maxX = LB.left + LB.width;
+        if (LB.top  + LB.height> maxY ) maxY = LB.top  + LB.height;
+
+    }
+
+    result  = { minX, minY, maxX, maxY };
+
+    return result;
+}
 
 
 /////////////////////////////////////////////////
@@ -128,11 +155,8 @@ void Gadget::demander_etreDevant ()
 /////////////////////////////////////////////////
 void Gadget::mettreDevant ( std::shared_ptr<Gadget> gadget )
 {
-    std::cout << "mettreDevant : " << m_enfants.size() << "\n";
-
     // on supprime le gadget de sa place dans le tableau
    retirerEnfant ( gadget );
-
 
     // puis on le replace à la fin du tableau
     m_enfants.push_back( gadget );
@@ -169,15 +193,10 @@ void Gadget::actualiser ()
 {
 
     // on actualise les positions des bounds
-    if (m_parent != nullptr) {
-        m_globalBounds.left = getPosAbs().x;
-        m_globalBounds.top  = getPosAbs().y;
-    } else {
-        m_globalBounds.left = getPosition().x;
-        m_globalBounds.top  = getPosition().y;
-    }
-    m_localBounds.width     = getPosition().x;
-    m_localBounds.height    = getPosition().y;
+    m_globalBounds.left     = getPosAbs().x;
+    m_globalBounds.top      = getPosAbs().y;
+    m_localBounds.left      = getPosition().x;
+    m_localBounds.top       = getPosition().y;
 
     // on actualise les tailles des bounds
     m_globalBounds.width    = m_size.x;

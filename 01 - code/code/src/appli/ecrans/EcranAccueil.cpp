@@ -16,18 +16,16 @@ namespace app {
 EcranAccueil::EcranAccueil( Application*  appli )
 : Ecran         ( appli )
 , m_interface   ( std::make_shared<gui::Gui>( appli->getFenetre() ) )
-
 {
     // Initialisation de l'interface graphique.
     initGUI();
-
-
 }
+
 /////////////////////////////////////////////////
 EcranAccueil::~EcranAccueil( )
 {
     // vide l'interface
-//    m_interface->reinitialiser();
+    //    m_interface->reinitialiser();
 }
 
 /////////////////////////////////////////////////
@@ -142,25 +140,21 @@ EcranAccueil::initGUI  ( )
 
 
 
-    std::shared_ptr<gui::Fenetre>    fenetreTest   =   m_interface->creer.fenetre( "Fenetre test" , { 200, 100 } );
+    std::shared_ptr<gui::Fenetre>    fenetreTest   =   m_interface->creer.fenetre( "Fenetre test" , { 200, 120 } );
 
 
     auto boutonPourFenetre  = m_interface->creer.bouton ("Bouton dans la fenetre");
+    boutonPourFenetre->setPosition ( 10, 5 );
     auto boutonPourFenetre2 = m_interface->creer.bouton ("Bouton dans la fenetre super long pour voir quand ca depasse");
-    boutonPourFenetre2->move ( 0, 25 );
+    boutonPourFenetre2->setPosition ( 10, 30 );
+
+
     fenetreTest->ajouterEnfant( boutonPourFenetre );
     fenetreTest->ajouterEnfant( boutonPourFenetre2 );
     fenetreTest->setPosition   ( 250,250 );
 
 
 
-    std::shared_ptr<gui::Label>     lblPourFenetre  =   m_interface->creer.label( " label un peu lkong pour que ca depasse un peu");
-    lblPourFenetre->setPosition   ( 50,0 );
-    lblPourFenetre->setCouleur    ( sf::Color(255,255,0) );
-    lblPourFenetre->setTaille     ( 20 );
-    lblPourFenetre->setStyle      ( sf::Text::Style::Italic );
-
-    fenetreTest->ajouterEnfant( lblPourFenetre );
 
 
 

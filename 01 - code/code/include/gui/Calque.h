@@ -32,12 +32,14 @@ public:
 
     /////////////////////////////////////////////////
     /// \brief Teste le survol du gadget par la souris.
-    /// \return thisPtr si est survolé, sinon nullptr.
     ///
     /// \param posSouris
+    /// \return thisPtr si est survolé, sinon nullptr.
     /////////////////////////////////////////////////
-//    virtual std::shared_ptr<Gadget> testerSurvol (sf::Vector2i posSouris) ;
     virtual Gadget* testerSurvol (sf::Vector2i posSouris) ;
+
+
+
 
 }; // fin class Calque
 

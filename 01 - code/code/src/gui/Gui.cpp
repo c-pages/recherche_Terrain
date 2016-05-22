@@ -31,6 +31,8 @@ Gui::Gui ( sf::RenderWindow* fenetre )
     ajouterEnfant( m_calqueFond );
     ajouterEnfant( m_calqueFenetres );
 
+    m_calqueFond->setSize ( { ms_fenetre->getSize().x, ms_fenetre->getSize().y } );
+    m_calqueFenetres->setSize ( { ms_fenetre->getSize().x, ms_fenetre->getSize().y } );
 }
 
 

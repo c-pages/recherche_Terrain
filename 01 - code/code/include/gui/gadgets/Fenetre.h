@@ -58,21 +58,67 @@ private:
             /////////////////////////////////////////////////
             Glissiere (Orientation orientation);
 
+
+            /////////////////////////////////////////////////
+            /// \brief Modifie la longueur de la glissere pour l'adapter à la fenetre.
+            ///
+            /// \param longueur la nouvelle longueur
+            /////////////////////////////////////////////////
+            void setLongueur ( int longueur );
+
+            /////////////////////////////////////////////////
+            /// \brief Modifie la largeur de la glissere.
+            ///
+            /// \param largeur la nouvelle largeur
+            /////////////////////////////////////////////////
+            void setLargeur ( int largeur );
+
+            /////////////////////////////////////////////////
+            /// \brief Modifie la largeur de la glissere.
+            ///
+            /// \return  la largeur
+            /////////////////////////////////////////////////
+            int getLargeur ( );
+
+
+
+
+
+
+            /////////////////////////////////////////////////
+            /// \brief Teste le survol du gadget par la souris.
+            /// \return thisPtr si est survolé, sinon nullptr.
+            ///
+            /// \param posSouris
+            /////////////////////////////////////////////////
+            virtual Gadget* testerSurvol (sf::Vector2i posSouris) ;
+
+            /////////////////////////////////////////////////
+            /// \brief Actualiser les éléments de l'interface.
+            ///
+            /////////////////////////////////////////////////
+            virtual void actualiser ();
+
+            /////////////////////////////////////////////////
+            /// \brief Dessine tout les éléments de l'interface.
+            ///
+            /// \param target
+            /// \param states
+            /////////////////////////////////////////////////
+            virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
+
+
+
+
         /////////////////////////////////////////////////
         // Membres
         /////////////////////////////////////////////////
         private:
-            Orientation m_orientation;
-            Bouton m_btnFond;           ///< Le bouton fix de fond, il permet de déplacer en un clique le m_btnGlissière.
-            Bouton m_btnGlissiere;      ///< Ce bouton est la glissière proprement dite, c'est ce bouton qui glisse pour deplacer le contenu de la fenetre.
 
-        /////////////////////////////////////////////////
-        /// \brief Dessine tout les éléments de l'interface.
-        ///
-        /// \param target
-        /// \param states
-        /////////////////////////////////////////////////
-        virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
+            Orientation m_orientation;
+            Bouton      m_btnFond;           ///< Le bouton fix de fond, il permet de déplacer en un clique le m_btnGlissière.
+            Bouton      m_btnGlissiere;      ///< Ce bouton est la glissière proprement dite, c'est ce bouton qui glisse pour deplacer le contenu de la fenetre.
+            int         m_largeur;           ///< La largeur de la glissiere, represente m_size.x pour une glissiere vertical et m_size.y pour une horizontale.
 
 
     }; // fin class Glissiere
@@ -105,7 +151,7 @@ public:
     bool getResizable () const { return m_resizable; };
 
     ///< Rendre visible ou non le bouton de fermeture de la fenetre
-    void setFermable( bool val ){ m_fermable = val; };
+    void setFermable( bool val ){ m_fermable = val; m_btnFermer.setVisible( m_fermable ); };
 
     ///< Acceder à m_fermable
     bool getFermable () const { return m_fermable; };
@@ -218,12 +264,6 @@ public:
     /////////////////////////////////////////////////
     virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
 
-private:
-//    /////////////////////////////////////////////////
-//    /// \brief Actualise les parametres du shader clipping.
-//    ///
-//    /////////////////////////////////////////////////
-//    void actualiserClipping ();
 
 
 
@@ -237,21 +277,19 @@ private:
     bool                m_resizable;            ///< Si on peut redimmensionner la fenetre (defaut:true)
     bool                m_draggable;            ///< Si on peut dragger la fenetre (defaut:true)
     bool                m_dragEnCours;          ///< Si on est en train de dragger la fenêtre.
+
     sf::Vector2i        m_dragPosOrigin;        ///< La position d'origine au debut du drag.
     sf::Vector2i        m_dragPosSourisOrigin;  ///< La position d'origine de la souris au debut du drag.
 
-//    /// le shader /////////////////
-//    sf::Shader          m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
-
     /// Les composants de la fenetre /////////////////
-    Bouton              m_boutonFermer;     ///< Le bouton de fermeture de la fenetre
-    sf::RectangleShape  m_fond;             ///< Le shape du fond de la fenêtre.
-    sf::Text            m_titre;            ///< Le titre de la fenêtre.
-    Glissiere           m_sliderH;          ///< Le slider horizontal
-    Glissiere           m_sliderV;          ///< Le slider vertical
+    sf::RectangleShape  m_fond;         ///< Le shape du fond de la fenêtre.
+    sf::Text            m_titre;        ///< Le titre de la fenêtre.
 
-    std::shared_ptr<Calque> m_calque;       ///< Le calque regroupant les enfants de la fenetres.
+    Bouton              m_btnFermer;    ///< Le bouton de fermeture de la fenetre
+    Glissiere           m_btnSliderH;   ///< Le slider horizontal
+    Glissiere           m_btnSliderV;   ///< Le slider vertical
 
+    std::shared_ptr<Calque> m_calque;   ///< Le calque regroupant les enfants de la fenetres.
 
 }; // fin class Fenetre
 

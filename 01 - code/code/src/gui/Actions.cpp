@@ -2,6 +2,7 @@
 // Headers
 /////////////////////////////////////////////////
 #include <gui/Actions.h>
+#include <gui/Gadget.h>
 
 #include <iostream>
 
@@ -55,6 +56,8 @@ void Actions::vider ()
 /////////////////////////////////////////////////
 void Actions::declencher (Evenement evenement)
 {
+    if ( ! static_cast<Gadget*>(this)->estVisible() ) return;
+
     auto cherche = m_evenementsSouris.find( evenement );
     if ( cherche != m_evenementsSouris.end() ) {
         cherche->second();
