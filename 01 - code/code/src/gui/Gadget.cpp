@@ -25,6 +25,14 @@ Gadget::Gadget ()
 
 
 ////////////////////////////////////////////////////////////
+void Gadget::setPosition(int x, int y)
+{
+    Transformable::setPosition ( (int)(x) , (int)(y) );
+    actualiser();
+}
+
+
+////////////////////////////////////////////////////////////
 void Gadget::setPosition(float x, float y)
 {
     Transformable::setPosition ( (int)(x) , (int)(y) );
@@ -35,13 +43,15 @@ void Gadget::setPosition(float x, float y)
 ////////////////////////////////////////////////////////////
 void Gadget::setPosition(const sf::Vector2f& position)
 {
-    setPosition ( (int)(position.x) , (int)(position.y) );
+    Transformable::setPosition ( (int)(position.x) , (int)(position.y) );
+    actualiser();
 }
 
 ////////////////////////////////////////////////////////////
 void Gadget::setPosition(const sf::Vector2i& position)
 {
-    setPosition ( position.x , position.y );
+    Transformable::setPosition ( position.x , position.y );
+    actualiser();
 }
 
 
@@ -140,8 +150,8 @@ void Gadget::actualiser ()
 
     // on actualise les positions des bounds
     if (m_parent != nullptr) {
-        m_globalBounds.left = getPosition().x + m_parent->getPosAbs().x;
-        m_globalBounds.top  = getPosition().y + m_parent->getPosAbs().y;
+        m_globalBounds.left = getPosAbs().x;
+        m_globalBounds.top  = getPosAbs().y;
     } else {
         m_globalBounds.left = getPosition().x;
         m_globalBounds.top  = getPosition().y;

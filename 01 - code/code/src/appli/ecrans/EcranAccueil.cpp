@@ -137,6 +137,17 @@ EcranAccueil::initGUI  ( )
 
 
 
+
+
+    std::shared_ptr<gui::Fenetre>    fenetreTest   =   m_interface->creer.fenetre( "Fenetre test" , { 200, 100 } );
+
+
+
+
+
+
+
+
 }   // fin init GUI
 
 

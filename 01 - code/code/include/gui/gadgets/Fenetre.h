@@ -1,4 +1,5 @@
-﻿#ifndef FENETRE__H
+﻿
+#ifndef FENETRE__H
 #define FENETRE__H
 
 /////////////////////////////////////////////////
@@ -6,12 +7,12 @@
 /////////////////////////////////////////////////
 #include "gui/Gadget.h"
 #include "gui/gadgets/Bouton.h"
+
 #include <SFML/Graphics.hpp>
 
 
 
 namespace gui {
-
 
 /////////////////////////////////////////////////
 /// \brief Une fenêtre encapsule des éléments d'interface.
@@ -68,12 +69,17 @@ private:
 
 
 
-
-
-
 /////////////////////////////////////////////////
 // Méthodes
 /////////////////////////////////////////////////
+
+public:
+
+    /////////////////////////////////////////////////
+    /// \brief Constructeur
+    ///
+    /////////////////////////////////////////////////
+    Fenetre (  );
 
 public:
     ///< Definir m_draggable
@@ -88,16 +94,15 @@ public:
     ///< Acceder à m_resizable
     bool getResizable () const { return m_resizable; };
 
-public:
-    /////////////////////////////////////////////////
-    /// \brief Constructeur
-    ///
-    /// \param titre		 Le titre de la fenetre
-    /// \param taille		 La taille de la fenetre.
-    /// \param draggable		 Si la fenetre peut être déplacer par l'utilisatuer.
-    /// \param resizable		 Si la fenetre peut être redimmensionner par l'utilisatuer.
-    /////////////////////////////////////////////////
-    Fenetre (std::string titre = "", sf::Vector2i taille = {-1,-1}, bool draggable = true, bool resizable = true);
+    ///< Rendre visible ou non le bouton de fermeture de la fenetre
+    void setFermable( bool val ){ m_fermable = val; };
+
+    ///< Acceder à m_fermable
+    bool getFermable () const { return m_fermable; };
+
+
+
+
 
     /////////////////////////////////////////////////
     /// \brief Définit le titre de la fenêtre.
@@ -148,7 +153,7 @@ public:
     /////////////////////////////////////////////////
     void setFondCouleur (sf::Color couleur);
 
-    /////////////////////////////////////////////////
+    //////////////////////m_fermable///////////////////////////
     /// \brief Definir la couleur du contour de la fenêtre.
     ///
     /// \param couleur		 La nouvelle couleur.
@@ -161,6 +166,20 @@ public:
     /// \param epaisseur		 La nouvelle épaisseur du contour.
     /////////////////////////////////////////////////
     void setContourEpaisseur (float epaisseur);
+
+
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief Teste le survol du gadget par la souris.
+    /// \return thisPtr si est survolé, sinon nullptr.
+    ///
+    /// \param posSouris
+    /////////////////////////////////////////////////
+    virtual Gadget* testerSurvol (sf::Vector2i posSouris) ;
+
 
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments de l'interface.
@@ -197,15 +216,21 @@ private:
 /////////////////////////////////////////////////
 private:
 
-    bool                m_draggable;        ///< Si on peut dragger la fenetre (defaut:true)
-    bool                m_dragEnCours;      ///< Si on est en train de dragger la fenêtre.
-    sf::Vector2i        m_dragPosOrigin;    ///< La position d'origine d'avant le debut du drag.
-    bool                m_resizable;        ///< Si on peut redimmensionner la fenetre (defaut:true)
+    /// options et propriétés de fonctionement /////////////////
+    bool                m_fermable;             ///< Si on affiche le bouton de fermeture de la fenetre (defaut:true)
+    bool                m_resizable;            ///< Si on peut redimmensionner la fenetre (defaut:true)
+    bool                m_draggable;            ///< Si on peut dragger la fenetre (defaut:true)
+    bool                m_dragEnCours;          ///< Si on est en train de dragger la fenêtre.
+    sf::Vector2i        m_dragPosOrigin;        ///< La position d'origine au debut du drag.
+    sf::Vector2i        m_dragPosSourisOrigin;  ///< La position d'origine de la souris au debut du drag.
+
+    /// le shader /////////////////
+    sf::Shader          m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
 
     /// Les composants de la fenetre /////////////////
-    sf::Shader          m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage
-    sf::RectangleShape  m_fond;             ///< Le shape du fond de la fenêtre.
     Bouton              m_boutonFermer;     ///< Le bouton de fermeture de la fenetre
+    sf::RectangleShape  m_fond;             ///< Le shape du fond de la fenêtre.
+    sf::Text            m_titre;            ///< Le titre de la fenêtre.
     Glissiere           m_sliderH;          ///< Le slider horizontal
     Glissiere           m_sliderV;          ///< Le slider vertical
 

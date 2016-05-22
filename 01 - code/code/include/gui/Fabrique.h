@@ -6,8 +6,8 @@
 /////////////////////////////////////////////////
 #include "gui/gadgets/Label.h"
 #include "gui/gadgets/Image.h"
-
 #include "gui/gadgets/Bouton.h"
+#include "gui/gadgets/Fenetre.h"
 
 
 namespace gui {
@@ -36,6 +36,8 @@ public:
 
 
 
+
+
     /////////////////////////////////////////////////
     /// \brief Créer un label.
     /// \return un pointeur vers le nouveau gadget créé.
@@ -51,6 +53,7 @@ public:
     /// \param texture		 La texture du label.
     /////////////////////////////////////////////////
     std::shared_ptr<Image> image ( sf::Texture& texture );
+
 
 
 
@@ -71,6 +74,25 @@ public:
     /// \param texture		 La texture du bouton.
     /////////////////////////////////////////////////
     std::shared_ptr<Bouton> bouton ( sf::Texture& texture , sf::Vector2i taille = {-1,-1} );
+
+
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief Créer une fenêtre
+    /// \return un pointeur vers le nouveau gadget créé.
+    ///
+    /// \param titre		 Le titre de la fenetre
+    /// \param taille		 La taille de la fenetre.
+    /// \param draggable		 Si la fenetre peut être déplacer par l'utilisatuer.
+    /// \param resizable		 Si la fenetre peut être redimmensionner par l'utilisatuer.
+    /////////////////////////////////////////////////
+    std::shared_ptr<Fenetre> fenetre  ( std::string titre = "Fenetre"
+                                      , sf::Vector2i taille = {-1,-1}
+                                      , bool draggable = true
+                                      , bool resizable = true );
 
 
 

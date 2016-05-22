@@ -1,0 +1,7 @@
+<map id="gui::Fenetre::actualiser" name="gui::Fenetre::actualiser">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="219,5,360,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="419,56,572,83"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a92c42e660b6b307daa77cd0d42aad26f" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="208,107,371,133"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#ad3827bd88c06b140c48352f3864f299a" title="Actualise les parametres du shader clipping. " alt="" coords="212,158,367,199"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="620,56,781,83"/>
+</map>

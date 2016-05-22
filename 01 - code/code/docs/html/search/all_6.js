@@ -13,6 +13,7 @@ var searchData=
   ['getdureeimage',['getDureeImage',['../classapp_1_1_config.html#a300d3ecafed165cfe44b93c555116ff5',1,'app::Config']]],
   ['getenfant',['getEnfant',['../classgui_1_1_gadget.html#a8cf95ed43ca734db351030c58c6fe2f5',1,'gui::Gadget::getEnfant()'],['../classgui_1_1_gui.html#aced24f6da36479c68b22f2a6c7f6973d',1,'gui::Gui::getEnfant()']]],
   ['getfenetre',['getFenetre',['../classapp_1_1_application.html#abedd293ac058355e13abd02057c32aee',1,'app::Application']]],
+  ['getfermable',['getFermable',['../classgui_1_1_fenetre.html#a36d1f9a476270594be27083eab3c9638',1,'gui::Fenetre']]],
   ['getglobalbounds',['getGlobalBounds',['../classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401',1,'gui::Gadget']]],
   ['getindexetagecourant',['getIndexEtageCourant',['../classjeu_1_1_terrain.html#a044b5cdbffba772339cf9078120afd4f',1,'jeu::Terrain']]],
   ['getlocalbounds',['getLocalBounds',['../classgui_1_1_gadget.html#a9618784a15aedf679d52dfe46d5b6cb7',1,'gui::Gadget']]],

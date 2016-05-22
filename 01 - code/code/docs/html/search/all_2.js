@@ -8,6 +8,7 @@ var searchData=
   ['changerecran',['changerEcran',['../classapp_1_1_application.html#ace29cf983643a2cc74cb52b19483620d',1,'app::Application']]],
   ['chargerpartie',['chargerPartie',['../classjeu_1_1_jeu.html#a8a4797dd1509a9f81da923f6bdff7796',1,'jeu::Jeu']]],
   ['cherchergadgetsurvole',['chercherGadgetSurvole',['../classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a',1,'gui::Gui']]],
+  ['clipping',['clipping',['../classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62fa0b400653f74f52cab543097c24df2cae',1,'app::Config']]],
   ['config',['Config',['../classapp_1_1_config.html',1,'app']]],
   ['config',['Config',['../classapp_1_1_config.html#a6b5877b87cbfef7bb28ed405dfa3ea62',1,'app::Config']]],
   ['config_2ecpp',['Config.cpp',['../_config_8cpp.html',1,'']]],

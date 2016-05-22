@@ -5,7 +5,6 @@ var searchData=
   ['initgui',['initGUI',['../classapp_1_1_ecran_accueil.html#a0fd3aaa6c37ad943764e02a38c165653',1,'app::EcranAccueil::initGUI()'],['../classapp_1_1_ecran_jeu.html#a6c2d5e0c9a600e92eb9bf5fef009729d',1,'app::EcranJeu::initGUI()']]],
   ['initialiser',['initialiser',['../classjeu_1_1_terrain.html#a43df1b4f47b831a2d944964ccda6e82e',1,'jeu::Terrain']]],
   ['initpolices',['initPolices',['../classapp_1_1_config.html#ada2a8a71c6ef00e4726666af45c04d25',1,'app::Config']]],
-  ['initskins',['initSkins',['../classapp_1_1_config.html#a87cba3dc8625eccfe14efae71555312c',1,'app::Config']]],
-  ['initstyles',['initStyles',['../classapp_1_1_config.html#a3f6e6c60455e9b9f35fdead803864bcf',1,'app::Config']]],
+  ['initshaders',['initShaders',['../classapp_1_1_config.html#ae5357eda7781d4741a348473fd1b048c',1,'app::Config']]],
   ['inittextures',['initTextures',['../classapp_1_1_config.html#a690065179d9ef7ade6a67193f44acb89',1,'app::Config']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fin',['Fin',['../classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a4493d011fa6935f4d91714d738888eb0',1,'gui::Gadget']]]
+  ['clipping',['clipping',['../classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62fa0b400653f74f52cab543097c24df2cae',1,'app::Config']]]
 ];

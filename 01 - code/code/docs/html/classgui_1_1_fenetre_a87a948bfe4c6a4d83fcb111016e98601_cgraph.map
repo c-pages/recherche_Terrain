@@ -1,0 +1,13 @@
+<map id="gui::Fenetre::Fenetre" name="gui::Fenetre::Fenetre">
+<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a621faf32d2fa1cf218afcd97bdfd0104" title="Definie la couleur du remplissage. " alt="" coords="210,5,399,47"/>
+<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#ac299867580d5d39d60a60039fe757b93" title="Definie la couleur du contour. " alt="" coords="203,71,406,98"/>
+<area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a72f9bcfca56bf51121eae0cf0f739149" title="Definie la couleur du contour. " alt="" coords="196,122,413,149"/>
+<area shape="rect" id="node6" href="$classgui_1_1_actions.html#a0b0dfd024938532a3c8abf98ddefd3d8" title="Créer une nouvelle liaison entre un evenement souris et une fonction lambda. " alt="" coords="247,173,363,199"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#a51255d1ce23986d50ca2a447024a0c14" title="Actualiser les éléments de l&#39;interface. " alt="" coords="227,223,382,250"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton.html#a94ba72e031aa13cffb9658228c4c1f0e" title="Accessuers / mutateurs ///////////////////////. " alt="" coords="473,13,612,39"/>
+<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="472,147,613,174"/>
+<area shape="rect" id="node9" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="672,198,825,225"/>
+<area shape="rect" id="node11" href="$classgui_1_1_gadget.html#a92c42e660b6b307daa77cd0d42aad26f" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="461,249,624,275"/>
+<area shape="rect" id="node12" href="$classgui_1_1_fenetre.html#ad3827bd88c06b140c48352f3864f299a" title="Actualise les parametres du shader clipping. " alt="" coords="465,300,620,341"/>
+<area shape="rect" id="node10" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="873,198,1035,225"/>
+</map>

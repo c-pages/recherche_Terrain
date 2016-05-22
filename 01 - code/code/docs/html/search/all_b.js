@@ -24,6 +24,7 @@ var searchData=
   ['m_5fevenementsclavier',['m_evenementsClavier',['../classgui_1_1_actions.html#ab00b449f8ae4b775591a899aeade2ebc',1,'gui::Actions']]],
   ['m_5fevenementssouris',['m_evenementsSouris',['../classgui_1_1_actions.html#ae14d5de5925a8024539546804e4f0b8f',1,'gui::Actions']]],
   ['m_5ffenetre',['m_fenetre',['../classapp_1_1_application.html#a5faee20484956cb1813c7eec81521a8f',1,'app::Application::m_fenetre()'],['../classgui_1_1_gui.html#a676bd17b12968c4541fd6f9abcee3cff',1,'gui::Gui::m_fenetre()']]],
+  ['m_5ffermable',['m_fermable',['../classgui_1_1_fenetre.html#a9482403f6c741acaeac5f282f184f8d9',1,'gui::Fenetre']]],
   ['m_5ffond',['m_fond',['../classapp_1_1_ecran_accueil.html#a4a85ba0ad48e955a3b5bc72ddab7711c',1,'app::EcranAccueil::m_fond()'],['../classapp_1_1_ecran_jeu.html#a7081feb754c0bfe75798daeb57833dc0',1,'app::EcranJeu::m_fond()'],['../classgui_1_1_bouton.html#a7a4cca0de2173fe71bdf78723d8dc43d',1,'gui::Bouton::m_fond()'],['../classgui_1_1_fenetre.html#a21649cafc780b53392126dbcd2ff0d47',1,'gui::Fenetre::m_fond()']]],
   ['m_5fgadgetpresse',['m_gadgetPresse',['../classgui_1_1_gui.html#a81bd7f3a2f4a3286988f490702807196',1,'gui::Gui']]],
   ['m_5fgadgetsurvole',['m_gadgetSurvole',['../classgui_1_1_gui.html#afdc3584efc019882f7cb18e2c703e494',1,'gui::Gui']]],
@@ -54,6 +55,7 @@ var searchData=
   ['m_5ftaille',['m_taille',['../classjeu_1_1_terrain.html#abb505adb5a07904eb33b9cef7aa5bd69',1,'jeu::Terrain']]],
   ['m_5fterrain',['m_terrain',['../classjeu_1_1_jeu.html#ae4032b3d2e3033452ae67d3494250a7d',1,'jeu::Jeu']]],
   ['m_5ftexte',['m_texte',['../classgui_1_1_bouton.html#a988708913eceb6733a852275a393147a',1,'gui::Bouton::m_texte()'],['../classgui_1_1_label.html#a18b5433045a4c5eeaed075943a27faa6',1,'gui::Label::m_texte()']]],
+  ['m_5ftitre',['m_titre',['../classgui_1_1_fenetre.html#ae2a5a9032b237447fea409da292b6c19',1,'gui::Fenetre']]],
   ['m_5fvisible',['m_visible',['../classgui_1_1_gadget.html#a10fc45e0ac3da5339be2e1efb9fed289',1,'gui::Gadget']]],
   ['m_5fvue',['m_vue',['../classapp_1_1_ecran_accueil.html#a463db13c7e5a38f5c1ac725a01eb1120',1,'app::EcranAccueil::m_vue()'],['../classapp_1_1_ecran_jeu.html#a2af21bc87b915892b0089f90edb07145',1,'app::EcranJeu::m_vue()']]],
   ['m_5fvuegui',['m_vueGUI',['../classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db',1,'app::Ecran']]],
@@ -64,5 +66,6 @@ var searchData=
   ['mplan',['mPlan',['../classapp_1_1_resource_mgr.html#aaf3f11ff8309da00bbc6cce38bc156fa',1,'app::ResourceMgr::mPlan()'],['../classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#ae8c4bbb3a6a64b4d88d5224770d0cd92',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;::mPlan()']]],
   ['ms_5fdureeimage',['ms_dureeImage',['../classapp_1_1_config.html#adfee58e2cdbc4fd635323e5071e582d4',1,'app::Config']]],
   ['ms_5fpolices',['ms_polices',['../classapp_1_1_config.html#ac90624673018affec317ebb4dbc2ea58',1,'app::Config']]],
+  ['ms_5fshaders',['ms_shaders',['../classapp_1_1_config.html#adb8d6774c6ab540f97fbd4379a40c69a',1,'app::Config']]],
   ['ms_5ftextures',['ms_textures',['../classapp_1_1_config.html#a4155b86a370fd8216be541378630160f',1,'app::Config']]]
 ];

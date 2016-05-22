@@ -11,18 +11,25 @@
 
 namespace gui {
 
+sf::RenderWindow *  ms_fenetre = nullptr;
+
+
+
 /////////////////////////////////////////////////
 Gui::Gui ( sf::RenderWindow* fenetre )
 : creer             ( this )
-, m_fenetre         ( fenetre )
 , m_calqueFond      ( std::make_shared<Calque>() )
 , m_calqueFenetres  ( std::make_shared<Calque>() )
 , m_gadgetSurvole   ( nullptr )
 , m_gadgetPresse    ( nullptr )
 {
+    // la fenetre SFML
+    ms_fenetre = fenetre;
+
     /// Initialisation des claques
-    ajouterEnfant( m_calqueFond );
     ajouterEnfant( m_calqueFenetres );
+    ajouterEnfant( m_calqueFond );
+
 }
 
 
@@ -50,7 +57,7 @@ Gadget* Gui::chercherGadgetSurvole ()
 //std::shared_ptr<Gadget> Gui::chercherGadgetSurvole ()
 {
 //                std::cout << "chercherGadgetSurvole\n";
-    sf::Vector2i posSouris = sf::Mouse::getPosition( *m_fenetre );
+    sf::Vector2i posSouris = sf::Mouse::getPosition( *ms_fenetre );
 
     for ( auto enfant : m_enfants )
         if ( enfant->testerSurvol ( posSouris ) != nullptr )
@@ -205,20 +212,13 @@ void Gui::actualiser ()
 
 }
 
-//
-///////////////////////////////////////////////////
-//void Gui::draw (sf::RenderTarget& target, sf::RenderStates states) const
-//{
-//    //Gadget::draw ( target, states);
-//
-//    // On dessine les calques
-//    target.draw ( *m_calqueFond , states );
-//    target.draw ( *m_calqueFenetres , states );
-//
-//}
-//
 
 
+/////////////////////////////////////////////////
+sf::Vector2i Gui::getSourisPosition ()
+{
+    return sf::Mouse::getPosition( *ms_fenetre );
+}
 
 
 } // fin namespace gui

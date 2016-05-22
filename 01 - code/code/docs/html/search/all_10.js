@@ -7,6 +7,7 @@ var searchData=
   ['setcouleur',['setCouleur',['../classgui_1_1_label.html#a7c067208c9b05bcc07b9e10f7496bc4a',1,'gui::Label']]],
   ['setdraggable',['setDraggable',['../classgui_1_1_fenetre.html#ad7cca613afc7540c9a78cdb86b575731',1,'gui::Fenetre']]],
   ['setetat',['setEtat',['../classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432',1,'gui::Gadget::setEtat()'],['../classgui_1_1_bouton.html#a94ba72e031aa13cffb9658228c4c1f0e',1,'gui::Bouton::setEtat()']]],
+  ['setfermable',['setFermable',['../classgui_1_1_fenetre.html#a6c16eb8479a743607c6d38d80e4bfac0',1,'gui::Fenetre']]],
   ['setfondcouleur',['setFondCouleur',['../classgui_1_1_fenetre.html#ab527018e1a3d5cd14b89703ea5858558',1,'gui::Fenetre']]],
   ['setfondtexture',['setFondTexture',['../classgui_1_1_fenetre.html#adf0b0703c11658f4e29619c544fe9688',1,'gui::Fenetre']]],
   ['seticone',['setIcone',['../classgui_1_1_bouton.html#aba42e9f194a0584f1d3ff04479084fda',1,'gui::Bouton']]],
@@ -32,6 +33,7 @@ var searchData=
   ['settitrestyle',['setTitreStyle',['../classgui_1_1_fenetre.html#a96bdcba239ccadb7436831f3e84bd88a',1,'gui::Fenetre']]],
   ['settitretaille',['setTitreTaille',['../classgui_1_1_fenetre.html#a7204bb57d13c34b423d34a6df585b9f5',1,'gui::Fenetre']]],
   ['setvisible',['setVisible',['../classgui_1_1_gadget.html#a1ba69340c4ea11ac6facd3f0bb8487bf',1,'gui::Gadget']]],
+  ['shaders',['Shaders',['../classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62f',1,'app::Config']]],
   ['supprimer',['supprimer',['../classgui_1_1_gadget.html#a2c9c5d103b90ace0b72e66625497c995',1,'gui::Gadget']]],
   ['survol',['Survol',['../classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524ab7365de0974fdb24c2a47a2af713c14e',1,'gui::Gadget']]]
 ];

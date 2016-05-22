@@ -36,6 +36,19 @@ public:
     Gui ( sf::RenderWindow* fenetre );
 
 
+/////////////////////////////////////////////////
+// Fonctions static
+/////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////
+    /// \brief accesseur la la position de la souris
+    ///
+    /////////////////////////////////////////////////
+    static sf::Vector2i getSourisPosition ();
+
+
+
+
 
     /////////////////////////////////////////////////
     /// \brief Definir m_parent. Ici ne fait rien car Gui est le root.
@@ -108,13 +121,9 @@ public:
     /////////////////////////////////////////////////
     void actualiser ();
 
-//    /////////////////////////////////////////////////
-//    /// \brief Dessine tout les éléments de l'interface.
-//    ///
-//    /// \param target
-//    /// \param states
-//    /////////////////////////////////////////////////
-//    virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
+
+
+
 
 
 
@@ -123,22 +132,20 @@ public:
 /////////////////////////////////////////////////
 public:
 
-    /// la fabrique/////////////////////
-    gui::Fabrique       creer;              ///< La fabrique des gadget.
+    /// la fabrique /////////////////////
+    Fabrique       creer;              ///< La fabrique des gadget.
 
 private:
 
     /// la fenetre SFML /////////////////////
-    sf::RenderWindow *  m_fenetre;          ///< La fenêtre SFML de l'application, pour acceder aux coordonnées de la souris par exemple.
+    static sf::RenderWindow *  m_fenetre;          ///< La fenêtre SFML de l'application, pour acceder aux coordonnées de la souris par exemple.
 
     /// les calques /////////////////////
     friend class                Fabrique;
     std::shared_ptr<Calque>     m_calqueFond;       ///< Le calque regroupant les gadgets les plus au fond de la vue.
     std::shared_ptr<Calque>     m_calqueFenetres;   ///< Le calque regroupant les fenetres.
 
-    /// la gestion des gadgets interactifs
-//    std::shared_ptr<Gadget>     m_gadgetSurvole;    ///> Le gadget survolé (nullptr si aucun)
-//    std::shared_ptr<Gadget>     m_gadgetPresse;     ///> Le gadget pressé (nullptr si aucun)
+    /// la gestion des gadgets interactifs /////////////////////
     Gadget*     m_gadgetSurvole;    ///> Le gadget survolé (nullptr si aucun)
     Gadget*     m_gadgetPresse;     ///> Le gadget pressé (nullptr si aucun)
 

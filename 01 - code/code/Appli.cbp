@@ -72,6 +72,7 @@
 		<Unit filename="include/gui/Gadget.h" />
 		<Unit filename="include/gui/Gui.h" />
 		<Unit filename="include/gui/gadgets/Bouton.h" />
+		<Unit filename="include/gui/gadgets/Fenetre.h" />
 		<Unit filename="include/gui/gadgets/Image.h" />
 		<Unit filename="include/gui/gadgets/Label.h" />
 		<Unit filename="include/jeu/Etage.h" />
@@ -141,6 +142,7 @@
 		<Unit filename="src/gui/Gadget.cpp" />
 		<Unit filename="src/gui/Gui.cpp" />
 		<Unit filename="src/gui/gadgets/Bouton.cpp" />
+		<Unit filename="src/gui/gadgets/Fenetre.cpp" />
 		<Unit filename="src/gui/gadgets/Image.cpp" />
 		<Unit filename="src/gui/gadgets/Label.cpp" />
 		<Unit filename="src/jeu/Etage.cpp" />

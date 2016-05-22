@@ -75,6 +75,35 @@ std::shared_ptr<Bouton> Fabrique::bouton ( sf::Texture& texture, sf::Vector2i ta
     return nouveauGadget;
 }
 
+
+
+
+
+
+/////////////////////////////////////////////////
+std::shared_ptr<Fenetre> Fabrique::fenetre  ( std::string titre , sf::Vector2i taille , bool draggable , bool resizable )
+{
+
+    // creation du gadget dans son pointeur
+    std::shared_ptr<Fenetre> nouveauGadget = std::make_shared<gui::Fenetre>( );
+
+    // initialisation du gadget
+    m_interface->m_calqueFenetres->ajouterEnfant( nouveauGadget );
+    nouveauGadget->setTitre     ( titre );
+    nouveauGadget->setSize      ( taille );
+    nouveauGadget->setDraggable ( draggable );
+    nouveauGadget->setResizable ( resizable );
+
+    return nouveauGadget;
+
+}
+
+
+
+
+
+
+
 ///////////////////////////////////////////////////
 //std::shared_ptr<Vue> Fabrique::vue ()
 //{

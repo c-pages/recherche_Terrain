@@ -16,16 +16,24 @@
 namespace app
 {
 
+
+
+
+
+
 /////////////////////////////////////////////////
 /// \brief Contient les différents éléments de Configuration de l'application.
+///
+/// \todo s'occuper des shaders (cf:le pdf SFML essantials  +/- P.109)
 ///
 /////////////////////////////////////////////////
 class Config
 {
 
 public:
+
     /////////////////////////////////////////////////
-    /// \brief listes les polices enregistrables dans le manager de polices
+    /// \brief les polices enregistrables dans le manager de polices
     ///
     /////////////////////////////////////////////////
     enum Polices                :  int  {   police_1
@@ -34,17 +42,19 @@ public:
                                         };
 
     /////////////////////////////////////////////////
-    /// \brief listes les images enregistrables dans le manager de texture
+    /// \brief les images enregistrables dans le manager de texture
     ///
     /////////////////////////////////////////////////
     enum Images                :  int  {   image_1
                                         ,  image_2
                                         };
 
-
-
-
-
+    /////////////////////////////////////////////////
+    /// \brief les shaders enregistrables dans le manager de shaders
+    ///
+    /////////////////////////////////////////////////
+    enum Shaders                :  int  {  clipping
+                                        };
     /////////////////////////////////////////////////
     /// \brief Constructeur
     ///
@@ -90,29 +100,24 @@ private:
     static void initPolices();
 
     /////////////////////////////////////////////////
-    /// \brief Initialiser les differents skins pour l'interface graphique
+    /// \brief Initialiser les differents shaders
     ///
     /////////////////////////////////////////////////
-    static void initSkins();
-
-    /////////////////////////////////////////////////
-    /// \brief Initialiser les differents styles pour l'interface graphique
-    ///
-    /////////////////////////////////////////////////
-    static void initStyles();
+    static void initShaders();
 
 
-    /////////////////////////////////////////////////
-    // Les membres
-    /////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// Les membres
+/////////////////////////////////////////////////
 
 public:
 
-    static  ResourceMgr<sf::Texture,int>                        ms_textures;     ///< Manager des textures
-    static  ResourceMgr<sf::Font,int>                           ms_polices;      ///< Manager des polices
+    static  ResourceMgr<sf::Texture,    int>    ms_textures;     ///< Manager des textures
+    static  ResourceMgr<sf::Font,       int>    ms_polices;      ///< Manager des polices
+    static  ResourceMgr<sf::Shader,     int>    ms_shaders;      ///< Manager des polices
 
 private:
-    static  sf::Time                                            ms_dureeImage;   ///< Durée d'une image, Autrement dit on a 1/FrameRate = \e DureeImage
+    static  sf::Time                        ms_dureeImage;   ///< Durée d'une image, Autrement dit on a 1/FrameRate = \e DureeImage
 
 
 

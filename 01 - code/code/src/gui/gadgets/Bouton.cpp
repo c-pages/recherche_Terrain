@@ -22,7 +22,7 @@ Bouton::Bouton (  )
     m_texte.setColor            ( sf::Color (200,200,200) );
     m_texte.setFont             ( app::Config::ms_polices.get( app::Config::Polices::police_1 ) );
 
-    /// Initialisation du rectangle SFML.
+    /// Initialisation du fond SFML.
     m_fond.setFillColor        ( { 150, 150, 150 } );
     m_fond.setOutlineColor     ( { 150, 150, 150 } );
     m_fond.setOutlineThickness ( 1 );
