@@ -6,6 +6,7 @@ var hierarchy =
         [ "gui::Calque", "classgui_1_1_calque.html", null ],
         [ "gui::Fenetre", "classgui_1_1_fenetre.html", null ],
         [ "gui::Fenetre::Glissiere", "classgui_1_1_fenetre_1_1_glissiere.html", null ],
+        [ "gui::Fenetre::Redimensionnement", "classgui_1_1_fenetre_1_1_redimensionnement.html", null ],
         [ "gui::Gui", "classgui_1_1_gui.html", null ],
         [ "gui::Image", "classgui_1_1_image.html", null ],
         [ "gui::Label", "classgui_1_1_label.html", null ]

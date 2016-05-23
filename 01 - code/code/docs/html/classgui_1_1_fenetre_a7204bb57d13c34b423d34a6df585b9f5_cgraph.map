@@ -1,0 +1,7 @@
+<map id="gui::Fenetre::setTitreTaille" name="gui::Fenetre::setTitreTaille">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre_1_1_glissiere.html#a173fd57f47aaa00d7ce34e1d8a65da67" title="Actualiser les éléments de l&#39;interface. " alt="" coords="225,49,376,90"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="429,5,571,32"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="624,56,777,83"/>
+<area shape="rect" id="node6" href="$classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e" title="Actualiser le gadget (bounding bax) " alt="" coords="424,107,576,133"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="825,56,987,83"/>
+</map>

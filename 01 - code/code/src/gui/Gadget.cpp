@@ -81,6 +81,14 @@ sf::Vector2f Gadget::getPosAbs () const
 }
 
 
+/////////////////////////////////////////////////
+void Gadget::setSize( int x , int y )
+{
+     m_size = { x , y };
+    actualiser();
+}
+
+
 
 /////////////////////////////////////////////////
 void Gadget::setSize( sf::Vector2i val ){

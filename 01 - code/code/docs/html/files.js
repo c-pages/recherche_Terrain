@@ -37,7 +37,8 @@ var files =
     [ "Fenetre.cpp", "_fenetre_8cpp.html", null ],
     [ "Fenetre.h", "_fenetre_8h.html", [
       [ "Fenetre", "classgui_1_1_fenetre.html", "classgui_1_1_fenetre" ],
-      [ "Glissiere", "classgui_1_1_fenetre_1_1_glissiere.html", "classgui_1_1_fenetre_1_1_glissiere" ]
+      [ "Glissiere", "classgui_1_1_fenetre_1_1_glissiere.html", "classgui_1_1_fenetre_1_1_glissiere" ],
+      [ "Redimensionnement", "classgui_1_1_fenetre_1_1_redimensionnement.html", "classgui_1_1_fenetre_1_1_redimensionnement" ]
     ] ],
     [ "Gadget.cpp", "_gadget_8cpp.html", null ],
     [ "Gadget.h", "_gadget_8h.html", [

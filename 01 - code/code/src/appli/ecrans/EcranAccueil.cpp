@@ -157,19 +157,24 @@ EcranAccueil::initGUI  ( )
     fenetreTest->ajouterEnfant( boutonPourFenetre2 );
     fenetreTest->ajouterEnfant( boutonPourFenetre3 );
     fenetreTest->setPosition   ( 250,250 );
+//    fenetreTest->setFondTexture( Config::ms_textures.get( Config::Images::image_1 ) );
+//    fenetreTest->setFondCouleur( sf::Color::White );
 
-
-
+    fenetreTest->lier (  gui::Actions::Evenement::onFen_fermer
+                        , [this](){
+                            std::cout <<"Fermer la fenetre\n";
+                            m_appli->getFenetre()->close();
+                        });
 
 
 
     boutonPourFenetre->lier (  gui::Actions::Evenement::onBtnG_relacher
-                        , [this , boutonTexte_1 ](){
+                        , [](){
                             std::cout << "ACTION BOUTON 2\n";
                         });
 
     boutonPourFenetre2->lier (  gui::Actions::Evenement::onBtnG_relacher
-                        , [this , boutonTexte_1 ](){
+                        , [](){
                             std::cout << "ACTION BOUTON 3\n";
                         });
 

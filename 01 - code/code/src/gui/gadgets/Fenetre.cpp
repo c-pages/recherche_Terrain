@@ -13,8 +13,9 @@ namespace gui {
 /////////////////////////////////////////////////
 
 /////////////////////////////////////////////////
-Fenetre::Glissiere::Glissiere ( Glissiere::Orientation orientation )
-: m_orientation         ( orientation )
+Fenetre::Glissiere::Glissiere ( Glissiere::Orientation orientation , Fenetre* fenetre )
+: m_fenetre             ( fenetre )
+, m_orientation         ( orientation )
 , m_dragEnCours         ( false )
 , m_dragPosOrigin       ( {0,0} )
 , m_dragPosSourisOrigin ( {0,0} )
@@ -23,29 +24,53 @@ Fenetre::Glissiere::Glissiere ( Glissiere::Orientation orientation )
 , m_largeur             ( 7 )
 {
 
-    /// Initialisation bouton du fond
+    /// Initialisation bouton du fond ////////////////////
     m_btnFond.setRemplissageCouleur    ( { 255, 255, 255 } );
     m_btnFond.setContourCouleur        ( { 150, 150, 150 } );
     m_btnFond.setContourEpaisseur      ( 0 );
     m_btnFond.setParent                ( this );
     m_btnFond.setAlphaEtats            ( 0,20,30 );
 
-    /// Initialisation bouton glissiere
+
+    /// Initialisation bouton glissiere ////////////////////
     m_btnGlissiere.setRemplissageCouleur    ( { 255, 255, 255 } );
     m_btnGlissiere.setContourCouleur        ( { 150, 150, 150 } );
     m_btnGlissiere.setContourEpaisseur      ( 0 );
     m_btnGlissiere.setParent                ( this );
     m_btnGlissiere.setAlphaEtats            ( 100,150,200 );
 
-    /// Interactions
+
+    /// Interactions Fonctions ////////////////////
     auto fctDebutDrag = [this](){
         std::cout << "debut drag\n";
+        m_dragEnCours = true;
+        m_dragPosOrigin         = { m_btnGlissiere.getPosition ().x, m_btnGlissiere.getPosition ().y } ;
+        m_dragPosSourisOrigin   = Gui::getSourisPosition ();
     };
     auto fctFinDrag = [this](){
-        std::cout << "fin drag\n";
+        if ( m_dragEnCours ){
+            std::cout << "fin drag\n";
+            m_dragEnCours = false;
+            m_dragPosOrigin         = { 0, 0 } ;
+            m_dragPosSourisOrigin   = { 0, 0 } ;
+        }
     };
-    m_btnGlissiere.lier ( Evenement::onBtnG_presser     , fctDebutDrag );
-    m_btnGlissiere.lier ( Evenement::onBtnG_relacher    , fctFinDrag );
+    auto fctRouletteHaut = [this](){
+            std::cout << "fctRouletteHaut\n";
+    };
+    auto fctRouletteBas = [this](){
+            std::cout << "fctRouletteBas\n";
+    };
+
+    /// Interactions Laisons ////////////////////
+    m_btnFond.lier      ( Evenement::onBtnM_roulerHaut      , fctRouletteHaut );
+    m_btnFond.lier      ( Evenement::onBtnM_roulerBas       , fctRouletteBas );
+
+    m_btnGlissiere.lier ( Evenement::onBtnG_presser         , fctDebutDrag );
+    m_btnGlissiere.lier ( Evenement::onBtnG_relacher        , fctFinDrag );
+    m_btnGlissiere.lier ( Evenement::onBtnG_relacherDehors  , fctFinDrag );
+    m_btnGlissiere.lier ( Evenement::onBtnM_roulerHaut      , fctRouletteHaut );
+    m_btnGlissiere.lier ( Evenement::onBtnM_roulerBas       , fctRouletteBas );
 
     actualiser();
 
@@ -80,42 +105,6 @@ void Fenetre::Glissiere::setRapport ( float rapport )
     actualiser();
 }
 
-
-/////////////////////////////////////////////////
-void Fenetre::Glissiere::setLargeur ( int largeur )
-{
-    m_largeur = largeur;
-}
-
-
-/////////////////////////////////////////////////
-int Fenetre::Glissiere::getLargeur ( )
-{
-    return m_largeur;
-}
-
-
-
-
-
-/////////////////////////////////////////////////
-void Fenetre::Glissiere::setPosGlissiere ( int position )
-{
-
-}
-
-
-/////////////////////////////////////////////////
-int Fenetre::Glissiere::getPosGlissiere ()
-{
-
-}
-
-
-
-
-
-
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::actualiser (){
 
@@ -147,13 +136,54 @@ Gadget* Fenetre::Glissiere::testerSurvol (sf::Vector2i posSouris)
         return m_btnFond.testerSurvol ( posSouris );
 
 
-
-
-
-    // finalement on renvois la fenetre (pour le drag par exemple)
-    return this;
+    // finalement on renvois nullptr mais normalement on devrait pas pouvoir arriver là
+    return nullptr;
 
 }
+
+
+/////////////////////////////////////////////////
+void Fenetre::Glissiere::traiterEvenements (sf::Event evenement)
+{
+    if ( m_dragEnCours ){
+
+        auto posSouris = Gui::getSourisPosition ();
+
+        switch ( m_orientation ){
+            case Horizontal: {      // la destination du drag
+                                    float destH = m_dragPosOrigin.x + posSouris.x - m_dragPosSourisOrigin.x;
+
+                                    // limitation du drag
+                                    if ( destH < 0 ) destH = 0;
+                                    if ( destH > m_size.x - m_btnGlissiere.getSize().x ) destH = m_size.x - m_btnGlissiere.getSize().x;
+
+                                    // placement de la glisserre
+                                    m_btnGlissiere.setPosition  ( destH ,  m_btnGlissiere.getPosition().y );
+
+                                    // placement du calque de la fenêtre parent
+                                    m_fenetre->defilerHorizontal( destH / ( m_size.x - m_btnGlissiere.getSize().x ) );
+                break;
+            }
+            case Vertical: {        // la destination du drag
+                                    float destV = m_dragPosOrigin.y + posSouris.y - m_dragPosSourisOrigin.y;
+
+                                    // limitation du drag
+                                    if ( destV <0 ) destV = 0;
+                                    if ( destV > m_size.y - m_btnGlissiere.getSize().y ) destV = m_size.y - m_btnGlissiere.getSize().y;
+
+                                    // placement de la glisserre
+                                    m_btnGlissiere.setPosition  (  m_btnGlissiere.getPosition().x , destV);
+
+                                    // placement du calque de la fenêtre parent
+                                    m_fenetre->defilerVertical( destV / ( m_size.y - m_btnGlissiere.getSize().y ) );
+                break;
+            }
+        } // fin switch
+    }
+
+}
+
+
 
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::draw (sf::RenderTarget& target, sf::RenderStates states) const
@@ -165,8 +195,8 @@ void Fenetre::Glissiere::draw (sf::RenderTarget& target, sf::RenderStates states
     // On applique la transformation
     states.transform *= getTransform();
 
-    // On dessine le fond
-    target.draw ( m_btnFond , states );
+//    // On dessine le fond
+//    target.draw ( m_btnFond , states );
 
     // on dessine la glissiere
     target.draw ( m_btnGlissiere , states );
@@ -176,6 +206,129 @@ void Fenetre::Glissiere::draw (sf::RenderTarget& target, sf::RenderStates states
 
 
 
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
+// Redimensionnement
+/////////////////////////////////////////////////
+
+/////////////////////////////////////////////////
+Fenetre::Redimensionnement::Redimensionnement ( Fenetre* fenetre )
+: m_fenetre ( fenetre )
+, m_largeur ( 5 )
+{
+    /// on remplie la liste des boutons
+    m_boutons.push_back( &m_btn_HG );
+    m_boutons.push_back( &m_btn_H );
+    m_boutons.push_back( &m_btn_HD );
+    m_boutons.push_back( &m_btn_D );
+    m_boutons.push_back( &m_btn_G );
+    m_boutons.push_back( &m_btn_BG );
+    m_boutons.push_back( &m_btn_B );
+    m_boutons.push_back( &m_btn_BD );
+
+    for ( auto bouton : m_boutons)
+        bouton->setParent ( m_fenetre );
+
+    /// les interactions
+    auto fctRedimHaut   = [this ](){
+        std::cout << "redim haut\n";
+    };
+    auto fctRedimBas    = [this](){
+        std::cout << "redim bas\n";
+    };
+    auto fctRedimGauche = [this](){
+        std::cout << "redim gauche\n";
+    };
+    auto fctRedimDroite = [this](){
+        std::cout << "redim droite\n";
+    };
+    auto fctRedimHautGauche   = [ this, fctRedimHaut, fctRedimGauche](){
+        fctRedimHaut();
+        fctRedimGauche();
+    };
+    auto fctRedimHautDroite   = [ this, fctRedimHaut, fctRedimDroite](){
+        fctRedimHaut();
+        fctRedimDroite();
+    };
+    auto fctRedimBasGauche   = [ this, fctRedimBas, fctRedimGauche](){
+        fctRedimBas();
+        fctRedimGauche();
+    };
+    auto fctRedimBasDroite   = [ this, fctRedimBas, fctRedimDroite](){
+        fctRedimBas();
+        fctRedimDroite();
+    };
+    auto fctRedimFin   = [ this](){
+        std::cout << "redim FIN\n";
+    };
+
+
+
+    m_btn_HG.lier ( Evenement::onBtnG_presser   , fctRedimHautGauche );
+    m_btn_HG.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
+    m_btn_H.lier ( Evenement::onBtnG_presser    , fctRedimHaut );
+    m_btn_H.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
+    m_btn_HD.lier ( Evenement::onBtnG_presser   , fctRedimHautDroite );
+    m_btn_HD.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
+    m_btn_D.lier ( Evenement::onBtnG_presser    , fctRedimDroite );
+    m_btn_D.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
+    m_btn_G.lier ( Evenement::onBtnG_presser    , fctRedimGauche );
+    m_btn_G.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
+    m_btn_BG.lier ( Evenement::onBtnG_presser   , fctRedimBasGauche );
+    m_btn_BG.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
+    m_btn_B.lier ( Evenement::onBtnG_presser    , fctRedimBas );
+    m_btn_B.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
+    m_btn_BD.lier ( Evenement::onBtnG_presser   , fctRedimBasDroite);
+    m_btn_BD.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
+
+}
+
+
+/////////////////////////////////////////////////
+Gadget* Fenetre::Redimensionnement::testerSurvol (sf::Vector2i posSouris)
+{
+
+    /// si non visible on renvois nullptr
+    if (! estVisible () )
+        return nullptr;
+
+    /// on test chaque bouton
+    for ( auto bouton : m_boutons )
+        if ( bouton->testerSurvol ( posSouris ) != nullptr )
+            return bouton->testerSurvol ( posSouris );
+
+    /// sinon on renvois null
+    return nullptr;
+}
+
+
+/////////////////////////////////////////////////
+void Fenetre::Redimensionnement::actualiser ()
+{
+    m_btn_HG.setSize        ( m_largeur , m_largeur );
+    m_btn_H.setSize         ( m_size.x - 2*m_largeur, m_largeur );
+    m_btn_H.setPosition     ( m_largeur, 0 );
+    m_btn_HD.setSize        ( m_largeur, m_largeur );
+    m_btn_HD.setPosition    ( m_size.x - m_largeur, 0 );
+
+    m_btn_G.setSize         ( m_largeur, m_size.y - 2*m_largeur );
+    m_btn_G.setPosition     ( 0 , m_largeur );
+    m_btn_D.setSize         ( m_largeur, m_size.y - 2*m_largeur );
+    m_btn_D.setPosition     ( m_size.x - m_largeur , m_largeur );
+
+    m_btn_BG.setSize        ( m_largeur, m_largeur );
+    m_btn_BG.setPosition    ( 0, m_size.y - m_largeur );
+    m_btn_B.setSize         ( m_size.x - 2*m_largeur, m_largeur );
+    m_btn_B.setPosition     ( m_largeur, m_size.y - m_largeur );
+    m_btn_BD.setSize        ( m_largeur, m_largeur );
+    m_btn_BD.setPosition    ( m_size.x - m_largeur, m_size.y - m_largeur );
+}
 
 
 
@@ -207,9 +360,11 @@ Fenetre::Fenetre ( )
 , m_fond                ( )
 , m_titre               ( )
 , m_btnFermer           ( )
-, m_btnSliderH          ( Glissiere::Orientation::Horizontal )
-, m_btnSliderV          ( Glissiere::Orientation::Vertical )
-, m_calque              ( std::make_shared<Calque>() )
+, m_btnSliderH          ( Glissiere::Orientation::Horizontal, this )
+, m_btnSliderV          ( Glissiere::Orientation::Vertical, this )
+, m_redim               ( this )
+, m_contenant           ( std::make_shared<Calque>() )
+, m_contenu             ( std::make_shared<Calque>() )
 {
 
     /// la marge pour les fenetres ////////////////////
@@ -240,7 +395,8 @@ Fenetre::Fenetre ( )
 
 
     /// Initialisation du calque des enfants. ////////////////////
-    Gadget::ajouterEnfant ( m_calque );
+    Gadget::ajouterEnfant ( m_contenant );
+    m_contenant->ajouterEnfant ( m_contenu );
 
 
     /// Initialisation des glissières. ////////////////////
@@ -250,16 +406,14 @@ Fenetre::Fenetre ( )
 
     /// Initialisation des  interactions ////////////////////
     auto fn_fermeture = [this](){
-        std::cout <<"Fermer la fenetre\n";
+        declencher ( Evenement::onFen_fermer );
     };
     auto fn_dragDebut = [this](){
-        std::cout <<"Debut du drag\n";
         m_dragEnCours           = true;
         m_dragPosOrigin         = { getPosition ().x, getPosition ().y } ;
         m_dragPosSourisOrigin   = Gui::getSourisPosition ();
     };
     auto fn_dragFin = [this](){
-        std::cout <<"Fin du drag\n";
         if ( m_dragEnCours ) {
             m_dragEnCours = false;
             m_dragPosOrigin         = { 0,0 } ;
@@ -273,92 +427,37 @@ Fenetre::Fenetre ( )
 
     m_btnFermer.lier ( Evenement::onBtnG_relacher, fn_fermeture );
 
-
     /// Une tite atualisation ////////////////////
     actualiser();
 
 }
 
+
 /////////////////////////////////////////////////
 void Fenetre::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
 
     /// on l'ajoute dans le calque
-    m_calque->ajouterEnfant( nouvelElement );
+    m_contenu->ajouterEnfant( nouvelElement );
 
     actualiser();
 
 }
 
+
 /////////////////////////////////////////////////
-void Fenetre::setTitre (std::string titre)
+void Fenetre::defilerHorizontal ( float rapport )
 {
-    m_titre.setString ( titre );
+    int dest = rapport * ( m_contenant->getSize().x - m_contenu->getEnfantsLocalBounds().width );
+    m_contenu->setPosition ( dest , int( m_contenu->getPosition().y) );
 }
 
 
 /////////////////////////////////////////////////
-void Fenetre::setTitreCouleur (sf::Color couleur)
+void Fenetre::defilerVertical ( float rapport )
 {
-    m_titre.setColor ( couleur );
+    int dest = rapport * ( m_contenant->getSize().y - m_contenu->getEnfantsLocalBounds().height );
+    m_contenu->setPosition ( int( m_contenu->getPosition().x ) , dest );
 }
-
-
-/////////////////////////////////////////////////
-void Fenetre::setTitreTaille (float taille)
-{
-    m_titre.setCharacterSize( taille );
-    actualiser();
-}
-
-
-/////////////////////////////////////////////////
-void Fenetre::setTitreStyle (sf::Text::Style style)
-{
-    m_titre.setStyle( style );
-    actualiser();
-}
-
-
-/////////////////////////////////////////////////
-void Fenetre::setTitrePolice (sf::Font& police)
-{
-    m_titre.setFont( police );
-    actualiser();
-}
-
-
-/////////////////////////////////////////////////
-void Fenetre::setFondTexture (sf::Texture& texture)
-{
-    m_fond.setTexture( &texture );
-}
-
-
-/////////////////////////////////////////////////
-void Fenetre::setFondCouleur (sf::Color couleur)
-{
-    m_fond.setFillColor( couleur );
-}
-
-
-/////////////////////////////////////////////////
-void Fenetre::setContourCouleur (sf::Color couleur)
-{
-    m_fond.setOutlineColor( couleur );
-}
-
-
-/////////////////////////////////////////////////
-void Fenetre::setContourEpaisseur (float epaisseur)
-{
-    m_fond.setOutlineThickness( epaisseur );
-}
-
-
-
-
-
-
 
 
 /////////////////////////////////////////////////
@@ -374,33 +473,36 @@ void Fenetre::actualiser ()
     m_btnFermer.setSize         ( { hauteurTitre , hauteurTitre } );
     m_btnFermer.setPosition     ( m_size.x - hauteurTitre - m_marge.x, m_marge.y );
 
-    /// on replace le calque enfants dans la fenetre
-    m_calque->setSize           ( { m_size.x - 2*m_marge.x - m_btnSliderV.getLargeur (), m_size.y - ( 3*m_marge.y + hauteurTitre ) - m_btnSliderH.getLargeur () } );
-    m_calque->setPosition       ( m_marge.x, 2*m_marge.y + hauteurTitre );
+    /// on place le calque contenant dans la fenetre
+    m_contenant->setSize           ( { m_size.x - 2*m_marge.x - m_btnSliderV.getLargeur (), m_size.y - ( 3*m_marge.y + hauteurTitre ) - m_btnSliderH.getLargeur () } );
+    m_contenant->setPosition       ( m_marge.x, 2*m_marge.y + hauteurTitre );
+
+    /// le contenu
+    auto boundsEnfants = m_contenu->getEnfantsLocalBounds () ;
+    m_contenu->setSize ( { boundsEnfants.width, boundsEnfants.height } );
 
     /// les glissières si besoin
-    auto boundsEnfants = m_calque->getEnfantsLocalBounds () ;
-    m_btnSliderH.setVisible ( boundsEnfants.width  > m_calque->getSize().x );
-    m_btnSliderV.setVisible ( boundsEnfants.height > m_calque->getSize().y );
+    m_btnSliderH.setVisible ( boundsEnfants.width  > m_contenant->getSize().x );
+    m_btnSliderV.setVisible ( boundsEnfants.height > m_contenant->getSize().y );
     if ( m_btnSliderH.estVisible() ) {
-        m_btnSliderH.setPosition  ( m_calque->getPosition().x
-                                  , m_calque->getPosition().y + m_calque->getSize().y   );
-        m_btnSliderH.setLongueur ( m_calque->getSize().x );
+        m_btnSliderH.setPosition  ( m_contenant->getPosition().x
+                                  , m_contenant->getPosition().y + m_contenant->getSize().y   );
+        m_btnSliderH.setLongueur ( m_contenant->getSize().x );
 
-        m_btnSliderH.setRapport (  (float)(m_calque->getSize().x ) /  (float)(boundsEnfants.width));
+        m_btnSliderH.setRapport (  (float)(m_contenant->getSize().x ) /  (float)(boundsEnfants.width ));
     }
     if ( m_btnSliderV.estVisible() ) {
-        m_btnSliderV.setPosition   ( m_calque->getPosition().x + m_calque->getSize().x
-                                   , m_calque->getPosition().y);
-        m_btnSliderV.setLongueur ( m_calque->getSize().y );
-        m_btnSliderV.setRapport ( (float)(m_calque->getSize().y) /  (float)(boundsEnfants.height));
+        m_btnSliderV.setPosition   ( m_contenant->getPosition().x + m_contenant->getSize().x
+                                   , m_contenant->getPosition().y);
+        m_btnSliderV.setLongueur ( m_contenant->getSize().y );
+        m_btnSliderV.setRapport ( (float)(m_contenant->getSize().y) /  (float)(boundsEnfants.height ));
     }
 
+    /// Le redimensionnement
+    m_redim.setSize ( m_size );
 
-
-    /// actualiser les bounds du shader
-    actualiserClipping ( m_calque->getGlobalBounds () );
-
+    /// actualiser les limites du shader de clipping
+    actualiserClipping ( m_contenant->getGlobalBounds () );
 
 }
 
@@ -447,13 +549,18 @@ Gadget* Fenetre::testerSurvol (sf::Vector2i posSouris)
     if ( m_btnSliderV.testerSurvol ( posSouris ) != nullptr )
         return m_btnSliderV.testerSurvol ( posSouris );
 
+    /// Si on survol les redims
+    if ( m_redim.testerSurvol ( posSouris ) != nullptr )
+        return m_redim.testerSurvol ( posSouris );
+
+
 
     /// on test les enfants
-    if ( m_calque->testerSurvol ( posSouris ) != nullptr )
-        return m_calque->testerSurvol ( posSouris );
+    if ( m_contenu->testerSurvol ( posSouris ) != nullptr )
+        return m_contenu->testerSurvol ( posSouris );
 
 
-    /// finalement on renvois la fenetre (pour le drag par exemple)
+    /// finalement on renvois la fenetre (pour le drag)
     return this;
 
 }
@@ -478,11 +585,12 @@ void Fenetre::draw (sf::RenderTarget& target, sf::RenderStates states) const
     target.draw ( m_btnSliderH , states );
     target.draw ( m_btnSliderV , states );
 
+
     /// On dessine le titre
     target.draw ( m_titre , states );
 
     /// on dessine les enfants
-    target.draw ( *m_calque , states );
+    target.draw ( *m_contenant , states );
 
 
 }

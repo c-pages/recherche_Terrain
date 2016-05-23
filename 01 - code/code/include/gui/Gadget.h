@@ -62,9 +62,9 @@ public:
 
     /////////////////////////////////////////////////
     /// \brief Teste le survol du gadget par la souris.
-    /// \return nullptr de base, fonction à surcharger pour éléments interactifs.
     ///
     /// \param posSouris		 La position à tester.
+    /// \return nullptr de base, fonction à surcharger pour éléments interactifs.
     /////////////////////////////////////////////////
     virtual Gadget* testerSurvol (sf::Vector2i posSouris) ;
 
@@ -74,6 +74,13 @@ public:
     /// \param evenement		 L'évenemnt à tratier.
     /////////////////////////////////////////////////
     virtual void traiterEvenements (sf::Event evenement);
+
+    /////////////////////////////////////////////////
+    /// \brief Actualise les parametres du shader clipping.
+    ///
+    /// \param bounds le rectangle de découpe
+    /////////////////////////////////////////////////
+    void actualiserClipping ( sf::IntRect bounds );
 
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments de l'interface.
@@ -241,6 +248,12 @@ public:
     virtual void setSize( sf::Vector2i val );
 
     /////////////////////////////////////////////////
+    /// \brief Definir m_size.
+    ///
+    /////////////////////////////////////////////////
+    virtual void setSize( int x , int y );
+
+    /////////////////////////////////////////////////
     /// \brief Acceder à m_size.
     ///
     /////////////////////////////////////////////////
@@ -268,11 +281,6 @@ public:
 
 
 
-   /////////////////////////////////////////////////
-    /// \brief Actualise les parametres du shader clipping.
-    ///
-    /////////////////////////////////////////////////
-    void actualiserClipping ( sf::IntRect bounds );
 
 
 
@@ -281,12 +289,15 @@ public:
 // Membres
 /////////////////////////////////////////////////
 protected:
-    ///  /////////////////////
+
+    /// Propriétés diverses /////////////////////
     bool            m_visible; ///< La visibilité du gadget ( true :visible, false: caché )
+
 
     /// Composite /////////////////////
     Gadget*                                 m_parent;           ///< Le gadget parent.
     std::vector<std::shared_ptr<Gadget>>    m_enfants;          ///< les liste des gadgets enfants.
+
 
     /// Geométrie /////////////////////
     sf::Vector2i    m_size;             ///< La taille du gadget.
@@ -296,8 +307,9 @@ protected:
 
 
     /// le shader /////////////////
-    sf::Shader          m_shaderClipImage;  ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
-    sf::Shader          m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
+    sf::Shader      m_shaderClipImage;  ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
+    sf::Shader      m_shaderClip;       ///< Le shader qui permet de clipper les enfants de la fenêtre qui sortent de la zone d'affichage \todo Reintegrer en RAII les shaders!!
+
 
 }; // fin class Gadget
 
