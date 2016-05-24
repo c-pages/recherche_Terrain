@@ -164,7 +164,7 @@ public:
     /// \param cible le gadget à retirer
     ///
     /////////////////////////////////////////////////
-    virtual void retirerEnfant ( std::shared_ptr<Gadget> cible );
+    virtual void supprimerEnfant ( std::shared_ptr<Gadget> cible );
 
     /////////////////////////////////////////////////
     /// \brief Vider m_enfants.
@@ -177,10 +177,6 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual std::shared_ptr<Gadget> getEnfant ( unsigned int id ) const { if ( id>=0 || id<m_enfants.size() )  return m_enfants.at( id ); else return 0; };
-
-
-
-
 
     /////////////////////////////////////////////////
     /// \brief demanderau perent à être au dessus des autres enfants.
@@ -200,7 +196,13 @@ public:
     /// \brief supprimer le gadget.
     ///
     /////////////////////////////////////////////////
-    virtual void supprimer () { m_parent->retirerEnfant ( thisPtr() ); };
+    virtual void supprimer () { m_parent->supprimerEnfant ( thisPtr() ); };
+
+    /////////////////////////////////////////////////
+    /// \brief supprimer le gadget.
+    ///
+    /////////////////////////////////////////////////
+    virtual void actuaListeSuppression () ;
 
 
 
@@ -295,8 +297,9 @@ protected:
 
 
     /// Composite /////////////////////
-    Gadget*                                 m_parent;           ///< Le gadget parent.
-    std::vector<std::shared_ptr<Gadget>>    m_enfants;          ///< les liste des gadgets enfants.
+    Gadget*                                 m_parent;               ///< Le gadget parent.
+    std::vector<std::shared_ptr<Gadget>>    m_enfants;              ///< les liste des gadgets enfants.
+    std::vector<std::shared_ptr<Gadget>>    m_enfantsASupprimer;    ///< les liste des gadgets enfants à supprimer dans le traitement des evenements.
 
 
     /// Geométrie /////////////////////

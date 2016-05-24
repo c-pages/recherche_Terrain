@@ -37,11 +37,11 @@ Gui::Gui ( sf::RenderWindow* fenetre )
 
 
 /////////////////////////////////////////////////
-void Gui::retirerEnfant ( std::shared_ptr<Gadget> cible )
+void Gui::supprimerEnfant ( std::shared_ptr<Gadget> cible )
 {
     /// on ne retire pas directement l'enfant dans m_enfants mais dans les calques.
-    m_calqueFenetres->retirerEnfant ( cible );
-    m_calqueFond->retirerEnfant     ( cible );
+    m_calqueFenetres->supprimerEnfant ( cible );
+    m_calqueFond->supprimerEnfant     ( cible );
 }
 
 
@@ -57,9 +57,8 @@ void Gui::retirerEnfant ( std::shared_ptr<Gadget> cible )
 
 /////////////////////////////////////////////////
 Gadget* Gui::chercherGadgetSurvole ()
-//std::shared_ptr<Gadget> Gui::chercherGadgetSurvole ()
 {
-//                std::cout << "chercherGadgetSurvole\n";
+
     sf::Vector2i posSouris = sf::Mouse::getPosition( *ms_fenetre );
 
     for (  int i =  m_enfants.size()-1 ; i>=0 ; i--){
@@ -68,9 +67,8 @@ Gadget* Gui::chercherGadgetSurvole ()
             return enfant->testerSurvol ( posSouris );
     }
 
-
-
     return nullptr;
+
 }
 
 /////////////////////////////////////////////////
@@ -87,7 +85,6 @@ void Gui::traiterEvenements (sf::Event evenement)
     auto boutonSurvoleBack = m_gadgetSurvole;
     m_gadgetSurvole = chercherGadgetSurvole ();
 
-
     /// les evenements 'souris' de l'interface
     switch ( evenement.type ){
 
@@ -96,6 +93,10 @@ void Gui::traiterEvenements (sf::Event evenement)
 
             // On sort si on a pas changé de bouton survolé
             if ( m_gadgetSurvole ==  boutonSurvoleBack )
+                return;
+
+            // si on est en train de presser un bouton on sort
+            if (m_gadgetPresse != nullptr )
                 return;
 
             // on gère le gadget anciennement survolé
@@ -181,8 +182,10 @@ void Gui::traiterEvenements (sf::Event evenement)
 
 
             // on reset m_boutonPressé
-            m_gadgetPresse->setEtat(Gadget::Etat::Repos);
-            m_gadgetPresse = nullptr;
+//            if ( m_gadgetPresse != nullptr ) {
+                m_gadgetPresse->setEtat(Gadget::Etat::Repos);
+                m_gadgetPresse = nullptr;
+//            }
 
 
         break;
@@ -208,6 +211,8 @@ void Gui::traiterEvenements (sf::Event evenement)
 
     }
 
+
+    actuaListeSuppression ();
 
 }
 

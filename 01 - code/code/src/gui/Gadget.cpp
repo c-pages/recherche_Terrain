@@ -31,6 +31,7 @@ Gadget::Gadget ()
     m_shaderClipImage.setParameter("texture", sf::Shader::CurrentTexture);
     m_shaderClipImage.setParameter("aTexture", true );
 
+    m_enfantsASupprimer.clear();
 }
 
 
@@ -132,7 +133,7 @@ void Gadget::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
 
     // on retire l'enfant de son ancien parent si besoin
     if ( nouvelElement->getParent() != nullptr )
-        nouvelElement->getParent()->retirerEnfant( nouvelElement ) ;
+        nouvelElement->getParent()->supprimerEnfant( nouvelElement ) ;
 
     // puis on l'ajoute
     m_enfants.push_back( nouvelElement );
@@ -141,17 +142,40 @@ void Gadget::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
 }
 
 /////////////////////////////////////////////////
-void Gadget::retirerEnfant ( std::shared_ptr<Gadget> cible ) {
-    int i =0;
-    for ( auto enfant : m_enfants )    {
-        if ( enfant == cible )        {
-            m_enfants.erase( m_enfants.begin() + i );
+void Gadget::supprimerEnfant ( std::shared_ptr<Gadget> cible ) {
+
+    for ( auto enfant : m_enfants )
+        if ( enfant == cible )  {
+            m_enfantsASupprimer.push_back( enfant );
             return;
         }
-        i++;
-    }
+
 }
 
+
+
+void Gadget::actuaListeSuppression (){
+
+     // on gere la liste des enfants a supprimer
+     if ( m_enfantsASupprimer.size() > 0 ) {
+        for ( auto enfantASuppr : m_enfantsASupprimer ){
+            int i=0;
+            for ( auto enfant : m_enfants )    {
+                if ( enfant == enfantASuppr ) {
+                    m_enfants.erase( m_enfants.begin() + i );
+                    break;
+                }
+                i++;
+            }
+        }
+        m_enfantsASupprimer.clear();
+    }
+
+    // on fait pareil pour les enfants qui restent
+    for ( auto enfant : m_enfants )
+        enfant->actuaListeSuppression ();
+
+}
 
 
 /////////////////////////////////////////////////
@@ -164,7 +188,7 @@ void Gadget::demander_etreDevant ()
 void Gadget::mettreDevant ( std::shared_ptr<Gadget> gadget )
 {
     // on supprime le gadget de sa place dans le tableau
-   retirerEnfant ( gadget );
+   supprimerEnfant ( gadget );
 
     // puis on le replace à la fin du tableau
     m_enfants.push_back( gadget );
@@ -187,6 +211,7 @@ Gadget* Gadget::testerSurvol (sf::Vector2i posSouris)
 /////////////////////////////////////////////////
 void Gadget::traiterEvenements (sf::Event evenement)
 {
+
     // si non visible on sort
     if (! estVisible () ) return;
 
@@ -199,6 +224,7 @@ void Gadget::traiterEvenements (sf::Event evenement)
 /////////////////////////////////////////////////
 void Gadget::actualiser ()
 {
+
 
     // on actualise les positions des bounds
     m_globalBounds.left     = getPosAbs().x;

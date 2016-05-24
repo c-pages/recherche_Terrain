@@ -142,6 +142,7 @@ EcranAccueil::initGUI  ( )
 
     std::shared_ptr<gui::Fenetre>    fenetreTest   =   m_interface->creer.fenetre( "Fenetre test" , { 200, 120 } );
 
+    std::shared_ptr<gui::Fenetre>    fenetreTest2   =   m_interface->creer.fenetre( "Fenetre test2" , { 200, 120 } );
 
     auto boutonPourFenetre  = m_interface->creer.bouton ("Bouton dans la fenetre");
     boutonPourFenetre->setPosition ( 0, 5 );
@@ -157,8 +158,8 @@ EcranAccueil::initGUI  ( )
     fenetreTest->ajouterEnfant( boutonPourFenetre2 );
     fenetreTest->ajouterEnfant( boutonPourFenetre3 );
     fenetreTest->setPosition   ( 250,250 );
-//    fenetreTest->setFondTexture( Config::ms_textures.get( Config::Images::image_1 ) );
-//    fenetreTest->setFondCouleur( sf::Color::White );
+    fenetreTest->setFondTexture( Config::ms_textures.get( Config::Images::fenetreFond1 ) );
+    fenetreTest->setFondCouleur( sf::Color::White );
 
     fenetreTest->lier (  gui::Actions::Evenement::onFen_fermer
                         , [this](){

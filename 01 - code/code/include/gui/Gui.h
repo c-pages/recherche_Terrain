@@ -79,7 +79,7 @@ public:
     /// \param cible le gadget à retirer
     ///
     /////////////////////////////////////////////////
-    virtual void retirerEnfant ( std::shared_ptr<Gadget> cible );
+    virtual void supprimerEnfant ( std::shared_ptr<Gadget> cible );
 
     /////////////////////////////////////////////////
     /// \brief Vider m_enfants. Ici on vide le contenu des calques.

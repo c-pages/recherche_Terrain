@@ -514,8 +514,10 @@ Fenetre::Fenetre ( )
     /// Initialisation des  interactions ////////////////////
     auto fn_fermeture = [this](){
         declencher ( Evenement::onFen_fermer );
+        supprimer ();
     };
     auto fn_dragDebut = [this](){
+        demander_etreDevant ();
         m_dragEnCours           = true;
         m_dragPosOrigin         = { getPosition ().x, getPosition ().y } ;
         m_dragPosSourisOrigin   = Gui::getSourisPosition ();
@@ -566,37 +568,9 @@ void Fenetre::defilerVertical ( float rapport )
     m_contenu->setPosition ( int( m_contenu->getPosition().x ) , dest );
 }
 
-//
-///////////////////////////////////////////////////
-//void Fenetre::redimensionnerGauche ( float taille )
-//{
-//
-//        std::cout << "redim gauche\n";
-//}
-//
-//
-///////////////////////////////////////////////////
-//void Fenetre::redimensionnerDroite ( float taille )
-//{
-//        std::cout << "redim droite\n";
-//
-//}
-//
-//
-///////////////////////////////////////////////////
-//void Fenetre::redimensionnerHaut ( float taille )
-//{
-//
-//        std::cout << "redim haut\n";
-//}
-//
-//
-///////////////////////////////////////////////////
-//void Fenetre::redimensionnerBas ( float taille )
-//{
-//        std::cout << "redim bas\n";
-//
-//}
+
+
+
 
 
 
