@@ -1,5 +1,0 @@
-<map id="gui::Fabrique" name="gui::Fabrique">
-<area shape="rect" id="node2" href="$classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme&#45;machine du jeu. D&#39;un coté un système de fenêtre..." alt="" coords="451,65,517,91"/>
-<area shape="rect" id="node3" href="$classgui_1_1_gadget.html" title="Un gadget est la classe abstraite des éléments de l&#39;interface. " alt="" coords="207,122,296,149"/>
-<area shape="rect" id="node8" href="$classgui_1_1_actions.html" title="Classe abstraite qui gère les évenements claviers et souris. " alt="" coords="34,223,125,250"/>
-</map>

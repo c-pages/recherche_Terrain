@@ -1,9 +1,14 @@
 var classgui_1_1_fenetre_1_1_redimensionnement =
 [
     [ "Redimensionnement", "classgui_1_1_fenetre_1_1_redimensionnement.html#afbd6a18d1d60114831878232428922b7", null ],
+    [ "actualiser", "classgui_1_1_fenetre_1_1_redimensionnement.html#ab5d43312de8658ebe4c4adb62d8fe354", null ],
+    [ "draw", "classgui_1_1_fenetre_1_1_redimensionnement.html#aee136a9acd23f6d47e7b115754edbe65", null ],
     [ "getLargeur", "classgui_1_1_fenetre_1_1_redimensionnement.html#abf4739074d24fd4223a120204dc055bd", null ],
     [ "setLargeur", "classgui_1_1_fenetre_1_1_redimensionnement.html#a57e4bf2de75ef2ad857ec4421bb27cab", null ],
+    [ "testerSurvol", "classgui_1_1_fenetre_1_1_redimensionnement.html#ad4542b1b77faeca6380c116eae117f18", null ],
+    [ "traiterEvenements", "classgui_1_1_fenetre_1_1_redimensionnement.html#a9e9b3f6698430020de7774e451d56720", null ],
     [ "Fenetre", "classgui_1_1_fenetre_1_1_redimensionnement.html#af5c60b20048ba2de87cbc917bd75e2da", null ],
+    [ "m_boutons", "classgui_1_1_fenetre_1_1_redimensionnement.html#a7ec5a3c5bbf4ed2c63d82b00afa6807a", null ],
     [ "m_btn_B", "classgui_1_1_fenetre_1_1_redimensionnement.html#a9cf06e4e8164240edff7d6535c5551b9", null ],
     [ "m_btn_BD", "classgui_1_1_fenetre_1_1_redimensionnement.html#af9bc04bd51e5fce74f8d8b69581a76db", null ],
     [ "m_btn_BG", "classgui_1_1_fenetre_1_1_redimensionnement.html#a3ea5d94247a421285216ab62b4620d25", null ],
@@ -13,5 +18,12 @@ var classgui_1_1_fenetre_1_1_redimensionnement =
     [ "m_btn_HD", "classgui_1_1_fenetre_1_1_redimensionnement.html#abf29ed9ab382cb98d048e483deff9f72", null ],
     [ "m_btn_HG", "classgui_1_1_fenetre_1_1_redimensionnement.html#a2a1496e612fd9099627ef9e925845b49", null ],
     [ "m_fenetre", "classgui_1_1_fenetre_1_1_redimensionnement.html#a23c5f66afeb225b3b7b1b92e09477952", null ],
-    [ "m_largeur", "classgui_1_1_fenetre_1_1_redimensionnement.html#a24a931bee0d4c9f0778b4b7a7d50902d", null ]
+    [ "m_largeur", "classgui_1_1_fenetre_1_1_redimensionnement.html#a24a931bee0d4c9f0778b4b7a7d50902d", null ],
+    [ "m_redimB", "classgui_1_1_fenetre_1_1_redimensionnement.html#a7d5f64505bbbb01286b18c91823bbcef", null ],
+    [ "m_redimD", "classgui_1_1_fenetre_1_1_redimensionnement.html#a04d061be2d0868013ef6648854619562", null ],
+    [ "m_redimG", "classgui_1_1_fenetre_1_1_redimensionnement.html#ae4e96ab14d563c63ecdc63b03b025a07", null ],
+    [ "m_redimH", "classgui_1_1_fenetre_1_1_redimensionnement.html#ab0caac32a3af45dde1f27ba7773a6efe", null ],
+    [ "m_redimPosOrigin", "classgui_1_1_fenetre_1_1_redimensionnement.html#a89a5f7bbb54e335505b88523ba492949", null ],
+    [ "m_redimPosSourisOrigin", "classgui_1_1_fenetre_1_1_redimensionnement.html#ad6990b8f282cd8786c815b55876c6731", null ],
+    [ "m_redimTailleOrigin", "classgui_1_1_fenetre_1_1_redimensionnement.html#a2eeab6f3c278715e5b346f7abf71b8bb", null ]
 ];

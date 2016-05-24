@@ -1,5 +1,0 @@
-<map id="gui::Bouton::setTextePolice" name="gui::Bouton::setTextePolice">
-<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e" title="Actualiser le gadget (bounding bax) " alt="" coords="236,29,388,56"/>
-<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="436,29,589,56"/>
-<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="637,29,799,56"/>
-</map>

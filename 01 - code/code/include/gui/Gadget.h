@@ -49,13 +49,6 @@ public:
     /////////////////////////////////////////////////
     Gadget ();
 
-    /////////////////////////////////////////////////
-    /// \brief Créer un shared pointeur vers this.
-    /// \return Un pointeur vers ce gadget.
-    ///
-    /////////////////////////////////////////////////
-    virtual std::shared_ptr<Gadget> thisPtr ()  { return shared_from_this(); };
-
 
 
 
@@ -101,7 +94,7 @@ public:
 
 
 
-
+public:
     /// Accesseurs / mutateur    /////////////////////
 
     /////////////////////////////////////////////////
@@ -119,7 +112,6 @@ public:
     bool estVisible () const { return m_visible; };
 
 
-
     /////////////////////////////////////////////////
     /// \brief Definie la taille de la marge
     ///
@@ -134,18 +126,19 @@ public:
     sf::Vector2f setMarge (  ){ return m_marge; };
 
 
-
     /////////////////////////////////////////////////
     /// \brief Definie l'état du gadget , surtout pour les éléments interactifs, ici ne fait rien.
     ///
+    /// \param etat Le nouvel état
     /////////////////////////////////////////////////
     virtual void setEtat (Etat etat){ };
 
     /////////////////////////////////////////////////
     /// \brief Definir m_parent.
     ///
+    /// \param parent Le nouveau parent
     /////////////////////////////////////////////////
-    virtual void setParent( Gadget* val ){ m_parent = val; };
+    virtual void setParent( Gadget* parent ){ m_parent = parent; };
 
     /////////////////////////////////////////////////
     /// \brief Acceder à m_parent.
@@ -159,12 +152,6 @@ public:
     /////////////////////////////////////////////////
     virtual void ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement );
 
-    /////////////////////////////////////////////////
-    /// \brief retirer un enfant du gadget
-    /// \param cible le gadget à retirer
-    ///
-    /////////////////////////////////////////////////
-    virtual void supprimerEnfant ( std::shared_ptr<Gadget> cible );
 
     /////////////////////////////////////////////////
     /// \brief Vider m_enfants.
@@ -185,6 +172,23 @@ public:
     void demander_etreDevant ();
 
     /////////////////////////////////////////////////
+    /// \brief demande au parent de supprimer le gadget.
+    ///
+    /// Le parent va l'ajouter dans sa liste des gadgets à supprimer (supprimerEnfant()) et
+    /// supprimera effectivement le gadget à la fin du traitement des evenements du Gui (actuaListeSuppression())
+    /////////////////////////////////////////////////
+    virtual void supprimer () { m_parent->supprimerEnfant ( thisPtr() ); };
+
+
+//protected:
+    /////////////////////////////////////////////////
+    /// \brief Créer un shared pointeur vers this.
+    /// \return Un pointeur vers ce gadget.
+    ///
+    /////////////////////////////////////////////////
+    virtual std::shared_ptr<Gadget> thisPtr ()  { return shared_from_this(); };
+
+    /////////////////////////////////////////////////
     /// \brief Mettre le gadget au dessus des autres enfants de son parent.
     ///
     /// \param gadget le gadget à mettre devant
@@ -193,10 +197,11 @@ public:
 
 
     /////////////////////////////////////////////////
-    /// \brief supprimer le gadget.
+    /// \brief retirer un enfant du gadget
+    /// \param cible le gadget à retirer
     ///
     /////////////////////////////////////////////////
-    virtual void supprimer () { m_parent->supprimerEnfant ( thisPtr() ); };
+    virtual void supprimerEnfant ( std::shared_ptr<Gadget> cible );
 
     /////////////////////////////////////////////////
     /// \brief supprimer le gadget.
@@ -206,7 +211,7 @@ public:
 
 
 
-
+//public:
 
     ////////////////////////////////////////////////////////////
     /// \brief override (un peu a l'arrache) de la fonction sf::Transformable::setPosition().
@@ -261,6 +266,7 @@ public:
     /////////////////////////////////////////////////
     sf::Vector2i getSize () const { return m_size; };
 
+//protected:
     /////////////////////////////////////////////////
     /// \brief Acceder à m_globalBounds.
     ///

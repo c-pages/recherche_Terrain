@@ -1,8 +1,0 @@
-<map id="app::Application::Application" name="app::Application::Application">
-<area shape="rect" id="node2" href="$classapp_1_1_config.html#a48395c7e382fb68f5283676847b4fb58" title="Initialiser les differents élément. " alt="" coords="275,31,387,57"/>
-<area shape="rect" id="node6" href="$classapp_1_1_config.html#a300d3ecafed165cfe44b93c555116ff5" title="recuperer la durée d&#39;une image, DureeImage = 1.f / 60.f à 60Fps. " alt="" coords="240,81,423,108"/>
-<area shape="rect" id="node7" href="$classapp_1_1_gestion__ecrans.html#a576182f13e96e890e961dd1f7f69747b" title="Ajouter un �cran sur la pile. " alt="" coords="260,133,403,174"/>
-<area shape="rect" id="node3" href="$classapp_1_1_config.html#ada2a8a71c6ef00e4726666af45c04d25" title="Initialise le Manager des polices. " alt="" coords="475,5,629,32"/>
-<area shape="rect" id="node5" href="$classapp_1_1_config.html#a690065179d9ef7ade6a67193f44acb89" title="Initialise le manager de textures. " alt="" coords="471,56,633,83"/>
-<area shape="rect" id="node4" href="$classapp_1_1_resource_mgr.html#a43174877ac3bce3b43b68f94e0eb2815" title="Charger une image ou une police depuis un fichier et l&#39;associe � un identifiant. " alt="" coords="681,31,841,57"/>
-</map>

@@ -11,6 +11,7 @@ var classgui_1_1_fenetre =
     [ "getDraggable", "classgui_1_1_fenetre.html#ac73558e918987e720e7a603da99530d0", null ],
     [ "getFermable", "classgui_1_1_fenetre.html#a36d1f9a476270594be27083eab3c9638", null ],
     [ "getResizable", "classgui_1_1_fenetre.html#a1a1450d477f4756ede2786607031c1b7", null ],
+    [ "getTailleMin", "classgui_1_1_fenetre.html#a3bcd7d6f2841cc8aa57fc3d1faba34e8", null ],
     [ "setContourCouleur", "classgui_1_1_fenetre.html#a31c6aae930250dc3c90c6d8f9ca4c75a", null ],
     [ "setContourEpaisseur", "classgui_1_1_fenetre.html#ac07440e619255b14ac99d2d2274729ef", null ],
     [ "setDraggable", "classgui_1_1_fenetre.html#ad7cca613afc7540c9a78cdb86b575731", null ],
@@ -38,5 +39,6 @@ var classgui_1_1_fenetre =
     [ "m_fond", "classgui_1_1_fenetre.html#a21649cafc780b53392126dbcd2ff0d47", null ],
     [ "m_redim", "classgui_1_1_fenetre.html#a00b52ffa451c646ab10eac45c40aa15f", null ],
     [ "m_resizable", "classgui_1_1_fenetre.html#afbf4f8fa165675b2525f4c85cd9d9949", null ],
+    [ "m_tailleMin", "classgui_1_1_fenetre.html#a959bd315f13d72308e70521c7395d4b6", null ],
     [ "m_titre", "classgui_1_1_fenetre.html#ae2a5a9032b237447fea409da292b6c19", null ]
 ];

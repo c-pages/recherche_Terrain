@@ -155,9 +155,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a0b81c276f098468358927fef561a4601"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgui_1_1_gadget.html">Gadget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#a0b81c276f098468358927fef561a4601">getParent</a> () const </td></tr>
 <tr class="memdesc:a0b81c276f098468358927fef561a4601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_parent. Ici ne fait rien car <a class="el" href="classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme-machine du jeu. D&#39;un coté un système de fenêtre...">Gui</a> est le root.  <a href="#a0b81c276f098468358927fef561a4601">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0b81c276f098468358927fef561a4601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f8610a53aa2eb7626811dba531195f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ad6f8610a53aa2eb7626811dba531195f">retirerEnfant</a> (std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; cible)</td></tr>
-<tr class="memdesc:ad6f8610a53aa2eb7626811dba531195f"><td class="mdescLeft">&#160;</td><td class="mdescRight">retirer un enfant du gadget  <a href="#ad6f8610a53aa2eb7626811dba531195f">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad6f8610a53aa2eb7626811dba531195f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8341a10e00644439a892f89b90e075e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ac8341a10e00644439a892f89b90e075e">supprimerEnfant</a> (std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; cible)</td></tr>
+<tr class="memdesc:ac8341a10e00644439a892f89b90e075e"><td class="mdescLeft">&#160;</td><td class="mdescRight">retirer un enfant du gadget  <a href="#ac8341a10e00644439a892f89b90e075e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac8341a10e00644439a892f89b90e075e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab25e7e107c6a60f8cf52b3e11a936419"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gui.html#ab25e7e107c6a60f8cf52b3e11a936419">viderEnfants</a> ()</td></tr>
 <tr class="memdesc:ab25e7e107c6a60f8cf52b3e11a936419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vider m_enfants. Ici on vide le contenu des calques.  <a href="#ab25e7e107c6a60f8cf52b3e11a936419">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab25e7e107c6a60f8cf52b3e11a936419"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,8 +217,11 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:af01ca555487f3ea351e53e2074dad3aa inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre le gadget au dessus des autres enfants de son parent.  <a href="#af01ca555487f3ea351e53e2074dad3aa">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af01ca555487f3ea351e53e2074dad3aa inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c9c5d103b90ace0b72e66625497c995 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a2c9c5d103b90ace0b72e66625497c995">supprimer</a> ()</td></tr>
-<tr class="memdesc:a2c9c5d103b90ace0b72e66625497c995 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">supprimer le gadget.  <a href="#a2c9c5d103b90ace0b72e66625497c995">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a2c9c5d103b90ace0b72e66625497c995 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande au parent de supprimer le gadget.  <a href="#a2c9c5d103b90ace0b72e66625497c995">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2c9c5d103b90ace0b72e66625497c995 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2349562270944f34304484d809171a inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a0b2349562270944f34304484d809171a">actuaListeSuppression</a> ()</td></tr>
+<tr class="memdesc:a0b2349562270944f34304484d809171a inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">supprimer le gadget.  <a href="#a0b2349562270944f34304484d809171a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0b2349562270944f34304484d809171a inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af27d429925cd395f8cda313d45820f21 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21">setPosition</a> (int x, int y)</td></tr>
 <tr class="memdesc:af27d429925cd395f8cda313d45820f21 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">override (un peu a l'arrache) de la fonction sf::Transformable::setPosition().  <a href="#af27d429925cd395f8cda313d45820f21">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af27d429925cd395f8cda313d45820f21 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,6 +237,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ae8b82417fb662b2e9dcb34ad4766a539 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539">getPosAbs</a> () const </td></tr>
 <tr class="memdesc:ae8b82417fb662b2e9dcb34ad4766a539 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la position absolue du gadget.  <a href="#ae8b82417fb662b2e9dcb34ad4766a539">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae8b82417fb662b2e9dcb34ad4766a539 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c84f9faf3194f7784d08b9d124017a inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae8c84f9faf3194f7784d08b9d124017a">setSize</a> (int x, int y)</td></tr>
+<tr class="memdesc:ae8c84f9faf3194f7784d08b9d124017a inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definir m_size.  <a href="#ae8c84f9faf3194f7784d08b9d124017a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae8c84f9faf3194f7784d08b9d124017a inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14394919166b43c08176ea40a494c6c2 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2">getSize</a> () const </td></tr>
 <tr class="memdesc:a14394919166b43c08176ea40a494c6c2 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à m_size.  <a href="#a14394919166b43c08176ea40a494c6c2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a14394919166b43c08176ea40a494c6c2 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -371,6 +377,9 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:ae35b833b6030e36026729e15916ee694 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae35b833b6030e36026729e15916ee694">m_enfants</a></td></tr>
 <tr class="memdesc:ae35b833b6030e36026729e15916ee694 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">les liste des gadgets enfants.  <a href="#ae35b833b6030e36026729e15916ee694">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae35b833b6030e36026729e15916ee694 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445e151c843b5731732b9f398f38c4f8 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a445e151c843b5731732b9f398f38c4f8">m_enfantsASupprimer</a></td></tr>
+<tr class="memdesc:a445e151c843b5731732b9f398f38c4f8 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">les liste des gadgets enfants à supprimer dans le traitement des evenements.  <a href="#a445e151c843b5731732b9f398f38c4f8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a445e151c843b5731732b9f398f38c4f8 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35c10fa7e18e19b6dc19d65490104474 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a35c10fa7e18e19b6dc19d65490104474">m_size</a></td></tr>
 <tr class="memdesc:a35c10fa7e18e19b6dc19d65490104474 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geométrie /////////////////////.  <a href="#a35c10fa7e18e19b6dc19d65490104474">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a35c10fa7e18e19b6dc19d65490104474 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -560,7 +569,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph.png" border="0" usemap="#classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph" alt=""/></div>
 <map name="classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph" id="classgui_1_1_gui_a0b81c276f098468358927fef561a4601_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gui.html#ad6f8610a53aa2eb7626811dba531195f" title="retirer un enfant du gadget " alt="" coords="184,5,329,32"/>
+<area shape="rect" id="node2" href="classgui_1_1_gui.html#ac8341a10e00644439a892f89b90e075e" title="retirer un enfant du gadget " alt="" coords="184,5,353,32"/>
 </map>
 </div>
 </p>
@@ -589,41 +598,6 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p>accesseur de la position de la souris </p>
-
-</div>
-</div>
-<a class="anchor" id="ad6f8610a53aa2eb7626811dba531195f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void gui::Gui::retirerEnfant </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt;&#160;</td>
-          <td class="paramname"><em>cible</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>retirer un enfant du gadget </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cible</td><td>le gadget à retirer </td></tr>
-  </table>
-  </dd>
-</dl>
-<p>on ne retire pas directement l'enfant dans m_enfants mais dans les calques. </p>
-
-<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a387706235192713391026917bb119b22">gui::Gadget</a>.</p>
 
 </div>
 </div>
@@ -686,17 +660,53 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph.png" border="0" usemap="#classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph" alt=""/></div>
 <map name="classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph" id="classgui_1_1_gui_ab2965a5abefcf61e11429e01618b0206_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="417,5,583,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_gui.html#a6e0209d60ac47f2c86e8340a9b4a64b1" title="Traitement général des évenements clavier ou souris de tout les gadgets de l&#39;interface. " alt="" coords="172,118,351,145"/>
-<area shape="rect" id="node9" href="classgui_1_1_gui.html#ad10b5a8ef07513c03c9126a3eef9955b" title="Actualiser les éléments de l&#39;interface. " alt="" coords="196,169,327,195"/>
-<area shape="rect" id="node4" href="classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="399,71,601,112"/>
-<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="399,137,601,163"/>
-<area shape="rect" id="node7" href="classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="431,187,569,214"/>
-<area shape="rect" id="node8" href="classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="419,238,581,265"/>
-<area shape="rect" id="node6" href="classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="649,137,804,163"/>
+<area shape="rect" id="node2" href="classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="430,5,597,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_gui.html#a6e0209d60ac47f2c86e8340a9b4a64b1" title="Traitement général des évenements clavier ou souris de tout les gadgets de l&#39;interface. " alt="" coords="172,137,351,163"/>
+<area shape="rect" id="node10" href="classgui_1_1_gui.html#ad10b5a8ef07513c03c9126a3eef9955b" title="Actualiser les éléments de l&#39;interface. " alt="" coords="196,187,327,214"/>
+<area shape="rect" id="node4" href="classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="412,71,615,112"/>
+<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="413,137,614,163"/>
+<area shape="rect" id="node7" href="classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="444,187,583,214"/>
+<area shape="rect" id="node8" href="classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="432,238,595,265"/>
+<area shape="rect" id="node9" href="classgui_1_1_gadget.html#a0b2349562270944f34304484d809171a" title="supprimer le gadget. " alt="" coords="399,289,628,315"/>
+<area shape="rect" id="node6" href="classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="676,137,831,163"/>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8341a10e00644439a892f89b90e075e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Gui::supprimerEnfant </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt;&#160;</td>
+          <td class="paramname"><em>cible</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>retirer un enfant du gadget </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cible</td><td>le gadget à retirer </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>on ne retire pas directement l'enfant dans m_enfants mais dans les calques. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a48c2bea33d083e78c38735c9e3ff2eff">gui::Gadget</a>.</p>
 
 </div>
 </div>
@@ -741,12 +751,13 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph.png" border="0" usemap="#classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph" alt=""/></div>
 <map name="classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph" id="classgui_1_1_gui_a6e0209d60ac47f2c86e8340a9b4a64b1_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="232,5,435,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="233,71,434,98"/>
-<area shape="rect" id="node5" href="classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="250,123,417,164"/>
-<area shape="rect" id="node6" href="classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="264,189,403,215"/>
-<area shape="rect" id="node7" href="classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="252,239,415,266"/>
-<area shape="rect" id="node4" href="classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="483,71,637,98"/>
+<area shape="rect" id="node2" href="classgui_1_1_actions.html#a1efc2ada71486701f67d1d10015b127a" title="Regarde si l&#39;évenèment clavier envoyé correspond à une action liée au gadget, et la déclenche le cas ..." alt="" coords="245,5,448,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="246,71,447,98"/>
+<area shape="rect" id="node5" href="classgui_1_1_gui.html#ad1d59bd1caae90c88b0e4db8a3010a9a" title="Recherche le gadget survolé par la sourie dans l&#39;interface. " alt="" coords="263,123,430,164"/>
+<area shape="rect" id="node6" href="classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432" title="Definie l&#39;état du gadget , surtout pour les éléments interactifs, ici ne fait rien. " alt="" coords="277,189,416,215"/>
+<area shape="rect" id="node7" href="classgui_1_1_actions.html#ad997ac14f6b6c5873386152f46bcf83c" title="Déclencher un évenement souris (les évenement claviers sont gérer. " alt="" coords="265,239,428,266"/>
+<area shape="rect" id="node8" href="classgui_1_1_gadget.html#a0b2349562270944f34304484d809171a" title="supprimer le gadget. " alt="" coords="232,290,461,317"/>
+<area shape="rect" id="node4" href="classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="509,71,664,98"/>
 </map>
 </div>
 </p>
@@ -943,7 +954,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_gui.html">Gui</a></li>
-    <li class="footer">Généré le Lundi 23 Mai 2016 18:39:48 pour Appli par
+    <li class="footer">Généré le Mardi 24 Mai 2016 14:51:49 pour Appli par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

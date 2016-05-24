@@ -103,7 +103,17 @@ private:
             /////////////////////////////////////////////////
             int getLargeur ( ) { return m_largeur; };
 
+            /////////////////////////////////////////////////
+            /// \brief décalle la glissere dans un sens.
+            ///
+            /////////////////////////////////////////////////
+            void incrementer ();
 
+            /////////////////////////////////////////////////
+            /// \brief décalle la glissere dans l'autre sens.
+            ///
+            /////////////////////////////////////////////////
+            void decrementer ();
 
 
 
@@ -149,6 +159,7 @@ private:
 
             Orientation     m_orientation;          ///< L'orientation de la glissère, soit horizontal, soit vertical
             int             m_largeur;              ///< La largeur de la glissiere, represente m_size.x pour une glissiere vertical et m_size.y pour une horizontale.
+            int             m_increment;            ///< le décallage de l'incrementation/decrementation.
 
             bool            m_dragEnCours;          ///< Si on est en train de dragger la fenêtre.
             sf::Vector2i    m_dragPosOrigin;        ///< La position d'origine au debut du drag.

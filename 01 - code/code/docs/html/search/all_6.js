@@ -27,10 +27,11 @@ var searchData=
   ['getsize',['getSize',['../classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2',1,'gui::Gadget']]],
   ['getsourisposition',['getSourisPosition',['../classgui_1_1_gui.html#af759bc1556aa4ae6c9e319435cae98de',1,'gui::Gui']]],
   ['gettaille',['getTaille',['../classjeu_1_1_terrain.html#ae90b77e2d23cd2087df1c15bb23106f9',1,'jeu::Terrain']]],
+  ['gettaillemin',['getTailleMin',['../classgui_1_1_fenetre.html#a3bcd7d6f2841cc8aa57fc3d1faba34e8',1,'gui::Fenetre']]],
   ['glissiere',['Glissiere',['../classgui_1_1_fenetre_1_1_glissiere.html',1,'gui::Fenetre']]],
   ['glissiere',['Glissiere',['../classgui_1_1_fenetre_1_1_glissiere.html#a5e908a4d271ba3023aa34eba669b9bb2',1,'gui::Fenetre::Glissiere']]],
-  ['gui',['Gui',['../classgui_1_1_gui.html',1,'gui']]],
   ['gui',['gui',['../namespacegui.html',1,'gui'],['../classgui_1_1_actions.html#a2bb4ffbad57a036036984d978a76d27b',1,'gui::Actions::Gui()'],['../classgui_1_1_gui.html#a781368d750e9c2e57a721305fa0d81df',1,'gui::Gui::Gui()']]],
+  ['gui',['Gui',['../classgui_1_1_gui.html',1,'gui']]],
   ['gui_2ecpp',['Gui.cpp',['../_gui_8cpp.html',1,'']]],
   ['gui_2eh',['Gui.h',['../_gui_8h.html',1,'']]]
 ];

@@ -1,5 +1,0 @@
-<map id="app::EcranAccueil" name="app::EcranAccueil">
-<area shape="rect" id="node2" href="$classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. " alt="" coords="34,184,119,211"/>
-<area shape="rect" id="node3" href="$classapp_1_1_application.html" title="La classe de base du programme. " alt="" coords="19,95,134,121"/>
-<area shape="rect" id="node4" href="$classapp_1_1_gestion__ecrans.html" title="Gestionnaire des écrans. " alt="" coords="5,5,148,32"/>
-</map>

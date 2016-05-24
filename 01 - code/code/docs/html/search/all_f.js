@@ -12,6 +12,5 @@ var searchData=
   ['resourcemgr_3c_20sf_3a_3ashader_2c_20int_20_3e',['ResourceMgr&lt; sf::Shader, int &gt;',['../classapp_1_1_resource_mgr.html',1,'app']]],
   ['resourcemgr_3c_20sf_3a_3atexture_2c_20int_20_3e',['ResourceMgr&lt; sf::Texture, int &gt;',['../classapp_1_1_resource_mgr.html',1,'app']]],
   ['retirer',['retirer',['../classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c',1,'app::Gestion_ecrans']]],
-  ['retirerecran',['retirerEcran',['../classapp_1_1_application.html#a6cbc17d5a777730d7811e874182fd11a',1,'app::Application']]],
-  ['retirerenfant',['retirerEnfant',['../classgui_1_1_gadget.html#a387706235192713391026917bb119b22',1,'gui::Gadget::retirerEnfant()'],['../classgui_1_1_gui.html#ad6f8610a53aa2eb7626811dba531195f',1,'gui::Gui::retirerEnfant()']]]
+  ['retirerecran',['retirerEcran',['../classapp_1_1_application.html#a6cbc17d5a777730d7811e874182fd11a',1,'app::Application']]]
 ];

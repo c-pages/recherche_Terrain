@@ -22,7 +22,7 @@ var searchData=
   ['setrapport',['setRapport',['../classgui_1_1_fenetre_1_1_glissiere.html#a0b6467fd4be564cc4c99e583e7b3455e',1,'gui::Fenetre::Glissiere']]],
   ['setremplissagecouleur',['setRemplissageCouleur',['../classgui_1_1_bouton.html#a621faf32d2fa1cf218afcd97bdfd0104',1,'gui::Bouton']]],
   ['setresizable',['setResizable',['../classgui_1_1_fenetre.html#a6e153ac998f784be430e805650a8e1e0',1,'gui::Fenetre']]],
-  ['setsize',['setSize',['../classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9',1,'gui::Gadget::setSize()'],['../classgui_1_1_gui.html#ab2965a5abefcf61e11429e01618b0206',1,'gui::Gui::setSize()']]],
+  ['setsize',['setSize',['../classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9',1,'gui::Gadget::setSize(sf::Vector2i val)'],['../classgui_1_1_gadget.html#ae8c84f9faf3194f7784d08b9d124017a',1,'gui::Gadget::setSize(int x, int y)'],['../classgui_1_1_gui.html#ab2965a5abefcf61e11429e01618b0206',1,'gui::Gui::setSize()']]],
   ['setstyle',['setStyle',['../classgui_1_1_label.html#a4fed7410f937b6ff57804b8aad149e87',1,'gui::Label']]],
   ['settaille',['setTaille',['../classgui_1_1_label.html#a7c3b9903a4e63fd12f994892fefb9c15',1,'gui::Label::setTaille()'],['../classjeu_1_1_terrain.html#a720ed1fa9ef9cc785a4d84fff3ea6a3f',1,'jeu::Terrain::setTaille()']]],
   ['settexte',['setTexte',['../classgui_1_1_bouton.html#aa934845042a18c899daf86c8f164653a',1,'gui::Bouton::setTexte()'],['../classgui_1_1_label.html#a5c0c354060b3e9e5f6fd813e68ec2cf6',1,'gui::Label::setTexte()']]],
@@ -39,5 +39,6 @@ var searchData=
   ['setvisible',['setVisible',['../classgui_1_1_gadget.html#a1ba69340c4ea11ac6facd3f0bb8487bf',1,'gui::Gadget']]],
   ['shaders',['Shaders',['../classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62f',1,'app::Config']]],
   ['supprimer',['supprimer',['../classgui_1_1_gadget.html#a2c9c5d103b90ace0b72e66625497c995',1,'gui::Gadget']]],
+  ['supprimerenfant',['supprimerEnfant',['../classgui_1_1_gadget.html#a48c2bea33d083e78c38735c9e3ff2eff',1,'gui::Gadget::supprimerEnfant()'],['../classgui_1_1_gui.html#ac8341a10e00644439a892f89b90e075e',1,'gui::Gui::supprimerEnfant()']]],
   ['survol',['Survol',['../classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524ab7365de0974fdb24c2a47a2af713c14e',1,'gui::Gadget']]]
 ];

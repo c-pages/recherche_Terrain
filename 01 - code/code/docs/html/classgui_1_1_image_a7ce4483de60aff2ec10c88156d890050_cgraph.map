@@ -1,5 +1,0 @@
-<map id="gui::Image::actualiser" name="gui::Image::actualiser">
-<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2" title="Acceder à m_size. " alt="" coords="206,5,347,32"/>
-<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="200,56,353,83"/>
-<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="401,56,563,83"/>
-</map>

@@ -1,0 +1,6 @@
+<map id="gui::Fenetre::Redimensionnement::actualiser" name="gui::Fenetre::Redimensionnement::actualiser">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="281,5,423,32"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="271,56,433,83"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="481,31,635,57"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="683,31,844,57"/>
+</map>

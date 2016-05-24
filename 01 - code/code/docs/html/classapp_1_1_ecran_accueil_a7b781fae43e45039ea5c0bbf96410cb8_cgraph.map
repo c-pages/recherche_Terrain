@@ -1,4 +1,0 @@
-<map id="app::EcranAccueil::EcranAccueil" name="app::EcranAccueil::EcranAccueil">
-<area shape="rect" id="node2" href="$classapp_1_1_ecran_accueil.html#a0fd3aaa6c37ad943764e02a38c165653" title="Initialisation de l&#39;interface graphique. " alt="" coords="189,5,325,47"/>
-<area shape="rect" id="node3" href="$classapp_1_1_application.html#abedd293ac058355e13abd02057c32aee" title="renvois la fenetre sfml de l&#39;application " alt="" coords="373,13,559,39"/>
-</map>

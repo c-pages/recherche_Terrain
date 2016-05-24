@@ -1,5 +1,0 @@
-<map id="gui::Fenetre::Glissiere::testerSurvol" name="gui::Fenetre::Glissiere::testerSurvol">
-<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="437,5,591,32"/>
-<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401" title="Acceder à m_globalBounds. " alt="" coords="416,68,612,95"/>
-<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#a85f00dfbf2b34eb66f934a401684b9f3" title="Teste le survol du gadget par la souris. " alt="" coords="204,31,368,57"/>
-</map>

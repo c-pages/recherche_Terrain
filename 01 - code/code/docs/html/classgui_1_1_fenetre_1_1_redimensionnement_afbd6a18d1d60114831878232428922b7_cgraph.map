@@ -1,0 +1,5 @@
+<map id="gui::Fenetre::Redimensionnement::Redimensionnement" name="gui::Fenetre::Redimensionnement::Redimensionnement">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2" title="Acceder à m_size. " alt="" coords="289,5,430,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gui.html#af759bc1556aa4ae6c9e319435cae98de" title="accesseur de la position de la souris " alt="" coords="271,56,448,83"/>
+<area shape="rect" id="node4" href="$classgui_1_1_actions.html#a0b0dfd024938532a3c8abf98ddefd3d8" title="Créer une nouvelle liaison entre un evenement souris et une fonction lambda. " alt="" coords="301,107,417,133"/>
+</map>

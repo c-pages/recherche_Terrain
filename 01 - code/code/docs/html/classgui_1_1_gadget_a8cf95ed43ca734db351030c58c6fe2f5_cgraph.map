@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$classgui_1_1_gadget.html#a259ddff0c620f53e5533be5c09984323" title="demanderau perent à être au dessus des autres enfants. " alt="" coords="205,81,360,122"/>
 <area shape="rect" id="node3" href="$classgui_1_1_gadget.html#af01ca555487f3ea351e53e2074dad3aa" title="Mettre le gadget au dessus des autres enfants de son parent. " alt="" coords="408,29,581,56"/>
 <area shape="rect" id="node5" href="$classgui_1_1_gadget.html#ae1702e98e25d7b6986c98aeabecae7c0" title="Créer un shared pointeur vers this. " alt="" coords="427,135,562,161"/>
-<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#a387706235192713391026917bb119b22" title="retirer un enfant du gadget " alt="" coords="647,5,813,32"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#a48c2bea33d083e78c38735c9e3ff2eff" title="retirer un enfant du gadget " alt="" coords="635,5,825,32"/>
 <area shape="rect" id="node6" href="$classgui_1_1_gadget.html#a05c0bc3e85aab97c14f402cddb0be381" title="Teste le survol du gadget par la souris. " alt="" coords="647,56,813,83"/>
 <area shape="rect" id="node7" href="$classgui_1_1_gadget.html#a4425e4e636bbd4f1a3bc548e973ebd20" title="Traitement des évenements clavier ou souris. " alt="" coords="629,107,831,133"/>
 <area shape="rect" id="node9" href="$classgui_1_1_gadget.html#a99dcde56627a3c9e1b912e22586863d4" title="Actualise les parametres du shader clipping. " alt="" coords="631,208,829,235"/>

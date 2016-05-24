@@ -68,7 +68,7 @@ public:
     /// \brief Contructeur
     ///
     /////////////////////////////////////////////////
-    ActionSouris ();
+    Actions ();
 
     /////////////////////////////////////////////////
     /// \brief Créer une nouvelle liaison entre un evenement souris  et une fonction lambda.

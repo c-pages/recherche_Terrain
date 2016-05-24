@@ -22,6 +22,7 @@ Fenetre::Glissiere::Glissiere ( Glissiere::Orientation orientation , Fenetre* fe
 , m_btnFond             ( )
 , m_btnGlissiere        ( )
 , m_largeur             ( 7 )
+, m_increment           ( 5 )
 {
 
     /// Initialisation bouton du fond ////////////////////
@@ -57,9 +58,11 @@ Fenetre::Glissiere::Glissiere ( Glissiere::Orientation orientation , Fenetre* fe
     };
     auto fctRouletteHaut = [this](){
             std::cout << "fctRouletteHaut\n";
+            incrementer();
     };
     auto fctRouletteBas = [this](){
             std::cout << "fctRouletteBas\n";
+            decrementer();
     };
 
     /// Interactions Laisons ////////////////////
@@ -97,13 +100,88 @@ void Fenetre::Glissiere::setRapport ( float rapport )
     switch ( m_orientation ){
         case Horizontal:
             m_btnGlissiere.setSize( { rapport * m_size.x , m_largeur } );
+            setPosGlissiere ( m_btnGlissiere.getPosition().x );
             break;
         case Vertical:
             m_btnGlissiere.setSize( { m_largeur , m_size.y * rapport } );
+            setPosGlissiere ( m_btnGlissiere.getPosition().y );
             break;
     }
     actualiser();
 }
+
+
+
+/////////////////////////////////////////////////
+void Fenetre::Glissiere::incrementer ()
+{
+    switch ( m_orientation ){
+        case Horizontal: {  setPosGlissiere ( m_btnGlissiere.getPosition().x + m_increment );
+            break;
+        }
+        case Vertical: {    setPosGlissiere ( m_btnGlissiere.getPosition().y + m_increment );
+            break;
+        }
+    }
+}
+
+
+/////////////////////////////////////////////////
+void Fenetre::Glissiere::decrementer ()
+{
+    switch ( m_orientation ){
+        case Horizontal: {  setPosGlissiere ( m_btnGlissiere.getPosition().x - m_increment );
+            break;
+        }
+        case Vertical: {    setPosGlissiere ( m_btnGlissiere.getPosition().y - m_increment );
+            break;
+        }
+    }
+}
+
+
+
+
+
+/////////////////////////////////////////////////
+void Fenetre::Glissiere::setPosGlissiere ( int position )
+{
+    switch ( m_orientation ){
+        case Horizontal: {      // la destination du drag
+                                float destH = position;
+
+                                // limitation du drag
+                                if ( destH < 0 ) destH = 0;
+                                if ( destH > m_size.x - m_btnGlissiere.getSize().x ) destH = m_size.x - m_btnGlissiere.getSize().x;
+
+                                // placement de la glisserre
+                                m_btnGlissiere.setPosition  ( destH ,  m_btnGlissiere.getPosition().y );
+
+                                // placement du calque de la fenêtre parent
+                                m_fenetre->defilerHorizontal( destH / ( m_size.x - m_btnGlissiere.getSize().x ) );
+            break;
+        }
+        case Vertical: {        // la destination du drag
+                                float destV = position;
+
+                                // limitation du drag
+                                if ( destV <0 ) destV = 0;
+                                if ( destV > m_size.y - m_btnGlissiere.getSize().y ) destV = m_size.y - m_btnGlissiere.getSize().y;
+
+                                // placement de la glisserre
+                                m_btnGlissiere.setPosition  (  m_btnGlissiere.getPosition().x , destV);
+
+                                // placement du calque de la fenêtre parent
+                                m_fenetre->defilerVertical( destV / ( m_size.y - m_btnGlissiere.getSize().y ) );
+            break;
+        }
+    } // fin switch
+}
+
+
+
+
+
 
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::actualiser (){
@@ -135,7 +213,6 @@ Gadget* Fenetre::Glissiere::testerSurvol (sf::Vector2i posSouris)
     if ( m_btnFond.testerSurvol ( posSouris ) != nullptr )
         return m_btnFond.testerSurvol ( posSouris );
 
-
     // finalement on renvois nullptr mais normalement on devrait pas pouvoir arriver là
     return nullptr;
 
@@ -150,32 +227,10 @@ void Fenetre::Glissiere::traiterEvenements (sf::Event evenement)
         auto posSouris = Gui::getSourisPosition ();
 
         switch ( m_orientation ){
-            case Horizontal: {      // la destination du drag
-                                    float destH = m_dragPosOrigin.x + posSouris.x - m_dragPosSourisOrigin.x;
-
-                                    // limitation du drag
-                                    if ( destH < 0 ) destH = 0;
-                                    if ( destH > m_size.x - m_btnGlissiere.getSize().x ) destH = m_size.x - m_btnGlissiere.getSize().x;
-
-                                    // placement de la glisserre
-                                    m_btnGlissiere.setPosition  ( destH ,  m_btnGlissiere.getPosition().y );
-
-                                    // placement du calque de la fenêtre parent
-                                    m_fenetre->defilerHorizontal( destH / ( m_size.x - m_btnGlissiere.getSize().x ) );
+            case Horizontal: {  setPosGlissiere ( m_dragPosOrigin.x + posSouris.x - m_dragPosSourisOrigin.x );
                 break;
             }
-            case Vertical: {        // la destination du drag
-                                    float destV = m_dragPosOrigin.y + posSouris.y - m_dragPosSourisOrigin.y;
-
-                                    // limitation du drag
-                                    if ( destV <0 ) destV = 0;
-                                    if ( destV > m_size.y - m_btnGlissiere.getSize().y ) destV = m_size.y - m_btnGlissiere.getSize().y;
-
-                                    // placement de la glisserre
-                                    m_btnGlissiere.setPosition  (  m_btnGlissiere.getPosition().x , destV);
-
-                                    // placement du calque de la fenêtre parent
-                                    m_fenetre->defilerVertical( destV / ( m_size.y - m_btnGlissiere.getSize().y ) );
+            case Vertical: {    setPosGlissiere ( m_dragPosOrigin.y + posSouris.y - m_dragPosSourisOrigin.y );
                 break;
             }
         } // fin switch
