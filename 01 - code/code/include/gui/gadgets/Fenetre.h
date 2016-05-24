@@ -198,6 +198,7 @@ private:
 
 
 
+
             /////////////////////////////////////////////////
             /// \brief Teste le survol du gadget par la souris.
             /// \return thisPtr si est survolé, sinon nullptr.
@@ -207,10 +208,25 @@ private:
             virtual Gadget* testerSurvol (sf::Vector2i posSouris) ;
 
             /////////////////////////////////////////////////
+            /// \brief Traitement des évenements clavier ou souris. C'est ici qu'on va gérer le drag de la glissière.
+            ///
+            /// \param evenement		 L'évenemnt à tratier.
+            /////////////////////////////////////////////////
+            virtual void traiterEvenements (sf::Event evenement);
+
+            /////////////////////////////////////////////////
             /// \brief Actualiser les positions des boutons
             ///
             /////////////////////////////////////////////////
             virtual void actualiser ();
+
+            /////////////////////////////////////////////////
+            /// \brief Dessine tout les éléments de l'interface.
+            ///
+            /// \param target
+            /// \param states
+            /////////////////////////////////////////////////
+            virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
 
 
 
@@ -220,20 +236,30 @@ private:
         // Membres
         /////////////////////////////////////////////////
         private:
+            /// les propriétés de fonctionnement /////////////
+            Fenetre*        m_fenetre;              ///< La fenêtre parent
+            int             m_largeur;              ///< La largeur des boutons
 
-            Fenetre*    m_fenetre;  ///< La fenêtre parent
-            int         m_largeur;  ///< La largeur des boutons
+            sf::Vector2i    m_redimPosOrigin;       ///< La position d'origine de la fenetre au debut du redimensionnent.
+            sf::Vector2i    m_redimTailleOrigin;    ///< La taille d'origine de la fenetre  au debut du redimensionnent.
+            sf::Vector2i    m_redimPosSourisOrigin; ///< La position d'origine de la souris au debut du redimensionnent.
 
-            Bouton      m_btn_HG;   ///< Bouton Haut gauche
-            Bouton      m_btn_H;    ///< Bouton Haut
-            Bouton      m_btn_HD;   ///< Bouton Haut droit
-            Bouton      m_btn_D;    ///< Bouton droit
-            Bouton      m_btn_G;    ///< Bouton gauche
-            Bouton      m_btn_BG;   ///< Bouton Bas gauche
-            Bouton      m_btn_B;    ///< Bouton Bas
-            Bouton      m_btn_BD;   ///< Bouton Bas droit
+            bool            m_redimH;               ///< Si on est en train de redimensionner par le haut
+            bool            m_redimB;               ///< Si on est en train de redimensionner par le bas
+            bool            m_redimG;               ///< Si on est en train de redimensionner par la gauche
+            bool            m_redimD;               ///< Si on est en train de redimensionner par la droite
 
-            std::vector<Bouton*>    m_boutons;  ///< la liste des boutons pour simplifier les manips
+            /// les boutons ////////////////
+            std::vector<Bouton*>    m_boutons;      ///< la liste des boutons, pour simplifier les manips
+            Bouton      m_btn_HG;                   ///< Bouton Haut gauche
+            Bouton      m_btn_H;                    ///< Bouton Haut
+            Bouton      m_btn_HD;                   ///< Bouton Haut droit
+            Bouton      m_btn_D;                    ///< Bouton droit
+            Bouton      m_btn_G;                    ///< Bouton gauche
+            Bouton      m_btn_BG;                   ///< Bouton Bas gauche
+            Bouton      m_btn_B;                    ///< Bouton Bas
+            Bouton      m_btn_BD;                   ///< Bouton Bas droit
+
 
     }; // fin class Redimensionnement
 
@@ -398,6 +424,47 @@ public:
     /////////////////////////////////////////////////
     void defilerVertical ( float rapport );
 
+    /////////////////////////////////////////////////
+    /// \brief recuperer la taille minimum de la fenetre pour le redimensionnement
+    ///
+    /////////////////////////////////////////////////
+    sf::Vector2i getTailleMin ()
+    { return m_tailleMin; };
+
+
+
+
+
+//    /////////////////////////////////////////////////
+//    /// \brief Redimensionner à gauche
+//    ///
+//    /// \param taille nouvelle taille
+//    /////////////////////////////////////////////////
+//    void redimensionnerGauche ( float taille );
+//
+//    /////////////////////////////////////////////////
+//    /// \brief Redimensionner à droite
+//    ///
+//    /// \param taille nouvelle taille
+//    /////////////////////////////////////////////////
+//    void redimensionnerDroite ( float taille );
+//
+//    /////////////////////////////////////////////////
+//    /// \brief Redimensionner en haut
+//    ///
+//    /// \param taille nouvelle taille
+//    /////////////////////////////////////////////////
+//    void redimensionnerHaut ( float taille );
+//
+//    /////////////////////////////////////////////////
+//    /// \brief Redimensionner en bas
+//    ///
+//    /// \param taille nouvelle taille
+//    /////////////////////////////////////////////////
+//    void redimensionnerBas ( float taille );
+
+
+
 
 
 
@@ -447,6 +514,7 @@ private:
 
     sf::Vector2i        m_dragPosOrigin;        ///< La position d'origine au debut du drag.
     sf::Vector2i        m_dragPosSourisOrigin;  ///< La position d'origine de la souris au debut du drag.
+    sf::Vector2i        m_tailleMin;            ///< La taille minimum de la fenetre quand on la redimensione.
 
     /// Les composants de la fenetre /////////////////
 

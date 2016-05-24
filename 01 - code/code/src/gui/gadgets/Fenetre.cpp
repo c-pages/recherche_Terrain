@@ -219,75 +219,122 @@ void Fenetre::Glissiere::draw (sf::RenderTarget& target, sf::RenderStates states
 
 /////////////////////////////////////////////////
 Fenetre::Redimensionnement::Redimensionnement ( Fenetre* fenetre )
-: m_fenetre ( fenetre )
-, m_largeur ( 5 )
+: m_fenetre                 ( fenetre )
+, m_largeur                 ( 5 )
+, m_redimTailleOrigin       ( { 0,0} )
+, m_redimPosOrigin          ( { 0,0} )
+, m_redimPosSourisOrigin    ( { 0,0} )
+, m_redimH                  ( false )
+, m_redimB                  ( false )
+, m_redimG                  ( false )
+, m_redimD                  ( false )
 {
     /// on remplie la liste des boutons
-    m_boutons.push_back( &m_btn_HG );
     m_boutons.push_back( &m_btn_H );
-    m_boutons.push_back( &m_btn_HD );
     m_boutons.push_back( &m_btn_D );
     m_boutons.push_back( &m_btn_G );
-    m_boutons.push_back( &m_btn_BG );
     m_boutons.push_back( &m_btn_B );
+    m_boutons.push_back( &m_btn_HG );
+    m_boutons.push_back( &m_btn_HD );
+    m_boutons.push_back( &m_btn_BG );
     m_boutons.push_back( &m_btn_BD );
 
-    for ( auto bouton : m_boutons)
-        bouton->setParent ( m_fenetre );
+    /// on initialise les boutons
+    for ( auto bouton : m_boutons) {
+        bouton->setParent               ( m_fenetre );
+        bouton->setRemplissageCouleur   ( sf::Color::White );
+        bouton->setContourCouleur       ( sf::Color::Transparent );
+        bouton->setContourEpaisseur     ( 0 );
+        bouton->setAlphaEtats           ( 0, 50 , 100 );
+    }
 
     /// les interactions
-    auto fctRedimHaut   = [this ](){
-        std::cout << "redim haut\n";
+
+    auto fctInitRedim   = [this](){
+        m_redimPosOrigin        = { m_fenetre->getPosition().x  , m_fenetre->getPosition().y };
+        m_redimTailleOrigin     = { m_fenetre->getSize().x      , m_fenetre->getSize().y };
+        m_redimPosSourisOrigin  = Gui::getSourisPosition();
     };
-    auto fctRedimBas    = [this](){
-        std::cout << "redim bas\n";
-    };
-    auto fctRedimGauche = [this](){
-        std::cout << "redim gauche\n";
-    };
-    auto fctRedimDroite = [this](){
-        std::cout << "redim droite\n";
-    };
-    auto fctRedimHautGauche   = [ this, fctRedimHaut, fctRedimGauche](){
-        fctRedimHaut();
-        fctRedimGauche();
-    };
-    auto fctRedimHautDroite   = [ this, fctRedimHaut, fctRedimDroite](){
-        fctRedimHaut();
-        fctRedimDroite();
-    };
-    auto fctRedimBasGauche   = [ this, fctRedimBas, fctRedimGauche](){
-        fctRedimBas();
-        fctRedimGauche();
-    };
-    auto fctRedimBasDroite   = [ this, fctRedimBas, fctRedimDroite](){
-        fctRedimBas();
-        fctRedimDroite();
-    };
-    auto fctRedimFin   = [ this](){
-        std::cout << "redim FIN\n";
+    auto fctRedimFin    = [ this](){
+        m_redimH = false;
+        m_redimB = false;
+        m_redimG = false;
+        m_redimD = false;
     };
 
 
+    auto fctRedimHaut   = [this, fctInitRedim](){
+        fctInitRedim ();
+        m_redimH = true;
+    };
+    auto fctRedimBas    = [this, fctInitRedim](){
+        fctInitRedim ();
+        m_redimB = true;
+    };
+    auto fctRedimGauche = [this, fctInitRedim](){
+        fctInitRedim ();
+        m_redimG = true;
+    };
+    auto fctRedimDroite = [this, fctInitRedim](){
+        fctInitRedim ();
+        m_redimD = true;
+    };
+    auto fctRedimHautGauche = [ this, fctInitRedim ](){
+        fctInitRedim ();
+        m_redimH = true;
+        m_redimG = true;
+    };
+    auto fctRedimHautDroite = [ this, fctInitRedim ](){
+        fctInitRedim ();
+        m_redimH = true;
+        m_redimD = true;
+    };
+    auto fctRedimBasGauche  = [ this, fctInitRedim ](){
+        fctInitRedim ();
+        m_redimB = true;
+        m_redimG = true;
+    };
+    auto fctRedimBasDroite  = [ this, fctInitRedim ](){
+        fctInitRedim ();
+        m_redimB = true;
+        m_redimD = true;
+    };
 
-    m_btn_HG.lier ( Evenement::onBtnG_presser   , fctRedimHautGauche );
-    m_btn_HG.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
-    m_btn_H.lier ( Evenement::onBtnG_presser    , fctRedimHaut );
-    m_btn_H.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
-    m_btn_HD.lier ( Evenement::onBtnG_presser   , fctRedimHautDroite );
-    m_btn_HD.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
-    m_btn_D.lier ( Evenement::onBtnG_presser    , fctRedimDroite );
-    m_btn_D.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
-    m_btn_G.lier ( Evenement::onBtnG_presser    , fctRedimGauche );
-    m_btn_G.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
-    m_btn_BG.lier ( Evenement::onBtnG_presser   , fctRedimBasGauche );
-    m_btn_BG.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
-    m_btn_B.lier ( Evenement::onBtnG_presser    , fctRedimBas );
-    m_btn_B.lier ( Evenement::onBtnG_relacher   , fctRedimFin );
-    m_btn_BD.lier ( Evenement::onBtnG_presser   , fctRedimBasDroite);
-    m_btn_BD.lier ( Evenement::onBtnG_relacher  , fctRedimFin );
+    /// les liaisons
+    m_btn_HG.lier ( Evenement::onBtnG_presser           , fctRedimHautGauche );
+    m_btn_HG.lier ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_HG.lier ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
+    m_btn_H.lier  ( Evenement::onBtnG_presser           , fctRedimHaut );
+    m_btn_H.lier  ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_H.lier  ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
+    m_btn_HD.lier ( Evenement::onBtnG_presser           , fctRedimHautDroite );
+    m_btn_HD.lier ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_HD.lier ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
+    m_btn_D.lier  ( Evenement::onBtnG_presser           , fctRedimDroite );
+    m_btn_D.lier  ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_D.lier  ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
+    m_btn_G.lier  ( Evenement::onBtnG_presser           , fctRedimGauche );
+    m_btn_G.lier  ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_G.lier  ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
+    m_btn_BG.lier ( Evenement::onBtnG_presser           , fctRedimBasGauche );
+    m_btn_BG.lier ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_BG.lier ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
+    m_btn_B.lier  ( Evenement::onBtnG_presser           , fctRedimBas );
+    m_btn_B.lier  ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_B.lier  ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
+    m_btn_BD.lier ( Evenement::onBtnG_presser           , fctRedimBasDroite);
+    m_btn_BD.lier ( Evenement::onBtnG_relacher          , fctRedimFin );
+    m_btn_BD.lier ( Evenement::onBtnG_relacherDehors    , fctRedimFin );
 
 }
+
+
+
+
+
+
+
+
 
 
 /////////////////////////////////////////////////
@@ -299,38 +346,98 @@ Gadget* Fenetre::Redimensionnement::testerSurvol (sf::Vector2i posSouris)
         return nullptr;
 
     /// on test chaque bouton
-    for ( auto bouton : m_boutons )
+    for (  int i =  m_boutons.size()-1 ; i>=0 ; i--){
+        auto bouton = m_boutons[i];
         if ( bouton->testerSurvol ( posSouris ) != nullptr )
             return bouton->testerSurvol ( posSouris );
+    }
 
     /// sinon on renvois null
     return nullptr;
 }
 
 
+
+
+/////////////////////////////////////////////////
+void Fenetre::Redimensionnement::traiterEvenements (sf::Event evenement)
+{
+    /// si caché on zappe
+    if ( ! estVisible() ) return;
+
+    /// Redimensionner la fenetre ///////////////
+    if ( m_redimB )    {
+        int nouvelleTailleY = m_redimTailleOrigin.y + Gui::getSourisPosition ().y - m_redimPosSourisOrigin.y;
+        if ( nouvelleTailleY < m_fenetre->getTailleMin ().y )
+            nouvelleTailleY = m_fenetre->getTailleMin ().y;
+        m_fenetre->setSize  ( m_fenetre->getSize ().x , nouvelleTailleY );
+    }
+    if ( m_redimD )    {
+        int nouvelleTailleX = m_redimTailleOrigin.x + Gui::getSourisPosition ().x - m_redimPosSourisOrigin.x;
+        if ( nouvelleTailleX < m_fenetre->getTailleMin ().x )
+            nouvelleTailleX = m_fenetre->getTailleMin ().x;
+        m_fenetre->setSize  ( nouvelleTailleX ,m_fenetre->getSize ().y );
+    }
+    if ( m_redimH )    {
+        int nouvelleTailleY = m_redimTailleOrigin.y - (  Gui::getSourisPosition ().y - m_redimPosSourisOrigin.y );
+        if ( nouvelleTailleY < m_fenetre->getTailleMin ().y )
+            nouvelleTailleY = m_fenetre->getTailleMin ().y;
+        m_fenetre->setSize      ( m_fenetre->getSize ().x , nouvelleTailleY );
+        m_fenetre->setPosition  ( (int)(m_fenetre->getPosition().x) , m_redimPosOrigin.y + (  m_redimTailleOrigin.y - nouvelleTailleY ) );
+    }
+    if ( m_redimG )    {
+        int nouvelleTailleX = m_redimTailleOrigin.x - ( Gui::getSourisPosition ().x - m_redimPosSourisOrigin.x );
+        if ( nouvelleTailleX < m_fenetre->getTailleMin ().x )
+            nouvelleTailleX = m_fenetre->getTailleMin ().x;
+        m_fenetre->setSize  ( nouvelleTailleX ,m_fenetre->getSize ().y );
+        m_fenetre->setPosition  ( m_redimPosOrigin.x + (  m_redimTailleOrigin.x - nouvelleTailleX )  , (int)(m_fenetre->getPosition().y ) );
+    }
+
+}
+
+
+
+
+
+
 /////////////////////////////////////////////////
 void Fenetre::Redimensionnement::actualiser ()
 {
+
     m_btn_HG.setSize        ( m_largeur , m_largeur );
-    m_btn_H.setSize         ( m_size.x - 2*m_largeur, m_largeur );
-    m_btn_H.setPosition     ( m_largeur, 0 );
+    m_btn_H.setSize         ( m_size.x , m_largeur );
+    m_btn_H.setPosition     ( 0, 0 );
     m_btn_HD.setSize        ( m_largeur, m_largeur );
     m_btn_HD.setPosition    ( m_size.x - m_largeur, 0 );
 
-    m_btn_G.setSize         ( m_largeur, m_size.y - 2*m_largeur );
-    m_btn_G.setPosition     ( 0 , m_largeur );
-    m_btn_D.setSize         ( m_largeur, m_size.y - 2*m_largeur );
-    m_btn_D.setPosition     ( m_size.x - m_largeur , m_largeur );
+    m_btn_G.setSize         ( m_largeur, m_size.y  );
+    m_btn_G.setPosition     ( 0 , 0 );
+    m_btn_D.setSize         ( m_largeur, m_size.y  );
+    m_btn_D.setPosition     ( m_size.x - m_largeur , 0 );
 
     m_btn_BG.setSize        ( m_largeur, m_largeur );
     m_btn_BG.setPosition    ( 0, m_size.y - m_largeur );
-    m_btn_B.setSize         ( m_size.x - 2*m_largeur, m_largeur );
-    m_btn_B.setPosition     ( m_largeur, m_size.y - m_largeur );
+    m_btn_B.setSize         ( m_size.x , m_largeur );
+    m_btn_B.setPosition     ( 0, m_size.y - m_largeur );
     m_btn_BD.setSize        ( m_largeur, m_largeur );
     m_btn_BD.setPosition    ( m_size.x - m_largeur, m_size.y - m_largeur );
 }
 
 
+/////////////////////////////////////////////////
+void Fenetre::Redimensionnement::draw (sf::RenderTarget& target, sf::RenderStates states) const
+{
+
+    /// si non visible on sort
+    if ( ! estVisible () ) return;
+
+//    ///On applique la transformation
+//    states.transform *= getTransform();
+
+    /// On dessine le fond
+    for ( auto bouton : m_boutons )
+        target.draw ( *bouton , states );
+}
 
 
 
@@ -357,6 +464,7 @@ Fenetre::Fenetre ( )
 , m_dragEnCours         ( false )
 , m_dragPosOrigin       ( {0,0} )
 , m_dragPosSourisOrigin ( {0,0} )
+, m_tailleMin           ( {0,0} )
 , m_fond                ( )
 , m_titre               ( )
 , m_btnFermer           ( )
@@ -368,20 +476,20 @@ Fenetre::Fenetre ( )
 {
 
     /// la marge pour les fenetres ////////////////////
-    m_marge = { 8,8 };
+    m_marge = { 5,5 };
 
 
     /// Initialisation du titre SFML ////////////////////
-    m_titre.setCharacterSize    ( 12 );
-    m_titre.setColor            ( sf::Color (200,200,200) );
+    m_titre.setCharacterSize    ( 20 );
+    m_titre.setColor            ( sf::Color ( 200, 200, 200 ) );
     m_titre.setStyle            ( sf::Text::Bold );
-    m_titre.setFont             ( app::Config::ms_polices.get( app::Config::Polices::police_1 ) );
+    m_titre.setFont             ( app::Config::ms_polices.get( app::Config::Polices::police_2 ) );
 
 
     /// Initialisation du fond SFML. ////////////////////
-    m_fond.setFillColor        ( { 50, 70, 50  } );
-    m_fond.setOutlineColor     ( { 150, 150, 150 } );
-    m_fond.setOutlineThickness ( 1 );
+    m_fond.setFillColor         ( { 50, 70, 50  } );
+    m_fond.setOutlineColor      ( { 150, 150, 150 } );
+    m_fond.setOutlineThickness  ( 1 );
 
 
     /// Initialisation du bouton fermeture. ////////////////////
@@ -398,11 +506,10 @@ Fenetre::Fenetre ( )
     Gadget::ajouterEnfant ( m_contenant );
     m_contenant->ajouterEnfant ( m_contenu );
 
-
-    /// Initialisation des glissières. ////////////////////
+    /// Initialisation des glissières et redim. ////////////////////
     m_btnSliderH.setParent ( this );
     m_btnSliderV.setParent ( this );
-
+    m_redim.setLargeur( m_marge.x );
 
     /// Initialisation des  interactions ////////////////////
     auto fn_fermeture = [this](){
@@ -459,6 +566,39 @@ void Fenetre::defilerVertical ( float rapport )
     m_contenu->setPosition ( int( m_contenu->getPosition().x ) , dest );
 }
 
+//
+///////////////////////////////////////////////////
+//void Fenetre::redimensionnerGauche ( float taille )
+//{
+//
+//        std::cout << "redim gauche\n";
+//}
+//
+//
+///////////////////////////////////////////////////
+//void Fenetre::redimensionnerDroite ( float taille )
+//{
+//        std::cout << "redim droite\n";
+//
+//}
+//
+//
+///////////////////////////////////////////////////
+//void Fenetre::redimensionnerHaut ( float taille )
+//{
+//
+//        std::cout << "redim haut\n";
+//}
+//
+//
+///////////////////////////////////////////////////
+//void Fenetre::redimensionnerBas ( float taille )
+//{
+//        std::cout << "redim bas\n";
+//
+//}
+
+
 
 /////////////////////////////////////////////////
 void Fenetre::actualiser ()
@@ -469,9 +609,9 @@ void Fenetre::actualiser ()
     /// les éléments graphiques
     auto hauteurTitre = m_titre.getLocalBounds().height;
     m_fond.setSize              ( { m_size.x, m_size.y } );
-    m_titre.setPosition         ( m_marge.x , m_marge.y  - hauteurTitre/3 );
-    m_btnFermer.setSize         ( { hauteurTitre , hauteurTitre } );
-    m_btnFermer.setPosition     ( m_size.x - hauteurTitre - m_marge.x, m_marge.y );
+    m_titre.setPosition         ( m_marge.x , m_marge.y  - hauteurTitre/2 );
+    m_btnFermer.setSize         ( { hauteurTitre + m_marge.x , hauteurTitre + m_marge.x } );
+    m_btnFermer.setPosition     ( m_size.x - m_btnFermer.getSize().x - m_marge.x, m_marge.y );
 
     /// on place le calque contenant dans la fenetre
     m_contenant->setSize           ( { m_size.x - 2*m_marge.x - m_btnSliderV.getLargeur (), m_size.y - ( 3*m_marge.y + hauteurTitre ) - m_btnSliderH.getLargeur () } );
@@ -500,6 +640,8 @@ void Fenetre::actualiser ()
 
     /// Le redimensionnement
     m_redim.setSize ( m_size );
+    m_tailleMin =   { m_marge.x *3 + m_titre.getLocalBounds().width  + m_btnFermer.getSize().x
+                    , m_marge.y *3 + m_titre.getLocalBounds().height + m_btnSliderH.getSize().y };
 
     /// actualiser les limites du shader de clipping
     actualiserClipping ( m_contenant->getGlobalBounds () );
@@ -523,6 +665,9 @@ void Fenetre::traiterEvenements (sf::Event evenement)
     /// Les sliders, pour le drag aussi ///////////////
     m_btnSliderH.traiterEvenements( evenement );
     m_btnSliderV.traiterEvenements( evenement );
+
+    /// le redimensionnement
+    m_redim.traiterEvenements( evenement );
 
 }
 
@@ -584,6 +729,7 @@ void Fenetre::draw (sf::RenderTarget& target, sf::RenderStates states) const
     /// on dessine les glissieres
     target.draw ( m_btnSliderH , states );
     target.draw ( m_btnSliderV , states );
+    target.draw ( m_redim , states );
 
 
     /// On dessine le titre
