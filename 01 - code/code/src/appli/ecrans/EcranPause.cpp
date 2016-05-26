@@ -25,8 +25,9 @@ EcranPause::EcranPause( Gestion_ecrans&  pileEcrans , Contexte contexte  )
 /////////////////////////////////////////////////
 void EcranPause::traiter_evenements    ( const sf::Event& event )
 {
-    if ( ! m_pause )
+    if ( ! m_pause ) {
         m_interface->traiterEvenements  ( event );
+    }
 }
 
 
@@ -43,7 +44,6 @@ void EcranPause::dessiner ()
 {
     m_contexte.fenetre->draw ( m_fond );
     m_contexte.fenetre->draw ( *m_interface );
-    std::cout << "EcranPause::dessiner \n";
 }
 
 
@@ -52,12 +52,12 @@ void EcranPause::dessiner ()
 void
 EcranPause::initGUI  ( )
 {
-    std::cout << "INIT GUI DE L4ECRAN PAUSE\n";
+
 
     // Initialisation du fond.
     m_fond.setPosition(0,0);
     m_fond.setSize       ( sf::Vector2f ( m_contexte.fenetre->getSize() ) );
-    m_fond.setFillColor  ( sf::Color (50,65,57));
+    m_fond.setFillColor  ( sf::Color (50,65,57 , 150 ));
 
 
     /// l'interface graphique //////
@@ -85,20 +85,27 @@ EcranPause::initGUI  ( )
 
     /// interactions //////
     // les boutons //
-//    btnReprendre->lier  (  gui::Actions::Evenement::onBtnG_relacher
-//                        , [this, fenetrePrincipale ](){  m_appli->retirerEcran();  });
-//    btnOptions->lier    (  gui::Actions::Evenement::onBtnG_relacher
-//                        , [this](){  m_appli->ajouterEcran( app::Application::Ecrans::Options ); });
-//    btnQuitter->lier    (  gui::Actions::Evenement::onBtnG_relacher
-//                        , [this](){
-//                         m_appli->retirer( 0 );
-//                         m_appli->changerEcran( Application::Ecrans::Accueil );  });
-//
-//    // le clavier //
-//    m_interface->lier   ( sf::Keyboard::Escape
-//                        , [this, fenetrePrincipale ](){
-//                         std::cout << "PAUSE:Escape\n";
-//                            m_appli->retirerEcran(); });
+    btnReprendre->lier  (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this, fenetrePrincipale ](){
+                            retirerEcran();
+                            m_pileEcrans->at(0).setPause (false);
+                         });
+    btnOptions->lier    (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this](){
+                            setPause ( true );
+                            ajouterEcran( app::Ecrans::Options );
+                         });
+    btnQuitter->lier    (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this](){
+                         viderEcrans( );
+                         ajouterEcran( app::Ecrans::Accueil );  });
+
+    // le clavier //
+    m_interface->lier   ( sf::Keyboard::Escape
+                        , [this, fenetrePrincipale ](){
+                            retirerEcran();
+                            m_pileEcrans->at(0).setPause (false);
+                        });
 
 
 }   // fin init GUI

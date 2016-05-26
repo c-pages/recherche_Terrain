@@ -5,6 +5,7 @@
 // Headers
 /////////////////////////////////////////////////
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 namespace app
 {
@@ -76,7 +77,10 @@ public:
     /// \return rien
     ///
     /////////////////////////////////////////////////
-    void setPause ( bool pause ) { m_pause = pause; };
+    void setPause ( bool pause = true ) {
+        m_pause = pause;
+        std::cout << "PAUSE : " << m_pause;
+    };
 
     /////////////////////////////////////////////////
     /// \brief acceder à l'état de la pause

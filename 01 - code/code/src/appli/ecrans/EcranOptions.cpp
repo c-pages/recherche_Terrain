@@ -44,7 +44,7 @@ EcranOptions::initGUI  ( )
     /// Initialisation du fond. //////
     m_fond.setPosition(0,0);
     m_fond.setSize       ( sf::Vector2f ( m_contexte.fenetre->getSize() ) );
-    m_fond.setFillColor  ( sf::Color (70,70,30));
+    m_fond.setFillColor  ( sf::Color (70,70,30 , 150 ));
 
 
     /// l'interface graphique //////
@@ -61,14 +61,20 @@ EcranOptions::initGUI  ( )
 
     /// interactions //////
     // les boutons //
-//    btnQuitter->lier    (  gui::Actions::Evenement::onBtnG_relacher
-//                        , [this](){  m_appli->retirerEcran();  });
+    btnQuitter->lier    (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this](){
+                            m_pileEcrans->at( m_pileEcrans->size() -2).setPause ( false );
+                            retirerEcran();
+                         });
 
     // le clavier //
-//    m_interface->lier   ( sf::Keyboard::Escape
-//                        , [this](){
-//                         std::cout << "OPTIONS:Escape\n";
-//                         m_appli->retirerEcran(); });
+    m_interface->lier   ( sf::Keyboard::Escape
+                        , [this](){
+                            std::cout << "OPTIONS:Escape\n";
+                            m_pileEcrans->at( m_pileEcrans->size() -2).setPause ( false );
+                            retirerEcran();
+
+                         });
 
 }   // fin init GUI
 

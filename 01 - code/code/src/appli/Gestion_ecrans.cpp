@@ -15,6 +15,23 @@ Gestion_ecrans::Gestion_ecrans ( Ecran::Contexte contexte )
 { };
 
 
+
+/////////////////////////////////////////////////
+Ecran&    Gestion_ecrans::at ( unsigned int index )
+{
+    if ( index< m_pile.size() )
+        return *m_pile[ index ];
+}
+
+
+/////////////////////////////////////////////////
+unsigned int    Gestion_ecrans::size ( )
+{
+   return m_pile.size();
+}
+
+
+
 /////////////////////////////////////////////////
 void        Gestion_ecrans::ajouter(Ecrans::ID ecranID)
 {
@@ -52,9 +69,6 @@ bool        Gestion_ecrans::estVide() const
 
 
 
-
-
-
 /////////////////////////////////////////////////
 std::unique_ptr<Ecran>    Gestion_ecrans::creerEcran(Ecrans::ID ecranID)
 {
@@ -68,6 +82,8 @@ std::unique_ptr<Ecran>    Gestion_ecrans::creerEcran(Ecrans::ID ecranID)
     /// un nouvel ecran et retourne un pointeur vers celui ci.
     return trouve->second();
 }
+
+
 
 /////////////////////////////////////////////////
 void        Gestion_ecrans::appliquerModifEnAttente()
@@ -107,12 +123,8 @@ void    Gestion_ecrans::traiter_evenements (sf::Event event )
 {
 
     for (auto itr = m_pile.rbegin(); itr != m_pile.rend(); ++itr)
-    {
         (*itr)->traiter_evenements(event);
-//        if (!(*itr)->traiter_evenements(event))
-//        return;
 
-    }
     appliquerModifEnAttente();
 }
 
@@ -120,15 +132,11 @@ void    Gestion_ecrans::traiter_evenements (sf::Event event )
 /////////////////////////////////////////////////
 void    Gestion_ecrans::actualiser ( sf::Time deltaT )
 {
-//    for ( auto ecran : m_pile )
-//        ecran->actualiser( deltaT );
-    for (auto itr = m_pile.rbegin(); itr != m_pile.rend(); ++itr)
-    {
-        (*itr)->actualiser(deltaT);
-//        if (!(*itr)->traiter_evenements(event))
-//        return;
 
-    }
+    for (auto itr = m_pile.rbegin(); itr != m_pile.rend(); ++itr)
+        (*itr)->actualiser(deltaT);
+
+
     appliquerModifEnAttente();
 }
 
@@ -139,7 +147,10 @@ void    Gestion_ecrans::dessiner ()
     for (auto itr = m_pile.begin(); itr != m_pile.end(); ++itr)
         (*itr)->dessiner();
 
-//   for ( auto ecran : m_pile )
-//      ecran->dessiner();
 }
+
+
+
+
+
 }// fin app

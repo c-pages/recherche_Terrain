@@ -20,10 +20,7 @@ namespace app {
 
 /////////////////////////////////////////////////
 Application::Application()
-: m_fenetre ( sf::VideoMode(1280, 720)
-            , "SuperOrganisme"
-            , sf::Style::Titlebar
-            , sf::ContextSettings ( 	0, 0,   4,  2,  0) )
+: m_fenetre ( )
 , m_ecrans  ( Ecran::Contexte ( m_fenetre ) )
 {
 
@@ -31,6 +28,15 @@ Application::Application()
     Config::init();
 
     /// le frameRate de la fenetre
+    m_fenetre.create (
+            sf::VideoMode(1920, 1080)
+//            sf::VideoMode(1280, 720)
+            , "SuperOrganisme"
+//            , sf::Style::Titlebar
+            , sf::Style::Fullscreen
+            , sf::ContextSettings ( 	0, 0,   4,  2,  0) );
+
+
     m_fenetre.setFramerateLimit(  1 / Config::getDureeImage().asSeconds() );
 
     /// L'icone de la fenêtre
@@ -55,7 +61,7 @@ Application::Application()
 /////////////////////////////////////////////////
 Application::~Application()
 {
-    // vider la pile.
+    // vider la pile des ecrans.
     m_ecrans.vider();
 }
 
@@ -66,8 +72,6 @@ void    Application::executer()
 
     sf::Clock   horloge;
     sf::Time    tempsDepuisMAJ = sf::Time::Zero;
-
-//sf::sleep( sf::seconds(0.005f)) ;
 
     while ( m_fenetre.isOpen() )
     {
@@ -92,105 +96,6 @@ void    Application::executer()
         dessiner();
     }
 }
-
-/*
-/////////////////////////////////////////////////
-void Application::changerEcran( Ecrans ecran ){
-
-    switch (ecran){
-    case Accueil :
-            m_ecrans.changer( new EcranAccueil( this )  );
-        break;
-    case Jeu :
-            m_ecrans.changer( new EcranJeu( this )  );
-        break;
-    case Pause :
-            m_ecrans.changer( new EcranPause( this )  );
-        break;
-    case Options :
-            m_ecrans.changer( new EcranOptions( this )  );
-        break;
-    }
-}
-*/
-/*
-/////////////////////////////////////////////////
-void Application::ajouterEcran( Ecrans::ID ecranID )
-{
-
-}
-
-
-/////////////////////////////////////////////////
-void Application::retirerEcran( )
-{
-
-}
-
-
-/////////////////////////////////////////////////
-void Application::viderEcrans( )
-{
-
-}
-*/
-
-
-/*
-/////////////////////////////////////////////////
-void Application::ajouterEcran( Ecrans ecran ){
-
-    std::cout << " Application :: ajouterEcran avt\n";
-    switch (ecran){
-    case Accueil :
-        std::cout << "      EcranAccueil\n";
-            m_ecrans.ajouter( new EcranAccueil( this )  );
-        break;
-    case Jeu :
-        std::cout << "      EcranJeu\n";
-            m_ecrans.ajouter( new EcranJeu( this )  );
-        break;
-    case Pause :
-        std::cout << "      EcranPause\n";
-            m_ecrans.ajouter( new EcranPause( this )  );
-        break;
-    case Options :
-        std::cout << "      EcranOptions\n";
-            m_ecrans.ajouter( new EcranOptions( this )  );
-        break;
-    }
-    std::cout << " Application :: ajouterEcran fin\n";
-}
-
-
-/////////////////////////////////////////////////
-void Application::retirerEcran(  ){
-
-    m_ecrans.retirer(  );
-}
-
-/////////////////////////////////////////////////
-void    Application::retirer ( unsigned int index )
-{
-    m_ecrans.retirer( index );
-}
-
-
-*/
-
-
-
-
-
-
-
-
-//
-//
-///////////////////////////////////////////////////
-//sf::RenderWindow*    Application::getFenetre() {
-//    return m_fenetre;
-//}
 
 
 

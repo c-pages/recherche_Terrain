@@ -65,42 +65,16 @@ EcranJeu::initGUI  ( )
 
 
     /// l'interface graphique //////
-/*    // la fenetre //
-    auto   fenetrePrincipale   =   m_interface->creer.fenetre( "  Options" , { 230, 125 }, true );
-    fenetrePrincipale->aligner      ( m_interface );
-    fenetrePrincipale->setVisible   ( false );
-
-    // les boutons //
-    sf::Vector2i tailleBtn = { 200 , 20 } ;
-    auto    btnReprendre      =   m_interface->creer.bouton( "rePreNDre" , tailleBtn );
-    auto    btnOptions  =   m_interface->creer.bouton( "OPtiOnS" , tailleBtn );
-    auto    btnQuitter  =   m_interface->creer.bouton( "Retour Accueil" , tailleBtn );
-
-    fenetrePrincipale->ajouterEnfant    ( btnReprendre );
-    fenetrePrincipale->ajouterEnfant    ( btnOptions );
-    fenetrePrincipale->ajouterEnfant    ( btnQuitter );
-
-    btnReprendre->aligner( fenetrePrincipale );
-    btnReprendre->setPosition ( btnReprendre->getPosition ().x, 10. );
-    btnOptions->aligner( btnReprendre );
-    btnOptions->move( 0 , 30 );
-    btnQuitter->aligner( btnOptions );
-    btnQuitter->move( 0 , 30 );
-
-    /// interactions //////
-    // les boutons //
-    btnReprendre->lier  (  gui::Actions::Evenement::onBtnG_relacher
-                        , [this, fenetrePrincipale ](){  m_pause = false; fenetrePrincipale->setVisible ( false );  });
-    btnOptions->lier    (  gui::Actions::Evenement::onBtnG_relacher
-                        , [this](){  std::cout << "Options\n"; });
-    btnQuitter->lier    (  gui::Actions::Evenement::onBtnG_relacher
-                        , [this](){  m_appli->changerEcran( Application::Ecrans::Accueil );  });
-*/
-    // le clavier //
+    // Interactions clavier //
     m_interface->lier   ( sf::Keyboard::Escape
                         , [this ](){
+                         setPause ( true );
                          ajouterEcran ( app::Ecrans::Pause );
                          });
+
+
+
+
 }   // fin init GUI
 
 

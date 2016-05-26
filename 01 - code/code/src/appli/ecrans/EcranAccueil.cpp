@@ -96,7 +96,10 @@ EcranAccueil::initGUI  ( )
                          ajouterEcran( app::Ecrans::Jeu );
                          });
     btnOptions->lier    (  gui::Actions::Evenement::onBtnG_relacher
-                        , [this](){  ajouterEcran( app::Ecrans::Options ); });
+                        , [this](){
+                         setPause ();
+                         ajouterEcran( app::Ecrans::Options );
+                         });
     btnQuitter->lier    (  gui::Actions::Evenement::onBtnG_relacher
                         , [this](){  m_contexte.fenetre->close();  });
 

@@ -78,8 +78,6 @@ private:
     sf::RectangleShape  m_fond;  ///< Le shape SFML du fond de l'écran.
 
     std::shared_ptr<gui::Gui>   m_interface;
-    bool                        m_afficheEcranOptions = false;
-    bool                        m_pause = false;
 
 //    jeu::Jeu            m_jeu;  /// le jeu
 

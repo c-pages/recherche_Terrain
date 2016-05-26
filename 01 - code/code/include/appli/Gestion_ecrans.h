@@ -60,7 +60,21 @@ public:
 
 
 
+    /////////////////////////////////////////////////
+    /// \brief acceder à un ecran de la pile par index
+    ///
+    /// \param index L'ID de l'Ecran à ajouter à la pile active.
+    /// \return reference vers l'ecran à l'index specifié.
+    ///
+    /////////////////////////////////////////////////
+    Ecran&    at ( unsigned int index );
 
+    /////////////////////////////////////////////////
+    /// \brief acceder taille de m_pile, le nombre d'écran dans la pile
+    ///
+    /// \return le nombre d'écrans dans la pile
+    /////////////////////////////////////////////////
+    unsigned int    size ( );
 
     /////////////////////////////////////////////////
     /// \brief Ajouter un écran sur la pile
