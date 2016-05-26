@@ -63,14 +63,14 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-std=c++11" />
 			<Add option="-Wall" />
+			<Add option="-std=c++11" />
 			<Add option="-fexceptions" />
 			<Add option="-DSFML_STATIC" />
-			<Add directory="L:/programes/SFML-2.3.2/include" />
+			<Add directory="F:/Bibliotheques CPP/SFML-2.3.2/include" />
 		</Compiler>
 		<Linker>
-			<Add directory="L:/programes/SFML-2.3.2/lib" />
+			<Add directory="F:/Bibliotheques CPP/SFML-2.3.2/lib" />
 		</Linker>
 		<Unit filename="include/appli/Application.h" />
 		<Unit filename="include/appli/Config.h" />
@@ -80,12 +80,14 @@
 		<Unit filename="include/appli/ResourceMgr.inl" />
 		<Unit filename="include/appli/ecrans/EcranAccueil.h" />
 		<Unit filename="include/appli/ecrans/EcranJeu.h" />
+		<Unit filename="include/appli/ecrans/EcranOptions.h" />
+		<Unit filename="include/appli/ecrans/EcranPause.h" />
 		<Unit filename="include/gui/Actions.h" />
-		<Unit filename="include/gui/Calque.h" />
 		<Unit filename="include/gui/Fabrique.h" />
 		<Unit filename="include/gui/Gadget.h" />
 		<Unit filename="include/gui/Gui.h" />
 		<Unit filename="include/gui/gadgets/Bouton.h" />
+		<Unit filename="include/gui/gadgets/Calque.h" />
 		<Unit filename="include/gui/gadgets/Fenetre.h" />
 		<Unit filename="include/gui/gadgets/Image.h" />
 		<Unit filename="include/gui/gadgets/Label.h" />
@@ -150,12 +152,14 @@
 		<Unit filename="src/appli/Gestion_ecrans.cpp" />
 		<Unit filename="src/appli/ecrans/EcranAccueil.cpp" />
 		<Unit filename="src/appli/ecrans/EcranJeu.cpp" />
+		<Unit filename="src/appli/ecrans/EcranOptions.cpp" />
+		<Unit filename="src/appli/ecrans/EcranPause.cpp" />
 		<Unit filename="src/gui/Actions.cpp" />
-		<Unit filename="src/gui/Calque.cpp" />
 		<Unit filename="src/gui/Fabrique.cpp" />
 		<Unit filename="src/gui/Gadget.cpp" />
 		<Unit filename="src/gui/Gui.cpp" />
 		<Unit filename="src/gui/gadgets/Bouton.cpp" />
+		<Unit filename="src/gui/gadgets/Calque.cpp" />
 		<Unit filename="src/gui/gadgets/Fenetre.cpp" />
 		<Unit filename="src/gui/gadgets/Image.cpp" />
 		<Unit filename="src/gui/gadgets/Label.cpp" />

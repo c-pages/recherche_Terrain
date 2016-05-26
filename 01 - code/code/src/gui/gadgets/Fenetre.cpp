@@ -93,7 +93,6 @@ void Fenetre::Glissiere::setLongueur ( int longueur ){
     actualiser();
 }
 
-
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::setRapport ( float rapport )
 {
@@ -110,8 +109,6 @@ void Fenetre::Glissiere::setRapport ( float rapport )
     actualiser();
 }
 
-
-
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::incrementer ()
 {
@@ -125,7 +122,6 @@ void Fenetre::Glissiere::incrementer ()
     }
 }
 
-
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::decrementer ()
 {
@@ -138,10 +134,6 @@ void Fenetre::Glissiere::decrementer ()
         }
     }
 }
-
-
-
-
 
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::setPosGlissiere ( int position )
@@ -218,7 +210,6 @@ Gadget* Fenetre::Glissiere::testerSurvol (sf::Vector2i posSouris)
 
 }
 
-
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::traiterEvenements (sf::Event evenement)
 {
@@ -237,8 +228,6 @@ void Fenetre::Glissiere::traiterEvenements (sf::Event evenement)
     }
 
 }
-
-
 
 /////////////////////////////////////////////////
 void Fenetre::Glissiere::draw (sf::RenderTarget& target, sf::RenderStates states) const
@@ -387,11 +376,6 @@ Fenetre::Redimensionnement::Redimensionnement ( Fenetre* fenetre )
 
 
 
-
-
-
-
-
 /////////////////////////////////////////////////
 Gadget* Fenetre::Redimensionnement::testerSurvol (sf::Vector2i posSouris)
 {
@@ -410,9 +394,6 @@ Gadget* Fenetre::Redimensionnement::testerSurvol (sf::Vector2i posSouris)
     /// sinon on renvois null
     return nullptr;
 }
-
-
-
 
 /////////////////////////////////////////////////
 void Fenetre::Redimensionnement::traiterEvenements (sf::Event evenement)
@@ -450,11 +431,6 @@ void Fenetre::Redimensionnement::traiterEvenements (sf::Event evenement)
 
 }
 
-
-
-
-
-
 /////////////////////////////////////////////////
 void Fenetre::Redimensionnement::actualiser ()
 {
@@ -477,7 +453,6 @@ void Fenetre::Redimensionnement::actualiser ()
     m_btn_BD.setSize        ( m_largeur, m_largeur );
     m_btn_BD.setPosition    ( m_size.x - m_largeur, m_size.y - m_largeur );
 }
-
 
 /////////////////////////////////////////////////
 void Fenetre::Redimensionnement::draw (sf::RenderTarget& target, sf::RenderStates states) const
@@ -569,7 +544,8 @@ Fenetre::Fenetre ( )
     /// Initialisation des  interactions ////////////////////
     auto fn_fermeture = [this](){
         declencher ( Evenement::onFen_fermer );
-        supprimer ();
+//        supprimer ();
+        setVisible  ( false );
     };
     auto fn_dragDebut = [this](){
         demander_etreDevant ();
@@ -607,14 +583,12 @@ void Fenetre::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
 
 }
 
-
 /////////////////////////////////////////////////
 void Fenetre::defilerHorizontal ( float rapport )
 {
     int dest = rapport * ( m_contenant->getSize().x - m_contenu->getEnfantsLocalBounds().width );
     m_contenu->setPosition ( dest , int( m_contenu->getPosition().y) );
 }
-
 
 /////////////////////////////////////////////////
 void Fenetre::defilerVertical ( float rapport )
@@ -634,6 +608,7 @@ void Fenetre::actualiser ()
 {
     /// les bounds
     Gadget::actualiser();
+    auto tmp = getGlobalBounds();
 
     /// les éléments graphiques
     auto hauteurTitre = m_titre.getLocalBounds().height;
@@ -650,33 +625,35 @@ void Fenetre::actualiser ()
     auto boundsEnfants = m_contenu->getEnfantsLocalBounds () ;
     m_contenu->setSize ( { boundsEnfants.width, boundsEnfants.height } );
 
-    /// les glissières si besoin
-    m_btnSliderH.setVisible ( boundsEnfants.width  > m_contenant->getSize().x );
-    m_btnSliderV.setVisible ( boundsEnfants.height > m_contenant->getSize().y );
-    if ( m_btnSliderH.estVisible() ) {
-        m_btnSliderH.setPosition  ( m_contenant->getPosition().x
-                                  , m_contenant->getPosition().y + m_contenant->getSize().y   );
-        m_btnSliderH.setLongueur ( m_contenant->getSize().x );
+    /// les éléments de la fenetre
+    if ( m_resizable ) {
+        /// les glissières si besoin
+        m_btnSliderH.setVisible ( boundsEnfants.width  > m_contenant->getSize().x );
+        m_btnSliderV.setVisible ( boundsEnfants.height > m_contenant->getSize().y );
+        if ( m_btnSliderH.estVisible() ) {
+            m_btnSliderH.setPosition  ( m_contenant->getPosition().x
+                                      , m_contenant->getPosition().y + m_contenant->getSize().y   );
+            m_btnSliderH.setLongueur ( m_contenant->getSize().x );
 
-        m_btnSliderH.setRapport (  (float)(m_contenant->getSize().x ) /  (float)(boundsEnfants.width ));
-    }
-    if ( m_btnSliderV.estVisible() ) {
-        m_btnSliderV.setPosition   ( m_contenant->getPosition().x + m_contenant->getSize().x
-                                   , m_contenant->getPosition().y);
-        m_btnSliderV.setLongueur ( m_contenant->getSize().y );
-        m_btnSliderV.setRapport ( (float)(m_contenant->getSize().y) /  (float)(boundsEnfants.height ));
-    }
+            m_btnSliderH.setRapport (  (float)(m_contenant->getSize().x ) /  (float)(boundsEnfants.width ));
+        }
+        if ( m_btnSliderV.estVisible() ) {
+            m_btnSliderV.setPosition   ( m_contenant->getPosition().x + m_contenant->getSize().x
+                                       , m_contenant->getPosition().y);
+            m_btnSliderV.setLongueur ( m_contenant->getSize().y );
+            m_btnSliderV.setRapport ( (float)(m_contenant->getSize().y) /  (float)(boundsEnfants.height ));
+        }
+        /// Le redimensionnement
+        m_redim.setSize ( m_size );
+        m_tailleMin =   { m_marge.x *3 + m_titre.getLocalBounds().width  + m_btnFermer.getSize().x
+                        , m_marge.y *3 + m_titre.getLocalBounds().height + m_btnSliderH.getSize().y };
 
-    /// Le redimensionnement
-    m_redim.setSize ( m_size );
-    m_tailleMin =   { m_marge.x *3 + m_titre.getLocalBounds().width  + m_btnFermer.getSize().x
-                    , m_marge.y *3 + m_titre.getLocalBounds().height + m_btnSliderH.getSize().y };
+    }
 
     /// actualiser les limites du shader de clipping
     actualiserClipping ( m_contenant->getGlobalBounds () );
 
 }
-
 
 /////////////////////////////////////////////////
 void Fenetre::traiterEvenements (sf::Event evenement)
@@ -685,21 +662,23 @@ void Fenetre::traiterEvenements (sf::Event evenement)
     if ( ! estVisible() ) return;
 
     /// Drag de la fenetre ///////////////
-    if ( m_dragEnCours )
+    if ( m_draggable && m_dragEnCours )
     {
         auto posSouris = Gui::getSourisPosition ();
         setPosition ( m_dragPosOrigin + posSouris - m_dragPosSourisOrigin );
     }
+    if ( m_resizable ) {
+        /// Les sliders, pour le drag aussi ///////////////
+        m_btnSliderH.traiterEvenements( evenement );
+        m_btnSliderV.traiterEvenements( evenement );
 
-    /// Les sliders, pour le drag aussi ///////////////
-    m_btnSliderH.traiterEvenements( evenement );
-    m_btnSliderV.traiterEvenements( evenement );
+        /// le redimensionnement
+        m_redim.traiterEvenements( evenement );
+    }
 
-    /// le redimensionnement
-    m_redim.traiterEvenements( evenement );
-
+    /// les evenements des enfants
+    Gadget::traiterEvenements ( evenement );
 }
-
 
 /////////////////////////////////////////////////
 Gadget* Fenetre::testerSurvol (sf::Vector2i posSouris)
@@ -727,12 +706,9 @@ Gadget* Fenetre::testerSurvol (sf::Vector2i posSouris)
     if ( m_redim.testerSurvol ( posSouris ) != nullptr )
         return m_redim.testerSurvol ( posSouris );
 
-
-
     /// on test les enfants
     if ( m_contenu->testerSurvol ( posSouris ) != nullptr )
         return m_contenu->testerSurvol ( posSouris );
-
 
     /// finalement on renvois la fenetre (pour le drag)
     return this;
@@ -755,18 +731,19 @@ void Fenetre::draw (sf::RenderTarget& target, sf::RenderStates states) const
     /// on dessine le bouton fermeture si besoin
     if ( m_fermable ) target.draw ( m_btnFermer , states );
 
-    /// on dessine les glissieres
-    target.draw ( m_btnSliderH , states );
-    target.draw ( m_btnSliderV , states );
-    target.draw ( m_redim , states );
-
+    if ( m_resizable ) {
+        /// on dessine les glissieres
+        target.draw ( m_btnSliderH , states );
+        target.draw ( m_btnSliderV , states );
+        /// on dessine les redim
+        target.draw ( m_redim , states );
+    }
 
     /// On dessine le titre
     target.draw ( m_titre , states );
 
     /// on dessine les enfants
     target.draw ( *m_contenant , states );
-
 
 }
 

@@ -5,60 +5,49 @@
 /////////////////////////////////////////////////
 #include "appli/Application.h"
 #include "appli/Config.h"
+
 #include "appli/ecrans/EcranAccueil.h"
+#include "appli/ecrans/EcranPause.h"
 #include "appli/ecrans/EcranJeu.h"
-//#include "ecrans/EcranOptions.h"
+#include "appli/ecrans/EcranOptions.h"
 
 #include "gui/Gui.h"
 
 #include <SFML/System.hpp>
 
-namespace app
-{
+namespace app {
+
+
 /////////////////////////////////////////////////
 Application::Application()
-: m_fenetre     ( new sf::RenderWindow() )
-//, m_interface   ( std::make_shared<gui::Gui>( m_fenetre ) )
+: m_fenetre ( sf::VideoMode(1280, 720)
+            , "SuperOrganisme"
+            , sf::Style::Titlebar
+            , sf::ContextSettings ( 	0, 0,   4,  2,  0) )
+, m_ecrans  ( Ecran::Contexte ( m_fenetre ) )
 {
 
-    //   Initialisation de la Configuration ( ensembles des ressources ...)
+    /// Initialisation de la Configuration ( ensembles des ressources ...)
     Config::init();
 
-    //   Creation de la fenêtre SFML.
-    sf::ContextSettings 	contextFenetre  ( 	0,  //  depth
-                                                0,  //  stencilc
-                                                4,  //  antialiasing
-                                                2,  //  major
-                                                0); //  minor
+    /// le frameRate de la fenetre
+    m_fenetre.setFramerateLimit(  1 / Config::getDureeImage().asSeconds() );
 
-//    m_fenetre->create(sf::VideoMode(1920, 1080)
-//                      , "SuperOrganisme"
-//                      , sf::Style::Fullscreen
-//                      , contextFenetre );
-
-
-    m_fenetre->create(sf::VideoMode(1200, 800)
-                      , "SuperOrganisme"
-                      , sf::Style::Titlebar
-                      , contextFenetre );
-
-
+    /// L'icone de la fenêtre
     sf::Image iconeFenetre;
     if( iconeFenetre.loadFromFile("media/img/Icone_test.png"))
-        m_fenetre->setIcon( iconeFenetre.getSize().x
-                           ,iconeFenetre.getSize().y
-                           ,iconeFenetre.getPixelsPtr());
+        m_fenetre.setIcon   ( iconeFenetre.getSize().x
+                            , iconeFenetre.getSize().y
+                            , iconeFenetre.getPixelsPtr() );
 
-    // La synchronisation verticale pour des histoire de bugs de chargement de police bidule truc
-//    m_fenetre->setVerticalSyncEnabled(true);
-    int dureeTmp = 1 / Config::getDureeImage().asSeconds() ;
-    m_fenetre->setFramerateLimit( dureeTmp );
+    /// Initialiser les écrans
+    m_ecrans.enregistrerEcran<EcranAccueil>     ( Ecrans::Accueil );
+    m_ecrans.enregistrerEcran<EcranOptions>     ( Ecrans::Options );
+    m_ecrans.enregistrerEcran<EcranJeu>         ( Ecrans::Jeu );
+    m_ecrans.enregistrerEcran<EcranPause>       ( Ecrans::Pause );
 
-    //   Ajout du premier écran.
-    m_ecrans.ajouter( new EcranAccueil( this ) );
-
-
-
+    /// Le premier écran
+    m_ecrans.ajouter ( Ecrans::Accueil );
 
 }
 
@@ -80,7 +69,7 @@ void    Application::executer()
 
 //sf::sleep( sf::seconds(0.005f)) ;
 
-    while ( m_fenetre->isOpen() )
+    while ( m_fenetre.isOpen() )
     {
         traiter_evenements();
         tempsDepuisMAJ += horloge.restart();
@@ -96,7 +85,7 @@ void    Application::executer()
 
             // si la pile d'écrans est vide, on ferme.
             if ( m_ecrans.estVide() )
-                m_fenetre->close();
+                m_fenetre.close();
         }
 
         // Dessiner les écrans actifs.
@@ -104,7 +93,7 @@ void    Application::executer()
     }
 }
 
-
+/*
 /////////////////////////////////////////////////
 void Application::changerEcran( Ecrans ecran ){
 
@@ -115,49 +104,101 @@ void Application::changerEcran( Ecrans ecran ){
     case Jeu :
             m_ecrans.changer( new EcranJeu( this )  );
         break;
-//    case Options :
-//            m_ecrans.changer( new EcranOptions( this )  );
-//        break;
+    case Pause :
+            m_ecrans.changer( new EcranPause( this )  );
+        break;
+    case Options :
+            m_ecrans.changer( new EcranOptions( this )  );
+        break;
     }
+}
+*/
+/*
+/////////////////////////////////////////////////
+void Application::ajouterEcran( Ecrans::ID ecranID )
+{
+
 }
 
 
 /////////////////////////////////////////////////
+void Application::retirerEcran( )
+{
+
+}
+
+
+/////////////////////////////////////////////////
+void Application::viderEcrans( )
+{
+
+}
+*/
+
+
+/*
+/////////////////////////////////////////////////
 void Application::ajouterEcran( Ecrans ecran ){
 
+    std::cout << " Application :: ajouterEcran avt\n";
     switch (ecran){
     case Accueil :
+        std::cout << "      EcranAccueil\n";
             m_ecrans.ajouter( new EcranAccueil( this )  );
         break;
     case Jeu :
+        std::cout << "      EcranJeu\n";
             m_ecrans.ajouter( new EcranJeu( this )  );
         break;
-//    case Options :
-//            m_ecrans.ajouter( new EcranOptions( this )  );
-//        break;
+    case Pause :
+        std::cout << "      EcranPause\n";
+            m_ecrans.ajouter( new EcranPause( this )  );
+        break;
+    case Options :
+        std::cout << "      EcranOptions\n";
+            m_ecrans.ajouter( new EcranOptions( this )  );
+        break;
     }
+    std::cout << " Application :: ajouterEcran fin\n";
 }
 
 
 /////////////////////////////////////////////////
 void Application::retirerEcran(  ){
 
-            m_ecrans.retirer(  );
+    m_ecrans.retirer(  );
 }
 
 /////////////////////////////////////////////////
-sf::RenderWindow*    Application::getFenetre() {
-    return m_fenetre;
+void    Application::retirer ( unsigned int index )
+{
+    m_ecrans.retirer( index );
 }
+
+
+*/
+
+
+
+
+
+
+
+
+//
+//
+///////////////////////////////////////////////////
+//sf::RenderWindow*    Application::getFenetre() {
+//    return m_fenetre;
+//}
 
 
 
 /////////////////////////////////////////////////
 void Application::traiter_evenements(){
     sf::Event event;
-    while (m_fenetre->pollEvent(event)){
+    while (m_fenetre.pollEvent(event)){
         m_ecrans.traiter_evenements ( event );
-//        m_interface->traiterEvenements(event);
     }
 }
 
@@ -175,7 +216,7 @@ void Application::dessiner ( )
 {
 
     ///< Vider la fenetre.
-    m_fenetre->clear(sf::Color::Black);
+    m_fenetre.clear(sf::Color::Black);
 
 
     ///< Rendu des ecrans courants.
@@ -185,7 +226,7 @@ void Application::dessiner ( )
 //    m_fenetre->draw ( *m_interface );
 
     ///< Afficher la fenêtre.
-    m_fenetre->display();
+    m_fenetre.display();
 
 }
 

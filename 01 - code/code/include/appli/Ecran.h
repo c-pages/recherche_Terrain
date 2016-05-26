@@ -8,22 +8,60 @@
 
 namespace app
 {
+    /////////////////////////////////////////////////
+    /// \brief les diff√©rents √©crans que l'on va trouver dans l'application
+    ///
+    /////////////////////////////////////////////////
+    namespace Ecrans {
+       enum ID {
+            Accueil,
+            Pause,
+            Options,
+            Jeu,
+
+            Vide
+        };
+    }
+
 
 class Application;
+class Gestion_ecrans;
 
 /////////////////////////////////////////////////
-/// \brief La classe virtuelle communues aux Ècrans.
+/// \brief La classe virtuelle communues aux √©crans.
 ///
 /////////////////////////////////////////////////
 class Ecran
 {
 public:
 
+    ///< le context (la fenetre SFML, les textures, polices, ... ) associ√©s aux Etats (intro, menu ...)
+    struct Contexte
+    {
+        Contexte(    sf::RenderWindow&   fenetreSFML
+//                ,   Niveau *            niveau
+//                ,   TextureHolder*		textures;
+//                ,   FontHolder*			fonts;
+//                ,   Player*				player;
+                )
+                : fenetre ( &fenetreSFML ) {};
+
+        sf::RenderWindow*	    fenetre;
+        //Niveau                mNiveau;    ///<
+        //TextureHolder*		textures;
+        //FontHolder*			fonts;
+        //Player*				player;
+    };
+
+
+
+
+
     /////////////////////////////////////////////////
     /// \brief Constructeur
     ///
     /////////////////////////////////////////////////
-    Ecran( Application*  appli );
+    Ecran( Gestion_ecrans&  pileEcrans , Contexte contexte );
 
     /////////////////////////////////////////////////
     /// \brief Destructeur virtuel
@@ -32,7 +70,68 @@ public:
     virtual ~Ecran();
 
     /////////////////////////////////////////////////
-    /// \brief GËre les entrÈes claviers, souris, fenetre ...
+    /// \brief definir l'√©tat de la pause
+    ///
+    /// \param pause t
+    /// \return rien
+    ///
+    /////////////////////////////////////////////////
+    void setPause ( bool pause ) { m_pause = pause; };
+
+    /////////////////////////////////////////////////
+    /// \brief acceder √† l'√©tat de la pause
+    ///
+    /// \param pause t
+    /// \return rien
+    ///
+    /////////////////////////////////////////////////
+    bool estEnPause ( ) { return m_pause; };
+
+
+
+
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief ajouter un √©cran
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void ajouterEcran( Ecrans::ID ecranID );
+
+    /////////////////////////////////////////////////
+    /// \brief retirer un √©cran
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void retirerEcran( );
+
+    /////////////////////////////////////////////////
+    /// \brief vider les √©crans
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void viderEcrans( );
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief G√®re les entr√©es claviers, souris, fenetre ...
     ///
     /// \param event evenement SFML a dispatcher
     /// \return rien
@@ -41,20 +140,20 @@ public:
     virtual     void traiter_evenements ( const sf::Event& event ) =0;
 
     /////////////////////////////////////////////////
-    /// \brief Actualiser les ÈlÈments.
+    /// \brief Actualiser les √©l√©ments.
     ///
-    /// Actualiser les diffÈrents ÈlÈments du ou des Ècrans actifs.
+    /// Actualiser les diff√©rents √©l√©ments du ou des √©crans actifs.
     ///
-    /// \param deltaT          Un \e float qui indique le delta du temps ÈcoulÈ depuis la derniËre actualisation.
+    /// \param deltaT          Un \e float qui indique le delta du temps √©coul√© depuis la derni√®re actualisation.
     /// \return Rien
     ///
     /////////////////////////////////////////////////
     virtual     void actualiser ( sf::Time deltaT ) =0;
 
     /////////////////////////////////////////////////
-    /// \brief Rendre les ÈlÈments.
+    /// \brief Rendre les √©l√©ments.
     ///
-    /// Dessiner les diffÈrents ÈlÈments du ou des Ècrans actifs.
+    /// Dessiner les diff√©rents √©l√©ments du ou des √©crans actifs.
     /// \return Rien
     ///
     /////////////////////////////////////////////////
@@ -65,10 +164,17 @@ protected:
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
-    Application*    m_appli;    ///< La classe Apllication parent.
 
-    sf::View        m_vueJeu;   ///<
-    sf::View        m_vueGUI;   ///<
+
+//    Application*    m_appli;    ///< La classe Apllication parent.
+    Contexte            m_contexte;
+
+    Gestion_ecrans*     m_pileEcrans ;
+
+    sf::View            m_vueJeu;   ///<
+    sf::View            m_vueGUI;   ///<
+
+    bool                m_pause = false;
 
 }; // fin Ecran
 }; // fin app
@@ -80,8 +186,8 @@ protected:
 /// \class app::Ecran
 /// \ingroup application
 ///
-/// app::Ecran la classe de base des Ècrans.
-/// Les Ècrans peuvent se superposer (par exemple l'Ècran pause-option avec en dessous l'Ècran
+/// app::Ecran la classe de base des √©crans.
+/// Les √©crans peuvent se superposer (par exemple l'√©cran pause-option avec en dessous l'√©cran
 /// jeu en pause).
 ///
 /// \see app::EcranDemo

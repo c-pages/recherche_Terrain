@@ -26,32 +26,32 @@ public:
     /// \brief Constructeur
     ///
     /////////////////////////////////////////////////
-    EcranJeu( Application* appli );
+    EcranJeu( Gestion_ecrans&  pileEcrans , Contexte contexte );
 
 private:
     /////////////////////////////////////////////////
-    /// \brief La gestion des évènements utilisateurs.
+    /// \brief La gestion des Ã©vÃ¨nements utilisateurs.
     ///
-    /// \details  Gère les entrées claviers, souris, fenetre ...
+    /// \details  GÃ¨re les entrÃ©es claviers, souris, fenetre ...
     /// \return Rien
     ///
     /////////////////////////////////////////////////
     virtual     void traiter_evenements ( const sf::Event& event );
 
     /////////////////////////////////////////////////
-    /// \brief Actualiser les éléments.
+    /// \brief Actualiser les Ã©lÃ©ments.
     ///
-    /// \details Actualiser les différents éléments du ou des écrans actifs.
-    /// \param   deltaT          Un \e float qui indique le delta du temps écoulé depuis la dernière actualisation.
+    /// \details Actualiser les diffÃ©rents Ã©lÃ©ments du ou des Ã©crans actifs.
+    /// \param   deltaT          Un \e float qui indique le delta du temps Ã©coulÃ© depuis la derniÃ¨re actualisation.
     /// \return  Rien
     ///
     /////////////////////////////////////////////////
     virtual     void actualiser ( sf::Time deltaT );
 
     /////////////////////////////////////////////////
-    /// \brief Rendre les éléments.
+    /// \brief Rendre les Ã©lÃ©ments.
     ///
-    /// Dessiner les différents éléments du ou des écrans actifs.
+    /// Dessiner les diffÃ©rents Ã©lÃ©ments du ou des Ã©crans actifs.
     /// \return Rien
     ///
     /////////////////////////////////////////////////
@@ -74,17 +74,12 @@ private:
     // Les membres
     /////////////////////////////////////////////////
 
-    sf::View            m_vue;   ///< La vue SFML de l'écran.
-    sf::RectangleShape  m_fond;  ///< Le shape SFML du fond de l'écran.
+    sf::View            m_vue;   ///< La vue SFML de l'Ã©cran.
+    sf::RectangleShape  m_fond;  ///< Le shape SFML du fond de l'Ã©cran.
 
-//    std::shared_ptr<gui::Interface>     m_interface;
-//    std::shared_ptr<gui::Fenetre>       m_fenetreOptions;
+    std::shared_ptr<gui::Gui>   m_interface;
+    bool                        m_afficheEcranOptions = false;
 
-//    std::shared_ptr<gui::Interface>     m_interface;
-    bool                                m_afficheEcranOptions = false;
-    bool                                m_pause = false;
-
-   // gui::Groupe*     m_gui;         ///< Le groupe de GUI du menu principal.
 //    jeu::Jeu            m_jeu;  /// le jeu
 
 }; // fin EcranJeu

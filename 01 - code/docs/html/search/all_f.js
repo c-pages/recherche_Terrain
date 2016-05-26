@@ -1,16 +1,14 @@
 var searchData=
 [
-  ['sauvegarderpartie',['sauvegarderPartie',['../classjeu_1_1_jeu.html#a61a3a44e5de01e55376caf7b31785931',1,'jeu::Jeu']]],
-  ['setcouleur',['setCouleur',['../classgui_1_1_label.html#a7c067208c9b05bcc07b9e10f7496bc4a',1,'gui::Label']]],
-  ['setetat',['setEtat',['../classgui_1_1_bouton.html#a2880b31ee8b540382b191195281182e2',1,'gui::Bouton']]],
-  ['setindexetagecourant',['setIndexEtageCourant',['../classjeu_1_1_terrain.html#a863ec2c8050a5484b95fbb9e012e616e',1,'jeu::Terrain']]],
-  ['setparent',['setParent',['../classgui_1_1_gadget.html#a8d9dac5aee31bfbb176f452d61186be0',1,'gui::Gadget::setParent()'],['../classgui_1_1_gui.html#a49a33e82fb7fe037ef0d2eb493707df6',1,'gui::Gui::setParent()']]],
-  ['setpolice',['setPolice',['../classgui_1_1_label.html#ad3e679dbd83b028ba7d7ffe0e253caf8',1,'gui::Label']]],
-  ['setposition',['setPosition',['../classgui_1_1_gadget.html#a92c42e660b6b307daa77cd0d42aad26f',1,'gui::Gadget::setPosition(float x, float y)'],['../classgui_1_1_gadget.html#ad3d9ba5eecba0ecf49f94767699aba17',1,'gui::Gadget::setPosition(const sf::Vector2f &amp;position)'],['../classgui_1_1_gadget.html#a2872eb12af266b02c8bc17affebc7827',1,'gui::Gadget::setPosition(const sf::Vector2i &amp;position)']]],
-  ['setsize',['setSize',['../classgui_1_1_gadget.html#ae67f7a8e74dd9a41217016fdd72918fe',1,'gui::Gadget::setSize()'],['../classgui_1_1_gui.html#ab2965a5abefcf61e11429e01618b0206',1,'gui::Gui::setSize()']]],
-  ['setstyle',['setStyle',['../classgui_1_1_label.html#a4fed7410f937b6ff57804b8aad149e87',1,'gui::Label']]],
-  ['settaille',['setTaille',['../classjeu_1_1_terrain.html#a720ed1fa9ef9cc785a4d84fff3ea6a3f',1,'jeu::Terrain::setTaille()'],['../classgui_1_1_label.html#a7c3b9903a4e63fd12f994892fefb9c15',1,'gui::Label::setTaille()']]],
-  ['settexte',['setTexte',['../classgui_1_1_label.html#a5c0c354060b3e9e5f6fd813e68ec2cf6',1,'gui::Label']]],
-  ['settexture',['setTexture',['../classgui_1_1_image.html#aaf0c9ec740f5aa403b71e5d6dbe80f4c',1,'gui::Image']]],
-  ['supprimer',['supprimer',['../classgui_1_1_gadget.html#a2c9c5d103b90ace0b72e66625497c995',1,'gui::Gadget']]]
+  ['repos',['Repos',['../classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a5425be176c542f566123112599300dfa',1,'gui::Gadget']]],
+  ['resourcemgr',['ResourceMgr',['../classapp_1_1_resource_mgr.html',1,'app']]],
+  ['resourcemgr',['ResourceMgr',['../classapp_1_1_resource_mgr.html#a4f95e4f251a11a0cf368ed8b074fd297',1,'app::ResourceMgr::ResourceMgr(const ResourceMgr &amp;)=delete'],['../classapp_1_1_resource_mgr.html#a9bb6d183effa248577c9e6df24f948ef',1,'app::ResourceMgr::ResourceMgr()=default'],['../classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#a303e951921bbc6db156bf4bdb8cfddd0',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;::ResourceMgr(const ResourceMgr &amp;)=delete'],['../classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#a8cfcda920141961f58b497ead5ac0f00',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;::ResourceMgr()=default']]],
+  ['resourcemgr_2eh',['ResourceMgr.h',['../_resource_mgr_8h.html',1,'']]],
+  ['resourcemgr_2einl',['ResourceMgr.inl',['../_resource_mgr_8inl.html',1,'']]],
+  ['resourcemgr_3c_20sf_3a_3afont_2c_20int_20_3e',['ResourceMgr&lt; sf::Font, int &gt;',['../classapp_1_1_resource_mgr.html',1,'app']]],
+  ['resourcemgr_3c_20sf_3a_3amusic_2c_20identifiant_20_3e',['ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;',['../classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html',1,'app']]],
+  ['resourcemgr_3c_20sf_3a_3ashader_2c_20int_20_3e',['ResourceMgr&lt; sf::Shader, int &gt;',['../classapp_1_1_resource_mgr.html',1,'app']]],
+  ['resourcemgr_3c_20sf_3a_3atexture_2c_20int_20_3e',['ResourceMgr&lt; sf::Texture, int &gt;',['../classapp_1_1_resource_mgr.html',1,'app']]],
+  ['retirer',['Retirer',['../classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569a6bef3dad0638c21c3f9aec43f4300817',1,'app::Gestion_ecrans::Retirer()'],['../classapp_1_1_application.html#a435817c4e468447de1c6c4d6498a5c54',1,'app::Application::retirer()'],['../classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c',1,'app::Gestion_ecrans::retirer()'],['../classapp_1_1_gestion__ecrans.html#aecb888b61bffbf4fba1de10fe59e2775',1,'app::Gestion_ecrans::retirer(Ecran *ecran)'],['../classapp_1_1_gestion__ecrans.html#a351ecfeb016cfdbf3f95792ff690e96e',1,'app::Gestion_ecrans::retirer(unsigned int index)']]],
+  ['retirerecran',['retirerEcran',['../classapp_1_1_application.html#a6cbc17d5a777730d7811e874182fd11a',1,'app::Application']]]
 ];

@@ -25,7 +25,7 @@ public:
     /// \brief Constructeur
     ///
     /////////////////////////////////////////////////
-    EcranAccueil( Application* appli );
+    EcranAccueil( Gestion_ecrans&  pileEcrans , Contexte contexte );
 
     /////////////////////////////////////////////////
     /// \brief Destructeur
@@ -65,7 +65,7 @@ private:
     /////////////////////////////////////////////////
     /// \brief Fonction a supprimer
     ///
-    /// juste là pour tester des machins bidules.
+    /// juste là  pour tester des machins bidules.
     /// \return Rien
     ///
     /////////////////////////////////////////////////

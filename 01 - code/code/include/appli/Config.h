@@ -1,4 +1,4 @@
-﻿
+
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -48,6 +48,7 @@ public:
     enum Images                :  int  {   image_1
                                         ,  image_2
                                         ,  fenetreFond1
+                                        ,  FondAccueil
                                         };
 
     /////////////////////////////////////////////////

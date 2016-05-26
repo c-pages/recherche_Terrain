@@ -1,20 +1,21 @@
 <map id="gui::Fenetre::traiterEvenements" name="gui::Fenetre::traiterEvenements">
-<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="1195,512,1350,539"/>
-<area shape="rect" id="node3" href="$classgui_1_1_gui.html#af759bc1556aa4ae6c9e319435cae98de" title="accesseur de la position de la souris " alt="" coords="943,5,1120,32"/>
-<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="950,56,1113,83"/>
-<area shape="rect" id="node7" href="$classgui_1_1_fenetre_1_1_glissiere.html#ae76db4afdf0353fe1919fc6679867acc" title="Traitement des évenements clavier ou souris. C&#39;est ici qu&#39;on va gérer le drag de la glissière..." alt="" coords="737,161,888,202"/>
-<area shape="rect" id="node11" href="$classgui_1_1_fenetre_1_1_redimensionnement.html#a9e9b3f6698430020de7774e451d56720" title="Traitement des évenements clavier ou souris. C&#39;est ici qu&#39;on va gérer le drag de la glissière..." alt="" coords="256,219,473,261"/>
-<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="1196,284,1349,311"/>
-<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="1419,284,1580,311"/>
-<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2" title="Acceder à m_size. " alt="" coords="961,208,1102,235"/>
-<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html#a92017dfa133d5f10ac79756dc332a2c4" title="Faire défiler horizontalement le calque des enfnnts. " alt="" coords="936,157,1127,184"/>
-<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html#a2e089eb213f6033be8ae902f25a68731" title="Faire défiler verticalement le calque des enfnnts. " alt="" coords="943,107,1120,133"/>
-<area shape="rect" id="node12" href="$classgui_1_1_fenetre.html#a3bcd7d6f2841cc8aa57fc3d1faba34e8" title="recuperer la taille minimum de la fenetre pour le redimensionnement " alt="" coords="521,395,689,421"/>
-<area shape="rect" id="node17" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="961,360,1102,387"/>
-<area shape="rect" id="node13" href="$classgui_1_1_fenetre_1_1_glissiere.html#a0cbaec07e797738431ceb58102db1063" title="Teste le survol du gadget par la souris. " alt="" coords="737,530,888,571"/>
-<area shape="rect" id="node16" href="$classgui_1_1_fenetre_1_1_glissiere.html#a173fd57f47aaa00d7ce34e1d8a65da67" title="Actualiser les éléments de l&#39;interface. " alt="" coords="737,278,888,319"/>
-<area shape="rect" id="node19" href="$classgui_1_1_fenetre_1_1_glissiere.html#a33c88bb6ac8a46d961deaaa365f0290f" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="737,395,888,437"/>
-<area shape="rect" id="node14" href="$classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401" title="Acceder à m_globalBounds. " alt="" coords="1175,613,1371,640"/>
-<area shape="rect" id="node15" href="$classgui_1_1_bouton.html#a85f00dfbf2b34eb66f934a401684b9f3" title="Teste le survol du gadget par la souris. " alt="" coords="949,563,1113,589"/>
-<area shape="rect" id="node18" href="$classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e" title="Actualiser le gadget (bounding bax) " alt="" coords="955,309,1107,336"/>
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="1182,632,1337,659"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gui.html#af759bc1556aa4ae6c9e319435cae98de" title="accesseur de la position de la souris " alt="" coords="936,144,1113,171"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="1178,160,1341,187"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre_1_1_glissiere.html#ae76db4afdf0353fe1919fc6679867acc" title="Traitement des évenements clavier ou souris. C&#39;est ici qu&#39;on va gérer le drag de la glissière..." alt="" coords="737,246,888,287"/>
+<area shape="rect" id="node12" href="$classgui_1_1_fenetre_1_1_redimensionnement.html#a9e9b3f6698430020de7774e451d56720" title="Traitement des évenements clavier ou souris. C&#39;est ici qu&#39;on va gérer le drag de la glissière..." alt="" coords="256,305,473,346"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="1405,388,1559,415"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="1607,388,1768,415"/>
+<area shape="rect" id="node8" href="$classgui_1_1_fenetre_1_1_glissiere.html#ae482cf8985c8379ea49b792537d82e5d" title="Definie la position de la glissere sur le gadget. " alt="" coords="949,246,1100,287"/>
+<area shape="rect" id="node9" href="$classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2" title="Acceder à m_size. " alt="" coords="1189,312,1330,339"/>
+<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html#a92017dfa133d5f10ac79756dc332a2c4" title="Faire défiler horizontalement le calque des enfnnts. " alt="" coords="1164,211,1355,237"/>
+<area shape="rect" id="node11" href="$classgui_1_1_fenetre.html#a2e089eb213f6033be8ae902f25a68731" title="Faire défiler verticalement le calque des enfnnts. " alt="" coords="1171,261,1348,288"/>
+<area shape="rect" id="node13" href="$classgui_1_1_fenetre.html#a3bcd7d6f2841cc8aa57fc3d1faba34e8" title="recuperer la taille minimum de la fenetre pour le redimensionnement " alt="" coords="521,421,689,448"/>
+<area shape="rect" id="node18" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="1189,363,1330,389"/>
+<area shape="rect" id="node14" href="$classgui_1_1_fenetre_1_1_glissiere.html#a0cbaec07e797738431ceb58102db1063" title="Teste le survol du gadget par la souris. " alt="" coords="737,498,888,539"/>
+<area shape="rect" id="node17" href="$classgui_1_1_fenetre_1_1_glissiere.html#a173fd57f47aaa00d7ce34e1d8a65da67" title="Actualiser les éléments de l&#39;interface. " alt="" coords="949,414,1100,455"/>
+<area shape="rect" id="node20" href="$classgui_1_1_fenetre_1_1_glissiere.html#a33c88bb6ac8a46d961deaaa365f0290f" title="Dessine tout les éléments de l&#39;interface. " alt="" coords="737,577,888,618"/>
+<area shape="rect" id="node15" href="$classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401" title="Acceder à m_globalBounds. " alt="" coords="1161,523,1357,549"/>
+<area shape="rect" id="node16" href="$classgui_1_1_bouton.html#a85f00dfbf2b34eb66f934a401684b9f3" title="Teste le survol du gadget par la souris. " alt="" coords="943,531,1107,557"/>
+<area shape="rect" id="node19" href="$classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e" title="Actualiser le gadget (bounding bax) " alt="" coords="1183,413,1335,440"/>
 </map>

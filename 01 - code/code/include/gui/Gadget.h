@@ -14,6 +14,25 @@
 
 namespace gui {
 
+
+
+
+
+/////////////////////////////////////////////////
+/// \brief les 9 endroits d'alignement entre gadgets
+/////////////////////////////////////////////////
+enum class Alignement {
+    Centre,
+    Gauche,
+    Droite,
+    Haut,
+    Bas,
+    GaucheHaut,
+    GaucheBas,
+    DroiteHaut,
+    DroiteBas
+};
+
 /////////////////////////////////////////////////
 /// \brief Un gadget est la classe abstraite des éléments de l'interface.
 ///
@@ -214,6 +233,13 @@ public:
 //public:
 
     ////////////////////////////////////////////////////////////
+    /// \brief place le gadget à la meme position qu'un autre.
+    ///
+    /// \param cible
+    ////////////////////////////////////////////////////////////
+    void setPosition( std::shared_ptr<Gadget> cible );
+
+    ////////////////////////////////////////////////////////////
     /// \brief override (un peu a l'arrache) de la fonction sf::Transformable::setPosition().
     ///
     ////////////////////////////////////////////////////////////
@@ -242,6 +268,28 @@ public:
     ///
     /////////////////////////////////////////////////
     sf::Vector2f getPosAbs () const;
+
+    /////////////////////////////////////////////////
+    /// \brief Surcharge du SFML
+    ///
+    /////////////////////////////////////////////////
+    void move(float offsetX, float offsetY);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Surcharge du SFML
+    ///
+    ////////////////////////////////////////////////////////////
+    void move(const sf::Vector2f& offset);
+
+    /////////////////////////////////////////////////
+    /// \brief S'aligner sur un autre gadget.
+    ///
+    /// \param cible		    gadget cible sur lequel s'aligner.
+    /// \param alignementThis   L'endroit du gadget à aligner sur la cible.
+    /// \param alignementCible	L'endroit de la cible sur lequel aligner le gadget.
+    /////////////////////////////////////////////////
+    void aligner ( std::shared_ptr<Gadget> cible, Alignement alignementThis = Alignement::Centre , Alignement alignementCible = Alignement::Centre );
+
 
 
 

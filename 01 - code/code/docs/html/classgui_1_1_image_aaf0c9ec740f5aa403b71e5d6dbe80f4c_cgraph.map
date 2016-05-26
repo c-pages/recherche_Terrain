@@ -1,0 +1,5 @@
+<map id="gui::Image::setTexture" name="gui::Image::setTexture">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="204,29,345,56"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="393,29,547,56"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="595,29,756,56"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="gui::Bouton::setMarge" name="gui::Bouton::setMarge">
+<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a961823c2d04c02b85316bb177f24f379" title="Ajuster le fond au texte et à l&#39;icone (le plus grand des deux) " alt="" coords="245,5,380,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e" title="Actualiser le gadget (bounding bax) " alt="" coords="491,132,643,159"/>
+<area shape="rect" id="node6" href="$classgui_1_1_bouton.html#aa934845042a18c899daf86c8f164653a" title="Définie le texte à afficher. " alt="" coords="239,107,386,133"/>
+<area shape="rect" id="node7" href="$classgui_1_1_bouton.html#a441e2e464621b1f3c7c150800b6430e2" title="Definie la taille du texte. " alt="" coords="225,157,401,184"/>
+<area shape="rect" id="node8" href="$classgui_1_1_bouton.html#ac8001596e0cc9cb1bad7ae3c755f1128" title="Definie la couleur du texte. " alt="" coords="217,208,408,235"/>
+<area shape="rect" id="node9" href="$classgui_1_1_bouton.html#ac02c3dbec9a808602ed91baae6d180d5" title="Défine le style du texte (sf::Text::Style). " alt="" coords="225,259,401,285"/>
+<area shape="rect" id="node10" href="$classgui_1_1_bouton.html#a22e63d4061e86a6a2967e29e11e394f6" title="Definie la police du texte. " alt="" coords="221,309,404,336"/>
+<area shape="rect" id="node11" href="$classgui_1_1_bouton.html#a621faf32d2fa1cf218afcd97bdfd0104" title="Definie la couleur du remplissage. " alt="" coords="218,361,407,402"/>
+<area shape="rect" id="node13" href="$classgui_1_1_bouton.html#ac299867580d5d39d60a60039fe757b93" title="Definie la couleur du contour. " alt="" coords="211,427,414,453"/>
+<area shape="rect" id="node14" href="$classgui_1_1_bouton.html#a72f9bcfca56bf51121eae0cf0f739149" title="Definie la couleur du contour. " alt="" coords="204,477,421,504"/>
+<area shape="rect" id="node15" href="$classgui_1_1_bouton.html#aba42e9f194a0584f1d3ff04479084fda" title="Définie l&#39;image à afficher. " alt="" coords="240,528,385,555"/>
+<area shape="rect" id="node16" href="$classgui_1_1_bouton.html#a28f93a602d107b3c02a20677868f472b" title="Definie l&#39;alpha du fond du bouton à l&#39;état de repos. " alt="" coords="223,579,402,605"/>
+<area shape="rect" id="node17" href="$classgui_1_1_bouton.html#a85f00dfbf2b34eb66f934a401684b9f3" title="Teste le survol du gadget par la souris. " alt="" coords="231,680,395,707"/>
+<area shape="rect" id="node20" href="$classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d" title="Dessine le gadget. " alt="" coords="251,629,374,656"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="713,132,867,159"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="915,132,1076,159"/>
+<area shape="rect" id="node12" href="$classgui_1_1_bouton.html#a94ba72e031aa13cffb9658228c4c1f0e" title="Accessuers / mutateurs ///////////////////////. " alt="" coords="498,473,637,500"/>
+<area shape="rect" id="node18" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="490,629,645,656"/>
+<area shape="rect" id="node19" href="$classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401" title="Acceder à m_globalBounds. " alt="" coords="469,680,665,707"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="gui::Fenetre::Glissiere::incrementer" name="gui::Fenetre::Glissiere::incrementer">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre_1_1_glissiere.html#ae482cf8985c8379ea49b792537d82e5d" title="Definie la position de la glissere sur le gadget. " alt="" coords="204,74,355,115"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2" title="Acceder à m_size. " alt="" coords="427,5,569,32"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="417,56,579,83"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#a92017dfa133d5f10ac79756dc332a2c4" title="Faire défiler horizontalement le calque des enfnnts. " alt="" coords="403,107,593,133"/>
+<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#a2e089eb213f6033be8ae902f25a68731" title="Faire défiler verticalement le calque des enfnnts. " alt="" coords="409,157,587,184"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="641,56,795,83"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="843,56,1004,83"/>
+</map>

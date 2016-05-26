@@ -1,0 +1,4 @@
+<map id="app::EcranJeu::EcranJeu" name="app::EcranJeu::EcranJeu">
+<area shape="rect" id="node2" href="$classapp_1_1_ecran_jeu.html#a6c2d5e0c9a600e92eb9bf5fef009729d" title="Initialisation de l&#39;interface graphique. " alt="" coords="220,5,372,32"/>
+<area shape="rect" id="node3" href="$classapp_1_1_application.html#abedd293ac058355e13abd02057c32aee" title="renvois la fenetre sfml de l&#39;application " alt="" coords="420,5,605,32"/>
+</map>

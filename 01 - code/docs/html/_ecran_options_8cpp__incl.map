@@ -1,0 +1,21 @@
+<map id="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/src/appli/ecrans/EcranOptions.cpp" name="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/src/appli/ecrans/EcranOptions.cpp">
+<area shape="rect" id="node2" href="$_ecran_options_8h.html" title="appli/ecrans\\EcranOptions.h" alt="" coords="896,124,1083,151"/>
+<area shape="rect" id="node24" href="$_config_8h.html" title="appli/Config.h" alt="" coords="1269,497,1369,524"/>
+<area shape="rect" id="node4" href="$_ecran_8h.html" title="appli/Ecran.h" alt="" coords="1095,348,1193,375"/>
+<area shape="rect" id="node5" href="$_application_8h.html" title="La classe principale du programme. " alt="" coords="925,199,1053,225"/>
+<area shape="rect" id="node21" href="$_jeu_8h.html" title="jeu/Jeu.h" alt="" coords="43,497,117,524"/>
+<area shape="rect" id="node6" href="$_gestion__ecrans_8h.html" title="appli/Gestion_ecrans.h" alt="" coords="912,273,1067,300"/>
+<area shape="rect" id="node7" href="$_gui_8h.html" title="gui/Gui.h" alt="" coords="813,273,888,300"/>
+<area shape="rect" id="node9" href="$_gadget_8h.html" title="gui/Gadget.h" alt="" coords="695,572,791,599"/>
+<area shape="rect" id="node15" href="$_fabrique_8h.html" title="gui/Fabrique.h" alt="" coords="636,348,740,375"/>
+<area shape="rect" id="node20" href="$_calque_8h.html" title="gui/gadgets/Calque.h" alt="" coords="725,497,869,524"/>
+<area shape="rect" id="node11" href="$_actions_8h.html" title="gui/Actions.h" alt="" coords="1344,647,1443,673"/>
+<area shape="rect" id="node16" href="$_label_8h.html" title="gui/gadgets/Label.h" alt="" coords="294,497,429,524"/>
+<area shape="rect" id="node17" href="$_image_8h.html" title="gui/gadgets/Image.h" alt="" coords="944,497,1083,524"/>
+<area shape="rect" id="node18" href="$_bouton_8h.html" title="gui/gadgets/Bouton.h" alt="" coords="505,497,650,524"/>
+<area shape="rect" id="node19" href="$_fenetre_8h.html" title="gui/gadgets/Fenetre.h" alt="" coords="614,423,762,449"/>
+<area shape="rect" id="node22" href="$_terrain_8h.html" title="Terrain.h" alt="" coords="95,572,167,599"/>
+<area shape="rect" id="node23" href="$_etage_8h.html" title="Etage.h" alt="" coords="144,647,211,673"/>
+<area shape="rect" id="node25" href="$_resource_mgr_8h.html" title="appli/ResourceMgr.h" alt="" coords="1512,572,1653,599"/>
+<area shape="rect" id="node29" href="$_resource_mgr_8inl.html" title="appli/ResourceMgr.inl" alt="" coords="1847,647,1993,673"/>
+</map>

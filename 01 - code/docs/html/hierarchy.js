@@ -1,18 +1,19 @@
 var hierarchy =
 [
     [ "gui::Actions", "classgui_1_1_actions.html", [
-      [ "gui::Gui", "classgui_1_1_gui.html", null ]
+      [ "gui::Gadget", "classgui_1_1_gadget.html", [
+        [ "gui::Bouton", "classgui_1_1_bouton.html", null ],
+        [ "gui::Calque", "classgui_1_1_calque.html", null ],
+        [ "gui::Fenetre", "classgui_1_1_fenetre.html", null ],
+        [ "gui::Gui", "classgui_1_1_gui.html", null ],
+        [ "gui::Image", "classgui_1_1_image.html", null ],
+        [ "gui::Label", "classgui_1_1_label.html", null ]
+      ] ]
     ] ],
     [ "app::Application", "classapp_1_1_application.html", null ],
     [ "app::Config", "classapp_1_1_config.html", null ],
     [ "Drawable", null, [
-      [ "gui::Gadget", "classgui_1_1_gadget.html", [
-        [ "gui::Bouton", "classgui_1_1_bouton.html", null ],
-        [ "gui::Calque", "classgui_1_1_calque.html", null ],
-        [ "gui::Gui", "classgui_1_1_gui.html", null ],
-        [ "gui::Image", "classgui_1_1_image.html", null ],
-        [ "gui::Label", "classgui_1_1_label.html", null ]
-      ] ],
+      [ "gui::Gadget", "classgui_1_1_gadget.html", null ],
       [ "jeu::Etage", "classjeu_1_1_etage.html", null ],
       [ "jeu::Jeu", "classjeu_1_1_jeu.html", null ],
       [ "jeu::PlanteVerte", "classjeu_1_1_plante_verte.html", null ],
@@ -20,7 +21,9 @@ var hierarchy =
     ] ],
     [ "app::Ecran", "classapp_1_1_ecran.html", [
       [ "app::EcranAccueil", "classapp_1_1_ecran_accueil.html", null ],
-      [ "app::EcranJeu", "classapp_1_1_ecran_jeu.html", null ]
+      [ "app::EcranJeu", "classapp_1_1_ecran_jeu.html", null ],
+      [ "app::EcranOptions", "classapp_1_1_ecran_options.html", null ],
+      [ "app::EcranPause", "classapp_1_1_ecran_pause.html", null ]
     ] ],
     [ "enable_shared_from_this", null, [
       [ "gui::Gadget", "classgui_1_1_gadget.html", null ]
@@ -37,6 +40,7 @@ var hierarchy =
     [ "app::ResourceMgr< RESOURCE, IDENTIFIANT >", "classapp_1_1_resource_mgr.html", null ],
     [ "app::ResourceMgr< sf::Font, int >", "classapp_1_1_resource_mgr.html", null ],
     [ "app::ResourceMgr< sf::Music, IDENTIFIANT >", "classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html", null ],
+    [ "app::ResourceMgr< sf::Shader, int >", "classapp_1_1_resource_mgr.html", null ],
     [ "app::ResourceMgr< sf::Texture, int >", "classapp_1_1_resource_mgr.html", null ],
     [ "Transformable", null, [
       [ "gui::Gadget", "classgui_1_1_gadget.html", null ],

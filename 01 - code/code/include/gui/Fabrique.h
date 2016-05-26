@@ -91,8 +91,9 @@ public:
     /////////////////////////////////////////////////
     std::shared_ptr<Fenetre> fenetre  ( std::string titre = "Fenetre"
                                       , sf::Vector2i taille = {-1,-1}
-                                      , bool draggable = true
-                                      , bool resizable = true );
+                                      , bool draggable = false
+                                      , bool resizable = false
+                                      , bool fermable  = false );
 
 
 

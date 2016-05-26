@@ -13,10 +13,12 @@
 namespace app {
 
 /////////////////////////////////////////////////
-EcranAccueil::EcranAccueil( Application*  appli )
-: Ecran         ( appli )
-, m_interface   ( std::make_shared<gui::Gui>( appli->getFenetre() ) )
+EcranAccueil::EcranAccueil( Gestion_ecrans&  pileEcrans , Contexte contexte  )
+: Ecran         ( pileEcrans,  contexte )
+//, m_interface   ( std::make_shared<gui::Gui>( contexte.fenetre ) )
 {
+    m_interface   = std::make_shared<gui::Gui>( m_contexte.fenetre ) ;
+
     // Initialisation de l'interface graphique.
     initGUI();
 }
@@ -31,22 +33,24 @@ EcranAccueil::~EcranAccueil( )
 /////////////////////////////////////////////////
 void EcranAccueil::traiter_evenements    ( const sf::Event& event )
 {
-    m_interface->traiterEvenements  ( event );
+    if ( ! m_pause )
+        m_interface->traiterEvenements  ( event );
 }
 
 
 /////////////////////////////////////////////////
 void EcranAccueil::actualiser            ( sf::Time deltaT )
 {
-    m_interface->actualiser    (  );
+    if ( ! m_pause )
+        m_interface->actualiser    (  );
 }
 
 
 /////////////////////////////////////////////////
 void EcranAccueil::dessiner ()
 {
-    m_appli->getFenetre()->draw ( m_fond );
-    m_appli->getFenetre()->draw ( *m_interface );
+    m_contexte.fenetre->draw ( m_fond );
+    m_contexte.fenetre->draw ( *m_interface );
 
 }
 
@@ -56,128 +60,52 @@ void EcranAccueil::dessiner ()
 void
 EcranAccueil::initGUI  ( )
 {
-    // Initialisation du fond.
+    /// Initialisation du fond. ///
     m_fond.setPosition(0,0);
-    m_fond.setSize       ( sf::Vector2f ( m_appli->getFenetre()->getSize() ) );
-    m_fond.setFillColor  ( sf::Color (50,100,50));
+    m_fond.setSize       ( sf::Vector2f ( m_contexte.fenetre->getSize() ) );
+    m_fond.setFillColor  ( sf::Color (50,70,50));
+    m_fond.setTexture    ( &Config::ms_textures.get ( Config::Images::FondAccueil ) );
 
-    // interactions de l'interface
-    m_interface->lier (  sf::Keyboard::Escape
-                       , [this](){  m_appli->getFenetre()->close();  }
-                       );
+    /// l'interface graphique //////
+    // la fenetre //
+    auto   fenetrePrincipale   =   m_interface->creer.fenetre( "  meTaORGanISmE" , { 230, 125 }, true );
+    fenetrePrincipale->aligner( m_interface );
 
-    // creation de la fenetre
-    std::shared_ptr<gui::Label>     lbl_1  =   m_interface->creer.label( );
-    lbl_1->setTaille     ( 20 );
-    lbl_1->setCouleur    ( sf::Color(255,255,0) );
-    lbl_1->setPosition   ( 200,220 );
+    // les boutons //
+    sf::Vector2i tailleBtn = { 200 , 20 } ;
+    auto    btnNEW      =   m_interface->creer.bouton( "Nouvel partiE" , tailleBtn );
+    auto    btnOptions  =   m_interface->creer.bouton( "OPtionS" , tailleBtn );
+    auto    btnQuitter  =   m_interface->creer.bouton( "quITteR" , tailleBtn );
 
-    std::shared_ptr<gui::Label>     lblTitre  =   m_interface->creer.label( );
-    lblTitre->setPosition   ( 200,200 );
-    lblTitre->setCouleur    ( sf::Color(255,255,0) );
-    lblTitre->setTaille     ( 20 );
-    lblTitre->setStyle      ( sf::Text::Style::Italic );
+    fenetrePrincipale->ajouterEnfant    ( btnNEW );
+    fenetrePrincipale->ajouterEnfant    ( btnOptions );
+    fenetrePrincipale->ajouterEnfant    ( btnQuitter );
 
-    std::shared_ptr<gui::Label>     lbl_2  =   m_interface->creer.label( );
-    lbl_2->setTaille     ( 20 );
-    lbl_2->setCouleur    ( sf::Color(255,255,0) );
-    lbl_2->setStyle      ( sf::Text::Style::Bold );
-    lbl_2->setPosition   ( 200,250 );
+    btnNEW->aligner( fenetrePrincipale );
+    btnNEW->setPosition ( btnNEW->getPosition ().x, 10. );
+    btnOptions->aligner( btnNEW );
+    btnOptions->move( 0 , 30 );
+    btnQuitter->aligner( btnOptions );
+    btnQuitter->move( 0 , 30 );
 
-
-    std::shared_ptr<gui::Image>     img_1  =   m_interface->creer.image( Config::ms_textures.get( Config::Images::image_1 ) );
-    //img_1->setSize ( {20,200});
-//    img_1->setImage( Config::ms_textures.get( Config::Images::image_1 ) );
-//    img_1->setImage( Config::ms_textures.get( Config::Images::image_1 ) );
-    img_1->setPosition   ( 200,300 );
-
-    std::shared_ptr<gui::Image>     img_2  =   m_interface->creer.image( Config::ms_textures.get( Config::Images::image_2 ) );
-    //img_1->setSize ( {20,200});
-    img_2->setTexture( Config::ms_textures.get( Config::Images::image_1 ) );
-//    img_1->setImage( Config::ms_textures.get( Config::Images::image_1 ) );
-    img_2->setPosition   ( 220,320 );
-
-
-    std::shared_ptr<gui::Bouton>    boutonTexte_1   =   m_interface->creer.bouton( "Bouton texte sans taille" );
-    boutonTexte_1->setPosition   ( 400,200 );
-
-    std::shared_ptr<gui::Bouton>    boutonTexte_2   =   m_interface->creer.bouton( "Bouton texte AVEC taille" , {300,20});
-
-//    boutonTexte_2->setIcone( Config::ms_textures.get( Config::Images::image_2 ) );
-
-    boutonTexte_2->setPosition   ( 410,210 );
-//    boutonTexte_2->setSize ({ 30,30});
-
-    // interactions de l'interface
-    m_interface->lier (  sf::Keyboard::Space
-                       , [this, boutonTexte_1 ](){  boutonTexte_1->setEtat( gui::Gadget::Etat::Presse );  }
-                       );
-
-    // interactions de l'interface
-    boutonTexte_1->lier (  gui::Actions::Evenement::onBtnG_relacher
-                        , [this , boutonTexte_1 ](){
-                            std::cout << "ACTION BOUTON\n";
-                        });
-
-//    boutonTexte_1->setRemplissageCouleur    ( sf::Color(0,0,200));
-//    boutonTexte_1->setContourCouleur        ( sf::Color(250,250,0));
-//    boutonTexte_1->setContourEpaisseur      ( 3 );
-//    boutonTexte_1->setAlphaEtats            ( 255,255,0);
-
-    std::shared_ptr<gui::Bouton>    boutonTexte_3   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) );
-    boutonTexte_3->setPosition   ( 400,300 );
-    boutonTexte_3->setAlphaEtats            (   0, 100, 250 );
-    boutonTexte_3->setContourEpaisseur      ( 0 );
-//    boutonTexte_3->setMarge({20,20});
-
-    std::shared_ptr<gui::Bouton>    boutonTexte_4   =   m_interface->creer.bouton( Config::ms_textures.get( Config::Images::image_2 ) , { 40, 20 });
-    boutonTexte_4->setPosition   ( 400,350 );
-
-
-
-
-
-
-
-
-    std::shared_ptr<gui::Fenetre>    fenetreTest   =   m_interface->creer.fenetre( "Fenetre test" , { 200, 120 } );
-
-    std::shared_ptr<gui::Fenetre>    fenetreTest2   =   m_interface->creer.fenetre( "Fenetre test2" , { 200, 120 } );
-
-    auto boutonPourFenetre  = m_interface->creer.bouton ("Bouton dans la fenetre");
-    boutonPourFenetre->setPosition ( 0, 5 );
-
-    auto boutonPourFenetre2 = m_interface->creer.bouton ("Bouton dans la fenetre super long pour voir quand ca depasse");
-    boutonPourFenetre2->setPosition ( 0, 30 );
-
-    auto boutonPourFenetre3 = m_interface->creer.bouton ("Autre Bouton dans la fenetre super long pour voir quand ca depasse");
-    boutonPourFenetre3->setPosition ( 0, 70 );
-
-
-    fenetreTest->ajouterEnfant( boutonPourFenetre );
-    fenetreTest->ajouterEnfant( boutonPourFenetre2 );
-    fenetreTest->ajouterEnfant( boutonPourFenetre3 );
-    fenetreTest->setPosition   ( 250,250 );
-    fenetreTest->setFondTexture( Config::ms_textures.get( Config::Images::fenetreFond1 ) );
-    fenetreTest->setFondCouleur( sf::Color::White );
-
-    fenetreTest->lier (  gui::Actions::Evenement::onFen_fermer
+    /// interactions //////
+    // les boutons //
+    btnNEW->lier        (  gui::Actions::Evenement::onBtnG_relacher
                         , [this](){
-                            std::cout <<"Fermer la fenetre\n";
-                            m_appli->getFenetre()->close();
-                        });
+                         retirerEcran();
+                         ajouterEcran( app::Ecrans::Jeu );
+                         });
+    btnOptions->lier    (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this](){  ajouterEcran( app::Ecrans::Options ); });
+    btnQuitter->lier    (  gui::Actions::Evenement::onBtnG_relacher
+                        , [this](){  m_contexte.fenetre->close();  });
 
+    // le clavier //
+    m_interface->lier   ( sf::Keyboard::Escape
+                        , [this](){
+                         std::cout << "ACCUEIL:Escape\n";
+                         m_contexte.fenetre->close();  });
 
-
-    boutonPourFenetre->lier (  gui::Actions::Evenement::onBtnG_relacher
-                        , [](){
-                            std::cout << "ACTION BOUTON 2\n";
-                        });
-
-    boutonPourFenetre2->lier (  gui::Actions::Evenement::onBtnG_relacher
-                        , [](){
-                            std::cout << "ACTION BOUTON 3\n";
-                        });
 
 }   // fin init GUI
 

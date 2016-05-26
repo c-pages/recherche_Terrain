@@ -1,0 +1,4 @@
+<map id="gui::Calque::testerSurvol" name="gui::Calque::testerSurvol">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="SAvoir si le gadget est visible. " alt="" coords="237,5,391,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#af2f1b38002fb1eaf0b31b86b0c3e4401" title="Acceder à m_globalBounds. " alt="" coords="216,56,412,83"/>
+</map>

@@ -13,6 +13,7 @@ Gadget::Gadget ()
 : m_visible         ( true )
 , m_parent          ( nullptr )
 , m_enfants         (  )
+, m_enfantsASupprimer ( )
 , m_size            ( {0,0} )
 , m_globalBounds    ( {0,0,0,0} )
 , m_localBounds     ( {0,0,0,0} )
@@ -39,38 +40,52 @@ Gadget::Gadget ()
 
 
 ////////////////////////////////////////////////////////////
+void Gadget::setPosition( std::shared_ptr<Gadget> cible )
+{
+    setPosition ( cible->getPosition() );
+}
+
+
+////////////////////////////////////////////////////////////
 void Gadget::setPosition(int x, int y)
 {
     Transformable::setPosition ( (int)(x) , (int)(y) );
-    actualiser();
-}
 
+    actualiser();
+
+}
 
 ////////////////////////////////////////////////////////////
 void Gadget::setPosition(float x, float y)
 {
-    Transformable::setPosition ( (int)(x) , (int)(y) );
-    actualiser();
-}
+    setPosition ( (int)(x) , (int)(y) );
 
+}
 
 ////////////////////////////////////////////////////////////
 void Gadget::setPosition(const sf::Vector2f& position)
 {
-    Transformable::setPosition ( (int)(position.x) , (int)(position.y) );
-    actualiser();
+    setPosition ( (int)(position.x) , (int)(position.y) );
 }
 
 ////////////////////////////////////////////////////////////
 void Gadget::setPosition(const sf::Vector2i& position)
 {
-    Transformable::setPosition ( position.x , position.y );
+    setPosition ( (int)( position.x) , (int)(position.y) );
+}
+
+/////////////////////////////////////////////////
+void Gadget::move(float offsetX, float offsetY)
+{
+    Transformable::move( offsetX,  offsetY);
     actualiser();
 }
 
-
-
-
+////////////////////////////////////////////////////////////
+void Gadget::move(const sf::Vector2f& offset)
+{
+    move( offset.x, offset.y );
+}
 
 /////////////////////////////////////////////////
 sf::Vector2f Gadget::getPosAbs () const
@@ -81,7 +96,6 @@ sf::Vector2f Gadget::getPosAbs () const
         return getPosition();
 }
 
-
 /////////////////////////////////////////////////
 void Gadget::setSize( int x , int y )
 {
@@ -89,13 +103,111 @@ void Gadget::setSize( int x , int y )
     actualiser();
 }
 
-
-
 /////////////////////////////////////////////////
 void Gadget::setSize( sf::Vector2i val ){
     m_size = val;
     actualiser();
 };
+
+/////////////////////////////////////////////////
+void Gadget::aligner ( std::shared_ptr<Gadget> cible, Alignement alignementThis, Alignement alignementCible)
+{
+    if ( cible == nullptr ) return;
+
+    sf::Vector2i pt_origine;
+    sf::Vector2i pt_cible;
+    sf::Vector2f pt_destination;
+
+    // l'origine //////
+
+    // la ligne vert. de gauche du gadget a bouger
+    if ( alignementThis == Alignement::GaucheHaut
+    ||   alignementThis == Alignement::Gauche
+    ||   alignementThis == Alignement::GaucheBas )
+        pt_origine.x = getPosAbs().x ;
+
+    // la ligne vert. du milieu du gadget a bouger
+    else if ( alignementThis == Alignement::Haut
+         ||   alignementThis == Alignement::Centre
+         ||   alignementThis == Alignement::Bas )
+        pt_origine.x = getPosAbs().x + getSize().x/2;
+
+    // la ligne vert. de droite du gadget a bouger
+    else
+        pt_origine.x = getPosAbs().x  + getSize().x;
+
+
+    // la ligne horiz. du haut du gadget a bouger
+    if ( alignementThis == Alignement::GaucheHaut
+    ||   alignementThis == Alignement::Haut
+    ||   alignementThis == Alignement::DroiteHaut )
+        pt_origine.y = getPosAbs().y;
+
+    // la ligne horiz. du milieu du gadget a bouger
+    else if ( alignementThis == Alignement::Gauche
+         ||   alignementThis == Alignement::Centre
+         ||   alignementThis == Alignement::Droite )
+        pt_origine.y = getPosAbs().y + getSize().y/2;
+
+    // la ligne horiz. du bas du gadget a bouger
+    else
+        pt_origine.y = getPosAbs().y + getSize().y;
+
+
+
+
+
+    // la destination //////
+
+    // la ligne vert. de gauche du gadget a bouger
+    if ( alignementCible == Alignement::GaucheHaut
+    ||   alignementCible == Alignement::Gauche
+    ||   alignementCible == Alignement::GaucheBas )
+        pt_cible.x = cible->getPosAbs().x ;
+
+    // la ligne vert. du milieu du gadget a bouger
+    else if ( alignementCible == Alignement::Haut
+         ||   alignementCible == Alignement::Centre
+         ||   alignementCible == Alignement::Bas )
+        pt_cible.x = cible->getPosAbs().x + cible->getSize().x/2;
+
+    // la ligne vert. de droite du gadget a bouger
+    else
+        pt_cible.x = cible->getPosAbs().x  + cible->getSize().x;
+
+
+    // la ligne horiz. du haut du gadget a bouger
+    if ( alignementCible == Alignement::GaucheHaut
+    ||   alignementCible == Alignement::Haut
+    ||   alignementCible == Alignement::DroiteHaut )
+        pt_cible.y = cible->getPosAbs().y;
+
+    // la ligne horiz. du milieu du gadget a bouger
+    else if ( alignementCible == Alignement::Gauche
+         ||   alignementCible == Alignement::Centre
+         ||   alignementCible == Alignement::Droite )
+        pt_cible.y = cible->getPosAbs().y + cible->getSize().y/2;
+
+    // la ligne horiz. du bas du gadget a bouger
+    else
+        pt_cible.y = cible->getPosAbs().y + cible->getSize().y;
+
+
+    // et on deplace le gadget sur le point de destination
+    pt_destination = { pt_cible.x - pt_origine.x ,  pt_cible.y - pt_origine.y };
+
+    move ( pt_destination );
+
+    actualiser();
+
+}
+
+
+
+
+
+
+
 
 
 /////////////////////////////////////////////////
@@ -119,7 +231,6 @@ sf::IntRect  Gadget::getEnfantsLocalBounds()
         if (LB.top  < minY) minY = LB.top;
         if (LB.left + LB.width > maxX ) maxX = LB.left + LB.width;
         if (LB.top  + LB.height> maxY ) maxY = LB.top  + LB.height;
-
     }
 
     result  = { minX, minY, maxX, maxY };
@@ -138,6 +249,9 @@ void Gadget::ajouterEnfant ( std::shared_ptr<Gadget> nouvelElement ){
     // puis on l'ajoute
     m_enfants.push_back( nouvelElement );
     nouvelElement->setParent ( this );
+
+    nouvelElement->actualiser();
+    actualiser();
 
 }
 

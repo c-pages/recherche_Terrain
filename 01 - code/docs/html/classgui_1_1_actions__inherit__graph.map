@@ -1,3 +1,9 @@
 <map id="gui::Actions" name="gui::Actions">
-<area shape="rect" id="node2" href="$classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme&#45;machine du jeu. D&#39;un coté un système de fenêtre..." alt="" coords="17,80,84,107"/>
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html" title="Un gadget est la classe abstraite des éléments de l&#39;interface. " alt="" coords="281,80,370,107"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton.html" title="Un bouton rectangulaire. " alt="" coords="5,155,93,181"/>
+<area shape="rect" id="node4" href="$classgui_1_1_calque.html" title="Un calque permet de grouper un ensemble de gadgets et du coup de gérer la position de la profondeur d..." alt="" coords="118,155,205,181"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html" title="Une fenêtre encapsule des éléments d&#39;interface. " alt="" coords="229,155,320,181"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gui.html" title="Le Gui gère l&#39;ensemble des interactions homme&#45;machine du jeu. D&#39;un coté un système de fenêtre..." alt="" coords="344,155,411,181"/>
+<area shape="rect" id="node7" href="$classgui_1_1_image.html" title="Une simple image. " alt="" coords="435,155,517,181"/>
+<area shape="rect" id="node8" href="$classgui_1_1_label.html" title="Un simple label. " alt="" coords="542,155,621,181"/>
 </map>

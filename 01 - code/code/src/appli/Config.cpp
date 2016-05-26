@@ -71,6 +71,7 @@ void Config::initTextures()
     ms_textures.load( Images::image_1       , "media/img/avatar 2.jpg"  );
     ms_textures.load( Images::image_2       , "media/img/ico_fenetre.png" );
     ms_textures.load( Images::fenetreFond1  , "media/img/fenetre_fond_1.jpg" );
+    ms_textures.load( Images::FondAccueil   , "media/img/Fond_Accueil.jpg" );
 }
 
 /////////////////////////////////////////////////

@@ -1,0 +1,17 @@
+<map id="EcranJeu.h" name="EcranJeu.h">
+<area shape="rect" id="node3" href="$_ecran_8h.html" title="appli/Ecran.h" alt="" coords="73,229,171,256"/>
+<area shape="rect" id="node4" href="$_application_8h.html" title="La classe principale du programme. " alt="" coords="365,80,493,107"/>
+<area shape="rect" id="node20" href="$_jeu_8h.html" title="jeu/Jeu.h" alt="" coords="1162,379,1237,405"/>
+<area shape="rect" id="node5" href="$_gestion__ecrans_8h.html" title="appli/Gestion_ecrans.h" alt="" coords="159,155,314,181"/>
+<area shape="rect" id="node7" href="$_gui_8h.html" title="gui/Gui.h" alt="" coords="469,155,543,181"/>
+<area shape="rect" id="node9" href="$_gadget_8h.html" title="gui/Gadget.h" alt="" coords="561,453,657,480"/>
+<area shape="rect" id="node14" href="$_fabrique_8h.html" title="gui/Fabrique.h" alt="" coords="615,229,719,256"/>
+<area shape="rect" id="node19" href="$_calque_8h.html" title="gui/Calque.h" alt="" coords="511,379,605,405"/>
+<area shape="rect" id="node10" href="$_actions_8h.html" title="gui/Actions.h" alt="" coords="22,528,121,555"/>
+<area shape="rect" id="node15" href="$_label_8h.html" title="gui/gadgets/Label.h" alt="" coords="901,379,1036,405"/>
+<area shape="rect" id="node16" href="$_image_8h.html" title="gui/gadgets/Image.h" alt="" coords="297,379,435,405"/>
+<area shape="rect" id="node17" href="$_bouton_8h.html" title="gui/gadgets/Bouton.h" alt="" coords="732,379,877,405"/>
+<area shape="rect" id="node18" href="$_fenetre_8h.html" title="gui/gadgets/Fenetre.h" alt="" coords="593,304,741,331"/>
+<area shape="rect" id="node21" href="$_terrain_8h.html" title="Terrain.h" alt="" coords="1162,453,1234,480"/>
+<area shape="rect" id="node22" href="$_etage_8h.html" title="Etage.h" alt="" coords="1166,528,1233,555"/>
+</map>

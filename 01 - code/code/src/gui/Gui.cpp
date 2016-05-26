@@ -3,15 +3,16 @@
 /////////////////////////////////////////////////
 
 #include <iostream>
+#include <cassert>
 
-#include <gui/Gui.h>
-#include <gui/Calque.h>
-#include <gui/Fabrique.h>
+#include "gui/Gui.h"
+#include "gui/gadgets/Calque.h"
+#include "gui/Fabrique.h"
 
 
 namespace gui {
 
-sf::RenderWindow *  Gui::ms_fenetre = nullptr;
+sf::RenderWindow*   Gui::ms_fenetre = nullptr;
 
 
 
@@ -26,13 +27,16 @@ Gui::Gui ( sf::RenderWindow* fenetre )
 
     // la fenetre SFML
     ms_fenetre = fenetre;
+    assert( ms_fenetre != nullptr );
+
+    m_size = { ms_fenetre->getSize().x , ms_fenetre->getSize().y } ;
 
     /// Initialisation des claques
     ajouterEnfant( m_calqueFond );
     ajouterEnfant( m_calqueFenetres );
 
-    m_calqueFond->setSize ( { ms_fenetre->getSize().x, ms_fenetre->getSize().y } );
-    m_calqueFenetres->setSize ( { ms_fenetre->getSize().x, ms_fenetre->getSize().y } );
+    m_calqueFond->setSize       ( { ms_fenetre->getSize().x, ms_fenetre->getSize().y } );
+    m_calqueFenetres->setSize   ( { ms_fenetre->getSize().x, ms_fenetre->getSize().y } );
 }
 
 
@@ -80,6 +84,9 @@ void Gui::traiterEvenements (sf::Event evenement)
 
     /// on traite les évènements des enfants
     Gadget::traiterEvenements ( evenement );
+
+    // on nettoie les listes de gadget a supprimer
+    actuaListeSuppression ();
 
     /// les gadgets survolé et survolé back
     auto boutonSurvoleBack = m_gadgetSurvole;
@@ -162,9 +169,10 @@ void Gui::traiterEvenements (sf::Event evenement)
             if ( m_gadgetPresse ==  nullptr )
                 return;
 
+            m_gadgetPresse->setEtat(Gadget::Etat::Repos);
+
             // On survol le bouton pressé
             if ( m_gadgetSurvole ==  m_gadgetPresse ){
-
 
                 // on declenche l'evenement RELACHER DEDANS
                 if ( evenement.mouseButton.button == sf::Mouse::Left )
@@ -180,11 +188,13 @@ void Gui::traiterEvenements (sf::Event evenement)
                     m_gadgetPresse->declencher  ( Evenement::onBtnG_relacherDehors );
             }
 
-
             // on reset m_boutonPressé
-//            if ( m_gadgetPresse != nullptr ) {
-                m_gadgetPresse->setEtat(Gadget::Etat::Repos);
-                m_gadgetPresse = nullptr;
+            m_gadgetPresse = nullptr;
+
+//            if ( m_gadgetPresse ) {
+//                // on reset m_boutonPressé
+//                m_gadgetPresse->setEtat(Gadget::Etat::Repos);
+//                m_gadgetPresse = nullptr;
 //            }
 
 
@@ -195,7 +205,6 @@ void Gui::traiterEvenements (sf::Event evenement)
 
             // Si on survole un bouton
             if ( m_gadgetSurvole != nullptr ){
-
                 // On déclenche l'action en fonction
                 if ( evenement.mouseWheel.delta > 0 )
                     m_gadgetSurvole->declencher ( Evenement::onBtnM_roulerHaut );
@@ -208,11 +217,7 @@ void Gui::traiterEvenements (sf::Event evenement)
         ///////// on ne traite pas les autres types d'évènements /////////////////////////////////////////
         default: break;
 
-
     }
-
-
-    actuaListeSuppression ();
 
 }
 
@@ -220,7 +225,12 @@ void Gui::traiterEvenements (sf::Event evenement)
 /////////////////////////////////////////////////
 void Gui::actualiser ()
 {
+
 //    std::cout << "Gui::actualiser\n";
+
+    // on actualise les enfants
+//    for ( auto enfant : m_enfants )
+//        enfant->actualiser ( );
 
 }
 

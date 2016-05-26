@@ -14,12 +14,13 @@
 /////////////////////////////////////////////////
 //  Headers
 /////////////////////////////////////////////////
-#include <appli/Ecran.h>
-#include <appli/Gestion_ecrans.h>
+#include "appli/Ecran.h"
+#include "appli/Gestion_ecrans.h"
+#include "gui/Gui.h"
+
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-#include "gui/Gui.h"
 
 namespace app {  ///<  app Espace de l'application.
 
@@ -31,125 +32,129 @@ class Ecran;
 /////////////////////////////////////////////////
 class Application
 {
-    public:
-
-        enum Ecrans {
-            Accueil,
-            Jeu
-
-        };
-
-        /////////////////////////////////////////////////
-        /// \brief Constructeur
-        ///
-        /////////////////////////////////////////////////
-        Application();
-
-        /////////////////////////////////////////////////
-        /// \brief Destructeur
-        ///
-        /////////////////////////////////////////////////
-        virtual ~Application();
-
-    public:
+public:
 
 
 
-        /////////////////////////////////////////////////
-        /// \brief Changer d'écran
-        ///
-        /// \return Rien
-        ///
-        /////////////////////////////////////////////////
-        void changerEcran( Ecrans ecran );
+    /////////////////////////////////////////////////
+    /// \brief Constructeur
+    ///
+    /////////////////////////////////////////////////
+    Application();
 
-        /////////////////////////////////////////////////
-        /// \brief ajouter un écran
-        ///
-        /// \return Rien
-        ///
-        /////////////////////////////////////////////////
-        void ajouterEcran( Ecrans ecran );
+    /////////////////////////////////////////////////
+    /// \brief Destructeur
+    ///
+    /////////////////////////////////////////////////
+    virtual ~Application();
 
-        /////////////////////////////////////////////////
-        /// \brief retirer un écran
-        ///
-        /// \return Rien
-        ///
-        /////////////////////////////////////////////////
-        void retirerEcran(  );
+public:
 
 
-        /////////////////////////////////////////////////
-        /// \brief La boucle principale.
-        ///
-        /// \return Rien
-        ///
-        /////////////////////////////////////////////////
-        void executer();
+/*
+    /////////////////////////////////////////////////
+    /// \brief Changer d'écran
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void changerEcran( Ecrans::ID ecranID );
+*/
+//    /////////////////////////////////////////////////
+//    /// \brief ajouter un écran
+//    ///
+//    /// \return Rien
+//    ///
+//    /////////////////////////////////////////////////
+//    void ajouterEcran( Ecrans::ID ecranID );
+//
+//    /////////////////////////////////////////////////
+//    /// \brief retirer un écran
+//    ///
+//    /// \return Rien
+//    ///
+//    /////////////////////////////////////////////////
+//    void retirerEcran( );
+//
+//    /////////////////////////////////////////////////
+//    /// \brief vider les écrans
+//    ///
+//    /// \return Rien
+//    ///
+//    /////////////////////////////////////////////////
+//    void viderEcrans( );
+/*
+    /////////////////////////////////////////////////
+    /// \brief retire un écran de la pile
+    ///
+    /// \param index index de l'Ecran à  retirer à  la pile active.
+    /// \return Rien.
+    ///
+    /////////////////////////////////////////////////
+    void retirer ( unsigned int index );
+*/
+    /////////////////////////////////////////////////
+    /// \brief La boucle principale.
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void executer( );
 
-        /////////////////////////////////////////////////
-        /// \brief La gestion des évènements utilisateurs.
-        ///
-        ///  Gère les entrées claviers, souris, fenetre ...
-        /// \return Rien
-        ///
-        /////////////////////////////////////////////////
-        void traiter_evenements ();
+    /////////////////////////////////////////////////
+    /// \brief La gestion des évènements utilisateurs.
+    ///
+    ///  Gère les entrées claviers, souris, fenetre ...
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void traiter_evenements ();
 
-        /////////////////////////////////////////////////
-        /// \brief Actualiser les éléments.
-        ///
-        /// Actualiser les différents éléments du ou des écrans actifs.
-        /// \param deltaT          Un \e float qui indique le delta du temps écoulé depuis la dernière actualisation.
-        /// pour ponderer les mouvements en fonction du temps et ainsi avoir une indépendance entre animation et frame rate.
-        ///
-        /////////////////////////////////////////////////
-        void actualiser ( sf::Time deltaT );
+    /////////////////////////////////////////////////
+    /// \brief Actualiser les éléments.
+    ///
+    /// Actualiser les différents éléments du ou des écrans actifs.
+    /// \param deltaT          Un \e float qui indique le delta du temps écoulé depuis la dernière actualisation.
+    /// pour ponderer les mouvements en fonction du temps et ainsi avoir une indépendance entre animation et frame rate.
+    ///
+    /////////////////////////////////////////////////
+    void actualiser ( sf::Time deltaT );
 
-        /////////////////////////////////////////////////
-        /// \brief Rendre les éléments.
-        ///
-        /// Dessiner les différents éléments du ou des écrans actifs.
-        /// \return Rien
-        ///
-        /////////////////////////////////////////////////
-        void dessiner ( );
+    /////////////////////////////////////////////////
+    /// \brief Rendre les éléments.
+    ///
+    /// Dessiner les différents éléments du ou des écrans actifs.
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void dessiner ( );
 
-        /////////////////////////////////////////////////
-        /// \brief renvois la fenetre sfml de l'application
-        ///
-        /// \return la fenetre sfml de l'application
-        ///
-        /////////////////////////////////////////////////
-        sf::RenderWindow*    getFenetre();
-
-
-//        /////////////////////////////////////////////////
-//        /// \brief renvois le gestionnaire d'interface
-//        ///
-//        /// \return le gestionnaire d'interface
-//        ///
-//        /////////////////////////////////////////////////
-//        std::shared_ptr<gui::Gui>    getInterface() {return m_interface;};
+//    /////////////////////////////////////////////////
+//    /// \brief renvois la fenetre sfml de l'application
+//    ///
+//    /// \return la fenetre sfml de l'application
+//    ///
+//    /////////////////////////////////////////////////
+//    sf::RenderWindow&    getFenetre();
 
 
-        /////////////////////////////////////////////////
-        /// \brief renvois le gestionnaire d'interface
-        ///
-        /// \return le gestionnaire d'interface
-        ///
-        /////////////////////////////////////////////////
-//        std::shared_ptr<gui::Interface>    getEcran( int i ) {return m_interface;};
+private:
+    /////////////////////////////////////////////////
+    /// \brief Enregistrer tout les écrans de l'appli
+    ///
+    /// Se fait une fois à la construction de l'appli.
+    /////////////////////////////////////////////////
+    void    enregistrerEcrans ();
 
-    private:
 
-        /////////////////////////////////////////////////
-        // Les membres
-        /////////////////////////////////////////////////
-        Gestion_ecrans              m_ecrans;       ///< Le gestionnaire des écrans.
-        sf::RenderWindow*           m_fenetre;      ///< La fenêtre SFML
-//        std::shared_ptr<gui::Gui>   m_interface;    ///< Le gestionnaire d'interface
+private:
+
+    /////////////////////////////////////////////////
+    // Les membres
+    /////////////////////////////////////////////////
+    sf::RenderWindow    m_fenetre;  ///< La fenêtre SFML
+    Gestion_ecrans      m_ecrans;   ///< Le gestionnaire des écrans.
+
 
 };
 }; // fin namespace app
@@ -168,7 +173,7 @@ class Application
 ///
 /// Peut-être pour tester d'autre trucs, comme la bibilo d'interface graphique... ou comme base pour demarrer un nouveau projet.
 ///
-/// Manipule les différents écrans de l'application à l'aide d'une boucle infernalede type :
+/// Manipule les différents écrans de l'application à  l'aide d'une boucle infernale de type :
 /// \li Ecouter les évenements utilisateurs ( claviers, cliques...).
 /// \li Actualiser les parametres de tout les éléments ( position, couleurs, points de vies ... ).
 /// \li Dessiner les éléments dans la fenetre

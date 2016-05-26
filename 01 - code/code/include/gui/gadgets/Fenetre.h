@@ -6,7 +6,7 @@
 // Headers
 /////////////////////////////////////////////////
 #include "gui/Gadget.h"
-#include <gui/Calque.h>
+#include <gui/gadgets/Calque.h>
 #include "gui/gadgets/Bouton.h"
 
 #include <SFML/Graphics.hpp>
@@ -312,7 +312,7 @@ public:
     ///
     /// \param val true:fenêtre redimmensionable, false, fenêtre fixe
     /////////////////////////////////////////////////
-    void setResizable( bool val ){ m_resizable = val; };
+    void setResizable( bool val ){ m_resizable = val; m_redim.setVisible(val); };
 
     /////////////////////////////////////////////////
     /// \brief Acceder à m_resizable

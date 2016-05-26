@@ -7,10 +7,17 @@
 #include <memory>
 #include "gui/Gadget.h"
 #include "gui/Fabrique.h"
-#include "gui/Calque.h"
+#include "gui/gadgets/Calque.h"
 #include <iostream>
 
+
+
+/////////////////////////////////////////////////
+/// \brief Le gui regroupe tout les élément consernant les interfaces graphiques
+///
+/////////////////////////////////////////////////
 namespace gui {
+
 
 /////////////////////////////////////////////////
 /// \brief Le Gui gère l'ensemble des interactions homme-machine du jeu.
@@ -142,7 +149,7 @@ public:
 private:
 
     /// la fenetre SFML /////////////////////
-    static sf::RenderWindow *  ms_fenetre;          ///< La fenêtre SFML de l'application, pour acceder aux coordonnées de la souris par exemple.
+    static sf::RenderWindow*  ms_fenetre;          ///< La fenêtre SFML de l'application, pour acceder aux coordonnées de la souris par exemple.
 
     /// les calques /////////////////////
     friend class                Fabrique;

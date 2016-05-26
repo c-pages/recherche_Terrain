@@ -1,0 +1,12 @@
+<map id="Ecran.h" name="Ecran.h">
+<area shape="rect" id="node2" href="$_application_8h.html" title="La classe principale du programme. " alt="" coords="133,155,231,181"/>
+<area shape="rect" id="node3" href="$_ecran_accueil_8h.html" title="EcranAccueil.h" alt="" coords="36,229,147,256"/>
+<area shape="rect" id="node6" href="$_ecran_jeu_8h.html" title="EcranJeu.h" alt="" coords="321,229,408,256"/>
+<area shape="rect" id="node9" href="$_gestion__ecrans_8h.html" title="Gestion_ecrans.h" alt="" coords="252,80,376,107"/>
+<area shape="rect" id="node11" href="$_ecran_8cpp.html" title="Ecran.cpp" alt="" coords="469,80,551,107"/>
+<area shape="rect" id="node4" href="$_application_8cpp.html" title="Application.cpp" alt="" coords="153,304,264,331"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title="main.cpp" alt="" coords="222,229,297,256"/>
+<area shape="rect" id="node5" href="$_ecran_accueil_8cpp.html" title="EcranAccueil.cpp" alt="" coords="5,304,129,331"/>
+<area shape="rect" id="node7" href="$_ecran_jeu_8cpp.html" title="EcranJeu.cpp" alt="" coords="314,304,415,331"/>
+<area shape="rect" id="node10" href="$_gestion__ecrans_8cpp.html" title="Gestion_ecrans.cpp" alt="" coords="255,155,394,181"/>
+</map>

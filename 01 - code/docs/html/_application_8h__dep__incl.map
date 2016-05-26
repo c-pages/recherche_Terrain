@@ -1,5 +1,11 @@
 <map id="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/include/appli/Application.h" name="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/include/appli/Application.h">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/main.cpp" alt="" coords="5,131,160,187"/>
-<area shape="rect" id="node3" href="$_ecran_accueil_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranAccueil.h" alt="" coords="184,124,347,195"/>
-<area shape="rect" id="node4" href="$_ecran_jeu_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranJeu.h" alt="" coords="371,124,533,195"/>
+<area shape="rect" id="node2" href="$_ecran_accueil_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranAccueil.h" alt="" coords="759,124,922,195"/>
+<area shape="rect" id="node3" href="$_application_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/Application.cpp" alt="" coords="419,250,651,306"/>
+<area shape="rect" id="node5" href="$_ecran_jeu_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranJeu.h" alt="" coords="149,124,311,195"/>
+<area shape="rect" id="node7" href="$_ecran_options_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranOptions.h" alt="" coords="335,124,498,195"/>
+<area shape="rect" id="node9" href="$_ecran_pause_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranPause.h" alt="" coords="573,124,735,195"/>
+<area shape="rect" id="node4" href="$_ecran_accueil_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranAccueil.cpp" alt="" coords="883,243,1065,313"/>
+<area shape="rect" id="node6" href="$_ecran_jeu_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranJeu.cpp" alt="" coords="5,243,188,313"/>
+<area shape="rect" id="node8" href="$_ecran_options_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranOptions.cpp" alt="" coords="212,243,395,313"/>
+<area shape="rect" id="node10" href="$_ecran_pause_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranPause.cpp" alt="" coords="676,243,859,313"/>
 </map>

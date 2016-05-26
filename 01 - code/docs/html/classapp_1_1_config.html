@@ -129,7 +129,8 @@ Graphe de collaboration de app::Config:</div>
 <div class="center"><img src="classapp_1_1_config__coll__graph.jpg" border="0" usemap="#app_1_1_config_coll__map" alt="Collaboration graph"/></div>
 <map name="app_1_1_config_coll__map" id="app_1_1_config_coll__map">
 <area shape="rect" id="node2" href="classapp_1_1_resource_mgr.html" title="app::ResourceMgr\&lt; sf\l::Texture, int \&gt;" alt="" coords="5,5,156,47"/>
-<area shape="rect" id="node3" href="classapp_1_1_resource_mgr.html" title="app::ResourceMgr\&lt; sf\l::Font, int \&gt;" alt="" coords="180,5,331,47"/>
+<area shape="rect" id="node3" href="classapp_1_1_resource_mgr.html" title="app::ResourceMgr\&lt; sf\l::Shader, int \&gt;" alt="" coords="5,71,156,112"/>
+<area shape="rect" id="node4" href="classapp_1_1_resource_mgr.html" title="app::ResourceMgr\&lt; sf\l::Font, int \&gt;" alt="" coords="5,136,156,177"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -138,46 +139,56 @@ Types publics</h2></td></tr>
 <tr class="memitem:ac576a323feff0b9aaa6aecd40e038049"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049">Polices</a> : int { <a class="el" href="classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049a759ba1bca9923fc3b3e61b9e0edd154a">police_1</a>, 
 <a class="el" href="classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21">police_2</a>, 
 <a class="el" href="classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049aa9e5b356892159d1526d850436f9186e">log</a>
- }<tr class="memdesc:ac576a323feff0b9aaa6aecd40e038049"><td class="mdescLeft">&#160;</td><td class="mdescRight">listes les polices enregistrables dans le manager de polices  <a href="classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049">Plus de détails...</a><br /></td></tr>
+ }<tr class="memdesc:ac576a323feff0b9aaa6aecd40e038049"><td class="mdescLeft">&#160;</td><td class="mdescRight">les polices enregistrables dans le manager de polices  <a href="classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049">Plus de détails...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ac576a323feff0b9aaa6aecd40e038049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac16ebcfb92b7d180649cdb036add0f90"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90">Images</a> : int { <a class="el" href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90a908450b0cab5cec2d4a1868e620d99c3">image_1</a>, 
-<a class="el" href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90a7d037a9b8fc7d6a45b22e17312949a7a">image_2</a>
- }<tr class="memdesc:ac16ebcfb92b7d180649cdb036add0f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">listes les images enregistrables dans le manager de texture  <a href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90">Plus de détails...</a><br /></td></tr>
+<a class="el" href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90a7d037a9b8fc7d6a45b22e17312949a7a">image_2</a>, 
+<a class="el" href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90a684969f6b34123e193f15ee4f00bb596">fenetreFond1</a>, 
+<a class="el" href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90a3e5c8a8dccc150e8dd6396c534573cea">FondAccueil</a>
+ }<tr class="memdesc:ac16ebcfb92b7d180649cdb036add0f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">les images enregistrables dans le manager de texture  <a href="classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90">Plus de détails...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ac16ebcfb92b7d180649cdb036add0f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a09d1f62f03cc32a4643e68c26f62f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62f">Shaders</a> : int { <a class="el" href="classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62fa0b400653f74f52cab543097c24df2cae">clipping</a>
+ }<tr class="memdesc:a46a09d1f62f03cc32a4643e68c26f62f"><td class="mdescLeft">&#160;</td><td class="mdescRight">les shaders enregistrables dans le manager de shaders  <a href="classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62f">Plus de détails...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a46a09d1f62f03cc32a4643e68c26f62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a6b5877b87cbfef7bb28ed405dfa3ea62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a6b5877b87cbfef7bb28ed405dfa3ea62">Config</a> ()</td></tr>
 <tr class="memdesc:a6b5877b87cbfef7bb28ed405dfa3ea62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a6b5877b87cbfef7bb28ed405dfa3ea62">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6b5877b87cbfef7bb28ed405dfa3ea62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8bea439b3dd6daa60079937d43b0dcb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#af8bea439b3dd6daa60079937d43b0dcb">~Config</a> ()</td></tr>
-<tr class="memdesc:af8bea439b3dd6daa60079937d43b0dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#af8bea439b3dd6daa60079937d43b0dcb">Plus de détails...</a><br /></td></tr>
-<tr class="separator:af8bea439b3dd6daa60079937d43b0dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e97c97554890ab2ef671855d90dbbc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a44e97c97554890ab2ef671855d90dbbc">~Config</a> ()</td></tr>
+<tr class="memdesc:a44e97c97554890ab2ef671855d90dbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#a44e97c97554890ab2ef671855d90dbbc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a44e97c97554890ab2ef671855d90dbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
-<tr class="memitem:a8680abec2844bbb045614662a218b5d5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a8680abec2844bbb045614662a218b5d5">init</a> ()</td></tr>
-<tr class="memdesc:a8680abec2844bbb045614662a218b5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialiser les differents élément.  <a href="#a8680abec2844bbb045614662a218b5d5">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8680abec2844bbb045614662a218b5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a379b1f1ac039e8c2cb92567b994fe74c"><td class="memItemLeft" align="right" valign="top">static sf::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a379b1f1ac039e8c2cb92567b994fe74c">getDureeImage</a> ()</td></tr>
-<tr class="memdesc:a379b1f1ac039e8c2cb92567b994fe74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">recuperer la durée d'une image, DureeImage = 1.f / 60.f à 60Fps.  <a href="#a379b1f1ac039e8c2cb92567b994fe74c">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a379b1f1ac039e8c2cb92567b994fe74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48395c7e382fb68f5283676847b4fb58"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a48395c7e382fb68f5283676847b4fb58">init</a> ()</td></tr>
+<tr class="memdesc:a48395c7e382fb68f5283676847b4fb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialiser les differents élément.  <a href="#a48395c7e382fb68f5283676847b4fb58">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a48395c7e382fb68f5283676847b4fb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300d3ecafed165cfe44b93c555116ff5"><td class="memItemLeft" align="right" valign="top">static sf::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a300d3ecafed165cfe44b93c555116ff5">getDureeImage</a> ()</td></tr>
+<tr class="memdesc:a300d3ecafed165cfe44b93c555116ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">recuperer la durée d'une image, DureeImage = 1.f / 60.f à 60Fps.  <a href="#a300d3ecafed165cfe44b93c555116ff5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a300d3ecafed165cfe44b93c555116ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Attributs publics statiques</h2></td></tr>
-<tr class="memitem:ae738a6cd657f268f7e34c4a4ac900ee6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Texture, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#ae738a6cd657f268f7e34c4a4ac900ee6">ms_textures</a></td></tr>
-<tr class="memdesc:ae738a6cd657f268f7e34c4a4ac900ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manager des textures.  <a href="#ae738a6cd657f268f7e34c4a4ac900ee6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae738a6cd657f268f7e34c4a4ac900ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ef54f814df40f46b133cb9eb39e999c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Font, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a6ef54f814df40f46b133cb9eb39e999c">ms_polices</a></td></tr>
-<tr class="memdesc:a6ef54f814df40f46b133cb9eb39e999c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manager des polices.  <a href="#a6ef54f814df40f46b133cb9eb39e999c">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a6ef54f814df40f46b133cb9eb39e999c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4155b86a370fd8216be541378630160f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Texture, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#a4155b86a370fd8216be541378630160f">ms_textures</a></td></tr>
+<tr class="memdesc:a4155b86a370fd8216be541378630160f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manager des textures.  <a href="#a4155b86a370fd8216be541378630160f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4155b86a370fd8216be541378630160f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90624673018affec317ebb4dbc2ea58"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Font, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#ac90624673018affec317ebb4dbc2ea58">ms_polices</a></td></tr>
+<tr class="memdesc:ac90624673018affec317ebb4dbc2ea58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manager des polices.  <a href="#ac90624673018affec317ebb4dbc2ea58">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac90624673018affec317ebb4dbc2ea58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8d6774c6ab540f97fbd4379a40c69a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Shader, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_config.html#adb8d6774c6ab540f97fbd4379a40c69a">ms_shaders</a></td></tr>
+<tr class="memdesc:adb8d6774c6ab540f97fbd4379a40c69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manager des polices.  <a href="#adb8d6774c6ab540f97fbd4379a40c69a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adb8d6774c6ab540f97fbd4379a40c69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Contient les différents éléments de Configuration de l'application. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">A faire:</a></b></dt><dd>s'occuper des shaders (cf:le pdf SFML essantials +/- P.109)</dd></dl>
 <p>Configuration des textures, sons, musiques polices, tailles, couleurs ....</p>
-<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">app::Ecran</a>, <a class="el" href="classapp_1_1_gestion__ecrans.html" title="Gestionnaire des �crans. ">app::Gestion_ecrans</a> </dd></dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">app::Ecran</a>, <a class="el" href="classapp_1_1_gestion__ecrans.html" title="Classe qui s&#39;occupe de gérer les écrans. ">app::Gestion_ecrans</a> </dd></dl>
 </div><h2 class="groupheader">Documentation des énumérations membres</h2>
 <a class="anchor" id="ac16ebcfb92b7d180649cdb036add0f90"></a>
 <div class="memitem">
@@ -189,11 +200,15 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>listes les images enregistrables dans le manager de texture </p>
+<p>les images enregistrables dans le manager de texture </p>
 <table class="fieldtable">
 <tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a class="anchor" id="ac16ebcfb92b7d180649cdb036add0f90a908450b0cab5cec2d4a1868e620d99c3"></a>image_1&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ac16ebcfb92b7d180649cdb036add0f90a7d037a9b8fc7d6a45b22e17312949a7a"></a>image_2&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac16ebcfb92b7d180649cdb036add0f90a684969f6b34123e193f15ee4f00bb596"></a>fenetreFond1&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac16ebcfb92b7d180649cdb036add0f90a3e5c8a8dccc150e8dd6396c534573cea"></a>FondAccueil&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -209,13 +224,31 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>listes les polices enregistrables dans le manager de polices </p>
+<p>les polices enregistrables dans le manager de polices </p>
 <table class="fieldtable">
 <tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a class="anchor" id="ac576a323feff0b9aaa6aecd40e038049a759ba1bca9923fc3b3e61b9e0edd154a"></a>police_1&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21"></a>police_2&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ac576a323feff0b9aaa6aecd40e038049aa9e5b356892159d1526d850436f9186e"></a>log&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a46a09d1f62f03cc32a4643e68c26f62f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62f">app::Config::Shaders</a> : int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>les shaders enregistrables dans le manager de shaders </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a class="anchor" id="a46a09d1f62f03cc32a4643e68c26f62fa0b400653f74f52cab543097c24df2cae"></a>clipping&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -239,7 +272,7 @@ Attributs publics statiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af8bea439b3dd6daa60079937d43b0dcb"></a>
+<a class="anchor" id="a44e97c97554890ab2ef671855d90dbbc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -247,7 +280,7 @@ Attributs publics statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual app::Config::~Config </td>
+          <td class="memname">app::Config::~Config </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -265,7 +298,7 @@ Attributs publics statiques</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a class="anchor" id="a379b1f1ac039e8c2cb92567b994fe74c"></a>
+<a class="anchor" id="a300d3ecafed165cfe44b93c555116ff5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -273,7 +306,7 @@ Attributs publics statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static sf::Time app::Config::getDureeImage </td>
+          <td class="memname">sf::Time app::Config::getDureeImage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -290,7 +323,7 @@ Attributs publics statiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8680abec2844bbb045614662a218b5d5"></a>
+<a class="anchor" id="a48395c7e382fb68f5283676847b4fb58"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -298,7 +331,7 @@ Attributs publics statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void app::Config::init </td>
+          <td class="memname">void app::Config::init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -324,7 +357,7 @@ Attributs publics statiques</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a class="anchor" id="a6ef54f814df40f46b133cb9eb39e999c"></a>
+<a class="anchor" id="ac90624673018affec317ebb4dbc2ea58"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -332,7 +365,7 @@ Attributs publics statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt;sf::Font,int&gt; app::Config::ms_polices</td>
+          <td class="memname"><a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Font, int &gt; app::Config::ms_polices</td>
         </tr>
       </table>
   </td>
@@ -346,7 +379,7 @@ Attributs publics statiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae738a6cd657f268f7e34c4a4ac900ee6"></a>
+<a class="anchor" id="adb8d6774c6ab540f97fbd4379a40c69a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -354,7 +387,29 @@ Attributs publics statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt;sf::Texture,int&gt; app::Config::ms_textures</td>
+          <td class="memname"><a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Shader, int &gt; app::Config::ms_shaders</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manager des polices. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4155b86a370fd8216be541378630160f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a>&lt; sf::Texture, int &gt; app::Config::ms_textures</td>
         </tr>
       </table>
   </td>
@@ -368,8 +423,9 @@ Attributs publics statiques</h2></td></tr>
 
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/appli/<a class="el" href="_config_8h_source.html">Config.h</a></li>
+<li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/src/appli/<a class="el" href="_config_8cpp.html">Config.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

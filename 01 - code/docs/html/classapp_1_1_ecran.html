@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('classapp_1_1_ecran.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>La classe virtuelle communues aux �crans.  
+<p>La classe virtuelle communues aux écrans.  
  <a href="classapp_1_1_ecran.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_ecran_8h_source.html">Ecran.h</a>&gt;</code></p>
@@ -128,6 +128,8 @@ Graphe d'héritage de app::Ecran:</div>
 <map name="app_1_1_ecran_inherit__map" id="app_1_1_ecran_inherit__map">
 <area shape="rect" id="node2" href="classapp_1_1_ecran_accueil.html" title="L&#39;écran d&#39;accueil affiche le menu de démarrage du jeu : Démarrer une partie, accéder au options..." alt="" coords="5,80,133,107"/>
 <area shape="rect" id="node3" href="classapp_1_1_ecran_jeu.html" title="Ecran de jeu. " alt="" coords="158,80,263,107"/>
+<area shape="rect" id="node4" href="classapp_1_1_ecran_options.html" title="Ecran de jeu. " alt="" coords="288,80,419,107"/>
+<area shape="rect" id="node5" href="classapp_1_1_ecran_pause.html" title="Ecran de jeu. " alt="" coords="443,80,565,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
@@ -144,17 +146,23 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a06a27f001c26fb8d6f38e04764fd343e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a06a27f001c26fb8d6f38e04764fd343e">Ecran</a> (<a class="el" href="classapp_1_1_application.html">Application</a> *appli)</td></tr>
 <tr class="memdesc:a06a27f001c26fb8d6f38e04764fd343e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a06a27f001c26fb8d6f38e04764fd343e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a06a27f001c26fb8d6f38e04764fd343e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee32b1927cc8d449f10c13fd117bcc4a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#aee32b1927cc8d449f10c13fd117bcc4a">~Ecran</a> ()</td></tr>
-<tr class="memdesc:aee32b1927cc8d449f10c13fd117bcc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur virtuel.  <a href="#aee32b1927cc8d449f10c13fd117bcc4a">Plus de détails...</a><br /></td></tr>
-<tr class="separator:aee32b1927cc8d449f10c13fd117bcc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae428d4167b732b687fefc88379d62d9a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#ae428d4167b732b687fefc88379d62d9a">~Ecran</a> ()</td></tr>
+<tr class="memdesc:ae428d4167b732b687fefc88379d62d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur virtuel.  <a href="#ae428d4167b732b687fefc88379d62d9a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae428d4167b732b687fefc88379d62d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3be820c305d2dd2aae3edcdc315294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#afb3be820c305d2dd2aae3edcdc315294">setPause</a> (bool pause)</td></tr>
+<tr class="memdesc:afb3be820c305d2dd2aae3edcdc315294"><td class="mdescLeft">&#160;</td><td class="mdescRight">definir l'état de la pause  <a href="#afb3be820c305d2dd2aae3edcdc315294">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afb3be820c305d2dd2aae3edcdc315294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d478ef5e35355a702de7f566aacc8ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a0d478ef5e35355a702de7f566aacc8ee">estEnPause</a> ()</td></tr>
+<tr class="memdesc:a0d478ef5e35355a702de7f566aacc8ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">acceder à l'état de la pause  <a href="#a0d478ef5e35355a702de7f566aacc8ee">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0d478ef5e35355a702de7f566aacc8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b6695f6950903f11a378759aaa9a23"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a15b6695f6950903f11a378759aaa9a23">traiter_evenements</a> (const sf::Event &amp;event)=0</td></tr>
-<tr class="memdesc:a15b6695f6950903f11a378759aaa9a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">G�re les entr�es claviers, souris, fenetre ...  <a href="#a15b6695f6950903f11a378759aaa9a23">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a15b6695f6950903f11a378759aaa9a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère les entrées claviers, souris, fenetre ...  <a href="#a15b6695f6950903f11a378759aaa9a23">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a15b6695f6950903f11a378759aaa9a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a209a7aa65901b0d7199c3ca25d7e5794"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a209a7aa65901b0d7199c3ca25d7e5794">actualiser</a> (sf::Time deltaT)=0</td></tr>
-<tr class="memdesc:a209a7aa65901b0d7199c3ca25d7e5794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiser les �l�ments.  <a href="#a209a7aa65901b0d7199c3ca25d7e5794">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a209a7aa65901b0d7199c3ca25d7e5794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiser les éléments.  <a href="#a209a7aa65901b0d7199c3ca25d7e5794">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a209a7aa65901b0d7199c3ca25d7e5794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab279679638e35645bbae78e3f8a3938a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#ab279679638e35645bbae78e3f8a3938a">dessiner</a> ()=0</td></tr>
-<tr class="memdesc:ab279679638e35645bbae78e3f8a3938a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendre les �l�ments.  <a href="#ab279679638e35645bbae78e3f8a3938a">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ab279679638e35645bbae78e3f8a3938a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendre les éléments.  <a href="#ab279679638e35645bbae78e3f8a3938a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab279679638e35645bbae78e3f8a3938a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -166,10 +174,12 @@ Attributs protégés</h2></td></tr>
 <tr class="separator:aa619321cb264726990dc6a4362876db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ec228de93b9a07954be2e25371cd9db"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db">m_vueGUI</a></td></tr>
 <tr class="separator:a5ec228de93b9a07954be2e25371cd9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212022273c0711e2bcd4514e57cc7d51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a212022273c0711e2bcd4514e57cc7d51">m_pause</a> = false</td></tr>
+<tr class="separator:a212022273c0711e2bcd4514e57cc7d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>La classe virtuelle communues aux �crans. </p>
-<p><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">app::Ecran</a> la classe de base des �crans. Les �crans peuvent se superposer (par exemple l'�cran pause-option avec en dessous l'�cran jeu en pause).</p>
+<div class="textblock"><p>La classe virtuelle communues aux écrans. </p>
+<p><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">app::Ecran</a> la classe de base des écrans. Les écrans peuvent se superposer (par exemple l'écran pause-option avec en dessous l'écran jeu en pause).</p>
 <dl class="section see"><dt>Voir également</dt><dd>app::EcranDemo </dd></dl>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a06a27f001c26fb8d6f38e04764fd343e"></a>
@@ -190,7 +200,7 @@ Attributs protégés</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aee32b1927cc8d449f10c13fd117bcc4a"></a>
+<a class="anchor" id="ae428d4167b732b687fefc88379d62d9a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -198,7 +208,7 @@ Attributs protégés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual app::Ecran::~Ecran </td>
+          <td class="memname">app::Ecran::~Ecran </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -238,11 +248,11 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Actualiser les �l�ments. </p>
-<p>Actualiser les diff�rents �l�ments du ou des �crans actifs.</p>
+<p>Actualiser les éléments. </p>
+<p>Actualiser les différents éléments du ou des écrans actifs.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deltaT</td><td>Un <em>float</em> qui indique le delta du temps �coul� depuis la derni�re actualisation. </td></tr>
+    <tr><td class="paramname">deltaT</td><td>Un <em>float</em> qui indique le delta du temps écoulé depuis la dernière actualisation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -271,8 +281,73 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Rendre les �l�ments. </p>
-<p>Dessiner les diff�rents �l�ments du ou des �crans actifs. </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
+<p>Rendre les éléments. </p>
+<p>Dessiner les différents éléments du ou des écrans actifs. </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d478ef5e35355a702de7f566aacc8ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool app::Ecran::estEnPause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>acceder à l'état de la pause </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pause</td><td>t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>rien </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afb3be820c305d2dd2aae3edcdc315294"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app::Ecran::setPause </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pause</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>definir l'état de la pause </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pause</td><td>t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>rien </dd></dl>
 
 </div>
 </div>
@@ -298,7 +373,7 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>G�re les entr�es claviers, souris, fenetre ... </p>
+<p>Gère les entrées claviers, souris, fenetre ... </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>evenement SFML a dispatcher </td></tr>
@@ -329,6 +404,26 @@ Attributs protégés</h2></td></tr>
 </div><div class="memdoc">
 
 <p>La classe Apllication parent. </p>
+
+</div>
+</div>
+<a class="anchor" id="a212022273c0711e2bcd4514e57cc7d51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool app::Ecran::m_pause = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -372,8 +467,9 @@ Attributs protégés</h2></td></tr>
 
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/appli/<a class="el" href="_ecran_8h_source.html">Ecran.h</a></li>
+<li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/src/appli/<a class="el" href="_ecran_8cpp.html">Ecran.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

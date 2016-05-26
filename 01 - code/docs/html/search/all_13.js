@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['_7eapplication',['~Application',['../classapp_1_1_application.html#a6d1fee4f8c8fb3d33470f605c179def9',1,'app::Application']]],
-  ['_7econfig',['~Config',['../classapp_1_1_config.html#af8bea439b3dd6daa60079937d43b0dcb',1,'app::Config']]],
-  ['_7eecran',['~Ecran',['../classapp_1_1_ecran.html#aee32b1927cc8d449f10c13fd117bcc4a',1,'app::Ecran']]],
-  ['_7eecranaccueil',['~EcranAccueil',['../classapp_1_1_ecran_accueil.html#a9974fdcf2ef4b88851a8eab56939fcd5',1,'app::EcranAccueil']]],
-  ['_7elabel',['~Label',['../classgui_1_1_label.html#a35fe2fbca1f6c34beb66bfd9b3b9b609',1,'gui::Label']]]
+  ['vider',['Vider',['../classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569a5d9ab4b7c0fd02a370b0328801625a31',1,'app::Gestion_ecrans::Vider()'],['../classapp_1_1_gestion__ecrans.html#a1c7fab33cf6489b092a482bae4b266f7',1,'app::Gestion_ecrans::vider()'],['../classgui_1_1_actions.html#acd7a42c1fdb6f4051b9cd0edc7a6840e',1,'gui::Actions::vider()']]],
+  ['viderenfants',['viderEnfants',['../classgui_1_1_gadget.html#adb5a08b6427b6cd2af98a6a2e993bb5b',1,'gui::Gadget::viderEnfants()'],['../classgui_1_1_gui.html#ab25e7e107c6a60f8cf52b3e11a936419',1,'gui::Gui::viderEnfants()']]]
 ];

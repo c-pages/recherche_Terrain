@@ -162,6 +162,7 @@ void Bouton::ajuster ( )
 /////////////////////////////////////////////////
 void Bouton::actualiser ()
 {
+////    std::cout << "Actualiser()\n";
 
     // on actualise la taille du fond
     m_fond.setSize     ( {m_size.x, m_size.y}  );

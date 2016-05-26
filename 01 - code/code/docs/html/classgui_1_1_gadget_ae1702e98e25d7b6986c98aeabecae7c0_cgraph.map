@@ -1,0 +1,9 @@
+<map id="gui::Gadget::thisPtr" name="gui::Gadget::thisPtr">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#af01ca555487f3ea351e53e2074dad3aa" title="Mettre le gadget au dessus des autres enfants de son parent. " alt="" coords="216,5,389,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a48c2bea33d083e78c38735c9e3ff2eff" title="retirer un enfant du gadget " alt="" coords="465,31,656,57"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#a0b2349562270944f34304484d809171a" title="supprimer le gadget. " alt="" coords="188,107,417,133"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="221,157,384,184"/>
+<area shape="rect" id="node7" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="704,233,865,260"/>
+<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="232,208,373,235"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="484,208,637,235"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="gui::Fenetre::Glissiere::actualiser" name="gui::Fenetre::Glissiere::actualiser">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="209,5,351,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="404,56,557,83"/>
+<area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e" title="Actualiser le gadget (bounding bax) " alt="" coords="204,107,356,133"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="605,56,767,83"/>
+</map>

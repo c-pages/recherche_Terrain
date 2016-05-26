@@ -25,7 +25,7 @@ var classgui_1_1_gadget =
     [ "setEtat", "classgui_1_1_gadget.html#ad5b8d5f74d5b34aab2dcbab2273ae432", null ],
     [ "setMarge", "classgui_1_1_gadget.html#a942f46298bf3e5824a42b6439f9b2985", null ],
     [ "setMarge", "classgui_1_1_gadget.html#a11fb712d655dea8ba3ff47bf3ba0f608", null ],
-    [ "setParent", "classgui_1_1_gadget.html#a8d9dac5aee31bfbb176f452d61186be0", null ],
+    [ "setParent", "classgui_1_1_gadget.html#a02a9b2e04c82e9539312301c449e2baa", null ],
     [ "setPosition", "classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21", null ],
     [ "setPosition", "classgui_1_1_gadget.html#a92c42e660b6b307daa77cd0d42aad26f", null ],
     [ "setPosition", "classgui_1_1_gadget.html#ad3d9ba5eecba0ecf49f94767699aba17", null ],

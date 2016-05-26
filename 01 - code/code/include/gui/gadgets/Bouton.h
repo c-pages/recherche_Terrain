@@ -37,7 +37,6 @@ public:
 
     /// Accessuers / mutateurs ///////////////////////
 
-
     /////////////////////////////////////////////////
     /// \brief Définie l'état du bouton.
     ///

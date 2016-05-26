@@ -108,7 +108,8 @@ $(document).ready(function(){initNavTree('_gadget_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Espaces de nommage</a>  </div>
+<a href="#namespaces">Espaces de nommage</a> &#124;
+<a href="#enum-members">Énumérations</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier Gadget.h</div>  </div>
 </div><!--header-->
@@ -117,6 +118,7 @@ $(document).ready(function(){initNavTree('_gadget_8h.html','');});
 <code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="_actions_8h_source.html">gui/Actions.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de Gadget.h:</div>
 <div class="dyncontent">
@@ -130,16 +132,32 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="_gadget_8h__dep__incl.jpg" border="0" usemap="#_c_1_2_users_2kris_2_one_drive_2recherche_01_biome_201_01-_01code_2code_2include_2gui_2_gadget_8hdep" alt=""/></div>
 <map name="_c_1_2_users_2kris_2_one_drive_2recherche_01_biome_201_01-_01code_2code_2include_2gui_2_gadget_8hdep" id="_c_1_2_users_2kris_2_one_drive_2recherche_01_biome_201_01-_01code_2code_2include_2gui_2_gadget_8hdep">
-<area shape="rect" id="node2" href="_calque_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/Calque.h" alt="" coords="149,243,304,313"/>
-<area shape="rect" id="node3" href="_gui_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui/Gui.h" alt="" coords="248,361,435,417"/>
-<area shape="rect" id="node8" href="_bouton_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Bouton.h" alt="" coords="379,124,533,195"/>
-<area shape="rect" id="node9" href="_image_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Image.h" alt="" coords="557,124,712,195"/>
-<area shape="rect" id="node11" href="_label_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Label.h" alt="" coords="736,124,891,195"/>
-<area shape="rect" id="node4" href="_application_8h.html" title="La classe principale du programme. " alt="" coords="201,465,364,536"/>
-<area shape="rect" id="node6" href="_ecran_accueil_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranAccueil.h" alt="" coords="371,584,533,655"/>
-<area shape="rect" id="node5" href="main_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/main.cpp" alt="" coords="5,591,160,647"/>
-<area shape="rect" id="node7" href="_ecran_jeu_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranJeu.h" alt="" coords="184,584,347,655"/>
-<area shape="rect" id="node10" href="_fabrique_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/Fabrique.h" alt="" coords="557,243,712,313"/>
+<area shape="rect" id="node2" href="_bouton_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Bouton.h" alt="" coords="167,124,322,195"/>
+<area shape="rect" id="node4" href="_gui_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui/Gui.h" alt="" coords="346,480,533,536"/>
+<area shape="rect" id="node16" href="_gadget_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/Gadget.cpp" alt="" coords="1074,591,1274,647"/>
+<area shape="rect" id="node19" href="_fenetre_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Fenetre.h" alt="" coords="282,243,437,313"/>
+<area shape="rect" id="node21" href="_calque_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Calque.h" alt="" coords="522,124,677,195"/>
+<area shape="rect" id="node23" href="_image_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Image.h" alt="" coords="701,124,855,195"/>
+<area shape="rect" id="node25" href="_label_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/gadgets/Label.h" alt="" coords="954,124,1109,195"/>
+<area shape="rect" id="node27" href="_actions_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/Actions.cpp" alt="" coords="1322,131,1525,187"/>
+<area shape="rect" id="node3" href="_fabrique_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/gui\l/Fabrique.h" alt="" coords="535,361,690,432"/>
+<area shape="rect" id="node20" href="_bouton_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/gadgets\l/Bouton.cpp" alt="" coords="29,243,207,313"/>
+<area shape="rect" id="node15" href="_fabrique_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/Fabrique.cpp" alt="" coords="530,591,738,647"/>
+<area shape="rect" id="node18" href="_gui_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/Gui.cpp" alt="" coords="762,591,941,647"/>
+<area shape="rect" id="node5" href="_application_8h.html" title="La classe principale du programme. " alt="" coords="343,584,506,655"/>
+<area shape="rect" id="node6" href="_ecran_accueil_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranAccueil.h" alt="" coords="106,703,269,773"/>
+<area shape="rect" id="node7" href="_application_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/Application.cpp" alt="" coords="215,829,447,885"/>
+<area shape="rect" id="node17" href="_fenetre_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/gadgets\l/Fenetre.cpp" alt="" coords="39,584,218,655"/>
+<area shape="rect" id="node9" href="_ecran_jeu_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranJeu.h" alt="" coords="394,703,557,773"/>
+<area shape="rect" id="node11" href="_ecran_options_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranOptions.h" alt="" coords="581,703,743,773"/>
+<area shape="rect" id="node13" href="_ecran_pause_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranPause.h" alt="" coords="767,703,930,773"/>
+<area shape="rect" id="node8" href="_ecran_accueil_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranAccueil.cpp" alt="" coords="8,821,191,892"/>
+<area shape="rect" id="node10" href="_ecran_jeu_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranJeu.cpp" alt="" coords="472,821,655,892"/>
+<area shape="rect" id="node12" href="_ecran_options_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranOptions.cpp" alt="" coords="679,821,861,892"/>
+<area shape="rect" id="node14" href="_ecran_pause_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/appli/ecrans\l/EcranPause.cpp" alt="" coords="885,821,1068,892"/>
+<area shape="rect" id="node22" href="_calque_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/gadgets\l/Calque.cpp" alt="" coords="511,243,690,313"/>
+<area shape="rect" id="node24" href="_image_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/gadgets\l/Image.cpp" alt="" coords="815,243,994,313"/>
+<area shape="rect" id="node26" href="_label_8cpp.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/src/gui/gadgets\l/Label.cpp" alt="" coords="1069,243,1247,313"/>
 </map>
 </div>
 </div>
@@ -154,7 +172,27 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Espaces de nommage</h2></td></tr>
 <tr class="memitem:namespacegui"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegui.html">gui</a></td></tr>
+<tr class="memdesc:namespacegui"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le gui regroupe tout les élément consernant les interfaces graphiques. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:aef7456adfbb9be89723a9f25d5ade1d2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2">gui::Alignement</a> { <br />
+&#160;&#160;<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2a1b83331ee5b0015c375e6542628088a8">gui::Alignement::Centre</a>, 
+<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2a96edc948adb823d524184c91e9d97091">gui::Alignement::Gauche</a>, 
+<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2abd183b76ad571d95270590cb79f10efd">gui::Alignement::Droite</a>, 
+<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2a45813242334bd36ea577d842d352768c">gui::Alignement::Haut</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2ae92c45d0ed5c3da366c5b45ae81bb2c8">gui::Alignement::Bas</a>, 
+<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2a8054de84d5e07b157cdc8a2184b58970">gui::Alignement::GaucheHaut</a>, 
+<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2aa5f05a46e56fde51ad024b112d9046f1">gui::Alignement::GaucheBas</a>, 
+<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2a8c50e18ba61ba0a69e34bf9b5f39152c">gui::Alignement::DroiteHaut</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2ae0dcffeb8001275569cece8b33dd8ca0">gui::Alignement::DroiteBas</a>
+<br />
+ }<tr class="memdesc:aef7456adfbb9be89723a9f25d5ade1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">les 9 endroits d'alignement entre gadgets  <a href="namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2">Plus de détails...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aef7456adfbb9be89723a9f25d5ade1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

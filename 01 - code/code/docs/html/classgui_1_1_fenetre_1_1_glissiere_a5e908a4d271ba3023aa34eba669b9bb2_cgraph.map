@@ -1,0 +1,22 @@
+<map id="gui::Fenetre::Glissiere::Glissiere" name="gui::Fenetre::Glissiere::Glissiere">
+<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a621faf32d2fa1cf218afcd97bdfd0104" title="Definie la couleur du remplissage. " alt="" coords="218,5,407,47"/>
+<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#ac299867580d5d39d60a60039fe757b93" title="Definie la couleur du contour. " alt="" coords="211,71,414,98"/>
+<area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a72f9bcfca56bf51121eae0cf0f739149" title="Definie la couleur du contour. " alt="" coords="204,122,421,149"/>
+<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#a02a9b2e04c82e9539312301c449e2baa" title="Definir m_parent. " alt="" coords="236,173,389,199"/>
+<area shape="rect" id="node7" href="$classgui_1_1_bouton.html#a28f93a602d107b3c02a20677868f472b" title="Definie l&#39;alpha du fond du bouton à l&#39;état de repos. " alt="" coords="223,223,402,250"/>
+<area shape="rect" id="node8" href="$classgui_1_1_gui.html#af759bc1556aa4ae6c9e319435cae98de" title="accesseur de la position de la souris " alt="" coords="224,274,401,301"/>
+<area shape="rect" id="node9" href="$classgui_1_1_fenetre_1_1_glissiere.html#a40f1b9a971e9a449d5289f0398190c03" title="décalle la glissere dans un sens. " alt="" coords="237,325,388,367"/>
+<area shape="rect" id="node17" href="$classgui_1_1_fenetre_1_1_glissiere.html#a62d22ed0d88f9dda43d8c2c5277aa052" title="décalle la glissere dans l&#39;autre sens. " alt="" coords="237,391,388,432"/>
+<area shape="rect" id="node18" href="$classgui_1_1_actions.html#a0b0dfd024938532a3c8abf98ddefd3d8" title="Créer une nouvelle liaison entre un evenement souris et une fonction lambda. " alt="" coords="255,457,371,483"/>
+<area shape="rect" id="node19" href="$classgui_1_1_fenetre_1_1_glissiere.html#a173fd57f47aaa00d7ce34e1d8a65da67" title="Actualiser les éléments de l&#39;interface. " alt="" coords="469,500,620,541"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton.html#a94ba72e031aa13cffb9658228c4c1f0e" title="Accessuers / mutateurs ///////////////////////. " alt="" coords="475,118,614,145"/>
+<area shape="rect" id="node10" href="$classgui_1_1_fenetre_1_1_glissiere.html#ae482cf8985c8379ea49b792537d82e5d" title="Definie la position de la glissere sur le gadget. " alt="" coords="469,336,620,377"/>
+<area shape="rect" id="node11" href="$classgui_1_1_gadget.html#a14394919166b43c08176ea40a494c6c2" title="Acceder à m_size. " alt="" coords="693,254,834,281"/>
+<area shape="rect" id="node12" href="$classgui_1_1_gadget.html#af27d429925cd395f8cda313d45820f21" title="override (un peu a l&#39;arrache) de la fonction sf::Transformable::setPosition(). " alt="" coords="682,305,845,331"/>
+<area shape="rect" id="node15" href="$classgui_1_1_fenetre.html#a92017dfa133d5f10ac79756dc332a2c4" title="Faire défiler horizontalement le calque des enfnnts. " alt="" coords="668,355,859,382"/>
+<area shape="rect" id="node16" href="$classgui_1_1_fenetre.html#a2e089eb213f6033be8ae902f25a68731" title="Faire défiler verticalement le calque des enfnnts. " alt="" coords="675,406,852,433"/>
+<area shape="rect" id="node13" href="$classgui_1_1_gadget.html#aafcfc7ae84fe8277628f971c947b5972" title="Actualiser les éléments de l&#39;interface. " alt="" coords="907,482,1060,509"/>
+<area shape="rect" id="node14" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue du gadget. " alt="" coords="1108,482,1269,509"/>
+<area shape="rect" id="node20" href="$classgui_1_1_gadget.html#aeec07108a3ee71bcbc6d722fcc6f55a9" title="Definir m_size. " alt="" coords="693,507,834,534"/>
+<area shape="rect" id="node21" href="$classgui_1_1_bouton.html#a2255d73ed2ea825e61279148c004884e" title="Actualiser le gadget (bounding bax) " alt="" coords="687,558,839,585"/>
+</map>

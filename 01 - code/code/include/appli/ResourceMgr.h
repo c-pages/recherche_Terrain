@@ -27,7 +27,7 @@ class ResourceMgr
         /////////////////////////////////////////////////
         /// \brief constructeur par copie
         ///
-        ///  "= delete" c'est une manière de dire non copyable si j'ai bien compris, cf le bouquin SFML ...
+        ///  "= delete" c'est une maniÃ¨re de dire non copyable si j'ai bien compris, cf le bouquin SFML ...
         ///
         /////////////////////////////////////////////////
         ResourceMgr             ( const ResourceMgr& ) = delete;
@@ -49,7 +49,7 @@ class ResourceMgr
         ResourceMgr& operator=  ( const ResourceMgr& ) = delete;
 
         /////////////////////////////////////////////////
-        /// \brief Charger une image ou une police depuis un fichier et l'associe à un identifiant.
+        /// \brief Charger une image ou une police depuis un fichier et l'associe Ã  un identifiant.
         ///
         /// \param id l'identenfiant
         /// \param args le fichier
@@ -59,17 +59,17 @@ class ResourceMgr
         void        load(const IDENTIFIANT& id,Args&& ... args);
 
         /////////////////////////////////////////////////
-        /// \brief demande une image ou une police à partir de son identifiant.
+        /// \brief demande une image ou une police Ã  partir de son identifiant.
         ///
         /// \param id l'identenfiant
-        /// \return la ressource demandé.
+        /// \return la ressource demandÃ©.
         ///
         /////////////////////////////////////////////////
         RESOURCE&   get(const IDENTIFIANT& id)const;
 
     private:
 
-        std::unordered_map<IDENTIFIANT,std::unique_ptr<RESOURCE>>       mPlan;  ///< les resources enregistrés avec leur identifiant.
+        std::unordered_map<IDENTIFIANT,std::unique_ptr<RESOURCE>>       mPlan;  ///< les resources enregistrÃ©s avec leur identifiant.
 };
 
 
@@ -86,7 +86,7 @@ class ResourceMgr<sf::Music,IDENTIFIANT>
         /////////////////////////////////////////////////
         /// \brief constructeur
         ///
-        ///  "= delete" c'est une manière de dire non copyable si j'ai bien compris, cf le bouquin SFML ...
+        ///  "= delete" c'est une maniÃ¨re de dire non copyable si j'ai bien compris, cf le bouquin SFML ...
         ///
         /////////////////////////////////////////////////
         ResourceMgr(const ResourceMgr&) = delete;
@@ -108,7 +108,7 @@ class ResourceMgr<sf::Music,IDENTIFIANT>
         ResourceMgr& operator=(const ResourceMgr&) = delete;
 
         /////////////////////////////////////////////////
-        /// \brief Charger une musique depuis un fichier et l'associe à un identifiant.
+        /// \brief Charger une musique depuis un fichier et l'associe Ã  un identifiant.
         ///
         /// \param id l'identifiant
         /// \param args le fichier
@@ -118,15 +118,15 @@ class ResourceMgr<sf::Music,IDENTIFIANT>
         void load(const IDENTIFIANT& id,Args&& ... args);
 
         /////////////////////////////////////////////////
-        /// \brief demande une musique à partir de son identifiant.
+        /// \brief demande une musique Ã  partir de son identifiant.
         ///
         /// \param id l'identifiant
-        /// \return la musique demandé.
+        /// \return la musique demandÃ©.
         ///
         /////////////////////////////////////////////////
         sf::Music& get(const IDENTIFIANT& id)const;
     private:
-        std::unordered_map<IDENTIFIANT,std::unique_ptr<sf::Music>> mPlan; ///< les resources enregistrés avec leur identifiant.
+        std::unordered_map<IDENTIFIANT,std::unique_ptr<sf::Music>> mPlan; ///< les resources enregistrÃ©s avec leur identifiant.
 };
 
 
@@ -142,7 +142,7 @@ class ResourceMgr<sf::Music,IDENTIFIANT>
 /// \class app::ResourceMgr
 /// \ingroup application
 ///
-/// Gère les ressource façon RAII
+/// GÃ¨re les ressource faÃ§on RAII
 ///
 /// \see app::Ecran, app::Gestion_ecrans
 ///
