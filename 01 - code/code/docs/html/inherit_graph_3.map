@@ -1,3 +1,3 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classapp_1_1_gestion__ecrans.html" title="Gestionnaire des �crans. " alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node1" href="$structapp_1_1_ecran_1_1_contexte.html" title="&lt; le context (la fenetre SFML, les textures, polices, ... ) associés aux Etats (intro, menu ...) " alt="" coords="5,5,151,32"/>
 </map>

@@ -10,7 +10,12 @@ Ecran::Ecran( Gestion_ecrans&  pileEcrans , Contexte contexte )
 : m_pileEcrans  ( &pileEcrans )
 , m_contexte    ( contexte )
 {
-    //ctor
+
+    /// Initialisation de la vue ///
+//    auto    tailleCarte     = m_jeu.getTailleCarte();
+    auto    taillefenetre   = m_contexte.fenetre->getSize();
+    m_vuePrincipale.setSize ( {taillefenetre.x, taillefenetre.y} );
+    m_vuePrincipale.setCenter( taillefenetre.x/2, taillefenetre.y/2);
 }
 
 /////////////////////////////////////////////////

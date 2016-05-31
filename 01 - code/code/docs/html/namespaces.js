@@ -1,6 +1,6 @@
 var namespaces =
 [
-    [ "app", "namespaceapp.html", null ],
+    [ "app", "namespaceapp.html", "namespaceapp" ],
     [ "gui", "namespacegui.html", null ],
     [ "jeu", "namespacejeu.html", null ]
 ];

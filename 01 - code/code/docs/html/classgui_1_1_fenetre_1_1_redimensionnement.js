@@ -1,12 +1,12 @@
 var classgui_1_1_fenetre_1_1_redimensionnement =
 [
     [ "Redimensionnement", "classgui_1_1_fenetre_1_1_redimensionnement.html#afbd6a18d1d60114831878232428922b7", null ],
-    [ "actualiser", "classgui_1_1_fenetre_1_1_redimensionnement.html#ab5d43312de8658ebe4c4adb62d8fe354", null ],
-    [ "draw", "classgui_1_1_fenetre_1_1_redimensionnement.html#aee136a9acd23f6d47e7b115754edbe65", null ],
+    [ "actualiser", "classgui_1_1_fenetre_1_1_redimensionnement.html#ab27f343b3d89abc07ca9c4d0dafbfeb9", null ],
+    [ "draw", "classgui_1_1_fenetre_1_1_redimensionnement.html#ad92da804a1bae8bafb195f212d6873c8", null ],
     [ "getLargeur", "classgui_1_1_fenetre_1_1_redimensionnement.html#abf4739074d24fd4223a120204dc055bd", null ],
     [ "setLargeur", "classgui_1_1_fenetre_1_1_redimensionnement.html#a57e4bf2de75ef2ad857ec4421bb27cab", null ],
-    [ "testerSurvol", "classgui_1_1_fenetre_1_1_redimensionnement.html#ad4542b1b77faeca6380c116eae117f18", null ],
-    [ "traiterEvenements", "classgui_1_1_fenetre_1_1_redimensionnement.html#a9e9b3f6698430020de7774e451d56720", null ],
+    [ "testerSurvol", "classgui_1_1_fenetre_1_1_redimensionnement.html#a60d75700f55217f5d5706c783a6468ab", null ],
+    [ "traiterEvenements", "classgui_1_1_fenetre_1_1_redimensionnement.html#ad88d4f27a97fbe6d878e24da744ff105", null ],
     [ "Fenetre", "classgui_1_1_fenetre_1_1_redimensionnement.html#af5c60b20048ba2de87cbc917bd75e2da", null ],
     [ "m_boutons", "classgui_1_1_fenetre_1_1_redimensionnement.html#a7ec5a3c5bbf4ed2c63d82b00afa6807a", null ],
     [ "m_btn_B", "classgui_1_1_fenetre_1_1_redimensionnement.html#a9cf06e4e8164240edff7d6535c5551b9", null ],

@@ -11,6 +11,6 @@ var searchData=
   ['resourcemgr_3c_20sf_3a_3amusic_2c_20identifiant_20_3e',['ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;',['../classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html',1,'app']]],
   ['resourcemgr_3c_20sf_3a_3ashader_2c_20int_20_3e',['ResourceMgr&lt; sf::Shader, int &gt;',['../classapp_1_1_resource_mgr.html',1,'app']]],
   ['resourcemgr_3c_20sf_3a_3atexture_2c_20int_20_3e',['ResourceMgr&lt; sf::Texture, int &gt;',['../classapp_1_1_resource_mgr.html',1,'app']]],
-  ['retirer',['retirer',['../classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c',1,'app::Gestion_ecrans']]],
-  ['retirerecran',['retirerEcran',['../classapp_1_1_application.html#a6cbc17d5a777730d7811e874182fd11a',1,'app::Application']]]
+  ['retirer',['Retirer',['../classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569a6bef3dad0638c21c3f9aec43f4300817',1,'app::Gestion_ecrans::Retirer()'],['../classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c',1,'app::Gestion_ecrans::retirer()']]],
+  ['retirerecran',['retirerEcran',['../classapp_1_1_ecran.html#ab9cfe5ce6551587c3d8de86da00ef4b1',1,'app::Ecran']]]
 ];

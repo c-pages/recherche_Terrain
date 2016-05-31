@@ -9,8 +9,8 @@ void main() {
     // hachures
     vec4    color       = gl_Color;
     vec2    pos         = gl_FragCoord.xy;
-    float   colHachures = 1.5;
-    float   colContour  = .76;
+    float   colHachures = 1.2;
+    float   colContour  = .8;
     vec4    hachure     = vec4(colHachures,colHachures,colHachures,1.);
     vec4    contour     = vec4(colContour,colContour,colContour,1.);
 

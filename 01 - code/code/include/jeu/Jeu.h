@@ -6,7 +6,8 @@
 /////////////////////////////////////////////////
 #include <SFML/Graphics.hpp>
 
-#include "Terrain.h"
+#include "jeu/Terrain.h"
+#include "appli/Ecran.h"
 
 namespace jeu {
 
@@ -14,28 +15,32 @@ namespace jeu {
 
 /////////////////////////////////////////////////
 /// \brief La classe général du jeu, gère le jeu de manière global.
-/// popo
-/// autre ligne
-/// là aussi.
 ///
 /////////////////////////////////////////////////
 class Jeu : public sf::NonCopyable, public sf::Drawable {
 
 
-
 /////////////////////////////////////////////////
 // Méthodes
 /////////////////////////////////////////////////
+public:
 
-public:
-public:
+
+
+
     /////////////////////////////////////////////////
-    /// \brief Démarre une nouvelle partie.
-    /// et là onsaute une ligne.
-    /// et une autre.
+    /// \brief Constructeur
     ///
     /////////////////////////////////////////////////
-    void demarrerPartie ();
+    Jeu (app::Ecran::Contexte contexte);
+
+
+    /////////////////////////////////////////////////
+    /// \brief Démarre une nouvelle partie.
+    ///
+    /// \param seed		 Le seed permet de définir le seed du noise et ainsi d'aoptenir tojours le meme terrain avec le même seed. (cf. Minecraft)
+    /////////////////////////////////////////////////
+    void demarrerPartie (int seed = 123456);
 
     /////////////////////////////////////////////////
     /// \brief Quitter la partie en cours (sans sauvegarde).
@@ -55,6 +60,48 @@ public:
     /////////////////////////////////////////////////
     void sauvegarderPartie ();
 
+
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief acceder à la taille de la carte du jeu
+    ///
+    /// \return la taille de la carte de jeu en pixel
+    /////////////////////////////////////////////////
+    sf::Vector2i getTailleCarte () const { return m_tailleCarte; };
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief Monter d'un étage
+    ///
+    /////////////////////////////////////////////////
+    void etageMonter ();
+
+    /////////////////////////////////////////////////
+    /// \brief Descendre d'un étage
+    ///
+    /////////////////////////////////////////////////
+    void etageDescendre ();
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief Définir l'origin pour les shaders du terrain
+    /// Sert à recaller l'origine des hachures et du quadrillage des shaders du terrain.
+    ///
+    /// \param pos la nouvelle origine des shaders.
+    /////////////////////////////////////////////////
+    void setShadersOrigin ( sf::Vector2f pos )
+    { m_terrain.setShadersOrigin ( pos ); };
+
+
+
+
+
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments du jeu.
     ///
@@ -69,6 +116,12 @@ public:
     /////////////////////////////////////////////////
     void traiterEvenements (sf::Event evenement);
 
+    /////////////////////////////////////////////////
+    /// \brief Déssine tout les éléments graphiques nécessaires (terrains, plantes, PJ, PNJ, interface... tout quoi).
+    ///
+    /// \param target
+    /// \param states
+    /////////////////////////////////////////////////
     virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
 
 
@@ -77,7 +130,10 @@ public:
 // Membres
 /////////////////////////////////////////////////
 private:
-    Terrain m_terrain;    ///< Le terrain de la partie en cours.
+
+    Terrain                 m_terrain;          ///< Le terrain de la partie en cours.
+    app::Ecran::Contexte    m_contexte;         ///< Le contexte courant.
+    sf::Vector2i            m_tailleCarte;      ///< La taille du terrain, en pixels.
 
 }; // fin class Jeu
 

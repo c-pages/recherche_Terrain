@@ -1,7 +1,6 @@
 var searchData=
 [
   ['jeu',['Jeu',['../classjeu_1_1_jeu.html',1,'jeu']]],
-  ['jeu',['jeu',['../namespacejeu.html',1,'jeu'],['../classapp_1_1_application.html#af23b16d902265e5140a3c29f9f2a45a7a4f69f619f9ff3c77e312f52cefeba3e6',1,'app::Application::Jeu()']]],
-  ['jeu_2ecpp',['Jeu.cpp',['../_jeu_8cpp.html',1,'']]],
+  ['jeu',['jeu',['../namespacejeu.html',1,'jeu'],['../namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0ad1e2170e81b27d6e9c32f43b4171942c',1,'app::Ecrans::Jeu()']]],
   ['jeu_2eh',['Jeu.h',['../_jeu_8h.html',1,'']]]
 ];

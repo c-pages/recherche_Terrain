@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
-<title>Appli: Module pour Application</title>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Module pour Application</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,15 +31,17 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Appli
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">v0.1</span>
    </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.11 -->
+<!-- Généré par Doxygen 1.8.10 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -47,7 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
       <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
-      <li class="current"><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
@@ -115,10 +117,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contient les différents éléments de Configuration de l'application.  <a href="classapp_1_1_config.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">La classe virtuelle communues aux �crans.  <a href="classapp_1_1_ecran.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">La classe virtuelle communues aux écrans.  <a href="classapp_1_1_ecran.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html">app::Gestion_ecrans</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestionnaire des �crans.  <a href="classapp_1_1_gestion__ecrans.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe qui s'occupe de gérer les écrans.  <a href="classapp_1_1_gestion__ecrans.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_resource_mgr.html">app::ResourceMgr&lt; RESOURCE, IDENTIFIANT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manager de ressource (polices, images).  <a href="classapp_1_1_resource_mgr.html#details">Plus de détails...</a><br /></td></tr>
@@ -127,22 +129,22 @@ Classes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <p>Gère les différents écrans du programme (écran d'introduction, accueil, pause, écran du jeu ....)</p>
 <p>Peut-être pour tester d'autre trucs, comme la bibilo d'interface graphique... ou comme base pour demarrer un nouveau projet.</p>
-<p>Manipule les différents écrans de l'application à l'aide d'une boucle infernalede type : </p><ul>
+<p>Manipule les différents écrans de l'application à  l'aide d'une boucle infernale de type : </p><ul>
 <li>Ecouter les évenements utilisateurs ( claviers, cliques...). </li>
 <li>Actualiser les parametres de tout les éléments ( position, couleurs, points de vies ... ). </li>
 <li>Dessiner les éléments dans la fenetre</li>
 </ul>
 <p>C'est le gestionnaire des écrans ( m_ecrans app:Gestion_Ecrans ) qui se charge du traitement de la pile des écrans.</p>
 <p>Quand il n'y a plus d'écrans dans la pile, l'application se ferme.</p>
-<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">app::Ecran</a>, app::EcranDemo, <a class="el" href="classapp_1_1_gestion__ecrans.html" title="Gestionnaire des �crans. ">app::Gestion_ecrans</a> </dd></dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">app::Ecran</a>, app::EcranDemo, <a class="el" href="classapp_1_1_gestion__ecrans.html" title="Classe qui s&#39;occupe de gérer les écrans. ">app::Gestion_ecrans</a> </dd></dl>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Mardi 24 Mai 2016 17:13:56 pour Appli par
+    <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
 </div>
 </body>

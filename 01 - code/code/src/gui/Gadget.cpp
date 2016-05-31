@@ -3,8 +3,9 @@
 /////////////////////////////////////////////////
 #include "gui/Gadget.h"
 #include "gui/Gui.h"
+#include "appli/Config.h"
 
-#include <iostream>
+#include <iostream>*
 
 namespace gui {
 
@@ -28,9 +29,14 @@ Gadget::Gadget ()
     if (! m_shaderClipImage.loadFromFile( "media/shaders/clippingMask.frag", sf::Shader::Fragment ) )
         std::cout << "PROBLEME CHARGEMENT SHADER\n";
 
-    m_shaderClip.setParameter("texture", sf::Shader::CurrentTexture);
-    m_shaderClipImage.setParameter("texture", sf::Shader::CurrentTexture);
-    m_shaderClipImage.setParameter("aTexture", true );
+//    m_shaderClip        =    app::Config::ms_shaders.get ( app::Config::Shaders::clipping );
+//    m_shaderClipImage   =    app::Config::ms_shaders.get ( app::Config::Shaders::clipping );
+
+
+
+    m_shaderClip.setParameter       ("texture"  , sf::Shader::CurrentTexture);
+    m_shaderClipImage.setParameter  ("texture"  , sf::Shader::CurrentTexture);
+    m_shaderClipImage.setParameter  ("aTexture" , true );
 
     m_enfantsASupprimer.clear();
 }

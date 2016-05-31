@@ -52,7 +52,7 @@ void Config::init()
 
     initPolices();
     initTextures();
-
+    initShaders();
 }
 
 
@@ -77,7 +77,7 @@ void Config::initTextures()
 /////////////////////////////////////////////////
 void Config::initShaders()
 {
-    ms_shaders.load( Shaders::clipping  , "media/img/avatar 2.jpg" , sf::Shader::Fragment );
+    ms_shaders.load( Shaders::clipping  , "media/shaders/clippingMask.frag", sf::Shader::Fragment );
 }
 
 

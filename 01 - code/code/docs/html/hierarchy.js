@@ -14,6 +14,7 @@ var hierarchy =
     ] ],
     [ "app::Application", "classapp_1_1_application.html", null ],
     [ "app::Config", "classapp_1_1_config.html", null ],
+    [ "app::Ecran::Contexte", "structapp_1_1_ecran_1_1_contexte.html", null ],
     [ "Drawable", null, [
       [ "gui::Gadget", "classgui_1_1_gadget.html", null ],
       [ "jeu::Etage", "classjeu_1_1_etage.html", null ],
@@ -23,13 +24,16 @@ var hierarchy =
     ] ],
     [ "app::Ecran", "classapp_1_1_ecran.html", [
       [ "app::EcranAccueil", "classapp_1_1_ecran_accueil.html", null ],
-      [ "app::EcranJeu", "classapp_1_1_ecran_jeu.html", null ]
+      [ "app::EcranJeu", "classapp_1_1_ecran_jeu.html", null ],
+      [ "app::EcranOptions", "classapp_1_1_ecran_options.html", null ],
+      [ "app::EcranPause", "classapp_1_1_ecran_pause.html", null ]
     ] ],
     [ "enable_shared_from_this", null, [
       [ "gui::Gadget", "classgui_1_1_gadget.html", null ]
     ] ],
     [ "gui::Fabrique", "classgui_1_1_fabrique.html", null ],
     [ "app::Gestion_ecrans", "classapp_1_1_gestion__ecrans.html", null ],
+    [ "app::Gestion_ecrans::ModifEnAttente", "structapp_1_1_gestion__ecrans_1_1_modif_en_attente.html", null ],
     [ "NonCopyable", null, [
       [ "gui::Gadget", "classgui_1_1_gadget.html", null ],
       [ "jeu::Etage", "classjeu_1_1_etage.html", null ],

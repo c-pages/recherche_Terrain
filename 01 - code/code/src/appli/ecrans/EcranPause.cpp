@@ -42,6 +42,7 @@ void EcranPause::actualiser            ( sf::Time deltaT )
 /////////////////////////////////////////////////
 void EcranPause::dessiner ()
 {
+    m_contexte.fenetre->setView  ( m_vuePrincipale );
     m_contexte.fenetre->draw ( m_fond );
     m_contexte.fenetre->draw ( *m_interface );
 }
@@ -52,7 +53,7 @@ void EcranPause::dessiner ()
 void
 EcranPause::initGUI  ( )
 {
-
+    std::cout << "INITIALISER ECRAN PAUSE\n";
 
     // Initialisation du fond.
     m_fond.setPosition(0,0);
@@ -103,8 +104,8 @@ EcranPause::initGUI  ( )
     // le clavier //
     m_interface->lier   ( sf::Keyboard::Escape
                         , [this, fenetrePrincipale ](){
-                            retirerEcran();
-                            m_pileEcrans->at(0).setPause (false);
+                         viderEcrans( );
+                         ajouterEcran( app::Ecrans::Accueil );
                         });
 
 

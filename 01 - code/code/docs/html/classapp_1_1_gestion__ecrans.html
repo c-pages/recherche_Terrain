@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
-<title>Appli: Référence de la classe app::Gestion_ecrans</title>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Référence de la classe app::Gestion_ecrans</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,15 +31,17 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Appli
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">v0.1</span>
    </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.11 -->
+<!-- Généré par Doxygen 1.8.10 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -108,7 +110,10 @@ $(document).ready(function(){initNavTree('classapp_1_1_gestion__ecrans.html','')
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Types publics</a> &#124;
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
 <a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="classapp_1_1_gestion__ecrans-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
@@ -116,51 +121,160 @@ $(document).ready(function(){initNavTree('classapp_1_1_gestion__ecrans.html','')
 </div><!--header-->
 <div class="contents">
 
-<p>Gestionnaire des �crans.  
+<p>Classe qui s'occupe de gérer les écrans.  
  <a href="classapp_1_1_gestion__ecrans.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe de collaboration de app::Gestion_ecrans:</div>
+<div class="dyncontent">
+<div class="center"><img src="classapp_1_1_gestion__ecrans__coll__graph.png" border="0" usemap="#app_1_1_gestion__ecrans_coll__map" alt="Collaboration graph"/></div>
+<map name="app_1_1_gestion__ecrans_coll__map" id="app_1_1_gestion__ecrans_coll__map">
+<area shape="rect" id="node2" href="structapp_1_1_ecran_1_1_contexte.html" title="&lt; le context (la fenetre SFML, les textures, polices, ... ) associés aux Etats (intro, menu ...) " alt="" coords="5,5,151,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structapp_1_1_gestion__ecrans_1_1_modif_en_attente.html">ModifEnAttente</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; le struct qui porte l'info de ce qu'il doit faire comme modif sur la pile  <a href="structapp_1_1_gestion__ecrans_1_1_modif_en_attente.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:af35b8c3613b4d530f4590d04db4e7569"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569">Action</a> { <a class="el" href="classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569af59e81beddb868c86db8e3abc71a4bfe">Ajouter</a>, 
+<a class="el" href="classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569a6bef3dad0638c21c3f9aec43f4300817">Retirer</a>, 
+<a class="el" href="classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569a5d9ab4b7c0fd02a370b0328801625a31">Vider</a>
+ }<tr class="memdesc:af35b8c3613b4d530f4590d04db4e7569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les differentes actions réalisables sur les ecrans.  <a href="classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af35b8c3613b4d530f4590d04db4e7569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a576182f13e96e890e961dd1f7f69747b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a576182f13e96e890e961dd1f7f69747b">ajouter</a> (<a class="el" href="classapp_1_1_ecran.html">Ecran</a> *ecran)</td></tr>
-<tr class="memdesc:a576182f13e96e890e961dd1f7f69747b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter un �cran sur la pile.  <a href="#a576182f13e96e890e961dd1f7f69747b">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a576182f13e96e890e961dd1f7f69747b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc93fbe62a24b9c2122cbb89ac20a6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#addc93fbe62a24b9c2122cbb89ac20a6e">Gestion_ecrans</a> (<a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Ecran::Contexte</a> contexte)</td></tr>
+<tr class="memdesc:addc93fbe62a24b9c2122cbb89ac20a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur (explicit, j'ai pas encore bien compris ce truc)  <a href="#addc93fbe62a24b9c2122cbb89ac20a6e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:addc93fbe62a24b9c2122cbb89ac20a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019e8dc80df12ba14a8904c4cd14a356"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a019e8dc80df12ba14a8904c4cd14a356"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a019e8dc80df12ba14a8904c4cd14a356">enregistrerEcran</a> (<a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a> ecranID)</td></tr>
+<tr class="memdesc:a019e8dc80df12ba14a8904c4cd14a356"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction Template pour enregistrer les écrans dans m_factories.  <a href="#a019e8dc80df12ba14a8904c4cd14a356">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a019e8dc80df12ba14a8904c4cd14a356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898f190b91f0ace40b5eaa0a90c54939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classapp_1_1_ecran.html">Ecran</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a898f190b91f0ace40b5eaa0a90c54939">at</a> (unsigned int index)</td></tr>
+<tr class="memdesc:a898f190b91f0ace40b5eaa0a90c54939"><td class="mdescLeft">&#160;</td><td class="mdescRight">acceder à un ecran de la pile par index  <a href="#a898f190b91f0ace40b5eaa0a90c54939">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a898f190b91f0ace40b5eaa0a90c54939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c665b1c0881c43769d6a27edc2a20a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#ac7c665b1c0881c43769d6a27edc2a20a">size</a> ()</td></tr>
+<tr class="memdesc:ac7c665b1c0881c43769d6a27edc2a20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">acceder taille de m_pile, le nombre d'écran dans la pile  <a href="#ac7c665b1c0881c43769d6a27edc2a20a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac7c665b1c0881c43769d6a27edc2a20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825d1b573f22fdfc702b9b70aa32d69a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a825d1b573f22fdfc702b9b70aa32d69a">ajouter</a> (<a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a> ecranID)</td></tr>
+<tr class="memdesc:a825d1b573f22fdfc702b9b70aa32d69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter un écran sur la pile.  <a href="#a825d1b573f22fdfc702b9b70aa32d69a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a825d1b573f22fdfc702b9b70aa32d69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0db2b08457f77a9d01ed007d410d2e0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c">retirer</a> ()</td></tr>
-<tr class="memdesc:a0db2b08457f77a9d01ed007d410d2e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retirer l'�cran du dessus de la pile.  <a href="#a0db2b08457f77a9d01ed007d410d2e0c">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a0db2b08457f77a9d01ed007d410d2e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retirer l'écran du dessus de la pile.  <a href="#a0db2b08457f77a9d01ed007d410d2e0c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0db2b08457f77a9d01ed007d410d2e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c7fab33cf6489b092a482bae4b266f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a1c7fab33cf6489b092a482bae4b266f7">vider</a> ()</td></tr>
-<tr class="memdesc:a1c7fab33cf6489b092a482bae4b266f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retirer tout les �crans de la pile.  <a href="#a1c7fab33cf6489b092a482bae4b266f7">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a1c7fab33cf6489b092a482bae4b266f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retirer tout les écrans de la pile.  <a href="#a1c7fab33cf6489b092a482bae4b266f7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1c7fab33cf6489b092a482bae4b266f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7424aab98a8b01f5b5e201ee77bbb7bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a7424aab98a8b01f5b5e201ee77bbb7bb">estVide</a> ()</td></tr>
-<tr class="memdesc:a7424aab98a8b01f5b5e201ee77bbb7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demande si il y a encore des ecrans dans la pile.  <a href="#a7424aab98a8b01f5b5e201ee77bbb7bb">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a7424aab98a8b01f5b5e201ee77bbb7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd582c82b53c7c142d23dbee83c5bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#addd582c82b53c7c142d23dbee83c5bbd">changer</a> (<a class="el" href="classapp_1_1_ecran.html">Ecran</a> *ecran)</td></tr>
-<tr class="memdesc:addd582c82b53c7c142d23dbee83c5bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changer d'�cran.  <a href="#addd582c82b53c7c142d23dbee83c5bbd">Plus de détails...</a><br /></td></tr>
-<tr class="separator:addd582c82b53c7c142d23dbee83c5bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ab21cf757223d379edf67796b8dae99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classapp_1_1_ecran.html">Ecran</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a7ab21cf757223d379edf67796b8dae99">courant</a> ()</td></tr>
-<tr class="memdesc:a7ab21cf757223d379edf67796b8dae99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie l'�cran courant, celui au top de la <em>_pile</em>.  <a href="#a7ab21cf757223d379edf67796b8dae99">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a7ab21cf757223d379edf67796b8dae99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ac44228ae56e85a70a98097de03c6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a88ac44228ae56e85a70a98097de03c6d">estVide</a> () const </td></tr>
+<tr class="memdesc:a88ac44228ae56e85a70a98097de03c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demande si il y a encore des ecrans dans la pile.  <a href="#a88ac44228ae56e85a70a98097de03c6d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a88ac44228ae56e85a70a98097de03c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdca6c8f031948a5ce80136209924fe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#afdca6c8f031948a5ce80136209924fe8">traiter_evenements</a> (sf::Event event)</td></tr>
-<tr class="memdesc:afdca6c8f031948a5ce80136209924fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">G�re les �venements des �crans actifs.  <a href="#afdca6c8f031948a5ce80136209924fe8">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:afdca6c8f031948a5ce80136209924fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère les évenements des écrans actifs.  <a href="#afdca6c8f031948a5ce80136209924fe8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:afdca6c8f031948a5ce80136209924fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac271e2ce11691a51f82f54a7c395d565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#ac271e2ce11691a51f82f54a7c395d565">actualiser</a> (sf::Time deltaT)</td></tr>
-<tr class="memdesc:ac271e2ce11691a51f82f54a7c395d565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiser les �l�ments.  <a href="#ac271e2ce11691a51f82f54a7c395d565">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ac271e2ce11691a51f82f54a7c395d565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiser les éléments.  <a href="#ac271e2ce11691a51f82f54a7c395d565">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac271e2ce11691a51f82f54a7c395d565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c413e7ecbcb252c343136465f5be100"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a3c413e7ecbcb252c343136465f5be100">dessiner</a> ()</td></tr>
-<tr class="memdesc:a3c413e7ecbcb252c343136465f5be100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendre les �crans de la pile.  <a href="#a3c413e7ecbcb252c343136465f5be100">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a3c413e7ecbcb252c343136465f5be100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendre les écrans de la pile.  <a href="#a3c413e7ecbcb252c343136465f5be100">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3c413e7ecbcb252c343136465f5be100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:a5db554623b2592ab3bb34e70f50d63f4"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classapp_1_1_ecran.html">Ecran</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a5db554623b2592ab3bb34e70f50d63f4">creerEcran</a> (<a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a> ecranID)</td></tr>
+<tr class="memdesc:a5db554623b2592ab3bb34e70f50d63f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un <a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a>. Va chercher dans la factory l'id demandé, et créer l'écran grace à la fonction lambda associé à l'ID.  <a href="#a5db554623b2592ab3bb34e70f50d63f4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5db554623b2592ab3bb34e70f50d63f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab332d19741d7798caacd3e810f4f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a0ab332d19741d7798caacd3e810f4f08">appliquerModifEnAttente</a> ()</td></tr>
+<tr class="memdesc:a0ab332d19741d7798caacd3e810f4f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appliquer les modifications de la pile de modifs. C'est là qu'on manipule réelement les écrans (création, destruction...)  <a href="#a0ab332d19741d7798caacd3e810f4f08">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0ab332d19741d7798caacd3e810f4f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:a7c28eed460e613fbb2414dcaab9d0e16"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classapp_1_1_ecran.html">Ecran</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a7c28eed460e613fbb2414dcaab9d0e16">m_pile</a></td></tr>
-<tr class="memdesc:a7c28eed460e613fbb2414dcaab9d0e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">La pile des �crans actifs.  <a href="#a7c28eed460e613fbb2414dcaab9d0e16">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a7c28eed460e613fbb2414dcaab9d0e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50dff32725a2924368531cec7c5481a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classapp_1_1_ecran.html">Ecran</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#aa50dff32725a2924368531cec7c5481a">m_pile</a></td></tr>
+<tr class="memdesc:aa50dff32725a2924368531cec7c5481a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La pile des écrans actifs.  <a href="#aa50dff32725a2924368531cec7c5481a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa50dff32725a2924368531cec7c5481a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdf1806abc62c1858976545763c4914"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structapp_1_1_gestion__ecrans_1_1_modif_en_attente.html">ModifEnAttente</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#acfdf1806abc62c1858976545763c4914">m_modifEnAttente</a></td></tr>
+<tr class="memdesc:acfdf1806abc62c1858976545763c4914"><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des modifications à éffectuer sur la pile des <a class="el" href="namespaceapp_1_1_ecrans.html" title="les différents écrans que l&#39;on va trouver dans l&#39;application ">Ecrans</a>.  <a href="#acfdf1806abc62c1858976545763c4914">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acfdf1806abc62c1858976545763c4914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5c9d23b827aef563563cdb5b0542c8"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a>,std::function&lt; std::unique_ptr&lt; <a class="el" href="classapp_1_1_ecran.html">Ecran</a> &gt;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#adc5c9d23b827aef563563cdb5b0542c8">m_factories</a></td></tr>
+<tr class="memdesc:adc5c9d23b827aef563563cdb5b0542c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">C'est ce qui va créer les <a class="el" href="namespaceapp_1_1_ecrans.html" title="les différents écrans que l&#39;on va trouver dans l&#39;application ">Ecrans</a> à la volée. Un ID associé à une fonction Lambda qui va nous creer les écrans voulus.  <a href="#adc5c9d23b827aef563563cdb5b0542c8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adc5c9d23b827aef563563cdb5b0542c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d30f08dce07e498d6ef1e368b62cbed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Ecran::Contexte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_gestion__ecrans.html#a9d30f08dce07e498d6ef1e368b62cbed">m_contexte</a></td></tr>
+<tr class="memdesc:a9d30f08dce07e498d6ef1e368b62cbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le contexte de l'application (fenetre SFML, polices...) (à developper)  <a href="#a9d30f08dce07e498d6ef1e368b62cbed">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9d30f08dce07e498d6ef1e368b62cbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Gestionnaire des �crans. </p>
-<p>G�re les diff�rents �crans de l'application. C'est lui qui porte les �crans actifs du programme. qui permet de passer d'un �cran � l'autre, etc. </p><dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">app::Ecran</a> </dd></dl>
-</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<div class="textblock"><p>Classe qui s'occupe de gérer les écrans. </p>
+<p>L'idée c'est que chaque écran doit d'abords être enregistré dans la fabrique à l'initialisation de l'appli L'enregistrement ne créer pas l'écran mais associe une ID et une fonction lambda dans un &lt;map&gt; qui le créera au moment voulu. Les actions sur les écrans ne sont enregistrés dans une liste ( m_modifEnAttente ) et réalisé qu'à la fin de la frame (<a class="el" href="classapp_1_1_gestion__ecrans.html#a0ab332d19741d7798caacd3e810f4f08" title="Appliquer les modifications de la pile de modifs. C&#39;est là qu&#39;on manipule réelement les écrans (créat...">appliquerModifEnAttente()</a>). Cela permet par exemple qu'un écran se supprime lui-même sans tout faire planter.</p>
+<p>Gère les différents écrans de l'application. C'est lui qui porte les écrans actifs du programme. qui permet de passer d'un écran à l'autre, etc. </p><dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">app::Ecran</a> </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="_gestion__ecrans_8h_source.html#l00023">23</a> du fichier <a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>.</p>
+</div><h2 class="groupheader">Documentation des énumérations membres</h2>
+<a class="anchor" id="af35b8c3613b4d530f4590d04db4e7569"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classapp_1_1_gestion__ecrans.html#af35b8c3613b4d530f4590d04db4e7569">app::Gestion_ecrans::Action</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Les differentes actions réalisables sur les ecrans. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a class="anchor" id="af35b8c3613b4d530f4590d04db4e7569af59e81beddb868c86db8e3abc71a4bfe"></a>Ajouter&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af35b8c3613b4d530f4590d04db4e7569a6bef3dad0638c21c3f9aec43f4300817"></a>Retirer&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af35b8c3613b4d530f4590d04db4e7569a5d9ab4b7c0fd02a370b0328801625a31"></a>Vider&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="_gestion__ecrans_8h_source.html#l00031">31</a> du fichier <a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="addc93fbe62a24b9c2122cbb89ac20a6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">app::Gestion_ecrans::Gestion_ecrans </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Ecran::Contexte</a>&#160;</td>
+          <td class="paramname"><em>contexte</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructeur (explicit, j'ai pas encore bien compris ce truc) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">le</td><td>contexte courant transmit par l'application. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
 <a class="anchor" id="ac271e2ce11691a51f82f54a7c395d565"></a>
 <div class="memitem">
 <div class="memproto">
@@ -175,10 +289,10 @@ Attributs privés</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Actualiser les �l�ments. </p>
-<p>Actualiser les diff�rents �l�ments du ou des �crans actifs. </p><dl class="params"><dt>Paramètres</dt><dd>
+<p>Actualiser les éléments. </p>
+<p>Actualiser les différents éléments du ou des écrans actifs. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deltaT</td><td>Un <em>float</em> qui indique le delta du temps �coul� depuis la derni�re actualisation. </td></tr>
+    <tr><td class="paramname">deltaT</td><td>Un <em>float</em> qui indique le delta du temps écoulé depuis la dernière actualisation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -186,24 +300,24 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a576182f13e96e890e961dd1f7f69747b"></a>
+<a class="anchor" id="a825d1b573f22fdfc702b9b70aa32d69a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void app::Gestion_ecrans::ajouter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classapp_1_1_ecran.html">Ecran</a> *&#160;</td>
-          <td class="paramname"><em>ecran</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a>&#160;</td>
+          <td class="paramname"><em>ecranID</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ajouter un �cran sur la pile. </p>
+<p>Ajouter un écran sur la pile. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ecran</td><td>Un nouvel <em><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">Ecran</a></em> � ajouter � la pile active. </td></tr>
+    <tr><td class="paramname">ecranID</td><td>L'ID de l'<a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a> à ajouter à la pile active. </td></tr>
   </table>
   </dd>
 </dl>
@@ -211,58 +325,87 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="addd582c82b53c7c142d23dbee83c5bbd"></a>
+<a class="anchor" id="a0ab332d19741d7798caacd3e810f4f08"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void app::Gestion_ecrans::changer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classapp_1_1_ecran.html">Ecran</a> *&#160;</td>
-          <td class="paramname"><em>ecran</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Changer d'�cran. </p>
-<p>On retire l'�cran en cours, puis on ajoute le nouveau.</p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ecran</td><td>le nouvel <em><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">Ecran</a></em> � mettre � la place du dernier de la pile. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
-
-<p><div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classapp_1_1_gestion__ecrans_addd582c82b53c7c142d23dbee83c5bbd_cgraph.png" border="0" usemap="#classapp_1_1_gestion__ecrans_addd582c82b53c7c142d23dbee83c5bbd_cgraph" alt=""/></div>
-<map name="classapp_1_1_gestion__ecrans_addd582c82b53c7c142d23dbee83c5bbd_cgraph" id="classapp_1_1_gestion__ecrans_addd582c82b53c7c142d23dbee83c5bbd_cgraph">
-<area shape="rect" id="node2" href="classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c" title="Retirer l&#39;�cran du dessus de la pile. " alt="" coords="196,5,339,47"/>
-<area shape="rect" id="node3" href="classapp_1_1_gestion__ecrans.html#a576182f13e96e890e961dd1f7f69747b" title="Ajouter un �cran sur la pile. " alt="" coords="196,71,339,112"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a7ab21cf757223d379edf67796b8dae99"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classapp_1_1_ecran.html">Ecran</a> * app::Gestion_ecrans::courant </td>
+          <td class="memname">void app::Gestion_ecrans::appliquerModifEnAttente </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Renvoie l'�cran courant, celui au top de la <em>_pile</em>. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>L'�cran courant. </dd></dl>
+<p>Appliquer les modifications de la pile de modifs. C'est là qu'on manipule réelement les écrans (création, destruction...) </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a898f190b91f0ace40b5eaa0a90c54939"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classapp_1_1_ecran.html">Ecran</a>&amp; app::Gestion_ecrans::at </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>acceder à un ecran de la pile par index </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>L'ID de l'<a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a> à ajouter à la pile active. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>reference vers l'ecran à l'index specifié. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5db554623b2592ab3bb34e70f50d63f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classapp_1_1_ecran.html">Ecran</a>&gt; app::Gestion_ecrans::creerEcran </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a>&#160;</td>
+          <td class="paramname"><em>ecranID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Créer un <a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a>. Va chercher dans la factory l'id demandé, et créer l'écran grace à la fonction lambda associé à l'ID. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ecranID</td><td>l'ID de l'<a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a> à créer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un unique_ptr vers l'ecran créé. </dd></dl>
 
 </div>
 </div>
@@ -279,13 +422,42 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Rendre les �crans de la pile. </p>
-<p>Dessine les diff�rents �l�ments du ou des �crans de la pile.</p>
+<p>Rendre les écrans de la pile. </p>
+<p>Dessine les différents éléments du ou des écrans de la pile.</p>
 <dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a7424aab98a8b01f5b5e201ee77bbb7bb"></a>
+<a class="anchor" id="a019e8dc80df12ba14a8904c4cd14a356"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void app::Gestion_ecrans::enregistrerEcran </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a>&#160;</td>
+          <td class="paramname"><em>ecranID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction Template pour enregistrer les écrans dans m_factories. </p>
+<p>Necessaire pour manipuler les écrans de tous les enregistrer au debut. En gros ça fait un lien entre les <a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a> et les classes <a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a> proprement dites. Pour enregister la classe <a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a> concrete <a class="el" href="classapp_1_1_ecran_accueil.html" title="L&#39;écran d&#39;accueil affiche le menu de démarrage du jeu : Démarrer une partie, accéder au options...">EcranAccueil</a> : </p><div class="fragment"><div class="line">this.enregistrerEtat &lt;EcranAccueil&gt; ( <a class="code" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0a4c77c5df03062e1ce2e7b0c5e0e13379">Ecrans::ID::Accueil</a> );</div>
+</div><!-- fragment --><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ercanID</td><td>L'identification de l'etat. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="_gestion__ecrans_8h_source.html#l00202">202</a> du fichier <a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88ac44228ae56e85a70a98097de03c6d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -293,7 +465,7 @@ Voici le graphe d'appel pour cette fonction :</div>
           <td class="memname">bool app::Gestion_ecrans::estVide </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -316,8 +488,26 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Retirer l'�cran du dessus de la pile. </p>
+<p>Retirer l'écran du dessus de la pile. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac7c665b1c0881c43769d6a27edc2a20a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int app::Gestion_ecrans::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>acceder taille de m_pile, le nombre d'écran dans la pile </p>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre d'écrans dans la pile </dd></dl>
 
 </div>
 </div>
@@ -335,7 +525,7 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>G�re les �venements des �crans actifs. </p>
+<p>Gère les évenements des écrans actifs. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
 </div>
@@ -353,23 +543,13 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Retirer tout les �crans de la pile. </p>
+<p>Retirer tout les écrans de la pile. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
-
-<p><div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classapp_1_1_gestion__ecrans_a1c7fab33cf6489b092a482bae4b266f7_cgraph.png" border="0" usemap="#classapp_1_1_gestion__ecrans_a1c7fab33cf6489b092a482bae4b266f7_cgraph" alt=""/></div>
-<map name="classapp_1_1_gestion__ecrans_a1c7fab33cf6489b092a482bae4b266f7_cgraph" id="classapp_1_1_gestion__ecrans_a1c7fab33cf6489b092a482bae4b266f7_cgraph">
-<area shape="rect" id="node2" href="classapp_1_1_gestion__ecrans.html#a0db2b08457f77a9d01ed007d410d2e0c" title="Retirer l&#39;�cran du dessus de la pile. " alt="" coords="196,5,339,47"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a class="anchor" id="a7c28eed460e613fbb2414dcaab9d0e16"></a>
+<a class="anchor" id="a9d30f08dce07e498d6ef1e368b62cbed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -377,7 +557,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classapp_1_1_ecran.html">Ecran</a>*&gt; app::Gestion_ecrans::m_pile</td>
+          <td class="memname"><a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Ecran::Contexte</a> app::Gestion_ecrans::m_contexte</td>
         </tr>
       </table>
   </td>
@@ -387,13 +567,86 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>La pile des �crans actifs. </p>
+<p>Le contexte de l'application (fenetre SFML, polices...) (à developper) </p>
+
+<p>Définition à la ligne <a class="el" href="_gestion__ecrans_8h_source.html#l00193">193</a> du fichier <a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>.</p>
 
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a></li>
-<li><a class="el" href="_gestion__ecrans_8cpp.html">Gestion_ecrans.cpp</a></li>
+<a class="anchor" id="adc5c9d23b827aef563563cdb5b0542c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a> ,std::function&lt;std::unique_ptr&lt;<a class="el" href="classapp_1_1_ecran.html">Ecran</a>&gt;)&gt; &gt; app::Gestion_ecrans::m_factories</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>C'est ce qui va créer les <a class="el" href="namespaceapp_1_1_ecrans.html" title="les différents écrans que l&#39;on va trouver dans l&#39;application ">Ecrans</a> à la volée. Un ID associé à une fonction Lambda qui va nous creer les écrans voulus. </p>
+
+<p>Définition à la ligne <a class="el" href="_gestion__ecrans_8h_source.html#l00192">192</a> du fichier <a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acfdf1806abc62c1858976545763c4914"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structapp_1_1_gestion__ecrans_1_1_modif_en_attente.html">ModifEnAttente</a>&gt; app::Gestion_ecrans::m_modifEnAttente</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La liste des modifications à éffectuer sur la pile des <a class="el" href="namespaceapp_1_1_ecrans.html" title="les différents écrans que l&#39;on va trouver dans l&#39;application ">Ecrans</a>. </p>
+
+<p>Définition à la ligne <a class="el" href="_gestion__ecrans_8h_source.html#l00190">190</a> du fichier <a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa50dff32725a2924368531cec7c5481a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="classapp_1_1_ecran.html">Ecran</a>&gt; &gt; app::Gestion_ecrans::m_pile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La pile des écrans actifs. </p>
+
+<p>Définition à la ligne <a class="el" href="_gestion__ecrans_8h_source.html#l00189">189</a> du fichier <a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/appli/<a class="el" href="_gestion__ecrans_8h_source.html">Gestion_ecrans.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -401,9 +654,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceapp.html">app</a></li><li class="navelem"><a class="el" href="classapp_1_1_gestion__ecrans.html">Gestion_ecrans</a></li>
-    <li class="footer">Généré le Mardi 24 Mai 2016 17:13:56 pour Appli par
+    <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
 </div>
 </body>

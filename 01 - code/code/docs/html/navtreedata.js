@@ -1,10 +1,15 @@
 var NAVTREE =
 [
-  [ "Appli", "index.html", [
+  [ "Application de base", "index.html", [
     [ "Liste des choses à faire", "todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Espaces de nommage", null, [
-      [ "Liste des espaces de nommage", "namespaces.html", "namespaces" ]
+      [ "Liste des espaces de nommage", "namespaces.html", "namespaces" ],
+      [ "Membres de l'espace de nommage", "namespacemembers.html", [
+        [ "Tout", "namespacemembers.html", null ],
+        [ "Énumérations", "namespacemembers_enum.html", null ],
+        [ "Valeurs énumérées", "namespacemembers_eval.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Liste des classes", "annotated.html", "annotated_dup" ],
@@ -32,9 +37,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_actions_8cpp.html",
-"classgui_1_1_fenetre.html#a87a948bfe4c6a4d83fcb111016e98601",
-"modules.html"
+"_actions_8h.html",
+"classgui_1_1_bouton.html#aea58042e402b144e3372087120af67f5",
+"functions_c.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

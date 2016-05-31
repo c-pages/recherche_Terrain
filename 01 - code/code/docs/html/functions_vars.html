@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
-<title>Appli: Membres de classe - Variables</title>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Membres de classe - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,15 +31,17 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Appli
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">v0.1</span>
    </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.11 -->
+<!-- Généré par Doxygen 1.8.10 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -90,7 +92,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
       <li class="current"><a href="#index_m"><span>m</span></a></li>
     </ul>
   </div>
@@ -126,6 +131,13 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <div class="contents">
 &#160;
 
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>action
+: <a class="el" href="structapp_1_1_gestion__ecrans_1_1_modif_en_attente.html#ac7fc501dac476814ecc61a2c28ff79f1">app::Gestion_ecrans::ModifEnAttente</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>creer
 : <a class="el" href="classgui_1_1_gui.html#a56d932a70ff90dfd2fff8f005925b385">gui::Gui</a>
@@ -133,10 +145,21 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </ul>
 
 
-<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>m_afficheEcranOptions
-: <a class="el" href="classapp_1_1_ecran_jeu.html#a21006f742779b1c303d26327250fd17b">app::EcranJeu</a>
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>ecranID
+: <a class="el" href="structapp_1_1_gestion__ecrans_1_1_modif_en_attente.html#a0e2cc297079a1f9f2a842114deefe6e7">app::Gestion_ecrans::ModifEnAttente</a>
 </li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>fenetre
+: <a class="el" href="structapp_1_1_ecran_1_1_contexte.html#a2f4db3af492f130be5d6d7dede694372">app::Ecran::Contexte</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>m_alphaPresse
 : <a class="el" href="classgui_1_1_bouton.html#a28caa2c70fbd2922851d418371c932d7">gui::Bouton</a>
 </li>
@@ -145,9 +168,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_alphaSurvol
 : <a class="el" href="classgui_1_1_bouton.html#a2a230783e6a9c4d08ed4e3d002acf344">gui::Bouton</a>
-</li>
-<li>m_appli
-: <a class="el" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">app::Ecran</a>
 </li>
 <li>m_boutons
 : <a class="el" href="classgui_1_1_fenetre_1_1_redimensionnement.html#a7ec5a3c5bbf4ed2c63d82b00afa6807a">gui::Fenetre::Redimensionnement</a>
@@ -203,6 +223,10 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_contenu
 : <a class="el" href="classgui_1_1_fenetre.html#a57f6ba169c304a90348a635d39048b99">gui::Fenetre</a>
 </li>
+<li>m_contexte
+: <a class="el" href="classapp_1_1_ecran.html#a33a961ce0dac066a10d7078aaf661d45">app::Ecran</a>
+, <a class="el" href="classapp_1_1_gestion__ecrans.html#a9d30f08dce07e498d6ef1e368b62cbed">app::Gestion_ecrans</a>
+</li>
 <li>m_couleurOmbres
 : <a class="el" href="classjeu_1_1_terrain.html#a4a81180f753ae83956f79b0c22a81b59">jeu::Terrain</a>
 </li>
@@ -248,8 +272,11 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_evenementsSouris
 : <a class="el" href="classgui_1_1_actions.html#ae14d5de5925a8024539546804e4f0b8f">gui::Actions</a>
 </li>
+<li>m_factories
+: <a class="el" href="classapp_1_1_gestion__ecrans.html#adc5c9d23b827aef563563cdb5b0542c8">app::Gestion_ecrans</a>
+</li>
 <li>m_fenetre
-: <a class="el" href="classapp_1_1_application.html#a5faee20484956cb1813c7eec81521a8f">app::Application</a>
+: <a class="el" href="classapp_1_1_application.html#a2b45d94b25a7b29cb7409b7701c3c2d5">app::Application</a>
 , <a class="el" href="classgui_1_1_fenetre_1_1_glissiere.html#a5276aa98ba298818f7764b2902408504">gui::Fenetre::Glissiere</a>
 , <a class="el" href="classgui_1_1_fenetre_1_1_redimensionnement.html#a23c5f66afeb225b3b7b1b92e09477952">gui::Fenetre::Redimensionnement</a>
 </li>
@@ -259,6 +286,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_fond
 : <a class="el" href="classapp_1_1_ecran_accueil.html#a4a85ba0ad48e955a3b5bc72ddab7711c">app::EcranAccueil</a>
 , <a class="el" href="classapp_1_1_ecran_jeu.html#a7081feb754c0bfe75798daeb57833dc0">app::EcranJeu</a>
+, <a class="el" href="classapp_1_1_ecran_options.html#a55402f9b749d32e1ce7ad97cbe2baad2">app::EcranOptions</a>
+, <a class="el" href="classapp_1_1_ecran_pause.html#a44ccd52245b5b0df47994fb3cff60b8c">app::EcranPause</a>
 , <a class="el" href="classgui_1_1_bouton.html#a7a4cca0de2173fe71bdf78723d8dc43d">gui::Bouton</a>
 , <a class="el" href="classgui_1_1_fenetre.html#a21649cafc780b53392126dbcd2ff0d47">gui::Fenetre</a>
 </li>
@@ -282,6 +311,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_interface
 : <a class="el" href="classapp_1_1_ecran_accueil.html#a4d8aec3dc14ccffe2b908b1ea3a140d0">app::EcranAccueil</a>
+, <a class="el" href="classapp_1_1_ecran_jeu.html#ad45cae43907c428bbce42770830063d4">app::EcranJeu</a>
+, <a class="el" href="classapp_1_1_ecran_options.html#a7749680cdfa3bc09697d6045b50ffe52">app::EcranOptions</a>
+, <a class="el" href="classapp_1_1_ecran_pause.html#ae4cdb9c1ce7d04a344928b391b255cd8">app::EcranPause</a>
 , <a class="el" href="classgui_1_1_fabrique.html#aeedb810cea770e539ce73069ecb2e16f">gui::Fabrique</a>
 </li>
 <li>m_largeur
@@ -303,6 +335,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_marge
 : <a class="el" href="classgui_1_1_gadget.html#ace11645220e06219f23ac3e2f5150dff">gui::Gadget</a>
 </li>
+<li>m_modifEnAttente
+: <a class="el" href="classapp_1_1_gestion__ecrans.html#acfdf1806abc62c1858976545763c4914">app::Gestion_ecrans</a>
+</li>
 <li>m_orientation
 : <a class="el" href="classgui_1_1_fenetre_1_1_glissiere.html#aa14043db682143f3bf2ec938abe5a00d">gui::Fenetre::Glissiere</a>
 </li>
@@ -310,10 +345,13 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a">gui::Gadget</a>
 </li>
 <li>m_pause
-: <a class="el" href="classapp_1_1_ecran_jeu.html#a3468ea0e301965e59aa6e2a0d793df12">app::EcranJeu</a>
+: <a class="el" href="classapp_1_1_ecran.html#a212022273c0711e2bcd4514e57cc7d51">app::Ecran</a>
 </li>
 <li>m_pile
-: <a class="el" href="classapp_1_1_gestion__ecrans.html#a7c28eed460e613fbb2414dcaab9d0e16">app::Gestion_ecrans</a>
+: <a class="el" href="classapp_1_1_gestion__ecrans.html#aa50dff32725a2924368531cec7c5481a">app::Gestion_ecrans</a>
+</li>
+<li>m_pileEcrans
+: <a class="el" href="classapp_1_1_ecran.html#a6f12f2f27a89b78bedb4b24e51f4a044">app::Ecran</a>
 </li>
 <li>m_redim
 : <a class="el" href="classgui_1_1_fenetre.html#a00b52ffa451c646ab10eac45c40aa15f">gui::Fenetre</a>
@@ -391,12 +429,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_vue
 : <a class="el" href="classapp_1_1_ecran_accueil.html#a463db13c7e5a38f5c1ac725a01eb1120">app::EcranAccueil</a>
 , <a class="el" href="classapp_1_1_ecran_jeu.html#a2af21bc87b915892b0089f90edb07145">app::EcranJeu</a>
-</li>
-<li>m_vueGUI
-: <a class="el" href="classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db">app::Ecran</a>
-</li>
-<li>m_vueJeu
-: <a class="el" href="classapp_1_1_ecran.html#aa619321cb264726990dc6a4362876db1">app::Ecran</a>
+, <a class="el" href="classapp_1_1_ecran_options.html#a7de02e56701babbd5a27e72f11df47f9">app::EcranOptions</a>
+, <a class="el" href="classapp_1_1_ecran_pause.html#aede2540c3a12d0717b7df7e719395ae6">app::EcranPause</a>
 </li>
 <li>mPlan
 : <a class="el" href="classapp_1_1_resource_mgr.html#aaf3f11ff8309da00bbc6cce38bc156fa">app::ResourceMgr&lt; RESOURCE, IDENTIFIANT &gt;</a>
@@ -406,16 +440,16 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="classapp_1_1_config.html#adfee58e2cdbc4fd635323e5071e582d4">app::Config</a>
 </li>
 <li>ms_fenetre
-: <a class="el" href="classgui_1_1_gui.html#a5923cc25da17cde4803c8fb8980c2603">gui::Gui</a>
+: <a class="el" href="classgui_1_1_gui.html#a77114396a52298db8e2936217f1f26ba">gui::Gui</a>
 </li>
 <li>ms_polices
-: <a class="el" href="classapp_1_1_config.html#ac90624673018affec317ebb4dbc2ea58">app::Config</a>
+: <a class="el" href="classapp_1_1_config.html#ad83b2855dd8d1965431689ae30968d67">app::Config</a>
 </li>
 <li>ms_shaders
-: <a class="el" href="classapp_1_1_config.html#adb8d6774c6ab540f97fbd4379a40c69a">app::Config</a>
+: <a class="el" href="classapp_1_1_config.html#a1b3f13205f736d42cc2923aa28d9a5ff">app::Config</a>
 </li>
 <li>ms_textures
-: <a class="el" href="classapp_1_1_config.html#a4155b86a370fd8216be541378630160f">app::Config</a>
+: <a class="el" href="classapp_1_1_config.html#a4b6c107940ce8bdecc76b5be7d08e340">app::Config</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -423,9 +457,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Mardi 24 Mai 2016 17:13:56 pour Appli par
+    <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
 </div>
 </body>

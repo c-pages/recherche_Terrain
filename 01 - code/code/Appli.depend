@@ -10,7 +10,7 @@
 	<SFML/Graphics.hpp>
 	<vector>
 
-1464279728 c:\users\kris\onedrive\recherche biome\01 - code\code\include\appli\ecran.h
+1464642612 c:\users\kris\onedrive\recherche biome\01 - code\code\include\appli\ecran.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
@@ -405,7 +405,7 @@
 	"gui/gadgets/Calque.h"
 	<iostream>
 
-1464107016 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
+1464618516 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadget.h
 	<memory>
 	<SFML/Graphics.hpp>
 	<vector>
@@ -443,7 +443,7 @@
 1464109315 c:\users\kris\onedrive\recherche biome\01 - code\code\include\gui\gadgets\calque.h
 	"gui/Gadget.h"
 
-1464279498 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\application.cpp
+1464623593 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\application.cpp
 	"appli/Application.h"
 	"appli/Config.h"
 	"appli/ecrans/EcranAccueil.h"
@@ -584,23 +584,24 @@
 	<appli/Ecran.h>
 	<appli/Application.h>
 
-1464276143 c:\users\kris\onedrive\recherche biome\01 - code\code\include\appli\ecrans\ecranjeu.h
+1464642546 c:\users\kris\onedrive\recherche biome\01 - code\code\include\appli\ecrans\ecranjeu.h
 	<SFML/Graphics.hpp>
 	<appli/Ecran.h>
 	<appli/Application.h>
 	"jeu/Jeu.h"
 
-1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\jeu.h
+1464687383 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\jeu.h
 	<SFML/Graphics.hpp>
-	"Terrain.h"
+	"jeu/Terrain.h"
+	"appli/Ecran.h"
 
-1463928094 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain.h
+1464696979 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain.h
 	<SFML/Graphics.hpp>
 	<memory>
 	<vector>
-	"Etage.h"
+	<iostream>
 
-1463532361 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\etage.h
+1464695587 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\etage.h
 	<SFML/Graphics.hpp>
 
 1464276143 c:\users\kris\onedrive\recherche biome\01 - code\code\include\appli\ecrans\ecranoptions.h
@@ -609,11 +610,11 @@
 	<appli/Application.h>
 	"jeu/Jeu.h"
 
-1464115427 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\config.cpp
+1464617072 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\config.cpp
 	"appli/Config.h"
 	<iostream>
 
-1464272937 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecran.cpp
+1464644058 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecran.cpp
 	"appli/Ecran.h"
 	"appli/Gestion_ecrans.h"
 	<stdio.h>
@@ -624,7 +625,7 @@
 	<iostream>
 	<cstdio>
 
-1464274437 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranjeu.cpp
+1464691516 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranjeu.cpp
 	"appli/ecrans\EcranJeu.h"
 	"appli/Config.h"
 	<iostream>
@@ -636,7 +637,7 @@
 	<iostream>
 	<stdio.h>
 
-1464276395 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranpause.cpp
+1464690093 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranpause.cpp
 	"appli/ecrans\EcranPause.h"
 	"appli/Config.h"
 	<iostream>
@@ -657,12 +658,13 @@
 	"gui/Gui.h"
 	"appli/Config.h"
 
-1464111395 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
+1464619333 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadget.cpp
 	"gui/Gadget.h"
 	"gui/Gui.h"
+	"appli/Config.h"
 	<iostream>
 
-1464111395 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
+1464618586 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\bouton.cpp
 	<gui/gadgets/Bouton.h>
 	<appli/Config.h>
 	<iostream>
@@ -675,11 +677,11 @@
 	<appli/Config.h>
 	"gui/Gui.h"
 
-1463933035 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\image.cpp
+1464618597 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\image.cpp
 	<gui/gadgets/Image.h>
 	<iostream>
 
-1463933035 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\label.cpp
+1464618603 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gadgets\label.cpp
 	<gui/gadgets/Label.h>
 	"appli/Config.h"
 	<iostream>
@@ -691,12 +693,15 @@
 	"gui/gadgets/Calque.h"
 	"gui/Fabrique.h"
 
-1463527859 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\etage.cpp
-	<jeu/Etage.h>
+1464696078 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\etage.cpp
+	"jeu/Etage.h"
+	"jeu/Terrain.h"
+	<iostream>
 
-1463928094 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\jeu.cpp
-	<jeu/Jeu.h>
-	<jeu/Terrain.h>
+1464695326 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\jeu.cpp
+	"jeu/Jeu.h"
+	"jeu/Terrain.h"
+	<iostream>
 
 1463527872 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\planteverte.cpp
 	<jeu/PlanteVerte.h>
@@ -704,9 +709,11 @@
 1463532361 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\planteverte.h
 	<SFML/Graphics.hpp>
 
-1463928094 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain.cpp
-	<jeu/Terrain.h>
-	<jeu/Etage.h>
+1464696187 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain.cpp
+	"jeu/Terrain.h"
+	"jeu/Etage.h"
+	"outils/noiseutils.h"
+	<iostream>
 
 1464261512 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\outils\utilitaires.cpp
 	"outils/Utilitaires.h"
@@ -718,4 +725,190 @@
 
 1464261512 c:\users\kris\onedrive\recherche biome\01 - code\code\include\outils\utilitaires.inl
 	"outils/Utilitaires.h"
+
+1464618516 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ressourcesid.cpp
+	"RessourcesID.h"
+
+1464620410 c:\users\kris\onedrive\recherche biome\01 - code\code\include\appli\ressourcesid.h
+
+1463414841 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\outils\noiseutils.cpp
+	<fstream>
+	<iostream>
+	<noise/interp.h>
+	<noise/mathconsts.h>
+	"outils/noiseutils.h"
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\interp.h
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\mathconsts.h
+
+1461342818 c:\users\kris\onedrive\recherche biome\01 - code\code\include\outils\noiseutils.h
+	<stdlib.h>
+	<string.h>
+	<memory>
+	<noise/noise.h>
+	<SFML/Graphics.hpp>
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\noise.h
+	"module/module.h"
+	"model/model.h"
+	"misc.h"
+
+1460719058 f:\bibliotheques cpp\libnoise\noise\module\module.h
+	"add.h"
+	"abs.h"
+	"billow.h"
+	"blend.h"
+	"cache.h"
+	"checkerboard.h"
+	"clamp.h"
+	"const.h"
+	"curve.h"
+	"cylinders.h"
+	"displace.h"
+	"exponent.h"
+	"invert.h"
+	"max.h"
+	"min.h"
+	"multiply.h"
+	"perlin.h"
+	"power.h"
+	"ridgedmulti.h"
+	"rotatepoint.h"
+	"scalebias.h"
+	"scalepoint.h"
+	"select.h"
+	"spheres.h"
+	"terrace.h"
+	"translatepoint.h"
+	"turbulence.h"
+	"voronoi.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\module\add.h
+	"modulebase.h"
+
+1460719058 f:\bibliotheques cpp\libnoise\noise\module\modulebase.h
+	<stdlib.h>
+	<assert.h>
+	<math.h>
+	"../basictypes.h"
+	"../exception.h"
+	"../noisegen.h"
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\basictypes.h
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\exception.h
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\noisegen.h
+	<math.h>
+	"basictypes.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\module\abs.h
+	"modulebase.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\module\billow.h
+	"modulebase.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\module\blend.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\cache.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\checkerboard.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\clamp.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\const.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\curve.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\cylinders.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\displace.h
+	"modulebase.h"
+
+1460719057 f:\bibliotheques cpp\libnoise\noise\module\exponent.h
+	"modulebase.h"
+
+1460719058 f:\bibliotheques cpp\libnoise\noise\module\invert.h
+	"modulebase.h"
+
+1460719058 f:\bibliotheques cpp\libnoise\noise\module\max.h
+	"modulebase.h"
+
+1460719058 f:\bibliotheques cpp\libnoise\noise\module\min.h
+	"modulebase.h"
+
+1460719058 f:\bibliotheques cpp\libnoise\noise\module\multiply.h
+	"modulebase.h"
+
+1460719058 f:\bibliotheques cpp\libnoise\noise\module\perlin.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\power.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\ridgedmulti.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\rotatepoint.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\scalebias.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\scalepoint.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\select.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\spheres.h
+	"modulebase.h"
+
+1460719059 f:\bibliotheques cpp\libnoise\noise\module\terrace.h
+	"modulebase.h"
+
+1460719060 f:\bibliotheques cpp\libnoise\noise\module\translatepoint.h
+	"modulebase.h"
+
+1460719060 f:\bibliotheques cpp\libnoise\noise\module\turbulence.h
+	"perlin.h"
+
+1460719060 f:\bibliotheques cpp\libnoise\noise\module\voronoi.h
+	"modulebase.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\model\model.h
+	"cylinder.h"
+	"line.h"
+	"plane.h"
+	"sphere.h"
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\model\cylinder.h
+	<assert.h>
+	<math.h>
+	<stdlib.h>
+	"../module/modulebase.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\model\line.h
+	<assert.h>
+	<math.h>
+	<stdlib.h>
+	"../module/modulebase.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\model\plane.h
+	<assert.h>
+	"../module/modulebase.h"
+
+1460719056 f:\bibliotheques cpp\libnoise\noise\model\sphere.h
+	<assert.h>
+	"../module/modulebase.h"
+
+1460719055 f:\bibliotheques cpp\libnoise\noise\misc.h
 

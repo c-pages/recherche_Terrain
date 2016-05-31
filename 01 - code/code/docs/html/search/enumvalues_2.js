@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fenetrefond1',['fenetreFond1',['../classapp_1_1_config.html#ac16ebcfb92b7d180649cdb036add0f90a684969f6b34123e193f15ee4f00bb596',1,'app::Config']]],
-  ['fin',['Fin',['../classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a4493d011fa6935f4d91714d738888eb0',1,'gui::Gadget']]]
+  ['centre',['Centre',['../namespacegui.html#aef7456adfbb9be89723a9f25d5ade1d2a1b83331ee5b0015c375e6542628088a8',1,'gui']]],
+  ['clipping',['clipping',['../classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62fa0b400653f74f52cab543097c24df2cae',1,'app::Config']]]
 ];

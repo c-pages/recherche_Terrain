@@ -88,7 +88,7 @@ public:
     /// \param pause t
     /// \return rien
     ///
-    /////////////////////////////////////////////////
+    ////////////////////////////////////////////////
     bool estEnPause ( ) { return m_pause; };
 
 
@@ -165,20 +165,13 @@ public:
 
 protected:
 
-    /////////////////////////////////////////////////
-    // Les membres
-    /////////////////////////////////////////////////
-
-
-//    Application*    m_appli;    ///< La classe Apllication parent.
-    Contexte            m_contexte;
-
-    Gestion_ecrans*     m_pileEcrans ;
-
-    sf::View            m_vueJeu;   ///<
-    sf::View            m_vueGUI;   ///<
-
-    bool                m_pause = false;
+/////////////////////////////////////////////////
+// Les membres
+/////////////////////////////////////////////////
+    sf::View            m_vuePrincipale;    ///< La vue principale du jeu
+    Contexte            m_contexte;         ///<  Le contexte de l'écran (la fenetre SFML, textures, polices...) \todo intégrer les textures et polices dans le contexte
+    Gestion_ecrans*     m_pileEcrans ;      ///<  Le gestionnaire des écrans
+    bool                m_pause = false;    ///<  La pause stope l'actualisation et le traitement des évènements de l'écrans mais pas l'affichage.
 
 }; // fin Ecran
 }; // fin app

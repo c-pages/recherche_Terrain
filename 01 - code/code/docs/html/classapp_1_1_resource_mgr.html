@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
-<title>Appli: Référence du modèle de la classe app::ResourceMgr&lt; RESOURCE, IDENTIFIANT &gt;</title>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Référence du modèle de la classe app::ResourceMgr&lt; RESOURCE, IDENTIFIANT &gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,15 +31,17 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Appli
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">v0.1</span>
    </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.11 -->
+<!-- Généré par Doxygen 1.8.10 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -134,16 +136,16 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:a8c06cc4165068e7aae8ba2aa505d4c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43174877ac3bce3b43b68f94e0eb2815"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a43174877ac3bce3b43b68f94e0eb2815"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classapp_1_1_resource_mgr.html#a43174877ac3bce3b43b68f94e0eb2815">load</a> (const IDENTIFIANT &amp;id, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:a43174877ac3bce3b43b68f94e0eb2815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charger une image ou une police depuis un fichier et l'associe � un identifiant.  <a href="#a43174877ac3bce3b43b68f94e0eb2815">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a43174877ac3bce3b43b68f94e0eb2815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charger une image ou une police depuis un fichier et l'associe à un identifiant.  <a href="#a43174877ac3bce3b43b68f94e0eb2815">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a43174877ac3bce3b43b68f94e0eb2815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d50e13d521942530229e80f660ff004"><td class="memItemLeft" align="right" valign="top">RESOURCE &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_resource_mgr.html#a6d50e13d521942530229e80f660ff004">get</a> (const IDENTIFIANT &amp;id) const </td></tr>
-<tr class="memdesc:a6d50e13d521942530229e80f660ff004"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande une image ou une police � partir de son identifiant.  <a href="#a6d50e13d521942530229e80f660ff004">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a6d50e13d521942530229e80f660ff004"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande une image ou une police à partir de son identifiant.  <a href="#a6d50e13d521942530229e80f660ff004">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6d50e13d521942530229e80f660ff004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:aaf3f11ff8309da00bbc6cce38bc156fa"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; IDENTIFIANT, std::unique_ptr&lt; RESOURCE &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_resource_mgr.html#aaf3f11ff8309da00bbc6cce38bc156fa">mPlan</a></td></tr>
-<tr class="memdesc:aaf3f11ff8309da00bbc6cce38bc156fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">les resources enregistr�s avec leur identifiant.  <a href="#aaf3f11ff8309da00bbc6cce38bc156fa">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:aaf3f11ff8309da00bbc6cce38bc156fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">les resources enregistrés avec leur identifiant.  <a href="#aaf3f11ff8309da00bbc6cce38bc156fa">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aaf3f11ff8309da00bbc6cce38bc156fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -152,8 +154,10 @@ class app::ResourceMgr&lt; RESOURCE, IDENTIFIANT &gt;</h3>
 
 <p>Manager de ressource (polices, images). </p>
 <p>Classe template des polices, images</p>
-<p>G�re les ressource fa�on RAII</p>
-<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">app::Ecran</a>, <a class="el" href="classapp_1_1_gestion__ecrans.html" title="Gestionnaire des �crans. ">app::Gestion_ecrans</a> </dd></dl>
+<p>Gère les ressource façon RAII</p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">app::Ecran</a>, <a class="el" href="classapp_1_1_gestion__ecrans.html" title="Classe qui s&#39;occupe de gérer les écrans. ">app::Gestion_ecrans</a> </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="_resource_mgr_8h_source.html#l00024">24</a> du fichier <a class="el" href="_resource_mgr_8h_source.html">ResourceMgr.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a4f95e4f251a11a0cf368ed8b074fd297"></a>
 <div class="memitem">
@@ -180,7 +184,7 @@ template&lt;typename RESOURCE, typename IDENTIFIANT = int&gt; </div>
 </div><div class="memdoc">
 
 <p>constructeur par copie </p>
-<p>"= delete" c'est une mani�re de dire non copyable si j'ai bien compris, cf le bouquin SFML ... </p>
+<p>"= delete" c'est une manière de dire non copyable si j'ai bien compris, cf le bouquin SFML ... </p>
 
 </div>
 </div>
@@ -229,14 +233,16 @@ template&lt;typename RESOURCE , typename IDENTIFIANT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>demande une image ou une police � partir de son identifiant. </p>
+<p>demande une image ou une police à partir de son identifiant. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>l'identenfiant </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>la ressource demand�. </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la ressource demandé. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="_resource_mgr_8inl_source.html#l00067">67</a> du fichier <a class="el" href="_resource_mgr_8inl_source.html">ResourceMgr.inl</a>.</p>
 
 </div>
 </div>
@@ -268,7 +274,7 @@ template&lt;typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Charger une image ou une police depuis un fichier et l'associe � un identifiant. </p>
+<p>Charger une image ou une police depuis un fichier et l'associe à un identifiant. </p>
 <p>Manager de ressource.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
@@ -278,6 +284,8 @@ template&lt;typename... Args&gt; </div>
   </dd>
 </dl>
 <p>Class template des polices, images </p>
+
+<p>Définition à la ligne <a class="el" href="_resource_mgr_8inl_source.html#l00056">56</a> du fichier <a class="el" href="_resource_mgr_8inl_source.html">ResourceMgr.inl</a>.</p>
 
 </div>
 </div>
@@ -331,13 +339,15 @@ template&lt;typename RESOURCE, typename IDENTIFIANT = int&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>les resources enregistr�s avec leur identifiant. </p>
+<p>les resources enregistrés avec leur identifiant. </p>
+
+<p>Définition à la ligne <a class="el" href="_resource_mgr_8h_source.html#l00072">72</a> du fichier <a class="el" href="_resource_mgr_8h_source.html">ResourceMgr.h</a>.</p>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="_resource_mgr_8h_source.html">ResourceMgr.h</a></li>
-<li><a class="el" href="_resource_mgr_8inl.html">ResourceMgr.inl</a></li>
+<li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/appli/<a class="el" href="_resource_mgr_8h_source.html">ResourceMgr.h</a></li>
+<li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/appli/<a class="el" href="_resource_mgr_8inl_source.html">ResourceMgr.inl</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -345,9 +355,9 @@ template&lt;typename RESOURCE, typename IDENTIFIANT = int&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceapp.html">app</a></li><li class="navelem"><a class="el" href="classapp_1_1_resource_mgr.html">ResourceMgr</a></li>
-    <li class="footer">Généré le Mardi 24 Mai 2016 17:13:56 pour Appli par
+    <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
 </div>
 </body>

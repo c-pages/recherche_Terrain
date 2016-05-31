@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
-<title>Appli: Liste des membres</title>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Liste des membres</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,15 +31,17 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Appli
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">v0.1</span>
    </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.11 -->
+<!-- Généré par Doxygen 1.8.10 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -114,29 +116,34 @@ $(document).ready(function(){initNavTree('classapp_1_1_ecran_accueil.html','');}
 
 <p>Liste complète des membres de <a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a5fc8215d9b7c1a29f4fbcb538ce289b0">actualiser</a>(sf::Time deltaT)</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a93a5b60b2f0d7e114bd5e2105650df03">dessiner</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a06a27f001c26fb8d6f38e04764fd343e">Ecran</a>(Application *appli)</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a7b781fae43e45039ea5c0bbf96410cb8">EcranAccueil</a>(Application *appli)</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a0fd3aaa6c37ad943764e02a38c165653">initGUI</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">m_appli</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a7ac3d17a562125adff8fd26f0e4540c5">actualiser</a>(sf::Time deltaT)</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a6d531bab59fbe610fa72524443bc7080">ajouterEcran</a>(Ecrans::ID ecranID)</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#aecc055034dc78a575f350cc0bac64aa7">dessiner</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a0c605a88b1b16dfbc271405f3e638310">Ecran</a>(Gestion_ecrans &amp;pileEcrans, Contexte contexte)</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a438121f6373ba8344ad4324f91c15f2e">EcranAccueil</a>(Gestion_ecrans &amp;pileEcrans, Contexte contexte)</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a0d478ef5e35355a702de7f566aacc8ee">estEnPause</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a685603e424d936ccfa1e82210286558c">initGUI</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a33a961ce0dac066a10d7078aaf661d45">m_contexte</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a4a85ba0ad48e955a3b5bc72ddab7711c">m_fond</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a4d8aec3dc14ccffe2b908b1ea3a140d0">m_interface</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a212022273c0711e2bcd4514e57cc7d51">m_pause</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a6f12f2f27a89b78bedb4b24e51f4a044">m_pileEcrans</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a463db13c7e5a38f5c1ac725a01eb1120">m_vue</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db">m_vueGUI</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran.html#aa619321cb264726990dc6a4362876db1">m_vueJeu</a></td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#ab9cfe5ce6551587c3d8de86da00ef4b1">retirerEcran</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran.html#ad55481fc5b2a757a951c878023d95863">setPause</a>(bool pause=true)</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a74f8bace86f21da84155cf73d38b4e54">test</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a9492f5d548a2628f5af431fb3a39a77d">traiter_evenements</a>(const sf::Event &amp;event)</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#ae428d4167b732b687fefc88379d62d9a">~Ecran</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a9974fdcf2ef4b88851a8eab56939fcd5">~EcranAccueil</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#afccee4620d0d0985623f74b8841a9f32">traiter_evenements</a>(const sf::Event &amp;event)</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran.html#a931048b895645014b454d917b0daebf6">viderEcrans</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classapp_1_1_ecran.html#aee32b1927cc8d449f10c13fd117bcc4a">~Ecran</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html#a9974fdcf2ef4b88851a8eab56939fcd5">~EcranAccueil</a>()</td><td class="entry"><a class="el" href="classapp_1_1_ecran_accueil.html">app::EcranAccueil</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Mardi 24 Mai 2016 17:13:56 pour Appli par
+    <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
 </div>
 </body>

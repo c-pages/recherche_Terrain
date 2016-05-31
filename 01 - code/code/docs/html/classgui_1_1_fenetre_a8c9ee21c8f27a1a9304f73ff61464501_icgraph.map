@@ -1,0 +1,6 @@
+<map id="gui::Fenetre::actualiser" name="gui::Fenetre::actualiser">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a24b2816833602308807148bb523c518c" title="Définit le titre de la fenêtre. " alt="" coords="226,5,369,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a7204bb57d13c34b423d34a6df585b9f5" title="Définir la taille du texte du titre. " alt="" coords="211,56,383,83"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a96bdcba239ccadb7436831f3e84bd88a" title="Définit le style du texte du titre. " alt="" coords="211,107,383,133"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#ab5a9a119a353a3795da1dff6e78775aa" title="Définit la police du titre. " alt="" coords="208,157,387,184"/>
+</map>

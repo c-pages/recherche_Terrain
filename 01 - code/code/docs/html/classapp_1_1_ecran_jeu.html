@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
-<title>Appli: Référence de la classe app::EcranJeu</title>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Référence de la classe app::EcranJeu</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,15 +31,17 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Appli
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">v0.1</span>
    </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.11 -->
+<!-- Généré par Doxygen 1.8.10 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -117,7 +119,7 @@ $(document).ready(function(){initNavTree('classapp_1_1_ecran_jeu.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">Ecran</a> de jeu.  
+<p><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a> de jeu.  
  <a href="classapp_1_1_ecran_jeu.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_ecran_jeu_8h_source.html">EcranJeu.h</a>&gt;</code></p>
@@ -126,7 +128,7 @@ Graphe d'héritage de app::EcranJeu:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapp_1_1_ecran_jeu__inherit__graph.png" border="0" usemap="#app_1_1_ecran_jeu_inherit__map" alt="Inheritance graph"/></div>
 <map name="app_1_1_ecran_jeu_inherit__map" id="app_1_1_ecran_jeu_inherit__map">
-<area shape="rect" id="node2" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. " alt="" coords="15,5,101,32"/>
+<area shape="rect" id="node2" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. " alt="" coords="15,5,101,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
@@ -134,98 +136,114 @@ Graphe de collaboration de app::EcranJeu:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapp_1_1_ecran_jeu__coll__graph.png" border="0" usemap="#app_1_1_ecran_jeu_coll__map" alt="Collaboration graph"/></div>
 <map name="app_1_1_ecran_jeu_coll__map" id="app_1_1_ecran_jeu_coll__map">
-<area shape="rect" id="node2" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. " alt="" coords="34,184,119,211"/>
-<area shape="rect" id="node3" href="classapp_1_1_application.html" title="La classe de base du programme. " alt="" coords="19,95,134,121"/>
-<area shape="rect" id="node4" href="classapp_1_1_gestion__ecrans.html" title="Gestionnaire des �crans. " alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. " alt="" coords="35,184,121,211"/>
+<area shape="rect" id="node3" href="classapp_1_1_gestion__ecrans.html" title="Classe qui s&#39;occupe de gérer les écrans. " alt="" coords="123,95,265,121"/>
+<area shape="rect" id="node4" href="structapp_1_1_ecran_1_1_contexte.html" title="&lt; le context (la fenetre SFML, les textures, polices, ... ) associés aux Etats (intro, menu ...) " alt="" coords="5,5,151,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a9c61dc5b68650156f7380fe0739c4622"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a9c61dc5b68650156f7380fe0739c4622">EcranJeu</a> (<a class="el" href="classapp_1_1_application.html">Application</a> *appli)</td></tr>
-<tr class="memdesc:a9c61dc5b68650156f7380fe0739c4622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a9c61dc5b68650156f7380fe0739c4622">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a9c61dc5b68650156f7380fe0739c4622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47bc717f1f84ff81c74bd99ea0eadf93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a47bc717f1f84ff81c74bd99ea0eadf93">EcranJeu</a> (<a class="el" href="classapp_1_1_gestion__ecrans.html">Gestion_ecrans</a> &amp;pileEcrans, <a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Contexte</a> contexte)</td></tr>
+<tr class="memdesc:a47bc717f1f84ff81c74bd99ea0eadf93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a47bc717f1f84ff81c74bd99ea0eadf93">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a47bc717f1f84ff81c74bd99ea0eadf93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classapp_1_1_ecran"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classapp_1_1_ecran')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td></tr>
-<tr class="memitem:a06a27f001c26fb8d6f38e04764fd343e inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a06a27f001c26fb8d6f38e04764fd343e">Ecran</a> (<a class="el" href="classapp_1_1_application.html">Application</a> *appli)</td></tr>
-<tr class="memdesc:a06a27f001c26fb8d6f38e04764fd343e inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a06a27f001c26fb8d6f38e04764fd343e">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a06a27f001c26fb8d6f38e04764fd343e inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae428d4167b732b687fefc88379d62d9a inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#ae428d4167b732b687fefc88379d62d9a">~Ecran</a> ()</td></tr>
-<tr class="memdesc:ae428d4167b732b687fefc88379d62d9a inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur virtuel.  <a href="#ae428d4167b732b687fefc88379d62d9a">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae428d4167b732b687fefc88379d62d9a inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c605a88b1b16dfbc271405f3e638310 inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a0c605a88b1b16dfbc271405f3e638310">Ecran</a> (<a class="el" href="classapp_1_1_gestion__ecrans.html">Gestion_ecrans</a> &amp;pileEcrans, <a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Contexte</a> contexte)</td></tr>
+<tr class="memdesc:a0c605a88b1b16dfbc271405f3e638310 inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a0c605a88b1b16dfbc271405f3e638310">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0c605a88b1b16dfbc271405f3e638310 inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee32b1927cc8d449f10c13fd117bcc4a inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#aee32b1927cc8d449f10c13fd117bcc4a">~Ecran</a> ()</td></tr>
+<tr class="memdesc:aee32b1927cc8d449f10c13fd117bcc4a inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur virtuel.  <a href="#aee32b1927cc8d449f10c13fd117bcc4a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aee32b1927cc8d449f10c13fd117bcc4a inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55481fc5b2a757a951c878023d95863 inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#ad55481fc5b2a757a951c878023d95863">setPause</a> (bool pause=true)</td></tr>
+<tr class="memdesc:ad55481fc5b2a757a951c878023d95863 inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">definir l'état de la pause  <a href="#ad55481fc5b2a757a951c878023d95863">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad55481fc5b2a757a951c878023d95863 inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d478ef5e35355a702de7f566aacc8ee inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a0d478ef5e35355a702de7f566aacc8ee">estEnPause</a> ()</td></tr>
+<tr class="memdesc:a0d478ef5e35355a702de7f566aacc8ee inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">acceder à l'état de la pause  <a href="#a0d478ef5e35355a702de7f566aacc8ee">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0d478ef5e35355a702de7f566aacc8ee inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d531bab59fbe610fa72524443bc7080 inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a6d531bab59fbe610fa72524443bc7080">ajouterEcran</a> (<a class="el" href="namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0">Ecrans::ID</a> ecranID)</td></tr>
+<tr class="memdesc:a6d531bab59fbe610fa72524443bc7080 inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">ajouter un écran  <a href="#a6d531bab59fbe610fa72524443bc7080">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6d531bab59fbe610fa72524443bc7080 inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9cfe5ce6551587c3d8de86da00ef4b1 inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#ab9cfe5ce6551587c3d8de86da00ef4b1">retirerEcran</a> ()</td></tr>
+<tr class="memdesc:ab9cfe5ce6551587c3d8de86da00ef4b1 inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">retirer un écran  <a href="#ab9cfe5ce6551587c3d8de86da00ef4b1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab9cfe5ce6551587c3d8de86da00ef4b1 inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931048b895645014b454d917b0daebf6 inherit pub_methods_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a931048b895645014b454d917b0daebf6">viderEcrans</a> ()</td></tr>
+<tr class="memdesc:a931048b895645014b454d917b0daebf6 inherit pub_methods_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">vider les écrans  <a href="#a931048b895645014b454d917b0daebf6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a931048b895645014b454d917b0daebf6 inherit pub_methods_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Fonctions membres privées</h2></td></tr>
-<tr class="memitem:ac39030110a3aa5400f90a76de98422ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#ac39030110a3aa5400f90a76de98422ad">traiter_evenements</a> (const sf::Event &amp;event)</td></tr>
-<tr class="memdesc:ac39030110a3aa5400f90a76de98422ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">La gestion des �v�nements utilisateurs.  <a href="#ac39030110a3aa5400f90a76de98422ad">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac39030110a3aa5400f90a76de98422ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71711c40b53012415732d3b005cbb898"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a71711c40b53012415732d3b005cbb898">actualiser</a> (sf::Time deltaT)</td></tr>
-<tr class="memdesc:a71711c40b53012415732d3b005cbb898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiser les �l�ments.  <a href="#a71711c40b53012415732d3b005cbb898">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a71711c40b53012415732d3b005cbb898"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d9a739a05a0b228b3df0f4bb2aa9c46"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a4d9a739a05a0b228b3df0f4bb2aa9c46">dessiner</a> ()</td></tr>
-<tr class="memdesc:a4d9a739a05a0b228b3df0f4bb2aa9c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendre les �l�ments.  <a href="#a4d9a739a05a0b228b3df0f4bb2aa9c46">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4d9a739a05a0b228b3df0f4bb2aa9c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c2d5e0c9a600e92eb9bf5fef009729d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a6c2d5e0c9a600e92eb9bf5fef009729d">initGUI</a> ()</td></tr>
-<tr class="memdesc:a6c2d5e0c9a600e92eb9bf5fef009729d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation de l'interface graphique.  <a href="#a6c2d5e0c9a600e92eb9bf5fef009729d">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a6c2d5e0c9a600e92eb9bf5fef009729d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa9b80477482ba2a8d7d8cf2c779244"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a1fa9b80477482ba2a8d7d8cf2c779244">traiter_evenements</a> (const sf::Event &amp;event)</td></tr>
+<tr class="memdesc:a1fa9b80477482ba2a8d7d8cf2c779244"><td class="mdescLeft">&#160;</td><td class="mdescRight">La gestion des évènements utilisateurs.  <a href="#a1fa9b80477482ba2a8d7d8cf2c779244">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1fa9b80477482ba2a8d7d8cf2c779244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e846c6b37f87b6d225e789f1b66461"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a13e846c6b37f87b6d225e789f1b66461">actualiser</a> (sf::Time deltaT)</td></tr>
+<tr class="memdesc:a13e846c6b37f87b6d225e789f1b66461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiser les éléments.  <a href="#a13e846c6b37f87b6d225e789f1b66461">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a13e846c6b37f87b6d225e789f1b66461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce9b32aae86c875fe00129b6aa1746d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a0ce9b32aae86c875fe00129b6aa1746d">dessiner</a> ()</td></tr>
+<tr class="memdesc:a0ce9b32aae86c875fe00129b6aa1746d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendre les éléments.  <a href="#a0ce9b32aae86c875fe00129b6aa1746d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0ce9b32aae86c875fe00129b6aa1746d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9de29a8c54e9725af4b13c482e45d15"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#ab9de29a8c54e9725af4b13c482e45d15">initGUI</a> ()</td></tr>
+<tr class="memdesc:ab9de29a8c54e9725af4b13c482e45d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation de l'interface graphique.  <a href="#ab9de29a8c54e9725af4b13c482e45d15">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab9de29a8c54e9725af4b13c482e45d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a2af21bc87b915892b0089f90edb07145"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a2af21bc87b915892b0089f90edb07145">m_vue</a></td></tr>
-<tr class="memdesc:a2af21bc87b915892b0089f90edb07145"><td class="mdescLeft">&#160;</td><td class="mdescRight">La vue SFML de l'�cran.  <a href="#a2af21bc87b915892b0089f90edb07145">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a2af21bc87b915892b0089f90edb07145"><td class="mdescLeft">&#160;</td><td class="mdescRight">La vue SFML de l'écran.  <a href="#a2af21bc87b915892b0089f90edb07145">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2af21bc87b915892b0089f90edb07145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7081feb754c0bfe75798daeb57833dc0"><td class="memItemLeft" align="right" valign="top">sf::RectangleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a7081feb754c0bfe75798daeb57833dc0">m_fond</a></td></tr>
-<tr class="memdesc:a7081feb754c0bfe75798daeb57833dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le shape SFML du fond de l'�cran.  <a href="#a7081feb754c0bfe75798daeb57833dc0">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a7081feb754c0bfe75798daeb57833dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le shape SFML du fond de l'écran.  <a href="#a7081feb754c0bfe75798daeb57833dc0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7081feb754c0bfe75798daeb57833dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21006f742779b1c303d26327250fd17b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a21006f742779b1c303d26327250fd17b">m_afficheEcranOptions</a> = false</td></tr>
-<tr class="separator:a21006f742779b1c303d26327250fd17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3468ea0e301965e59aa6e2a0d793df12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#a3468ea0e301965e59aa6e2a0d793df12">m_pause</a> = false</td></tr>
-<tr class="separator:a3468ea0e301965e59aa6e2a0d793df12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45cae43907c428bbce42770830063d4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_gui.html">gui::Gui</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran_jeu.html#ad45cae43907c428bbce42770830063d4">m_interface</a></td></tr>
+<tr class="separator:ad45cae43907c428bbce42770830063d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Membres hérités additionnels</h2></td></tr>
 <tr class="inherit_header pro_attribs_classapp_1_1_ecran"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classapp_1_1_ecran')"><img src="closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="classapp_1_1_ecran.html">app::Ecran</a></td></tr>
-<tr class="memitem:a4711fc3fedd9458041b1f15b2f05f1a1 inherit pro_attribs_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classapp_1_1_application.html">Application</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">m_appli</a></td></tr>
-<tr class="memdesc:a4711fc3fedd9458041b1f15b2f05f1a1 inherit pro_attribs_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">La classe Apllication parent.  <a href="#a4711fc3fedd9458041b1f15b2f05f1a1">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4711fc3fedd9458041b1f15b2f05f1a1 inherit pro_attribs_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa619321cb264726990dc6a4362876db1 inherit pro_attribs_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#aa619321cb264726990dc6a4362876db1">m_vueJeu</a></td></tr>
-<tr class="separator:aa619321cb264726990dc6a4362876db1 inherit pro_attribs_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec228de93b9a07954be2e25371cd9db inherit pro_attribs_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db">m_vueGUI</a></td></tr>
-<tr class="separator:a5ec228de93b9a07954be2e25371cd9db inherit pro_attribs_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33a961ce0dac066a10d7078aaf661d45 inherit pro_attribs_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Contexte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a33a961ce0dac066a10d7078aaf661d45">m_contexte</a></td></tr>
+<tr class="memdesc:a33a961ce0dac066a10d7078aaf661d45 inherit pro_attribs_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le contexte de l'écran (la fenetre SFML, textures, polices...)  <a href="#a33a961ce0dac066a10d7078aaf661d45">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a33a961ce0dac066a10d7078aaf661d45 inherit pro_attribs_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f12f2f27a89b78bedb4b24e51f4a044 inherit pro_attribs_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classapp_1_1_gestion__ecrans.html">Gestion_ecrans</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a6f12f2f27a89b78bedb4b24e51f4a044">m_pileEcrans</a></td></tr>
+<tr class="memdesc:a6f12f2f27a89b78bedb4b24e51f4a044 inherit pro_attribs_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le gestionnaire des écrans.  <a href="#a6f12f2f27a89b78bedb4b24e51f4a044">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6f12f2f27a89b78bedb4b24e51f4a044 inherit pro_attribs_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212022273c0711e2bcd4514e57cc7d51 inherit pro_attribs_classapp_1_1_ecran"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapp_1_1_ecran.html#a212022273c0711e2bcd4514e57cc7d51">m_pause</a> = false</td></tr>
+<tr class="memdesc:a212022273c0711e2bcd4514e57cc7d51 inherit pro_attribs_classapp_1_1_ecran"><td class="mdescLeft">&#160;</td><td class="mdescRight">La pause stope l'actualisation et le traitement des évènements de l'écrans mais pas l'affichage.  <a href="#a212022273c0711e2bcd4514e57cc7d51">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a212022273c0711e2bcd4514e57cc7d51 inherit pro_attribs_classapp_1_1_ecran"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. ">Ecran</a> de jeu. </p>
+<div class="textblock"><p><a class="el" href="classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. ">Ecran</a> de jeu. </p>
+
+<p>Définition à la ligne <a class="el" href="_ecran_jeu_8h_source.html#l00021">21</a> du fichier <a class="el" href="_ecran_jeu_8h_source.html">EcranJeu.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="a9c61dc5b68650156f7380fe0739c4622"></a>
+<a class="anchor" id="a47bc717f1f84ff81c74bd99ea0eadf93"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">app::EcranJeu::EcranJeu </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classapp_1_1_application.html">Application</a> *&#160;</td>
-          <td class="paramname"><em>appli</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classapp_1_1_gestion__ecrans.html">Gestion_ecrans</a> &amp;&#160;</td>
+          <td class="paramname"><em>pileEcrans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structapp_1_1_ecran_1_1_contexte.html">Contexte</a>&#160;</td>
+          <td class="paramname"><em>contexte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Constructeur. </p>
 
-<p><div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classapp_1_1_ecran_jeu_a9c61dc5b68650156f7380fe0739c4622_cgraph.png" border="0" usemap="#classapp_1_1_ecran_jeu_a9c61dc5b68650156f7380fe0739c4622_cgraph" alt=""/></div>
-<map name="classapp_1_1_ecran_jeu_a9c61dc5b68650156f7380fe0739c4622_cgraph" id="classapp_1_1_ecran_jeu_a9c61dc5b68650156f7380fe0739c4622_cgraph">
-<area shape="rect" id="node2" href="classapp_1_1_ecran_jeu.html#a6c2d5e0c9a600e92eb9bf5fef009729d" title="Initialisation de l&#39;interface graphique. " alt="" coords="220,5,372,32"/>
-<area shape="rect" id="node3" href="classapp_1_1_application.html#abedd293ac058355e13abd02057c32aee" title="renvois la fenetre sfml de l&#39;application " alt="" coords="420,5,605,32"/>
-</map>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a class="anchor" id="a71711c40b53012415732d3b005cbb898"></a>
+<a class="anchor" id="a13e846c6b37f87b6d225e789f1b66461"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -233,7 +251,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void app::EcranJeu::actualiser </td>
+          <td class="memname">virtual void app::EcranJeu::actualiser </td>
           <td>(</td>
           <td class="paramtype">sf::Time&#160;</td>
           <td class="paramname"><em>deltaT</em></td><td>)</td>
@@ -247,10 +265,10 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Actualiser les �l�ments. </p>
-<p>Actualiser les diff�rents �l�ments du ou des �crans actifs. </p><dl class="params"><dt>Paramètres</dt><dd>
+<p>Actualiser les éléments. </p>
+<p>Actualiser les différents éléments du ou des écrans actifs. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deltaT</td><td>Un <em>float</em> qui indique le delta du temps �coul� depuis la derni�re actualisation. </td></tr>
+    <tr><td class="paramname">deltaT</td><td>Un <em>float</em> qui indique le delta du temps écoulé depuis la dernière actualisation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -260,7 +278,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
-<a class="anchor" id="a4d9a739a05a0b228b3df0f4bb2aa9c46"></a>
+<a class="anchor" id="a0ce9b32aae86c875fe00129b6aa1746d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -268,7 +286,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void app::EcranJeu::dessiner </td>
+          <td class="memname">virtual void app::EcranJeu::dessiner </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -281,14 +299,14 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Rendre les �l�ments. </p>
-<p>Dessiner les diff�rents �l�ments du ou des �crans actifs. </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
+<p>Rendre les éléments. </p>
+<p>Dessiner les différents éléments du ou des écrans actifs. </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
 <p>Implémente <a class="el" href="classapp_1_1_ecran.html#ab279679638e35645bbae78e3f8a3938a">app::Ecran</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6c2d5e0c9a600e92eb9bf5fef009729d"></a>
+<a class="anchor" id="ab9de29a8c54e9725af4b13c482e45d15"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -296,7 +314,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void app::EcranJeu::initGUI </td>
+          <td class="memname">virtual void app::EcranJeu::initGUI </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -312,19 +330,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Initialisation de l'interface graphique. </p>
 <p>Creation des fenetres, boutons, menus... ... </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
-<p><div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classapp_1_1_ecran_jeu_a6c2d5e0c9a600e92eb9bf5fef009729d_cgraph.png" border="0" usemap="#classapp_1_1_ecran_jeu_a6c2d5e0c9a600e92eb9bf5fef009729d_cgraph" alt=""/></div>
-<map name="classapp_1_1_ecran_jeu_a6c2d5e0c9a600e92eb9bf5fef009729d_cgraph" id="classapp_1_1_ecran_jeu_a6c2d5e0c9a600e92eb9bf5fef009729d_cgraph">
-<area shape="rect" id="node2" href="classapp_1_1_application.html#abedd293ac058355e13abd02057c32aee" title="renvois la fenetre sfml de l&#39;application " alt="" coords="205,5,391,32"/>
-</map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="ac39030110a3aa5400f90a76de98422ad"></a>
+<a class="anchor" id="a1fa9b80477482ba2a8d7d8cf2c779244"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -332,7 +340,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void app::EcranJeu::traiter_evenements </td>
+          <td class="memname">virtual void app::EcranJeu::traiter_evenements </td>
           <td>(</td>
           <td class="paramtype">const sf::Event &amp;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
@@ -346,34 +354,14 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>La gestion des �v�nements utilisateurs. </p>
-<p>G�re les entr�es claviers, souris, fenetre ... </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
+<p>La gestion des évènements utilisateurs. </p>
+<p>Gère les entrées claviers, souris, fenetre ... </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
 <p>Implémente <a class="el" href="classapp_1_1_ecran.html#a15b6695f6950903f11a378759aaa9a23">app::Ecran</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a class="anchor" id="a21006f742779b1c303d26327250fd17b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool app::EcranJeu::m_afficheEcranOptions = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a7081feb754c0bfe75798daeb57833dc0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -392,11 +380,13 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Le shape SFML du fond de l'�cran. </p>
+<p>Le shape SFML du fond de l'écran. </p>
+
+<p>Définition à la ligne <a class="el" href="_ecran_jeu_8h_source.html#l00078">78</a> du fichier <a class="el" href="_ecran_jeu_8h_source.html">EcranJeu.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3468ea0e301965e59aa6e2a0d793df12"></a>
+<a class="anchor" id="ad45cae43907c428bbce42770830063d4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -404,7 +394,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool app::EcranJeu::m_pause = false</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_gui.html">gui::Gui</a>&gt; app::EcranJeu::m_interface</td>
         </tr>
       </table>
   </td>
@@ -413,6 +403,8 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_ecran_jeu_8h_source.html#l00080">80</a> du fichier <a class="el" href="_ecran_jeu_8h_source.html">EcranJeu.h</a>.</p>
 
 </div>
 </div>
@@ -434,13 +426,14 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>La vue SFML de l'�cran. </p>
+<p>La vue SFML de l'écran. </p>
+
+<p>Définition à la ligne <a class="el" href="_ecran_jeu_8h_source.html#l00077">77</a> du fichier <a class="el" href="_ecran_jeu_8h_source.html">EcranJeu.h</a>.</p>
 
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="_ecran_jeu_8h_source.html">EcranJeu.h</a></li>
-<li><a class="el" href="_ecran_jeu_8cpp.html">EcranJeu.cpp</a></li>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/appli/ecrans/<a class="el" href="_ecran_jeu_8h_source.html">EcranJeu.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -448,9 +441,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceapp.html">app</a></li><li class="navelem"><a class="el" href="classapp_1_1_ecran_jeu.html">EcranJeu</a></li>
-    <li class="footer">Généré le Mardi 24 Mai 2016 17:13:56 pour Appli par
+    <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
 </div>
 </body>

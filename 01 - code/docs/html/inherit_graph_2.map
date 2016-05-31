@@ -1,7 +1,0 @@
-<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. " alt="" coords="5,81,91,108"/>
-<area shape="rect" id="node2" href="$classapp_1_1_ecran_accueil.html" title="L&#39;écran d&#39;accueil affiche le menu de démarrage du jeu : Démarrer une partie, accéder au options..." alt="" coords="140,5,268,32"/>
-<area shape="rect" id="node3" href="$classapp_1_1_ecran_jeu.html" title="Ecran de jeu. " alt="" coords="151,56,257,83"/>
-<area shape="rect" id="node4" href="$classapp_1_1_ecran_options.html" title="Ecran de jeu. " alt="" coords="139,107,269,133"/>
-<area shape="rect" id="node5" href="$classapp_1_1_ecran_pause.html" title="Ecran de jeu. " alt="" coords="143,157,265,184"/>
-</map>

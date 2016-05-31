@@ -1,8 +1,6 @@
-<map id="Application.h" name="Application.h">
-<area shape="rect" id="node2" href="$_ecran_accueil_8h.html" title="EcranAccueil.h" alt="" coords="60,80,171,107"/>
-<area shape="rect" id="node3" href="$_application_8cpp.html" title="Application.cpp" alt="" coords="153,155,264,181"/>
-<area shape="rect" id="node5" href="$_ecran_jeu_8h.html" title="EcranJeu.h" alt="" coords="247,80,333,107"/>
-<area shape="rect" id="node7" href="$main_8cpp.html" title="main.cpp" alt="" coords="358,80,433,107"/>
-<area shape="rect" id="node4" href="$_ecran_accueil_8cpp.html" title="EcranAccueil.cpp" alt="" coords="5,155,129,181"/>
-<area shape="rect" id="node6" href="$_ecran_jeu_8cpp.html" title="EcranJeu.cpp" alt="" coords="289,155,390,181"/>
+<map id="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/include/appli/Application.h" name="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/include/appli/Application.h">
+<area shape="rect" id="node2" href="$_ecran_accueil_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranAccueil.h" alt="" coords="5,124,168,195"/>
+<area shape="rect" id="node3" href="$_ecran_jeu_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranJeu.h" alt="" coords="192,124,355,195"/>
+<area shape="rect" id="node4" href="$_ecran_options_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranOptions.h" alt="" coords="379,124,541,195"/>
+<area shape="rect" id="node5" href="$_ecran_pause_8h.html" title="C:/Users/kris/OneDrive\l/recherche Biome/01 &#45;\l code/code/include/appli\l/ecrans/EcranPause.h" alt="" coords="565,124,728,195"/>
 </map>

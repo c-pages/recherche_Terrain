@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['shaders',['Shaders',['../classapp_1_1_config.html#a46a09d1f62f03cc32a4643e68c26f62f',1,'app::Config']]]
+  ['polices',['Polices',['../classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049',1,'app::Config']]]
 ];

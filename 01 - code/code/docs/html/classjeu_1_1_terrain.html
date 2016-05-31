@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
-<title>Appli: Référence de la classe jeu::Terrain</title>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Référence de la classe jeu::Terrain</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,15 +31,17 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Appli
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">v0.1</span>
    </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.11 -->
+<!-- Généré par Doxygen 1.8.10 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -154,9 +156,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a43df1b4f47b831a2d944964ccda6e82e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a43df1b4f47b831a2d944964ccda6e82e">initialiser</a> ()</td></tr>
 <tr class="memdesc:a43df1b4f47b831a2d944964ccda6e82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vide la liste des �tages, vide le terrain.  <a href="#a43df1b4f47b831a2d944964ccda6e82e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a43df1b4f47b831a2d944964ccda6e82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd3d2045650dd088147a0c4f0f3e9f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a0fd3d2045650dd088147a0c4f0f3e9f1">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const </td></tr>
-<tr class="memdesc:a0fd3d2045650dd088147a0c4f0f3e9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fonction de dessin SFML. Dessine l'�tage courant.  <a href="#a0fd3d2045650dd088147a0c4f0f3e9f1">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a0fd3d2045650dd088147a0c4f0f3e9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53fbaab5a7f98ee71569718de18f1a57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu_1_1_terrain.html#a53fbaab5a7f98ee71569718de18f1a57">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const </td></tr>
+<tr class="memdesc:a53fbaab5a7f98ee71569718de18f1a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fonction de dessin SFML. Dessine l'�tage courant.  <a href="#a53fbaab5a7f98ee71569718de18f1a57">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a53fbaab5a7f98ee71569718de18f1a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -193,6 +195,8 @@ Attributs privés</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Le terrain est le champs d'�volution des fourmis et autres �l�ments du biome. Compos� de plusieurs �tages ( 2? ou 3? ), il est repr�sent� en 2D avec une profondeur repr�sentant les �tages. Le "tilemap' est au niveau du pixel. </p>
+
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00024">24</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="ae4cf297206eccab9d9b119ca34a547ad"></a>
 <div class="memitem">
@@ -212,7 +216,7 @@ Attributs privés</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a class="anchor" id="a0fd3d2045650dd088147a0c4f0f3e9f1"></a>
+<a class="anchor" id="a53fbaab5a7f98ee71569718de18f1a57"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -220,7 +224,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void jeu::Terrain::draw </td>
+          <td class="memname">virtual void jeu::Terrain::draw </td>
           <td>(</td>
           <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
           <td class="paramname"><em>target</em>, </td>
@@ -302,6 +306,8 @@ Attributs privés</h2></td></tr>
 
 <p>Acceder � m_indexEtageCourant. </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00037">37</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae90b77e2d23cd2087df1c15bb23106f9"></a>
@@ -327,18 +333,7 @@ Attributs privés</h2></td></tr>
 
 <p>Acceder � m_taille. </p>
 
-<p><div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph.png" border="0" usemap="#classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph" alt=""/></div>
-<map name="classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph" id="classjeu_1_1_terrain_ae90b77e2d23cd2087df1c15bb23106f9_cgraph">
-<area shape="rect" id="node2" href="classjeu_1_1_terrain.html#ae4cf297206eccab9d9b119ca34a547ad" title="Constructeur par d�faut. " alt="" coords="219,5,352,32"/>
-<area shape="rect" id="node3" href="classjeu_1_1_terrain.html#acce6a8d053bbb70e22b6749b79cfd3b0" title="Gen�re les differents �tages du terrain. " alt="" coords="196,56,375,83"/>
-<area shape="rect" id="node4" href="classjeu_1_1_terrain.html#a43df1b4f47b831a2d944964ccda6e82e" title="Vide la liste des �tages, vide le terrain. " alt="" coords="213,107,358,133"/>
-<area shape="rect" id="node5" href="classjeu_1_1_terrain.html#a0fd3d2045650dd088147a0c4f0f3e9f1" title="La fonction de dessin SFML. Dessine l&#39;�tage courant. " alt="" coords="225,157,346,184"/>
-</map>
-</div>
-</p>
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00043">43</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
 
 </div>
 </div>
@@ -383,6 +378,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>&lt; Definir m_indexEtageCourant </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00034">34</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a720ed1fa9ef9cc785a4d84fff3ea6a3f"></a>
@@ -409,6 +406,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Definir m_taille. </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00040">40</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
@@ -432,6 +431,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>La couleur des ombres. </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00088">88</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae7307dfd83441f69a720df9bbaa3243b"></a>
@@ -453,6 +454,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p>La couleur du sol. </p>
+
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00086">86</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
 
 </div>
 </div>
@@ -476,6 +479,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>La couleur de la terre. </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00087">87</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3c959b256d57b8e62e2e5317f73e029e"></a>
@@ -497,6 +502,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Les diff�rents etages composants le terrain. </p>
+
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00079">79</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
 
 </div>
 </div>
@@ -520,6 +527,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>L'index dans m_etages de l'�tage actuellement affich�. </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00080">80</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a234e06036746a48e4acf4f4582cd82e5"></a>
@@ -541,6 +550,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Le shader simulant un AO ('terre', v�g�tation ...) sur les parties 'sol' du terrain. </p>
+
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00085">85</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
 
 </div>
 </div>
@@ -564,6 +575,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Le shader dessinant la grille sur les parties 'sol' du terrain. </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00082">82</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a80acf28cc64d6096bf088304cadf3710"></a>
@@ -585,6 +598,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Le shader dessinant les hachures sur les parties 'terre' du terrain. </p>
+
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00083">83</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
 
 </div>
 </div>
@@ -608,6 +623,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Le shader dessinant les ombres ('terre', v�g�tation ...) sur les parties 'sol' du terrain. /todo voir pour g�rer �a en fonction du mouvement d'un soleil, pour repr�senter un cycle jour/nuit) </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00084">84</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abb505adb5a07904eb33b9cef7aa5bd69"></a>
@@ -630,11 +647,12 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>La taille du terrain, en pixels. </p>
 
+<p>Définition à la ligne <a class="el" href="_terrain_8h_source.html#l00081">81</a> du fichier <a class="el" href="_terrain_8h_source.html">Terrain.h</a>.</p>
+
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li><a class="el" href="_terrain_8h_source.html">Terrain.h</a></li>
-<li><a class="el" href="_terrain_8cpp.html">Terrain.cpp</a></li>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>C:/Users/kris/OneDrive/recherche Biome/01 - code/code/include/jeu/<a class="el" href="_terrain_8h_source.html">Terrain.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -642,9 +660,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacejeu.html">jeu</a></li><li class="navelem"><a class="el" href="classjeu_1_1_terrain.html">Terrain</a></li>
-    <li class="footer">Généré le Mardi 24 Mai 2016 17:13:56 pour Appli par
+    <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
 </div>
 </body>

@@ -21,5 +21,6 @@ var searchData=
   ['onfen_5ffermer',['onFen_fermer',['../classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a2337908cb7d696e7426e7a8a261393ea',1,'gui::Actions']]],
   ['onfen_5fouvrir',['onFen_ouvrir',['../classgui_1_1_actions.html#a372fe9b49ce56cd4aedc01a8423457e4a4d0cbbd51ba58b8b217e5778c72ae607',1,'gui::Actions']]],
   ['operator_3d',['operator=',['../classapp_1_1_resource_mgr.html#a8c06cc4165068e7aae8ba2aa505d4c1a',1,'app::ResourceMgr::operator=()'],['../classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#abf1f4bce28d2f5cfb67fe32527f7fd66',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;::operator=()']]],
+  ['options',['Options',['../namespaceapp_1_1_ecrans.html#a7a6d249918520f9bb4c11c216805c6e0a7dad977bf339caf10bfbcaeba3efa465',1,'app::Ecrans']]],
   ['orientation',['Orientation',['../classgui_1_1_fenetre_1_1_glissiere.html#a515b0b8f6d096e6b31fbc2f2004d92bf',1,'gui::Fenetre::Glissiere']]]
 ];

@@ -29,11 +29,11 @@ Application::Application()
 
     /// le frameRate de la fenetre
     m_fenetre.create (
-            sf::VideoMode(1920, 1080)
-//            sf::VideoMode(1280, 720)
+//            sf::VideoMode(1920, 1080)
+            sf::VideoMode(1280, 720)
             , "SuperOrganisme"
-//            , sf::Style::Titlebar
-            , sf::Style::Fullscreen
+            , sf::Style::Titlebar
+//            , sf::Style::Fullscreen
             , sf::ContextSettings ( 	0, 0,   4,  2,  0) );
 
 

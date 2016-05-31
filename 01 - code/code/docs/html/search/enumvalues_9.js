@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['repos',['Repos',['../classgui_1_1_gadget.html#ab11cdc9ef91e4f62286cca422d65c524a5425be176c542f566123112599300dfa',1,'gui::Gadget']]]
+  ['log',['log',['../classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049aa9e5b356892159d1526d850436f9186e',1,'app::Config']]]
 ];

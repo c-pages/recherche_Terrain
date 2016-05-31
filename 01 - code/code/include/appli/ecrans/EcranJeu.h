@@ -16,7 +16,6 @@ namespace app {
 /// \class  EcranJeu
 /// \brief  Ecran de jeu
 ///
-///
 /////////////////////////////////////////////////
 class EcranJeu : public Ecran
 {
@@ -74,12 +73,17 @@ private:
     // Les membres
     /////////////////////////////////////////////////
 
-    sf::View            m_vue;   ///< La vue SFML de l'écran.
-    sf::RectangleShape  m_fond;  ///< Le shape SFML du fond de l'écran.
+    jeu::Jeu            m_jeu;                  /// le jeu
 
+    sf::RectangleShape  m_fond;                 ///< Le shape SFML du fond de l'écran.
     std::shared_ptr<gui::Gui>   m_interface;
 
-//    jeu::Jeu            m_jeu;  /// le jeu
+
+    // pour le drag de la souris
+    bool            m_drag                = false;
+    sf::Vector2f    m_posVueOrigine       = {0,0};
+    sf::Vector2i    m_posSourisOrigine    = {0,0};
+
 
 }; // fin EcranJeu
 }; // fin app

@@ -1,6 +1,6 @@
-<map id="Fenetre.h" name="Fenetre.h">
-<area shape="rect" id="node2" href="$_gadget_8h.html" title="gui/Gadget.h" alt="" coords="200,155,296,181"/>
-<area shape="rect" id="node10" href="$_calque_8h.html" title="gui/Calque.h" alt="" coords="64,80,158,107"/>
-<area shape="rect" id="node11" href="$_bouton_8h.html" title="gui/gadgets/Bouton.h" alt="" coords="182,80,328,107"/>
-<area shape="rect" id="node6" href="$_actions_8h.html" title="gui/Actions.h" alt="" coords="395,229,494,256"/>
+<map id="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/include/gui/gadgets/Fenetre.h" name="C:/Users/kris/OneDrive/recherche Biome/01 &#45; code/code/include/gui/gadgets/Fenetre.h">
+<area shape="rect" id="node2" href="$_gadget_8h.html" title="gui/Gadget.h" alt="" coords="223,199,319,225"/>
+<area shape="rect" id="node10" href="$_calque_8h.html" title="gui/gadgets/Calque.h" alt="" coords="48,124,192,151"/>
+<area shape="rect" id="node11" href="$_bouton_8h.html" title="gui/gadgets/Bouton.h" alt="" coords="217,124,362,151"/>
+<area shape="rect" id="node6" href="$_actions_8h.html" title="gui/Actions.h" alt="" coords="406,273,504,300"/>
 </map>

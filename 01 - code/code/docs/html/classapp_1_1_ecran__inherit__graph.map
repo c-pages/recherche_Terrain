@@ -1,4 +1,6 @@
 <map id="app::Ecran" name="app::Ecran">
 <area shape="rect" id="node2" href="$classapp_1_1_ecran_accueil.html" title="L&#39;écran d&#39;accueil affiche le menu de démarrage du jeu : Démarrer une partie, accéder au options..." alt="" coords="5,80,133,107"/>
 <area shape="rect" id="node3" href="$classapp_1_1_ecran_jeu.html" title="Ecran de jeu. " alt="" coords="158,80,263,107"/>
+<area shape="rect" id="node4" href="$classapp_1_1_ecran_options.html" title="Ecran de jeu. " alt="" coords="288,80,419,107"/>
+<area shape="rect" id="node5" href="$classapp_1_1_ecran_pause.html" title="Ecran de jeu. " alt="" coords="443,80,565,107"/>
 </map>

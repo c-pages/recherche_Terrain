@@ -1,5 +1,5 @@
 <map id="app::EcranJeu" name="app::EcranJeu">
-<area shape="rect" id="node2" href="$classapp_1_1_ecran.html" title="La classe virtuelle communues aux �crans. " alt="" coords="34,184,119,211"/>
-<area shape="rect" id="node3" href="$classapp_1_1_application.html" title="La classe de base du programme. " alt="" coords="19,95,134,121"/>
-<area shape="rect" id="node4" href="$classapp_1_1_gestion__ecrans.html" title="Gestionnaire des �crans. " alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$classapp_1_1_ecran.html" title="La classe virtuelle communues aux écrans. " alt="" coords="35,184,121,211"/>
+<area shape="rect" id="node3" href="$classapp_1_1_gestion__ecrans.html" title="Classe qui s&#39;occupe de gérer les écrans. " alt="" coords="123,95,265,121"/>
+<area shape="rect" id="node4" href="$structapp_1_1_ecran_1_1_contexte.html" title="&lt; le context (la fenetre SFML, les textures, polices, ... ) associés aux Etats (intro, menu ...) " alt="" coords="5,5,151,32"/>
 </map>

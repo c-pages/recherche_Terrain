@@ -1,0 +1,4 @@
+<map id="gui::Gadget::setVisible" name="gui::Gadget::setVisible">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a6e153ac998f784be430e805650a8e1e0" title="Définit si on peut redimmensionner la fenetre. " alt="" coords="208,5,383,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a6c16eb8479a743607c6d38d80e4bfac0" title="Rendre visible ou non le bouton de fermeture de la fenetre. " alt="" coords="210,56,381,83"/>
+</map>
