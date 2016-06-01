@@ -18,6 +18,7 @@
 					<Add directory="gui/include" />
 					<Add directory="racine/include" />
 					<Add directory="gui/gadgets/include" />
+					<Add directory="include/appli" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics-s-d" />
@@ -45,6 +46,7 @@
 					<Add directory="gui/include" />
 					<Add directory="racine/include" />
 					<Add directory="gui/gadgets/include" />
+					<Add directory="include/appli" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -68,9 +70,12 @@
 			<Add option="-fexceptions" />
 			<Add option="-DSFML_STATIC" />
 			<Add directory="F:/Bibliotheques CPP/SFML-2.3.2/include" />
+			<Add directory="F:/Bibliotheques CPP/libnoise" />
 		</Compiler>
 		<Linker>
+			<Add library="F:/Bibliotheques CPP/libnoise/bin/Release/liblibNoise.a" />
 			<Add directory="F:/Bibliotheques CPP/SFML-2.3.2/lib" />
+			<Add directory="F:/Bibliotheques CPP/libnoise/bin/Release" />
 		</Linker>
 		<Unit filename="include/appli/Application.h" />
 		<Unit filename="include/appli/Config.h" />
@@ -78,6 +83,7 @@
 		<Unit filename="include/appli/Gestion_ecrans.h" />
 		<Unit filename="include/appli/ResourceMgr.h" />
 		<Unit filename="include/appli/ResourceMgr.inl" />
+		<Unit filename="include/appli/RessourcesID.h" />
 		<Unit filename="include/appli/ecrans/EcranAccueil.h" />
 		<Unit filename="include/appli/ecrans/EcranJeu.h" />
 		<Unit filename="include/appli/ecrans/EcranOptions.h" />
@@ -93,10 +99,11 @@
 		<Unit filename="include/gui/gadgets/Label.h" />
 		<Unit filename="include/jeu/Etage.h" />
 		<Unit filename="include/jeu/Jeu.h" />
-		<Unit filename="include/jeu/PlanteVerte.h" />
+		<Unit filename="include/jeu/Plante.h" />
 		<Unit filename="include/jeu/Terrain.h" />
 		<Unit filename="include/outils/Utilitaires.h" />
 		<Unit filename="include/outils/Utilitaires.inl" />
+		<Unit filename="include/outils/noiseutils.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="media/img/IconeVide.png" />
 		<Unit filename="media/img/Icone_test x16.png" />
@@ -139,6 +146,7 @@
 		<Unit filename="media/polices/syastro_.ttf" />
 		<Unit filename="media/polices/webdings.ttf" />
 		<Unit filename="media/polices/wingding.ttf" />
+		<Unit filename="media/shaders/CoupeTerre.frag" />
 		<Unit filename="media/shaders/clippingMask.frag" />
 		<Unit filename="media/shaders/flou.frag" />
 		<Unit filename="media/shaders/flouTableau.frag" />
@@ -150,6 +158,7 @@
 		<Unit filename="src/appli/Config.cpp" />
 		<Unit filename="src/appli/Ecran.cpp" />
 		<Unit filename="src/appli/Gestion_ecrans.cpp" />
+		<Unit filename="src/appli/RessourcesID.cpp" />
 		<Unit filename="src/appli/ecrans/EcranAccueil.cpp" />
 		<Unit filename="src/appli/ecrans/EcranJeu.cpp" />
 		<Unit filename="src/appli/ecrans/EcranOptions.cpp" />
@@ -165,9 +174,10 @@
 		<Unit filename="src/gui/gadgets/Label.cpp" />
 		<Unit filename="src/jeu/Etage.cpp" />
 		<Unit filename="src/jeu/Jeu.cpp" />
-		<Unit filename="src/jeu/PlanteVerte.cpp" />
+		<Unit filename="src/jeu/Plante.cpp" />
 		<Unit filename="src/jeu/Terrain.cpp" />
 		<Unit filename="src/outils/Utilitaires.cpp" />
+		<Unit filename="src/outils/noiseutils.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

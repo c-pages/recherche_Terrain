@@ -131,8 +131,16 @@ void Gui::traiterEvenements (sf::Event evenement)
 //                declencherToutBoutons ( Evenement::onBtnD_relacherDehors  , m_gadgetSurvole );
 
             // On sort si on a pas de bouton survolé
-            if ( m_gadgetSurvole ==  nullptr )
+            if ( m_gadgetSurvole ==  nullptr ){
+                if ( evenement.mouseButton.button == sf::Mouse::Left ) {
+                    declencher ( Evenement::onBtnG_presser );
+                } else if ( evenement.mouseButton.button == sf::Mouse::Right ) {
+                    declencher ( Evenement::onBtnD_presser );
+                } else if ( evenement.mouseButton.button == sf::Mouse::Middle ) {
+                    declencher ( Evenement::onBtnM_presser );
+                }
                 return;
+            }
 
             // on definie le bouton pressé
             m_gadgetPresse = m_gadgetSurvole;
@@ -167,7 +175,15 @@ void Gui::traiterEvenements (sf::Event evenement)
 
             // si on a pas pressé de bouton, on passe
             if ( m_gadgetPresse ==  nullptr )
+            {
+                if ( evenement.mouseButton.button == sf::Mouse::Left )
+                    declencher  ( Evenement::onBtnG_relacher );
+                else if ( evenement.mouseButton.button == sf::Mouse::Right )
+                    declencher  ( Evenement::onBtnD_relacher );
+                else if ( evenement.mouseButton.button == sf::Mouse::Middle )
+                    declencher  ( Evenement::onBtnM_relacher );
                 return;
+            }
 
             m_gadgetPresse->setEtat(Gadget::Etat::Repos);
 

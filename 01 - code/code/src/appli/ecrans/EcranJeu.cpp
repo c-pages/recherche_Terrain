@@ -7,7 +7,7 @@
 #include "appli/Config.h"
 #include <iostream>
 #include <stdio.h>
-//#include "GUI.h"
+#include "outils/Utilitaires.h"
 
 namespace app {
 
@@ -57,7 +57,6 @@ void EcranJeu::traiter_evenements    ( const sf::Event& event )
                 if ( posVue.y > tailleCarte.y - window->getSize().y/2 )
                     posVue.y = tailleCarte.y - window->getSize().y/2;
 
-
                 // on applique le deplacement de la vue
                 m_vuePrincipale.setCenter( posVue );
 
@@ -101,6 +100,16 @@ void EcranJeu::actualiser   ( sf::Time deltaT )
 
     m_jeu.actualiser ( deltaT );
     m_interface->actualiser    (  );
+
+
+    /// pos souris
+    sf::Vector2i centreVue          = sf::Vector2i  ( m_vuePrincipale.getCenter() );
+    sf::Vector2i posVue             = centreVue - sf::Vector2i ( m_contexte.fenetre->getSize().x/2 , m_contexte.fenetre->getSize().y/2  );
+    sf::Vector2i posSourisFenetre   = sf::Vector2i (sf::Mouse::getPosition( *m_contexte.fenetre ));
+    sf::Vector2i posTerrain         = posVue + posSourisFenetre;
+
+    std::string txtTmp = "coord souris : " + toString( posTerrain.x ) + ", " + toString( posTerrain.y );
+    m_lblCoordSouris->setTexte( txtTmp );
 }
 
 
@@ -113,10 +122,10 @@ void EcranJeu::dessiner ()
     m_contexte.fenetre->setView  ( m_vuePrincipale );
     m_contexte.fenetre->draw ( m_jeu );
 
-//m_contexte.fenetre->setView  ( );
 
     // \todo : passer dans la vue interface
-    m_contexte.fenetre->draw ( *m_interface );
+    m_contexte.fenetre->setView ( m_vueInterface );
+    m_contexte.fenetre->draw    ( *m_interface );
 }
 
 
@@ -133,6 +142,11 @@ EcranJeu::initGUI  ( )
 
 
     /// l'interface graphique //////
+
+    m_lblCoordSouris = m_interface->creer.label( "coord souris :");
+    m_lblCoordSouris->setPosition( 10,10);
+
+
     // Interactions clavier //
     m_interface->lier   ( sf::Keyboard::Escape
                         , [this ](){
@@ -153,6 +167,18 @@ EcranJeu::initGUI  ( )
                          });
 
 
+    m_interface->lier   ( gui::Actions::Evenement::onBtnG_relacher
+                        , [this ](){
+
+                        /// coord fenetre -> coord terrain ///
+                        sf::Vector2i centreVue          = sf::Vector2i  ( m_vuePrincipale.getCenter() );
+                        sf::Vector2i posVue             = centreVue - sf::Vector2i ( m_contexte.fenetre->getSize().x/2 , m_contexte.fenetre->getSize().y/2  );
+                        sf::Vector2i posSourisFenetre   = sf::Vector2i (sf::Mouse::getPosition( *m_contexte.fenetre ));
+                        sf::Vector2i posTerrain         = posVue + posSourisFenetre;
+
+
+                        m_jeu.test ( posTerrain );
+                    });
 
 }   // fin init GUI
 

@@ -77,7 +77,7 @@ private:
 
     sf::RectangleShape  m_fond;                 ///< Le shape SFML du fond de l'écran.
     std::shared_ptr<gui::Gui>   m_interface;
-
+    std::shared_ptr<gui::Label> m_lblCoordSouris;
 
     // pour le drag de la souris
     bool            m_drag                = false;

@@ -27,17 +27,23 @@ Application::Application()
     /// Initialisation de la Configuration ( ensembles des ressources ...)
     Config::init();
 
-    /// le frameRate de la fenetre
-    m_fenetre.create (
+
+
+    /// creation de la fenetre
+//    m_fenetre.create (
 //            sf::VideoMode(1920, 1080)
+//            , "SuperOrganisme"
+//            , sf::Style::Fullscreen
+//            , sf::ContextSettings ( 	0, 0,   4,  2,  0) );
+
+    m_fenetre.create (
             sf::VideoMode(1280, 720)
             , "SuperOrganisme"
             , sf::Style::Titlebar
-//            , sf::Style::Fullscreen
             , sf::ContextSettings ( 	0, 0,   4,  2,  0) );
-
-
     m_fenetre.setFramerateLimit(  1 / Config::getDureeImage().asSeconds() );
+
+
 
     /// L'icone de la fenêtre
     sf::Image iconeFenetre;
@@ -53,7 +59,8 @@ Application::Application()
     m_ecrans.enregistrerEcran<EcranPause>       ( Ecrans::Pause );
 
     /// Le premier écran
-    m_ecrans.ajouter ( Ecrans::Accueil );
+//    m_ecrans.ajouter ( Ecrans::Accueil );
+    m_ecrans.ajouter ( Ecrans::Jeu );
 
 }
 

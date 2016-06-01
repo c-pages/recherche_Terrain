@@ -1,18 +1,21 @@
 #version 120
 
 uniform sampler2D   texture;
-uniform     vec2 origin;
+uniform  vec2       origin;
 
+//uniform vec4        colorTerre;
+//
+//uniform bool        coupeTerre = false;
 
 void main() {
 
     // hachures
     vec4    color       = gl_Color;
     vec2    pos         = gl_FragCoord.xy;
-    float   colHachures = 1.2;
+    float   colHachures = .2;
     float   colContour  = .8;
-    vec4    hachure     = vec4(colHachures,colHachures,colHachures,1.);
-    vec4    contour     = vec4(colContour,colContour,colContour,1.);
+    vec4    hachure     = vec4(color.x + colHachures, color.y + colHachures, color.z + colHachures,1.);
+    vec4    contour     = hachure; //vec4(colContour,colContour,colContour,1.);
 
     int     espacement  = 10;
     float   epaisseur   = 1;

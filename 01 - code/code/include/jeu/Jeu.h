@@ -88,6 +88,12 @@ public:
 
 
 
+    /////////////////////////////////////////////////
+    /// \brief test des trucs
+    /// \param pos la nouvelle origine des shaders.
+    /////////////////////////////////////////////////
+    void test ( sf::Vector2i pos );
+
 
     /////////////////////////////////////////////////
     /// \brief Définir l'origin pour les shaders du terrain
@@ -131,9 +137,14 @@ public:
 /////////////////////////////////////////////////
 private:
 
-    Terrain                 m_terrain;          ///< Le terrain de la partie en cours.
     app::Ecran::Contexte    m_contexte;         ///< Le contexte courant.
     sf::Vector2i            m_tailleCarte;      ///< La taille du terrain, en pixels.
+
+
+    Terrain                 m_terrain;          ///< Le terrain de la partie en cours.
+
+//    std::vector<shared_ptr<Plante>>     m_plantes;
+
 
 }; // fin class Jeu
 

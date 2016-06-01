@@ -169,6 +169,8 @@ protected:
 // Les membres
 /////////////////////////////////////////////////
     sf::View            m_vuePrincipale;    ///< La vue principale du jeu
+    sf::View            m_vueInterface;     ///< La vue principale du jeu
+
     Contexte            m_contexte;         ///<  Le contexte de l'écran (la fenetre SFML, textures, polices...) \todo intégrer les textures et polices dans le contexte
     Gestion_ecrans*     m_pileEcrans ;      ///<  Le gestionnaire des écrans
     bool                m_pause = false;    ///<  La pause stope l'actualisation et le traitement des évènements de l'écrans mais pas l'affichage.

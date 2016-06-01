@@ -9,16 +9,19 @@
 namespace jeu {
 
 /////////////////////////////////////////////////
-Etage::Etage ( Terrain* terrain, sf::Vector2i taille)
-: m_terrain         ( terrain )
+Etage::Etage ( Terrain* terrain, sf::Vector2i taille, int index )
+: m_index           ( index )
+, m_terrain         ( terrain )
 , m_mapCollision    ( )
 , m_mapPheromones   ( )
 , m_estCourant      ( false )
 , m_mapSol          ( )
 , m_taille          ( taille )
 
-, m_couleurSol      ( sf::Color ( 150, 175, 130 ) )
-, m_couleurTerre    ( sf::Color ( 110,  80,  80 ) )
+//, m_couleurSol      ( sf::Color ( 150, 175, 130 ) )
+, m_couleurSol      ( sf::Color ( 85, 118, 55 ) )
+, m_couleurTerre    ( sf::Color ( 70,  60,  60 ) )
+
 , m_couleurOmbres   ( sf::Color (   0,   0, 100, 100 ) )
 , m_couleurAO       ( sf::Color (   0,   0, 100, 150 ) )
 {
@@ -61,6 +64,94 @@ Etage::Etage ( Terrain* terrain, sf::Vector2i taille)
 
 }
 
+/////////////////////////////////////////////////
+void Etage::genererPlantations ( int nbrePlantes ) {
+
+    /// les plantes ///
+    for (int i = 0; i<nbrePlantes; i++){
+        std::shared_ptr<Plante> plante = std::make_shared<Plante> () ;
+        m_plantes.push_back( plante );
+        bool reussi = false;
+        while ( ! reussi  ) {
+            sf::Vector2i posTest =   { rand()% m_taille.x, rand()% m_taille.y };
+            reussi = estDeLaTerre ( {posTest.x, posTest.y} );
+            if ( reussi )
+                plante->setPosition( posTest.x, posTest.y );
+
+        }
+    }
+
+}
+
+
+/////////////////////////////////////////////////
+bool Etage::estLibre ( sf::Vector2i pos, int rayon )
+{
+
+    sf::Image imagTmp = m_texture.copyToImage();
+   /* bool test = false;
+
+    for ( int x = -rayon; x<= rayon; x++ )
+        for ( int y = -rayon; y<= rayon; y++ )
+        {
+            if ( imagTmp.getPixel( x, y).a == 0 )
+        }
+        */
+
+    bool test = ( imagTmp.getPixel( pos.x, pos.y).a == 0 );
+
+    return  test;
+
+}
+
+
+/////////////////////////////////////////////////
+bool Etage::estDeLaTerre ( sf::Vector2i pos, int rayon )
+{
+
+    sf::Image imagTmp = m_texture.copyToImage();
+//imagTmp.saveToFile("DEBUG.png");
+    std::cout << "est terre ( " << pos.x << " , "<< pos.y << " : " ;
+    for ( int x = pos.x -rayon; x<= pos.x+rayon; x++ )
+        for ( int y = pos.y-rayon; y<= pos.y+rayon; y++ )
+        {
+            if ( imagTmp.getPixel( x, y).a == 0 ){
+                std::cout << "non\n" ;
+                return false;
+            }
+        }
+
+     std::cout << "oui\n" ;
+
+//    bool test = ( imagTmp.getPixel( pos.x, pos.y).a != 0 );
+
+    return  true;
+
+}
+
+/////////////////////////////////////////////////
+void Etage::setCourant ( bool val  ) {
+    m_estCourant = val;
+    if ( m_estCourant )
+        m_shapeTerre.setFillColor( m_couleurTerre );
+    else
+        m_shapeTerre.setFillColor( m_couleurSol );
+}
+
+
+/////////////////////////////////////////////////
+bool Etage::estCourant () const
+{return m_estCourant;}
+
+
+/////////////////////////////////////////////////
+bool Etage::estCoupe () const
+{
+    if ( m_index > m_terrain->getNbreEtages() -1 )
+        return false;
+
+    return m_terrain->getEtage ( m_index + 1 )->estCourant ();
+}
 
 
 /////////////////////////////////////////////////
@@ -72,10 +163,15 @@ const sf::Texture* Etage::getTexture ()
 sf::RenderTexture* Etage::getRenderTexture ()
 { return &m_renderTexture; }
 
+
 /////////////////////////////////////////////////
 void Etage::appliquerTexture ( )
 {
     m_texture  = m_renderTexture.getTexture();
+//    m_mapSol   = m_texture.copyToImage();
+
+    sf::Image imagTmp = m_texture.copyToImage();
+    imagTmp.saveToFile( "etageDEBUG.png" );
 
     m_shapeTerre.setTexture         ( &m_texture );
     m_shapeOmbreTerre.setTexture    ( &m_texture );
@@ -88,10 +184,7 @@ void Etage::appliquerTexture ( )
 void Etage::draw (sf::RenderTarget& target, sf::RenderStates states) const
 {
 
-    // le sol
-//    states.shader = &m_shaderGrille;
-//    target.draw ( m_shapesol , states );
-    // l'ombre de la terre
+
     auto shaderTmp = states.shader;
 
     states.shader = &m_shaderAO;
@@ -99,16 +192,15 @@ void Etage::draw (sf::RenderTarget& target, sf::RenderStates states) const
     states.shader = &m_shaderOmbre;
     target.draw ( m_shapeOmbreTerre , states );
 
-/*
-
-    // la terre
-    if ( estCourant() )
-        states.shader = &m_shaderHachures;
-    else
-        states.shader = &m_shaderGrille;
-*/
     states.shader = shaderTmp;
     target.draw ( m_shapeTerre , states );
+
+    /// les plantes ///
+    if ( estCourant( ) ) {
+        states.shader = nullptr;
+        for (auto plante : m_plantes )
+            target.draw ( *plante , states );
+    }
 
 }
 

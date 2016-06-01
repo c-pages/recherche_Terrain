@@ -4,6 +4,9 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
+
+#include "jeu/Plante.h"
+
 #include <SFML/Graphics.hpp>
 #include <memory>
 #include <vector>
@@ -32,6 +35,14 @@ public:
 
     ///< Acceder à m_indexEtageCourant
     int getEtageCourant () const { return m_etageCourant; };
+
+    ///< Acceder à m_indexEtageCourant
+    int getNbreEtages () const { return m_nbreEtages; };
+
+
+    ///< Acceder à m_indexEtageCourant
+    std::shared_ptr<Etage> getEtage ( int index ) const { return m_etages[ index ]; };
+
 
     ///< Definir m_taille
     void setTaille( sf::Vector2i val ){ m_taille = val; };
@@ -64,6 +75,16 @@ public:
 
 
 
+    /////////////////////////////////////////////////
+    /// \brief Savoir si le pixel est libre ou occupé
+    ///
+    /// \param pos la position du pixel à tester
+    /// \param etage l'étage à tester
+    /// \param rayon le rayon autour du pixel ou étendre le test, defaut = 0, juste le pixel à la pos sera tester
+    /// \return true si libre, false occupé
+    ///
+    /////////////////////////////////////////////////
+    bool estLibre ( sf::Vector2i pos, int etage, int rayon = 0 );
 
 
 
@@ -102,12 +123,14 @@ public:
 // Membres
 /////////////////////////////////////////////////
 private:
-    std::vector<std::shared_ptr<Etage>>     m_etages;               ///< Les différents etages composants le terrain.
-    std::size_t                             m_nbreEtages;           ///< L'index dans m_etages de l'étage actuellement affiché.
-    int                                     m_etageCourant;         ///< L'index dans m_etages de l'étage actuellement affiché.
-    sf::Vector2i                            m_taille;               ///< La taille du terrain, en pixels.
+    std::vector<std::shared_ptr<Etage>>     m_etages;           ///< Les différents etages composants le terrain.
+    std::size_t                             m_nbreEtages;       ///< L'index dans m_etages de l'étage actuellement affiché.
+    int                                     m_etageCourant;     ///< L'index dans m_etages de l'étage actuellement affiché.
+    sf::Vector2i                            m_taille;           ///< La taille du terrain, en pixels.
 
-    int                                     m_ecartMin;             ///< L'ecart entre les ronds pour le dessin
+    int                                     m_ecartMin;         ///< L'ecart entre les ronds pour le dessin
+
+//    std::vector<std::shared_ptr<Plante>>    m_plantes;
 
 
 //    sf::Image               m_image;                ///< la bitmap
@@ -131,10 +154,11 @@ private:
     sf::Shader      m_shaderAO;         ///< Le shader simulant un AO ('terre', végétation ...) sur les parties 'sol' du terrain.
 
     /// Les couleurs /////
-    sf::Color       m_couleurSol;       ///< La couleur du sol.
-    sf::Color       m_couleurTerre;     ///< La couleur de la terre
-    sf::Color       m_couleurOmbres;    ///< La couleur des ombres.
-    sf::Color       m_couleurAO;        ///< La couleur de l'Ambient occlusion.
+    sf::Color       m_couleurBrume;     ///< La couleur du sol.
+//    sf::Color       m_couleurSol;       ///< La couleur du sol.
+//    sf::Color       m_couleurTerre;     ///< La couleur de la terre
+//    sf::Color       m_couleurOmbres;    ///< La couleur des ombres.
+//    sf::Color       m_couleurAO;        ///< La couleur de l'Ambient occlusion.
 
 }; // fin class Terrain
 

@@ -11,12 +11,13 @@
 namespace jeu {
 
 /////////////////////////////////////////////////
-Terrain::Terrain ()
-: m_etages              ()
+Terrain::Terrain ( )
+: m_etages              ( )
 , m_ecartMin            ( 10 )
-, m_nbreEtages          ( 5 )
+, m_nbreEtages          ( 3 )
 , m_etageCourant        ( m_nbreEtages -1 )
-//
+
+, m_couleurBrume          ( sf::Color(255,255,255,30) )
 //, m_couleurSol          ( sf::Color ( 180, 205, 160 ) )
 //, m_couleurTerre        ( sf::Color ( 110,  80,  80 ) )
 //, m_couleurOmbres       ( sf::Color (   0,   0, 100, 100 ) )
@@ -34,21 +35,25 @@ Terrain::Terrain ()
 
     m_shaderHachures.loadFromFile   ( "media/shaders/hachures&contours.frag" , sf::Shader::Fragment );
     m_shaderHachures.setParameter   ( "texture", sf::Shader::CurrentTexture );
+//    m_shaderHachures.setParameter   ( "colorTerre", sf::Color ( 85, 118, 55 ) );
 
     m_shaderGrille.loadFromFile     ( "media/shaders/grille.frag" , sf::Shader::Fragment );
 
 }
 
 
+
+
 /////////////////////////////////////////////////
 void Terrain::generer ( int seed, sf::Vector2i tailleCarte, unsigned int nbrEtages  )
 {
     std::cout << "Terrain::generer : seed="<< seed << " nbrEtages=" << nbrEtages << "\n";
-
-    m_taille = tailleCarte;
+    m_nbreEtages    = nbrEtages;
+    m_etageCourant  = m_nbreEtages ;
+    m_taille        = tailleCarte;
 
     m_shapeProfondeur.setSize ( { m_taille.x, m_taille.y } );
-    m_shapeProfondeur.setFillColor( sf::Color(255,255,255,30) );
+    m_shapeProfondeur.setFillColor( m_couleurBrume );
 
     // creation du perlin pinpin
     module::Perlin              perlinModule;       ///<  module à charger pour bruit de perlin
@@ -62,7 +67,7 @@ void Terrain::generer ( int seed, sf::Vector2i tailleCarte, unsigned int nbrEtag
 
         std::cout << "Creation etage " << i << ".\n";
 
-        std::shared_ptr<Etage> etage = std::make_shared<Etage> (this, m_taille) ;
+        std::shared_ptr<Etage> etage = std::make_shared<Etage> (this, m_taille, i) ;
         m_etages.push_back( etage );
 
         // Dessiner la map avec des ronds
@@ -80,12 +85,53 @@ void Terrain::generer ( int seed, sf::Vector2i tailleCarte, unsigned int nbrEtag
         // on l'applique a l'étage
         renderTexture->display();
         etage->appliquerTexture();
+        etage->genererPlantations( 20 / i );
     }
 
+    // creation du dernier étage vide
+    auto etage = std::make_shared<EtageVide> (this, m_taille, m_nbreEtages+1 ) ;
+    m_etages.push_back( etage );
+
     /// l'étage courant
-    setEtageCourant( m_etageCourant);
+    setEtageCourant( m_etageCourant );
+
+
+
+
+//
+//
+//    /// les plantes ///
+//    int nbrPlantes = 20;
+//    for (int i = 0; i<nbrPlantes; i++){
+//        std::shared_ptr<Plante> plante = std::make_shared<Plante> () ;
+//        m_plantes.push_back( plante );
+//        bool reussi = false;
+//        while ( ! reussi  ) {
+//            sf::Vector2i posTest =   { rand()% m_taille.x, rand()% m_taille.y };
+//            reussi =  estLibre ( {rand()% m_taille.x, rand()% m_taille.y},1 );
+//            if ( reussi )
+//            {
+//                plante->setPosition( posTest.x, posTest.y );
+//            }
+//        }
+//    }
+
 
 }
+
+
+
+
+/////////////////////////////////////////////////
+bool Terrain::estLibre ( sf::Vector2i pos, int etage, int rayon  )
+{
+    if ( etage<0 || etage>m_nbreEtages )
+        return false;
+
+    return m_etages[etage]->estLibre ( pos, rayon );
+}
+
+
 
 
 /////////////////////////////////////////////////
@@ -102,8 +148,8 @@ void Terrain::setEtageCourant( int val ){
     if ( val < 0 )
             val = 0;
 
-    if ( val > m_nbreEtages -1 )
-            val = m_nbreEtages -1;
+    if ( val > m_nbreEtages  )
+            val = m_nbreEtages ;
 
     m_etages[ m_etageCourant ]->setCourant(false);
     m_etageCourant = val;
@@ -125,6 +171,7 @@ void Terrain::dessinerRond ( sf::Vector2i centre, sf::Color couleur, sf::RenderT
     cercle.setOrigin ( rayon ,rayon );
 
     renderTexture.draw(cercle);
+
 }
 
 
@@ -145,9 +192,6 @@ void Terrain::vider ()
 /////////////////////////////////////////////////
 void Terrain::draw (sf::RenderTarget& target, sf::RenderStates states) const
 {
-//    for ( auto etage : m_etages )
-//        target.draw ( *etage , states );
-
     for ( int i=0; i<=m_etageCourant; i++ ) {
 
         states.shader = nullptr;
@@ -155,37 +199,19 @@ void Terrain::draw (sf::RenderTarget& target, sf::RenderStates states) const
 
         if ( i==m_etageCourant)
             states.shader = &m_shaderHachures;
-        else if ( i==m_etageCourant-1)
+        else //if ( i==m_etageCourant-1)
             states.shader = &m_shaderGrille;
-        else
-            states.shader = nullptr;
+//        else
+//            states.shader = nullptr;
 
         target.draw ( *m_etages[  i  ] , states );
     }
 
+/*
+            states.shader = &m_shaderHachures;
+            target.draw ( *m_etages[  m_etageCourant  ] , states );
 
-
-
-    /*
-    auto etage = m_etages[ m_etageCourant ];
-//    auto etage = m_etages.at( 2 );
-    target.draw ( *etage , states );
 */
-
-//    // le sol
-//    states.shader = &m_shaderGrille;
-//    target.draw ( m_shapesol , states );
-//
-//    // l'ombre de la terre
-//    //    states.shader = nullptr;
-//    states.shader = &m_shaderAO;
-//    target.draw ( m_shapeAO , states );
-//    states.shader = &m_shaderOmbre;
-//    target.draw ( m_shapeOmbreTerre , states );
-//
-//    // la terre
-//    states.shader = &m_shaderHachures;
-//    target.draw ( m_shapeTerre , states );
 }
 
 

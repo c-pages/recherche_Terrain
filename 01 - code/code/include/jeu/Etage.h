@@ -5,8 +5,9 @@
 // Headers
 /////////////////////////////////////////////////
 #include <SFML/Graphics.hpp>
+#include <memory>
 
-
+#include "jeu/Plante.h"
 
 namespace jeu {
 
@@ -29,7 +30,7 @@ public:
     /// \brief Constructeur par défaut.
     ///
     /////////////////////////////////////////////////
-    Etage ( Terrain* terrain, sf::Vector2i taille );
+    Etage ( Terrain* terrain, sf::Vector2i taille , int index );
 
 
     /////////////////////////////////////////////////
@@ -66,6 +67,28 @@ public:
     void appliquerTexture ( );
 
     /////////////////////////////////////////////////
+    /// \brief Savoir si le pixel est libre ou occupé
+    ///
+    /// \param pos la position du pixel à tester
+    /// \param rayon le rayon autour du pixel ou étendre le test, defaut = 0, juste le pixel à la pos sera tester
+    /// \return true si libre, false occupé
+    ///
+    /////////////////////////////////////////////////
+    bool estLibre ( sf::Vector2i pos, int rayon = 0 );
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief Savoir si le pixel est libre ou occupé
+    ///
+    /// \param pos la position du pixel à tester
+    /// \param rayon le rayon autour du pixel ou étendre le test, defaut = 0, juste le pixel à la pos sera tester
+    /// \return true si libre, false occupé
+    ///
+    /////////////////////////////////////////////////
+    bool estDeLaTerre ( sf::Vector2i pos, int rayon = 0 );
+
+    /////////////////////////////////////////////////
     /// \brief La fonction de dessin SFML. Dessine l'étage courant.
     ///
     /// \param target
@@ -73,23 +96,29 @@ public:
     /////////////////////////////////////////////////
     virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const;
 
-    void setCourant ( bool val = true ) {
-        m_estCourant = val;
-        if ( m_estCourant )
-            m_shapeTerre.setFillColor( m_couleurTerre );
-        else
-            m_shapeTerre.setFillColor( m_couleurSol );
-    };
+    /////////////////////////////////////////////////
+    void setCourant ( bool val = true );
 
-    bool estCourant () const {return m_estCourant;};
+    /////////////////////////////////////////////////
+    bool estCourant () const;
 
+    /////////////////////////////////////////////////
+    bool estCoupe () const;
+
+
+    /////////////////////////////////////////////////
+    void genererPlantations ( int nbrePlantes = 20 ) ;
 
 
 /////////////////////////////////////////////////
 // Membres
 /////////////////////////////////////////////////
 private:
+    int                 m_index;
     Terrain*            m_terrain;          ///<  le terrain parent.
+
+    std::vector<std::shared_ptr<Plante>>    m_plantes;
+
 
     sf::Image           m_mapCollision;     ///< Image N&B representant l'occupation de l'étage.
     sf::Image           m_mapPheromones;    ///< La map de phéromones, les fourmis
@@ -124,6 +153,37 @@ private:
 
 }; // fin class Etage
 
+
+
+
+
+/////////////////////////////////////////////////
+/// \brief Etage vide
+///
+/////////////////////////////////////////////////
+class EtageVide : public Etage {
+    public:
+
+    EtageVide( Terrain* terrain, sf::Vector2i taille , int index) : Etage ( terrain, taille , index) {};
+
+
+    /////////////////////////////////////////////////
+    /// \brief La fonction de dessin SFML. Dessine l'étage courant.
+    ///
+    /// \param target
+    /// \param states
+    /////////////////////////////////////////////////
+    virtual void draw (sf::RenderTarget& target, sf::RenderStates states) const{};
+
+};
+
+
+
 } // fin namespace jeu
+
+
+
+
+
 
 #endif
