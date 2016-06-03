@@ -221,11 +221,20 @@ void Gui::traiterEvenements (sf::Event evenement)
 
             // Si on survole un bouton
             if ( m_gadgetSurvole != nullptr ){
+
                 // On déclenche l'action en fonction
                 if ( evenement.mouseWheel.delta > 0 )
                     m_gadgetSurvole->declencher ( Evenement::onBtnM_roulerHaut );
                 else
                     m_gadgetSurvole->declencher ( Evenement::onBtnM_roulerBas );
+
+            // sinon on déclenche l'action pour l'interface
+            } else {
+
+                if ( evenement.mouseWheel.delta > 0 )
+                    declencher ( Evenement::onBtnM_roulerHaut );
+                else
+                    declencher ( Evenement::onBtnM_roulerBas );
             }
 
         break;

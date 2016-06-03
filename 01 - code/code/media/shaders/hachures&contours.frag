@@ -13,9 +13,9 @@ void main() {
     vec4    color       = gl_Color;
     vec2    pos         = gl_FragCoord.xy;
     float   colHachures = .2;
-    float   colContour  = .8;
-    vec4    hachure     = vec4(color.x + colHachures, color.y + colHachures, color.z + colHachures,1.);
-    vec4    contour     = hachure; //vec4(colContour,colContour,colContour,1.);
+    float   colContour  = 1.0;
+    vec4    hachure     = vec4(color.x + colHachures,   color.y + colHachures,  color.z + colHachures,  1.);
+    vec4    contour     = hachure; //vec4(color.x + colContour,    color.y + colContour,   color.z + colContour,   1.);
 
     int     espacement  = 10;
     float   epaisseur   = 1;
@@ -37,7 +37,7 @@ void main() {
 
 
 
-    const float offset = 1.0 / (4096.0*2);
+    const float offset = 1.0 / (2048/*4096.0*/);
     vec2 offx = vec2(offset, 0.0);
     vec2 offy = vec2(0.0, offset);
 

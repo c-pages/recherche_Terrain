@@ -36,7 +36,7 @@ unsigned int    Gestion_ecrans::size ( )
 void        Gestion_ecrans::ajouter(Ecrans::ID ecranID)
 {
     m_modifEnAttente.push_back(ModifEnAttente(Ajouter, ecranID));
-    std::cout << "Gestion_ecrans::ajouter" << std::endl;
+//    std::cout << "Gestion_ecrans::ajouter" << std::endl;
 }
 
 
@@ -44,7 +44,7 @@ void        Gestion_ecrans::ajouter(Ecrans::ID ecranID)
 void        Gestion_ecrans::retirer()
 {
 	m_modifEnAttente.push_back(ModifEnAttente(Retirer));
-    std::cout << " Gestion_ecrans::retirer()" << std::endl;
+//    std::cout << " Gestion_ecrans::retirer()" << std::endl;
 }
 
 
@@ -53,7 +53,7 @@ void        Gestion_ecrans::vider()
 {
 
     m_modifEnAttente.push_back(ModifEnAttente(Vider));
-    std::cout << "Gestion_ecrans::vider()" << std::endl;
+//    std::cout << "Gestion_ecrans::vider()" << std::endl;
 }
 
 
@@ -95,16 +95,12 @@ void        Gestion_ecrans::appliquerModifEnAttente()
         switch ((*itr).action)
         {
             case Ajouter:
-
-                std::cout << "      -> Ajouter" << std::endl;
                 m_pile.push_back( creerEcran((*itr).ecranID) );
                 break;
             case Retirer:
-                std::cout << "      -> Retirer" << std::endl;
                 m_pile.pop_back();
                 break;
             case Vider:
-                std::cout << "      -> Vider" << std::endl;
                 m_pile.clear();
                 break;
         }

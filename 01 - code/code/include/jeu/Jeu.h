@@ -5,8 +5,9 @@
 // Headers
 /////////////////////////////////////////////////
 #include <SFML/Graphics.hpp>
+//#include <memory>
 
-#include "jeu/Terrain.h"
+#include "jeu/terrain/Terrain.h"
 #include "appli/Ecran.h"
 
 namespace jeu {
@@ -109,6 +110,10 @@ public:
 
 
     /////////////////////////////////////////////////
+    void genererPlantations ( int nbrePlantes );
+
+
+    /////////////////////////////////////////////////
     /// \brief Actualiser les éléments du jeu.
     ///
     /// \param deltaT		 Temps écoulé depuis la dernière actualisation. ( par défaut = 0: Actualise sans tenir compte du temps ecoulé)
@@ -143,7 +148,7 @@ private:
 
     Terrain                 m_terrain;          ///< Le terrain de la partie en cours.
 
-//    std::vector<shared_ptr<Plante>>     m_plantes;
+    std::vector<std::shared_ptr<Plante>>     m_plantes;
 
 
 }; // fin class Jeu

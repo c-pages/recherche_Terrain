@@ -176,9 +176,22 @@ EcranJeu::initGUI  ( )
                         sf::Vector2i posSourisFenetre   = sf::Vector2i (sf::Mouse::getPosition( *m_contexte.fenetre ));
                         sf::Vector2i posTerrain         = posVue + posSourisFenetre;
 
-
                         m_jeu.test ( posTerrain );
                     });
+
+    m_interface->lier   ( gui::Actions::Evenement::onBtnM_roulerHaut
+                        , [this ](){
+
+                        m_jeu.etageMonter();
+                    });
+
+    m_interface->lier   ( gui::Actions::Evenement::onBtnM_roulerBas
+                        , [this ](){
+
+                        m_jeu.etageDescendre();
+                    });
+
+
 
 }   // fin init GUI
 

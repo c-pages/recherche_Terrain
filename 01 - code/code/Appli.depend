@@ -590,19 +590,19 @@
 	<appli/Application.h>
 	"jeu/Jeu.h"
 
-1464701813 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\jeu.h
+1464889763 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\jeu.h
 	<SFML/Graphics.hpp>
-	"jeu/Terrain.h"
+	"jeu/terrain/Terrain.h"
 	"appli/Ecran.h"
 
-1464710045 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain.h
+1464880855 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain.h
 	"jeu/Plante.h"
 	<SFML/Graphics.hpp>
 	<memory>
 	<vector>
 	<iostream>
 
-1464777834 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\etage.h
+1464878979 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\etage.h
 	<SFML/Graphics.hpp>
 	<memory>
 	"jeu/Plante.h"
@@ -628,7 +628,7 @@
 	<iostream>
 	<cstdio>
 
-1464712098 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranjeu.cpp
+1464881591 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\ecrans\ecranjeu.cpp
 	"appli/ecrans\EcranJeu.h"
 	"appli/Config.h"
 	<iostream>
@@ -647,7 +647,7 @@
 	<iostream>
 	<stdio.h>
 
-1464275750 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\gestion_ecrans.cpp
+1464864847 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\appli\gestion_ecrans.cpp
 	"appli/Gestion_ecrans.h"
 	<iostream>
 	<cassert>
@@ -690,21 +690,23 @@
 	"appli/Config.h"
 	<iostream>
 
-1464701726 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gui.cpp
+1464880855 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\gui\gui.cpp
 	<iostream>
 	<cassert>
 	"gui/Gui.h"
 	"gui/gadgets/Calque.h"
 	"gui/Fabrique.h"
 
-1464778761 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\etage.cpp
+1464882134 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\etage.cpp
 	"jeu/Etage.h"
 	"jeu/Terrain.h"
 	<iostream>
 
-1464778211 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\jeu.cpp
+1464889861 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\jeu.cpp
 	"jeu/Jeu.h"
-	"jeu/Terrain.h"
+	"jeu/terrain/Terrain.h"
+	"jeu/terrain/Etage.h"
+	"outils/Utilitaires.h"
 	<iostream>
 
 1463527872 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\planteverte.cpp
@@ -713,17 +715,18 @@
 1463532361 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\planteverte.h
 	<SFML/Graphics.hpp>
 
-1464778160 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain.cpp
+1464882134 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain.cpp
 	"jeu/Terrain.h"
 	"jeu/Etage.h"
 	"outils/noiseutils.h"
+	"outils/Utilitaires.h"
 	<iostream>
 
 1464261512 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\outils\utilitaires.cpp
 	"outils/Utilitaires.h"
 	<sstream>
 
-1464261512 c:\users\kris\onedrive\recherche biome\01 - code\code\include\outils\utilitaires.h
+1464888322 c:\users\kris\onedrive\recherche biome\01 - code\code\include\outils\utilitaires.h
 	<sstream>
 	<outils/Utilitaires.inl>
 
@@ -916,10 +919,49 @@
 
 1460719055 f:\bibliotheques cpp\libnoise\noise\misc.h
 
-1464708076 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\plante.h
+1464888695 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\plante.h
 	<SFML/Graphics.hpp>
+	<memory>
 
-1464708315 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\plante.cpp
+1464873621 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\plante.cpp
 	"jeu/Plante.h"
+	"jeu/Etage.h"
+	"appli/Config.h"
+	"outils/Utilitaires.h"
+	<iostream>
+
+1464889073 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain\etage.cpp
+	"jeu/terrain/Etage.h"
+	"jeu/terrain/Terrain.h"
+	<iostream>
+
+1464889081 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain\etage.h
+	<SFML/Graphics.hpp>
+	<memory>
+	"jeu/vegetation/Plante.h"
+
+1464889061 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\vegetation\plante.h
+	<SFML/Graphics.hpp>
+	<memory>
+
+1464889086 c:\users\kris\onedrive\recherche biome\01 - code\code\include\jeu\terrain\terrain.h
+	"jeu/vegetation/Plante.h"
+	<SFML/Graphics.hpp>
+	<memory>
+	<vector>
+	<iostream>
+
+1464889091 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\terrain\terrain.cpp
+	"jeu/terrain/Terrain.h"
+	"jeu/terrain/Etage.h"
+	"outils/noiseutils.h"
+	"outils/Utilitaires.h"
+	<iostream>
+
+1464889673 source:c:\users\kris\onedrive\recherche biome\01 - code\code\src\jeu\vegetation\plante.cpp
+	"jeu/vegetation/Plante.h"
+	"jeu/terrain/Etage.h"
+	"appli/Config.h"
+	"outils/Utilitaires.h"
 	<iostream>
 

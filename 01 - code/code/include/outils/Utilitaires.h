@@ -6,7 +6,7 @@
 /////////////////////////////////////////////////
 #include <sstream>
 
-
+#define PI 3.14159265359
 
 
 // conversions d'un nombre en string
